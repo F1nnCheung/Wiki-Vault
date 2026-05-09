@@ -156,6 +156,17 @@ Obsidian 知识体系
 │   ├── Skill 包：llm-wiki-skill、llm-knowledge-base、karpathy-llm-wiki
 │   └── Obsidian Vault 内：Ar9av/obsidian-wiki（14+ Agent 共享）
 │
+├── 🔧 插件进阶 ──── 图片管理 / 文档导出 / 数据查询 / 快速捕获
+│   ├── Custom Attachment Location：标准化图片管理
+│   ├── Enhancing Export：多格式导出（Word/PDF/HTML/ePub）
+│   ├── Dataview / Templater / Calendar / QuickAdd 深度用法
+│   └── 插件性能优化建议
+│
+├── 🔐 Git 云同步 ── 免费多端同步方案
+│   ├── GitHub 私有仓库创建与克隆
+│   ├── Git 插件自动同步配置（1 分钟自动 commit+push）
+│   └── 手机端完整配置（Personal Access Token + 同步验证）
+│
 ├── 🆚 工具对比 ─── Obsidian vs Notion vs Tolaria
 │   └── 本地优先 vs 云端优先 vs 两者兼顾
 │
@@ -164,9 +175,9 @@ Obsidian 知识体系
 
 ## 关键数据
 
-- 收录文章：60 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 15 篇 + 橙皮书 1 份）
+- 收录文章：68 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
 - 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践
 - 核心实体：10 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent、Obsidian、Tolaria）
-- 专题页面：20 个
+- 专题页面：22 个
 - 概念页面：11 个
 - 对比页面：2 个

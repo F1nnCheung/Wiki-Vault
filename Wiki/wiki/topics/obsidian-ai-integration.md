@@ -20,7 +20,7 @@ related:
 
 # Obsidian AI 集成方案
 
-2025-2026 年，AI 与 Obsidian 的集成出现了多种路线。核心问题不是「要不要用 AI」，而是「选哪条路线」。本文梳理五种主流方案，从成本、隐私、门槛、能力四个维度对比。
+2025-2026 年，AI 与 Obsidian 的集成出现了多种路线。核心问题不是「要不要用 AI」，而是「选哪条路线」。本文梳理六种主流方案，从成本、隐私、门槛、能力四个维度对比。
 
 ## 路线总览
 
@@ -155,6 +155,66 @@ ollama serve
 ### MiniMax 替代方案（国内推荐）
 
 MiniMax Coding Plan 29 元/月起，通过设置 `ANTHROPIC_BASE_URL` 指向 `https://api.minimaxi.com/anthropic`，可让 Claude Code 使用国内包月模型。
+
+## 方案六：Gemini CLI（Google 出品）
+
+Gemini CLI 是 Google 推出的命令行 AI 工具，直接操作本地文件系统，与 Obsidian 天然兼容。
+
+### 安装与配置
+
+```bash
+# 前置条件：Node.js
+node --version  # 确认已安装
+
+# 安装 Gemini CLI
+npm install -g @google/gemini-cli
+
+# 进入 Vault 启动
+cd /path/to/your/vault
+gemini
+# 选择 Login with Google 完成授权
+```
+
+### 典型用例
+
+**智能选题**：
+```
+"自媒体存档"文件夹里是我过去写的所有视频脚本。
+请分析我的选题特色和行文风格，结合当前网络热点，
+帮我生成 10 个新的视频选题。每个选题包含标题、简介和大纲。
+将结果输出到"新选题.md"文件中。
+```
+
+**批量文件处理**：
+```
+请将"年度总结.md"按二级标题拆分成多个独立笔记，
+每个笔记以二级标题命名，存放到"2025年度总结"文件夹中。
+```
+
+**模仿文风写作**：
+```
+请阅读"自媒体存档"文件夹中的内容，学习我的行文风格。
+然后搜索最近关于"AI Agent"的热门话题，模仿我的风格写一篇视频脚本。
+```
+
+### 安全：Git 兜底
+
+用 Git 同步的 Vault 中，AI 的每次操作都被 Git 追踪。不满意随时回滚：
+```bash
+git checkout -- 文件名    # 恢复单个文件
+```
+或在 GitHub Desktop 中 "Discard changes" 一键撤销。
+
+### 与 Claude Code 的对比
+
+| 维度 | Gemini CLI | Claude Code |
+|------|------------|-------------|
+| 模型 | Gemini 系列 | Claude 系列 |
+| 费用 | 有免费额度 | 按 API 用量 |
+| 网络搜索 | ✅ 内置 | 需通过 MCP |
+| 代码能力 | 强 | 更强 |
+| 中文内容创作 | 较好 | 优秀 |
+| 国内可用性 | 需网络环境 | 需网络环境/第三方中转 |
 
 ## 总结建议
 

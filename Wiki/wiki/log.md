@@ -102,3 +102,14 @@
   - wiki/comparisons/obsidian-notion-tolaria.md — Obsidian vs Notion vs Tolaria 三维全面对比
 - **更新页面**：wiki/overview.md（新增 Obsidian 知识体系板块）、wiki/index.md（新增概念/实体/专题/对比/原始资料板块）
 - 知识领域覆盖：知识管理方法论（PARA/Zettelkasten/MOC）、Obsidian 插件生态（20 个核心插件）、AI 集成路线（Claude Code/DeepSeek/Ollama）、信息收集闭环（Web Clipper/微信同步）、LLM Wiki 生态（7 种开源实现）、工具对比（Obsidian vs Notion vs Tolaria）
+
+## [2026-05-09] ingest | 收录 8 篇 Obsidian 系统教程（6 章 + 大纲 + 总教程）
+- **摘要**：处理 `raw/articles/Obsidian/` 下新增的 8 个教程文件，这是上一批 15 篇公众号文章的补充——一本完整结构化的 Obsidian 教科书
+- **新增专题页（2个）**：
+  - wiki/topics/obsidian-git-sync.md — Git 云同步完整指南（GitHub 私有仓库 + Git 插件自动同步 + 手机端 Token 配置 + 多重备份策略）
+  - wiki/topics/obsidian-plugins-advanced.md — 插件进阶指南（Custom Attachment Location / Enhancing Export / Dataview / Templater / Calendar / QuickAdd 深度配置）
+- **更新页面**：
+  - wiki/topics/obsidian-ai-integration.md — 新增方案六：Gemini CLI（Google 出品，安装/配置/智能选题/批量处理/模仿文风），方案总数 5→6
+  - wiki/overview.md — 新增插件进阶和 Git 云同步板块、更新文章计数（60→68）、更新专题页面计数（20→22）
+  - wiki/index.md — 新增 2 个专题页条目、新增 Obsidian 教程资料板块
+- 知识领域覆盖：Git 多端同步（电脑+手机完整配置）、图片标准化管理、文档多格式导出、动态模板系统、快速捕获工作流、Gemini CLI 智能化工作流

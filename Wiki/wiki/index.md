@@ -106,6 +106,8 @@ updated: 2026-05-09
 - [Obsidian AI 集成方案](topics/obsidian-ai-integration.md) — 五种方案对比：Claude Code CLI / Copilot+DeepSeek / Claudian / Ollama / Web Clipper
 - [Obsidian 信息收集工作流](topics/obsidian-capture-workflow.md) — 浏览器 Web Clipper / 微信 Messager / 笔记同步助手，三种入口打通
 - [Obsidian LLM Wiki 实践](topics/obsidian-llm-wiki-practice.md) — 七种 Karpathy Wiki 开源实现 + Python 知识蒸馏脚本 + LLM Wiki v2 扩展
+- [Obsidian Git 云同步指南](topics/obsidian-git-sync.md) — 免费 Git+GitHub 多端同步，电脑端+手机端完整教程
+- [Obsidian 插件进阶指南](topics/obsidian-plugins-advanced.md) — 图片管理/文档导出/Dataview/Templater/Calendar/QuickAdd 深度配置
 
 ---
 
@@ -164,3 +166,13 @@ updated: 2026-05-09
 - 微信文章一键入库 Obsidian — 枫林，2026.04，Messager 插件+五步知识内化法
 - Tolaria：结合 Obsidian 和 Notion 优势的开源笔记新品 — 火箭君，2026.04，后发优势分析
 - 一个装上就不想换的 Obsidian 主题：Baseline — 毕小烦，2026.04，主题深度评测+迁移指南
+
+### Obsidian 教程资料
+8 篇 Obsidian 系统教程（含大纲和 6 章正文 + 总教程），位于 `raw/articles/Obsidian/`：
+- Obsidain使用教程大纲 — 全系列导航与教学规划
+- 01-基础入门 — 安装/界面/设置/笔记管理/Markdown 语法
+- 02-核心功能与方法论 — 双向链接/知识图谱/Canvas/PARA/MOC/原子笔记
+- 03-Git云同步 — Git+GitHub 电脑端+手机端完整同步教程
+- 04-第三方插件 — Custom Attachment Location/Enhancing Export/Dataview/Templater/Calendar/QuickAdd
+- 05-AI接入 — Gemini CLI 配置与智能化工作流
+- 06-附录 — 插件清单/工具清单/快捷键速查/FAQs
