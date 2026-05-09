@@ -33,6 +33,8 @@ knowledge-base/
 │   ├── entities/      # 实体页面（人物、组织、产品、工具）
 │   ├── topics/        # 专题页面（深入讨论、教程指南）
 │   └── comparisons/   # 对比页面
+├── 教程/              # 面向新手的学习教程（与 wiki 互补，需同步维护）
+│   └── *.md           # 综合教程文档，基于 wiki 内容生成
 └── output/            # 输出产物（非 wiki 页面）
     ├── slides/        # Marp 幻灯片
     ├── charts/        # 图表（matplotlib 等）
@@ -89,6 +91,11 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 4. 更新 `wiki/index.md`，添加新页面条目
 5. 在 `wiki/log.md` 末尾追加操作记录
 6. 告知用户本次收录影响了哪些页面
+7. **检查并更新教程**：浏览 `教程/` 文件夹中的全部教程文档，逐一判断本次新增/更新的 wiki 页面是否与某份教程相关。如果相关，主动更新教程中对应的章节，并告知用户教程的变更内容。判断标准：
+   - 新增的概念/实体/工具 → 教程中是否有对应介绍段落需要补充
+   - 更新的安装步骤/命令/配置 → 教程中引用的代码块是否需要同步
+   - 新增的对比/选型建议 → 教程中的对比表或推荐策略是否需要刷新
+   - 新增的工作流/实践 → 教程中的「拓展使用」章节是否需要追加
 
 ### 2. 查询（Query）
 
@@ -157,6 +164,7 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 ## [2026-05-09] ingest | 资料标题
 - 新增页面：wiki/topics/xxx.md
 - 更新页面：wiki/entities/xxx.md
+- 教程同步：教程/AI Coding 学习计划.md（更新了 xxx 章节）
 - 摘要：一句话描述本次操作
 
 ## [2026-05-09] lint | 巡检
