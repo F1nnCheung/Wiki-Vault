@@ -34,7 +34,7 @@ knowledge-base/
 ```yaml
 ---
 title: 页面标题
-type: entity | topic | comparison | overview ｜ concepts
+type: entity | topic | concept | comparison | overview
 tags: [标签1, 标签2]
 created: 2026-05-09
 updated: 2026-05-09
@@ -47,7 +47,7 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 
 - 文件名使用英文小写 + 连字符：`large-language-models.md`
 - 页面标题（frontmatter 中的 title）使用中文
-- 目录名使用英文：entities、topics、comparisons
+- 目录名使用英文：concepts、entities、topics、comparisons
 
 ### 内容规范
 
@@ -68,8 +68,9 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 2. 与用户讨论关键要点，确认理解
 3. 创建或更新以下内容：
    - **摘要页面**：`wiki/topics/` 下一份结构化摘要
-   - **实体页面**：涉及的人物、组织、概念，在 `wiki/entities/` 下新建或更新
-   - **专题页面**：如有深化讨论，在 `wiki/topics/` 下更新
+   - **概念页面**：涉及的抽象概念、范式、方法论定义，在 `wiki/concepts/` 下新建或更新
+   - **实体页面**：涉及的人物、组织、产品、工具，在 `wiki/entities/` 下新建或更新
+   - **专题页面**：深入讨论或教程指南，在 `wiki/topics/` 下更新
    - **overview.md**：如果新信息影响了全局认知，更新概览
 4. 更新 `wiki/index.md`，添加新页面条目
 5. 在 `wiki/log.md` 末尾追加操作记录
@@ -113,6 +114,9 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 
 ## 概览
 - [全局概览](overview.md) — 核心论点与知识图谱总览
+
+## 概念
+- [概念名](concepts/xxx.md) — 一句话摘要
 
 ## 实体
 - [实体名](entities/xxx.md) — 一句话摘要
