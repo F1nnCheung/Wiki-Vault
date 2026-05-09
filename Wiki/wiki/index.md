@@ -75,6 +75,7 @@ updated: 2026-05-09
 
 ### 🚀 Claude Code 入门篇
 - [命令与日常使用](topics/claude-code-getting-started.md) — 50+ 命令体系、会话管理、权限规则
+- [高频实战技巧](topics/claude-code-practical-techniques.md) — /init + /memory 项目记忆、会话管理四件套、模型/上下文/成本/状态监控
 - [提示词工程](topics/claude-code-prompt-engineering.md) — 20 个结构化模板、Spec-Driven 开发
 
 ### 🧠 Claude Code 进阶篇
@@ -83,6 +84,7 @@ updated: 2026-05-09
 - [Superpowers + gstack 工作流](topics/claude-code-superpowers-workflow.md) — 完整开发闭环
 - [设计集成与前端开发](topics/claude-code-design-integration.md) — Figma MCP、DESIGN.md
 - [辅助工具](topics/claude-code-tools.md) — Claude HUD、Understand-Anything
+- [从入门到精通指南（花叔 v2.0.0）](topics/claude-code-mastery-guide.md) — 三层模型、CLAUDE.md 深度实践、Computer Use/Voice Mode、Agent Teams、六反模式
 
 ### 🛠️ AI Coding 工具教程
 - [Trae 完整教程](topics/trae-guide.md) — 安装、Chat/Builder/SOLO/IDE 四种模式、MCP 配置
@@ -125,7 +127,7 @@ updated: 2026-05-09
 
 ## 原始资料
 
-24 篇 Claude Code 中文文章，位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
 
 ### OpenClaw 资料
 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 PDF（已转 Markdown），位于 `raw/articles/OpenClaw/`：

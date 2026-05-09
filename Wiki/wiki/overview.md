@@ -39,7 +39,7 @@ related:
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 15 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南） + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -67,6 +67,7 @@ Claude Code 知识体系
 ├── 🚀 入门篇 ─── 50+ 命令体系、日常工作流、提示词工程
 │   ├── 会话管理（compact/clear/resume/rewind）
 │   ├── 权限管理（allow/ask/deny 三层分级）
+│   ├── 高频实战技巧 ── /init + /memory 项目记忆、会话管理四件套、模型/上下文/成本/状态监控
 │   └── Spec-Driven 开发模式
 │
 └── 🧠 进阶篇
@@ -75,6 +76,7 @@ Claude Code 知识体系
     ├── Superpowers+gstack ── 完整开发闭环（想法→上线）
     ├── 设计集成 ── Figma MCP、DESIGN.md、UI/UX Skill 体系
     ├── 辅助工具 ── Claude HUD、Understand-Anything
+    ├── 精通指南（花叔 v2.0.0）── 三层模型、CLAUDE.md 深度实践、Computer Use/Voice Mode、Agent Teams、六反模式
     └── 提示词工程 ── 5 大场景 20 个模板
 
 实体层：Claude Code / MCP / Superpowers / gstack / CC Switch / CCR
@@ -175,9 +177,9 @@ Obsidian 知识体系
 
 ## 关键数据
 
-- 收录文章：68 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践
+- 收录文章：71 篇（Claude Code 27 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南
 - 核心实体：10 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent、Obsidian、Tolaria）
-- 专题页面：22 个
+- 专题页面：24 个
 - 概念页面：11 个
 - 对比页面：2 个

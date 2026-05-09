@@ -113,3 +113,18 @@
   - wiki/overview.md — 新增插件进阶和 Git 云同步板块、更新文章计数（60→68）、更新专题页面计数（20→22）
   - wiki/index.md — 新增 2 个专题页条目、新增 Obsidian 教程资料板块
 - 知识领域覆盖：Git 多端同步（电脑+手机完整配置）、图片标准化管理、文档多格式导出、动态模板系统、快速捕获工作流、Gemini CLI 智能化工作流
+
+## [2026-05-09] ingest | 收录 3 篇 Claude Code 新增资料（2 篇实战技巧 .docx + 1 本精通指南 PDF）
+- **摘要**：处理 `raw/articles/Claude Code/` 下新增的 3 个文件（2 篇 .docx + 1 本 10 章 PDF），覆盖高频实战技巧（乐进）和从入门到精通完整指南（花叔 v2.0.0）
+- **文件转换**：
+  - 一、Claude Code：从入门到进阶的高频实战技巧(一).docx → textutil 转 text（68 行）
+  - 二、Claude Code：从入门到进阶的高频实战技巧(二).docx → textutil 转 text（132 行）
+  - Claude Code从入门到精通-v2.0.0.pdf → pdftotext 转 text（3330 行，10 章 + 附录）
+- **新增专题页（2个）**：
+  - wiki/topics/claude-code-practical-techniques.md — 高频实战技巧（/init + /memory 项目记忆系统、会话管理四件套 compact/clear/resume/export、模型/上下文/成本/状态四项监控）
+  - wiki/topics/claude-code-mastery-guide.md — 从入门到精通指南（三层模型 Prompt→Context→Harness、CLAUDE.md 深度实践：护栏不是手册 + 层级结构 + 迭代飞轮、Auto 模式 AI 分类器、Computer Use/Voice Mode、Agent Teams/Subagents、六反模式、TAOR 循环架构、产品开发实战教训）
+- **更新页面**：
+  - wiki/entities/claude-code.md — 新增 Computer Use、Voice Mode、Agent Teams、Auto 模式、三层能力模型、CLAUDE.md 层级结构、Web 模式
+  - wiki/overview.md — 新增实战技巧和精通指南板块、更新文章计数（68→71）、更新专题页面计数（22→24）
+  - wiki/index.md — 新增 2 个专题页条目、更新 Claude Code 资料索引（24→27）
+- 知识领域覆盖：项目记忆系统、会话管理哲学、三层能力模型、CLAUDE.md 深度最佳实践、Computer Use 与 GUI 操作、Voice Mode 语音交互、Agent Teams 多智能体协作、Auto 模式安全机制、六反模式、TAOR Agent 循环、产品开发工作流
