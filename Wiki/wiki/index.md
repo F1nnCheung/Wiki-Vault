@@ -146,3 +146,21 @@ updated: 2026-05-09
 - 手把手：给 Hermes Agent 装一个六面板控制中心 — 2026.05，Workspace 安装配置
 - 从 Claude Code 看 Harness Engineering — 澄旭，2026.05，编排工程方法论
 - 我为什么推荐你安装 Hermes Agent — Jeffrey Hu，2026.04，硬件选择/部署实操
+
+### Obsidian 资料
+15 篇 Obsidian 知识管理中文文章，位于 `raw/articles/Obsidian/`：入门与指南(5) / AI 集成(5) / 信息收集(3) / 生态与替代品(2)
+- 万字长文：个人如何用 Obsidian 搭建本地知识库 — 南哥，2026.04，全方位指南：PARA/Zettelkasten/MOC/20 插件/AI 集成/Karpathy Wiki
+- Claude Code+Obsidian：让 AI 当你的知识管家 — 强西，2026.05，Markdown 是 LLM 母语/CLAUDE.md/obsidian-skills
+- 别再手动整理笔记了！Claude+Obsidian 打造永不遗忘的 AI 知识系统 — Harry，2026.05，Claudian 插件介绍
+- Obsidian CLI 基础使用教程 AI 化知识管理全过程 — ShikiLab，2026.03，CLI+Claude Code+MiniMax 配置
+- 从崩溃到兴奋，5 小时把 DeepSeek V4 接入 Obsidian 实现自动化 — 小观，2026.04，踩坑全记录
+- 新手别折腾了：Obsidian + DeepSeek 组合便宜又能直接用 — 西湖太极熊，2026.05，Copilot+DeepSeek 方案
+- 手把手实践 Karpathy 爆红的 AI 知识库 — 多颗糖，2026.04，LLM Wiki 搭建教程
+- 推荐 obsidian-wiki（14+ Agent 共享 Wiki Skills） — 灵境星匠，2026.05，7 种实现对比+LangChain 实战
+- 公开我的 Obsidian LLM Wiki 的脚本 — V二君，2026.04，双平台 Python 知识蒸馏脚本
+- 建立 Obsidian 个人知识库的正确驾驶方式 — isEris，2026.04，插件 vs 脚本方案反思
+- 我简直爱死这个 Obsidian 插件了：Web Clipper 打通浏览器 — 蒋先森，2026.03，浏览器一键保存
+- 微信文章 5 秒保存到 Obsidian 知识库 — Kevin，2026.04，笔记同步助手配置
+- 微信文章一键入库 Obsidian — 枫林，2026.04，Messager 插件+五步知识内化法
+- Tolaria：结合 Obsidian 和 Notion 优势的开源笔记新品 — 火箭君，2026.04，后发优势分析
+- 一个装上就不想换的 Obsidian 主题：Baseline — 毕小烦，2026.04，主题深度评测+迁移指南
