@@ -130,11 +130,43 @@ Hermes 深度专题
     └── Agent = Model + Harness，生成-评估分离
 ```
 
+## Obsidian 知识管理体系
+
+```
+Obsidian 知识体系
+│
+├── 🏗️ 基础概念 ─── 第二大脑、File over App、LLM Wiki
+│
+├── 🔰 入门指南 ─── PARA / Zettelkasten / MOC 方法论 + 20 个核心插件 + 从零搭建实操
+│
+├── 🤖 AI 集成 ───── 五种方案对比
+│   ├── Claude Code + Obsidian CLI（最强能力）
+│   ├── Copilot + DeepSeek（新手最佳：便宜 6-15 倍）
+│   ├── Claudian 插件（无缝嵌入侧边栏）
+│   ├── Copilot + Ollama（完全本地，零数据外传）
+│   └── Web Clipper + Claude Code 批量处理
+│
+├── 📥 信息收集 ──── 三种入口打通
+│   ├── Obsidian Web Clipper：浏览器 → Obsidian，3 秒保存
+│   ├── 微信同步：笔记同步助手 / Messager 插件
+│   └── LLM Wiki raw/ 收录：Web Clipper → raw/ → AI 处理
+│
+├── 🔄 LLM Wiki 实践 ─ 七种开源实现
+│   ├── 完整应用：llmwiki、llm_wiki、Karpathy-LLM-Wiki
+│   ├── Skill 包：llm-wiki-skill、llm-knowledge-base、karpathy-llm-wiki
+│   └── Obsidian Vault 内：Ar9av/obsidian-wiki（14+ Agent 共享）
+│
+├── 🆚 工具对比 ─── Obsidian vs Notion vs Tolaria
+│   └── 本地优先 vs 云端优先 vs 两者兼顾
+│
+└── 🔌 实体层 ─── Obsidian、Tolaria
+```
+
 ## 关键数据
 
-- 收录文章：45 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + 橙皮书 1 份）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成
-- 核心实体：8 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent）
-- 专题页面：16 个
-- 概念页面：9 个
-- 对比页面：1 个
+- 收录文章：60 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 15 篇 + 橙皮书 1 份）
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践
+- 核心实体：10 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent、Obsidian、Tolaria）
+- 专题页面：20 个
+- 概念页面：11 个
+- 对比页面：2 个

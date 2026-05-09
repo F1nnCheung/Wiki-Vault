@@ -7,7 +7,7 @@ updated: 2026-05-09
 # 知识库索引
 
 ## 概览
-- [全局概览](overview.md) — Claude Code + AI Coding 知识体系总览
+- [全局概览](overview.md) — Claude Code + AI Coding + Obsidian 知识管理三大体系总览
 
 ---
 
@@ -34,6 +34,10 @@ updated: 2026-05-09
 - [Agent 上下文压缩](concepts/agent-context-compression.md) — 压中间 vs 压头部，Session 链保数据不丢
 - [Harness Engineering（编排工程）](concepts/harness-engineering.md) — Agent = Model + Harness，生成-评估分离的行业共识
 
+### Obsidian / 知识管理概念
+- [第二大脑（Second Brain）](concepts/second-brain.md) — 外部化的、可持久积累的认知基础设施
+- [File over App](concepts/file-over-app.md) — 数据属于用户，文件比应用更长寿的软件哲学
+
 ---
 
 ## 实体
@@ -54,6 +58,10 @@ updated: 2026-05-09
 ### AI Agent 工具
 - [OpenClaw](entities/openclaw.md) — 开源个人 AI Agent（24.7 万 Stars），消息平台交互
 - [Hermes Agent](entities/hermes-agent.md) — 自进化 AI Agent，多平台网关（13.7 万 Stars）
+
+### 知识管理工具
+- [Obsidian](entities/obsidian.md) — 本地优先、Markdown 原生的个人知识管理工具，2700+ 插件生态
+- [Tolaria](entities/tolaria.md) — 2026 年新兴开源 PKM，取 Obsidian（本地 Markdown）+ Notion（友好界面）之长
 
 ---
 
@@ -93,12 +101,21 @@ updated: 2026-05-09
 - [Hermes + Obsidian 知识库集成](topics/hermes-obsidian-integration.md) — Obsidian 做底座，Hermes 做执行层：Source→Topic→Draft→Published 生产线
 - [Hermes 个人知识管理 RAG 检索](topics/hermes-rag-setup.md) — Ollama Embedding + ChromaDB，自然语言检索所有笔记
 
+### 📓 Obsidian 知识管理
+- [Obsidian 入门指南](topics/obsidian-getting-started.md) — PARA / Zettelkasten / MOC 方法论 + 20 个核心插件 + 从零搭建实操
+- [Obsidian AI 集成方案](topics/obsidian-ai-integration.md) — 五种方案对比：Claude Code CLI / Copilot+DeepSeek / Claudian / Ollama / Web Clipper
+- [Obsidian 信息收集工作流](topics/obsidian-capture-workflow.md) — 浏览器 Web Clipper / 微信 Messager / 笔记同步助手，三种入口打通
+- [Obsidian LLM Wiki 实践](topics/obsidian-llm-wiki-practice.md) — 七种 Karpathy Wiki 开源实现 + Python 知识蒸馏脚本 + LLM Wiki v2 扩展
+
 ---
 
 ## 对比
 
 - [Agent 框架对比索引](comparisons/agent-frameworks-moc.md) — OpenClaw vs Hermes 知识体系导航（MOC）
 - [OpenClaw vs Hermes 深度对比](comparisons/openclaw-vs-hermes.md) — 设计哲学/学习闭环/记忆/压缩/安全/执行环境/选型建议，九维全面对比
+
+### PKM 工具对比
+- [Obsidian vs Notion vs Tolaria](comparisons/obsidian-notion-tolaria.md) — 本地优先 vs 云端优先 vs 两者兼顾，三款知识管理工具全面对比
 
 ## 输出产物
 
