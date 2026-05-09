@@ -1,6 +1,6 @@
 ---
 title: Vibe Coding
-type: entity
+type: concept
 tags: [vibe-coding, concept, karpathy]
 created: 2026-05-09
 updated: 2026-05-09
