@@ -12,10 +12,10 @@
   - [1.3 六维概念对比](#13-六维概念对比-skills--mcp--agent--rule--prompt--命令)
 - [第二部分：主流 AI Coding 工具](#第二部分主流-ai-coding-工具)
   - [2.1 工具全景对比](#21-工具全景对比)
-  - [2.2 Claude Code](#22-claude-code)
-  - [2.3 Cursor](#23-cursor)
-  - [2.4 Trae](#24-trae)
-  - [2.5 Codex](#25-codex)
+  - [2.2 Claude Code](#22-claude-code) — 介绍 · 安装与配置 · 基本使用 · 进阶使用（Skill / MCP） · 高阶指令
+  - [2.3 Cursor](#23-cursor) — 介绍 · 安装 · 基本使用 · 进阶使用 · 插件
+  - [2.4 Trae](#24-trae) — 介绍 · 安装 · 四种模式 · 进阶使用 · Trae vs Cursor
+  - [2.5 Codex](#25-codex) — 介绍 · 安装与配置 · 基本使用 · Spec-Driven 开发 · 适用场景
   - [2.6 GitHub Copilot](#26-github-copilot)
 - [第三部分：Agent 框架](#第三部分agent-框架)
   - [3.1 OpenClaw](#31-openclaw)
@@ -272,6 +272,10 @@ Agent（决策层）
 - **Skills**：教 AI「遇到某类问题怎么思考」
 - **MCP**：给 AI「连接外部世界的手脚」
 - **Agent**：以上所有要素整合后的「自主行动者」
+
+---
+
+## 第二部分：主流 AI Coding 工具
 
 ### 2.1 工具全景对比
 
