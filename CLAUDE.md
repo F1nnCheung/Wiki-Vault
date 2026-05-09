@@ -12,7 +12,7 @@
 
 当用户在知识库目录（`Wiki/` 或其子目录）下提问时，严格遵循以下优先级：
 
-1. **优先搜索知识库**：先用 `Grep`、`Glob`、`Read` 在 vault 中搜索相关内容，基于 `wiki/` 下的已整理页面和 `raw/` 下的原始资料回答
+1. **优先搜索知识库**：先用 `Grep`、`Glob`、`Read` 在 vault 中搜索相关内容，基于 `Wiki/wiki/` 下的已整理页面和 `Wiki/raw/` 下的原始资料回答
 2. **知识库不足时才联网**：仅当知识库中的内容不足以回答用户问题（例如信息缺失、过时、不够全面）时，才使用 `WebSearch` 或 `WebFetch` 补充搜索
 3. **主动询问收录**：当通过联网搜索获取了新信息后，**必须主动询问用户**是否要将搜索到的内容收录到知识库中。如用户同意，按照「收录（Ingest）」流程处理
 
@@ -61,8 +61,8 @@ type: entity | topic | concept | comparison | overview
 tags: [标签1, 标签2]
 created: 2026-05-09
 updated: 2026-05-09
-sources: [raw/articles/example.md]
-related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
+sources: [Wiki/raw/articles/主题/example.md]
+related: [topics/xxx.md, entities/yyy.md]
 ---
 ```
 
@@ -78,7 +78,7 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 - 开头用 2-3 句话概括核心要点
 - 使用 `##` 二级标题组织内容结构
 - 正文中通过 `[[页面标题]]` 或 `[页面标题](相对路径.md)` 链接到其他 wiki 页面
-- 引用原始资料时使用 `[来源](raw/...)` 格式
+- 引用原始资料时使用 `[[Wiki/raw/articles/主题/xxx|来源标题]]` 格式
 - 如有与其他页面的矛盾，使用 `> ⚠️ 矛盾：` 引用块标注
 
 ## 工作流
@@ -90,13 +90,13 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 1. 阅读原始资料，提取核心信息
 2. 与用户讨论关键要点，确认理解
 3. 创建或更新以下内容：
-   - **摘要页面**：`wiki/topics/` 下一份结构化摘要
-   - **概念页面**：涉及的抽象概念、范式、方法论定义，在 `wiki/concepts/` 下新建或更新
-   - **实体页面**：涉及的人物、组织、产品、工具，在 `wiki/entities/` 下新建或更新
-   - **专题页面**：深入讨论或教程指南，在 `wiki/topics/` 下更新
+   - **摘要页面**：`Wiki/wiki/topics/` 下一份结构化摘要
+   - **概念页面**：涉及的抽象概念、范式、方法论定义，在 `Wiki/wiki/concepts/` 下新建或更新
+   - **实体页面**：涉及的人物、组织、产品、工具，在 `Wiki/wiki/entities/` 下新建或更新
+   - **专题页面**：深入讨论或教程指南，在 `Wiki/wiki/topics/` 下更新
    - **overview.md**：如果新信息影响了全局认知，更新概览
-4. 更新 `wiki/index.md`，添加新页面条目
-5. 在 `wiki/log.md` 末尾追加操作记录
+4. 更新 `Wiki/wiki/index.md`，添加新页面条目
+5. 在 `Wiki/wiki/log.md` 末尾追加操作记录
 6. 告知用户本次收录影响了哪些页面
 7. **检查并更新教程**：浏览 `教程/` 文件夹中的全部教程文档，逐一判断本次新增/更新的 wiki 页面是否与某份教程相关。如果相关，主动更新教程中对应的章节，并告知用户教程的变更内容。判断标准：
    - 新增的概念/实体/工具 → 教程中是否有对应介绍段落需要补充
@@ -108,7 +108,7 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 
 当用户提问时，严格遵循「先搜库，后联网」的顺序：
 
-1. 先读 `wiki/index.md` 定位相关页面
+1. 先读 `Wiki/wiki/index.md` 定位相关页面
 2. 用 `Grep` 在 vault 中搜索关键词，精读相关页面和原始资料
 3. 基于知识库内容综合回答，附带页面引用
 4. **仅当知识库内容不足以回答时**，才使用 `WebSearch`/`WebFetch` 联网补充
@@ -132,10 +132,10 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 
 当用户需要非 wiki 格式的产物时：
 
-- **幻灯片**：使用 Marp 格式生成，存入 `output/slides/`
-- **图表**：使用 matplotlib 或 mermaid 生成，存入 `output/charts/`
-- **导出**：PDF、HTML 等格式，存入 `output/exports/`
-- 有价值的输出结果，整理为 wiki 页面存回 `wiki/` 目录
+- **幻灯片**：使用 Marp 格式生成，存入 `Wiki/output/slides/`
+- **图表**：使用 matplotlib 或 mermaid 生成，存入 `Wiki/output/charts/`
+- **导出**：PDF、HTML 等格式，存入 `Wiki/output/exports/`
+- 有价值的输出结果，整理为 wiki 页面存回 `Wiki/wiki/` 目录
 
 ## index.md 格式
 
@@ -169,8 +169,8 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 # 操作日志
 
 ## [2026-05-09] ingest | 资料标题
-- 新增页面：wiki/topics/xxx.md
-- 更新页面：wiki/entities/xxx.md
+- 新增页面：Wiki/wiki/topics/xxx.md
+- 更新页面：Wiki/wiki/entities/xxx.md
 - 教程同步：教程/AI Coding 学习计划.md（更新了 xxx 章节）
 - 摘要：一句话描述本次操作
 
@@ -178,7 +178,7 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 - 发现 3 处矛盾、1 个孤立页面
 
 ## [2026-05-09] query | 用户问题摘要
-- 已整理为页面：wiki/comparisons/xxx.md
+- 已整理为页面：Wiki/wiki/comparisons/xxx.md
 ```
 
 日志是追加写入的。每条以 `## [日期] 操作类型 | 标题` 开头，便于用 `grep` 检索。
