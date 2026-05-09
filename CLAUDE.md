@@ -19,26 +19,33 @@
 ## 目录结构
 
 ```
-knowledge-base/
+Vault Root/
 ├── CLAUDE.md          # 本文件 — schema 与工作流定义
-├── raw/               # 原始资料（只读，不可修改）
-│   ├── articles/      # 文章、论文
-│   ├── notes/         # 笔记、日志
-│   └── assets/        # 图片、附件
-├── wiki/              # LLM 生成的知识库
-│   ├── index.md       # 内容索引（每次收录后更新）
-│   ├── log.md         # 操作日志（追加写入）
-│   ├── overview.md    # 全局概览与核心论点
-│   ├── concepts/      # 概念页面（抽象概念、范式、方法论定义）
-│   ├── entities/      # 实体页面（人物、组织、产品、工具）
-│   ├── topics/        # 专题页面（深入讨论、教程指南）
-│   └── comparisons/   # 对比页面
-├── 教程/              # 面向新手的学习教程（与 wiki 互补，需同步维护）
-│   └── *.md           # 综合教程文档，基于 wiki 内容生成
-└── output/            # 输出产物（非 wiki 页面）
-    ├── slides/        # Marp 幻灯片
-    ├── charts/        # 图表（matplotlib 等）
-    └── exports/       # 导出文件（PDF、HTML 等）
+├── Wiki/              # 知识库根目录
+│   ├── llm-wiki.md    # LLM Wiki 方法论原始文档（只读）
+│   ├── raw/           # 原始资料（只读，不可修改）
+│   │   ├── articles/  # 文章，按主题分子文件夹
+│   │   │   ├── Claude Code/
+│   │   │   ├── Hemmers/
+│   │   │   ├── Obsidian/
+│   │   │   └── OpenClaw/
+│   │   ├── notes/     # 笔记、日志
+│   │   └── assets/    # 图片、附件
+│   ├── wiki/          # LLM 生成的知识库
+│   │   ├── index.md   # 内容索引（每次收录后更新）
+│   │   ├── log.md     # 操作日志（追加写入）
+│   │   ├── overview.md # 全局概览与核心论点
+│   │   ├── concepts/  # 概念页面（抽象概念、范式、方法论定义）
+│   │   ├── entities/  # 实体页面（人物、组织、产品、工具）
+│   │   ├── topics/    # 专题页面（深入讨论、教程指南）
+│   │   └── comparisons/ # 对比页面
+│   └── output/        # 输出产物（非 wiki 页面）
+│       ├── slides/    # Marp 幻灯片
+│       ├── charts/    # 图表（matplotlib 等）
+│       └── exports/   # 导出文件（PDF、HTML 等）
+└── 教程/              # 面向新手的学习教程（与 wiki 互补，需同步维护）
+    └── *.md           # 综合教程文档，基于 wiki 内容生成
+```
 ```
 
 ## 页面规范
