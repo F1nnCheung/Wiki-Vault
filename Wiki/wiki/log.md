@@ -84,3 +84,21 @@
   - `Hermes Agent 从入门到精通 V1.2...1.md` → 加 `_dup` 后缀（与带 frontmatter 版本重复）
   - HTML 文件 `官方出的HermesAgent大全.html` 为微信图片模式，内容无法提取为文本，已转为 Markdown 骨架
   - 11 个 .webp 文件未被任何文章引用（所有文章使用外部 `mmbiz.qpic.cn` URL），保留不动
+
+## [2026-05-09] ingest | 批量收录 15 篇 Obsidian 知识管理文章
+- **摘要**：处理 `raw/articles/Obsidian/` 下全部 15 篇文章，覆盖入门指南、AI 集成、信息收集、LLM Wiki 实践、工具对比五大板块
+- **新增实体页（2个）**：
+  - wiki/entities/obsidian.md — Obsidian 本体（7 人团队，3.5 亿美元估值，2700+ 插件）
+  - wiki/entities/tolaria.md — Tolaria 新兴开源 PKM 工具
+- **新增概念页（2个）**：
+  - wiki/concepts/second-brain.md — 第二大脑（数字认知基础设施）
+  - wiki/concepts/file-over-app.md — File over App（文件比应用更长寿的软件哲学）
+- **新增专题页（4个）**：
+  - wiki/topics/obsidian-getting-started.md — 入门指南（PARA/Zettelkasten/MOC 方法论 + 20 插件 + 从零搭建实操）
+  - wiki/topics/obsidian-ai-integration.md — AI 集成方案（5 种路线对比：Claude Code CLI / Copilot+DeepSeek / Claudian / Ollama / Web Clipper）
+  - wiki/topics/obsidian-capture-workflow.md — 信息收集工作流（Web Clipper / 微信同步 / Messager + 五步知识内化法）
+  - wiki/topics/obsidian-llm-wiki-practice.md — LLM Wiki 实践（7 种开源实现 + Python 蒸馏脚本 + LLM Wiki v2 扩展）
+- **新增对比页（1个）**：
+  - wiki/comparisons/obsidian-notion-tolaria.md — Obsidian vs Notion vs Tolaria 三维全面对比
+- **更新页面**：wiki/overview.md（新增 Obsidian 知识体系板块）、wiki/index.md（新增概念/实体/专题/对比/原始资料板块）
+- 知识领域覆盖：知识管理方法论（PARA/Zettelkasten/MOC）、Obsidian 插件生态（20 个核心插件）、AI 集成路线（Claude Code/DeepSeek/Ollama）、信息收集闭环（Web Clipper/微信同步）、LLM Wiki 生态（7 种开源实现）、工具对比（Obsidian vs Notion vs Tolaria）
