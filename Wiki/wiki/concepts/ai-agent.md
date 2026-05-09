@@ -6,8 +6,8 @@ created: 2026-05-09
 updated: 2026-05-09
 sources: []
 related:
-  - concepts/概念_Vibe Coding.md
-  - concepts/概念_Agentic Engineering.md
+  - concepts/vibe-coding.md
+  - concepts/agentic-engineering.md
   - entities/mcp.md
 ---
 

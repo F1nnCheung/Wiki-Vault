@@ -7,7 +7,7 @@ updated: 2026-05-09
 sources: []
 related:
   - entities/mcp.md
-  - concepts/概念_AI Agent.md
+  - concepts/ai-agent.md
   - topics/claude-code-skills-ecosystem.md
 ---
 

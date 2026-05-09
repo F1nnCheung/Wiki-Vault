@@ -21,11 +21,11 @@ updated: 2026-05-09
 
 ## 概念
 
-- [Vibe Coding](concepts/概念_Vibe Coding.md) — Karpathy 提出，用自然语言描述需求，让 AI「凭感觉」编程
-- [Agentic Engineering](concepts/概念_Agentic Engineering.md) — 多 Agent 自主规划→编写→测试→审查，人类退为架构师
-- [AI Agent](concepts/概念_AI Agent.md) — 自主感知、规划、执行、反思的 AI 系统，L1-L5 能力层次
-- [Skills（技能系统）](concepts/概念_Skills.md) — AI 的可复用「能力包」，自动发现并按需调用
-- [ID Coding](concepts/概念_ID Coding.md) — 终极愿景：意图→服务，编程语言可能消失
+- [Vibe Coding](concepts/vibe-coding.md) — Karpathy 提出，用自然语言描述需求，让 AI「凭感觉」编程
+- [Agentic Engineering](concepts/agentic-engineering.md) — 多 Agent 自主规划→编写→测试→审查，人类退为架构师
+- [AI Agent](concepts/ai-agent.md) — 自主感知、规划、执行、反思的 AI 系统，L1-L5 能力层次
+- [Skills（技能系统）](concepts/skills-concept.md) — AI 的可复用「能力包」，自动发现并按需调用
+- [ID Coding](concepts/id-coding.md) — 终极愿景：意图→服务，编程语言可能消失
 
 ---
 

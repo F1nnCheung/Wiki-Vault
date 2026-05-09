@@ -6,8 +6,8 @@ created: 2026-05-09
 updated: 2026-05-09
 sources: []
 related:
-  - concepts/概念_Vibe Coding.md
-  - concepts/概念_AI Agent.md
+  - concepts/vibe-coding.md
+  - concepts/ai-agent.md
   - topics/ai-coding-history.md
 ---
 
