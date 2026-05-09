@@ -628,3 +628,242 @@ codex init
 
 ---
 
+
+---
+
+## 第三部分：Agent 框架
+
+### 3.1 OpenClaw
+
+#### 介绍
+
+OpenClaw（原名 Clawdbot / Moltbot）是一个开源的**个人 AI Agent**，GitHub 24.7 万+ Stars。它运行在你的电脑上，7×24 小时在线，通过 WhatsApp、Telegram、Discord、飞书等消息平台与你交互，能自主读写文件、执行命令、浏览网页。
+
+官网：openclaw.ai
+
+**一句话**：不是 ChatBot——是 AI 员工。你可以像给同事发微信一样给它派任务。
+
+#### 安装
+
+**系统要求**：macOS 12+ / Ubuntu 20.04+ / Debian 11+ / Windows（WSL2）、Node.js v22+、内存最低 2GB
+
+```bash
+# 官方一键安装（推荐）
+curl -fsSL https://openclaw.ai/install.sh | bash
+
+# 或 npm 安装
+npm install -g openclaw@latest
+
+# Docker 部署
+docker pull openclaw/openclaw:latest
+docker run -d --name openclaw --restart unless-stopped \
+  -v ~/.openclaw:/data -p 3000:3000 \
+  openclaw/openclaw:latest
+```
+
+#### 初始化配置
+
+```bash
+openclaw onboard   # 进入配置向导
+```
+
+**选择 AI 模型 Provider**：Anthropic（Claude）、OpenAI（GPT）、DeepSeek（性价比高）、阿里云百炼（免费额度）、MiniMax、Ollama（本地零成本）
+
+**配置消息平台**：
+```bash
+openclaw config set channels.telegram.botToken "你的Bot Token"
+openclaw config set channels.feishu.appId "cli_xxxxx"
+openclaw config set channels.feishu.appSecret "your_secret"
+openclaw config set channels.feishu.enabled true
+```
+
+#### 日常使用
+
+```bash
+openclaw gateway start    # 启动 Gateway
+openclaw gateway status   # 查看状态
+openclaw gateway stop     # 停止
+openclaw logs --follow    # 查看日志
+openclaw doctor           # 健康检查
+```
+
+**通过消息平台交互**：配置完成后，直接在 WhatsApp/Telegram/Discord 上与 OpenClaw 对话派任务：
+- "帮我把今天的重要邮件整理成摘要"
+- "给我写一个 Python 脚本，每天备份数据库"
+- "github.com/xxx 这个项目分析一下"
+
+#### Skills 技能安装
+
+```bash
+clawhub search "财经分析"     # 搜索 Skill
+clawhub install skill-name    # 安装
+openclaw skills list          # 查看已安装
+```
+
+**推荐 Skills**：skill-vetter（安全扫描）、boot-md（启动上下文注入）、command-logger（操作日志）、session-memory（跨会话持久记忆）
+
+#### 安全建议
+
+1. 不要暴露公网，使用 VPN / IP 白名单
+2. 仅安装可信 Skill，优先用 skill-vetter 扫描
+3. 推荐 Docker 隔离运行
+4. API Key 不要硬编码，用环境变量
+
+---
+
+### 3.2 Hermes Agent
+
+#### 介绍
+
+Hermes Agent 是 Nous Research 开发的开源 AI Agent（MIT 许可证），GitHub 137K+ Stars。中文社区常称「爱马仕」（Hermès 谐音梗）。
+
+**核心特点**：
+- 🧬 **自学习循环**：自动从成功操作中提炼 Skill，越用越聪明
+- 🧠 **跨会话持久记忆**（三层：会话/持久/Skill）
+- 🌐 **20 个消息平台**（微信、飞书、Telegram、Discord、QQBot 等）
+- 🔌 **模型无关**：支持 22+ LLM 提供商
+- 🛠️ **40+ 内置工具**
+- 🏗️ **多 Agent Kanban**：Orchestrator/Dispatcher/Worker/Board
+- 📱 **安卓 Termux 支持**，手机上直接跑
+- 🎯 **`/goal` 跨轮目标追踪**：不用重复提醒，Agent 记住目标持续推进
+
+**一句话**：不是 ChatBot，是一个能从经验中学、越用越强的 AI 代理。
+
+#### 安装
+
+**系统要求**：Linux / macOS / WSL2、Python 3.10+、内存 4GB+
+
+```bash
+# 一键安装（推荐）
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+source ~/.bashrc
+hermes --version
+
+# Docker 部署
+docker pull nousresearch/hermes-agent:latest
+mkdir -p ~/.hermes
+docker run -it --rm -v ~/.hermes:/opt/data nousresearch/hermes-agent setup
+docker run -d --name hermes --restart unless-stopped \
+  -p 8000:8000 -v ~/.hermes:/opt/data \
+  nousresearch/hermes-agent gateway run
+```
+
+#### 配置
+
+```bash
+hermes setup           # 完整配置向导
+hermes model           # 选择模型
+hermes tools           # 配置工具
+hermes gateway setup   # 配置消息平台
+```
+
+**配置文件结构**：
+| 路径 | 用途 |
+|---|---|
+| `~/.hermes/config.yaml` | 主配置 |
+| `~/.hermes/.env` | API 密钥（权限 0600） |
+| `~/.hermes/skills/` | 已安装技能库 |
+| `~/.hermes/sessions/` | 会话数据 |
+
+**LLM 提供商**：OpenRouter（聚合 200+ 模型，国内首选）、Anthropic、OpenAI、火山方舟 Coding Plan、Ollama（本地零成本）、DeepSeek
+
+#### 日常使用
+
+```bash
+hermes doctor           # 系统诊断
+hermes                  # 启动交互式对话
+hermes gateway start    # 启动网关服务（连接消息平台）
+hermes update           # 更新
+hermes skills list      # 查看已学习的 Skill
+hermes skills show <skill-name>
+```
+
+#### 自进化系统（核心差异）
+
+Hermes Agent 区别于其他工具的核心能力：
+
+```
+用户任务 → Agent 执行 → 成功完成
+  ↓
+自动分析：用了什么工具？什么流程？
+  ↓
+提炼为 Skill：存储到 ~/.hermes/skills/
+  ↓
+下次类似任务 → 自动调用 Skill → 更快完成
+```
+
+#### 装完后第一件事：SOUL.md 与 AGENTS.md
+
+| 文件 | 主要作用 | 放在哪里 |
+|------|---------|---------|
+| `SOUL.md` | 全局身份、语气、协作方式 | `~/.hermes/SOUL.md` |
+| `AGENTS.md` | 项目规则、命令、目录、注意事项 | 项目根目录 |
+
+使用顺序：先改 SOUL.md 定性格 → 在每个重要项目根目录放 AGENTS.md 定规矩 → 在项目根目录启动 Hermes
+
+#### Hermes Workspace：六面板 Web 控制中心
+
+| 面板 | 功能 |
+|------|------|
+| **Chat** | 多模型聊天，同对话切换模型不丢上下文 |
+| **Memory** | 浏览、搜索、编辑三层记忆系统 |
+| **Skills** | 100+ 技能在线管理 |
+| **Terminal** | 内置终端 |
+| **Tools** | 实时查看代理调用的工具，可批准/中止 |
+| **Conductor** | 任务编排器，并行生成子代理 |
+
+```bash
+git clone https://github.com/outsourc-e/hermes-workspace.git
+cd hermes-workspace && pnpm install
+# 终端 1：hermes gateway run
+# 终端 2：pnpm dev → 浏览器打开 http://localhost:3000
+```
+
+#### 多 Agent Profile
+
+```bash
+hermes profile create "coder" --clone      # 创建编码助手
+hermes profile create "research" --clone   # 创建研究 Agent
+coder chat                                  # 直接用 Profile 名
+hermes -p research chat                    # 或 -p 标志
+```
+
+典型分工：
+- **default** — 项目经理/架构师：拆解任务、分派子 Agent
+- **coder** — 编码专家：代码编写、调试、修复
+- **research** — 研究助手：文献检索、知识整理
+
+---
+
+### 3.3 OpenClaw vs Hermes 深度对比
+
+两个 Agent 框架回答的根本问题不同：
+
+| 维度 | Hermes Agent | OpenClaw |
+|------|-------------|----------|
+| **核心问题** | Agent 怎么才能越来越强？ | 怎么让 Agent 安全可靠地执行任务？ |
+| **设计哲学** | 成长优先（自进化） | 安全优先（默认安全） |
+| **语言** | Python + Rust CLI | Node.js / TypeScript |
+| **Stars** | 13.7 万 | 24.7 万 |
+| **技能/插件** | Agent 自己创建 Markdown 技能 | Plugin SDK，manifest-first |
+| **记忆系统** | 三层：内置 + 外部 Provider + 会话搜索 | 单插件槽位，可替换 |
+| **安全模型** | 智能审批（辅助模型判断风险） | 10+ 安全模块，默认安全 |
+| **执行环境** | 6 种后端（含无服务器） | 3 种后端（偏安全沙箱） |
+| **国内平台** | 飞书/钉钉/企业微信/微信 原生支持 | 飞书/QQ 扩展支持 |
+| **研究能力** | 内置 RL 训练工具链 | 纯产品，无训练能力 |
+| **安装复杂度** | 中等 | 低 |
+| **适合** | 深度 AI 用户、追求自进化 | 轻量入门、首次尝试 Agent |
+
+**选择建议**：
+```
+安全合规是硬要求 → 选 OpenClaw
+想让 Agent 自己学习改进 → 选 Hermes
+消息平台要覆盖最广 → OpenClaw 支持 25+ 渠道
+主力用飞书/钉钉/企业微信 → Hermes 三者原生支持
+TypeScript 技术栈 → OpenClaw，Python → Hermes
+企业环境/安全合规 → OpenClaw 更让人放心
+快速探索/个人使用 → Hermes 更灵活、更"聪明"
+```
+
+**一句话总结**：Hermes 非常迎合小白用户（灵活、自进化、多平台），OpenClaw 想做生产级平台（安全、稳定、可扩展）——但现阶段 Agent 整体还不成熟，两者都偏探索性质。
+
