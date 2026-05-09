@@ -45,7 +45,8 @@ related: [wiki/entities/xxx.md, wiki/topics/yyy.md]
 
 ### 命名规范
 
-- 文件名使用英文小写 + 连字符：`large-language-models.md`
+- 概念页文件名格式：`概念_中文名.md`，如 `概念_Vibe Coding.md`
+- 实体/专题页文件名使用英文小写 + 连字符：`large-language-models.md`
 - 页面标题（frontmatter 中的 title）使用中文
 - 目录名使用英文：concepts、entities、topics、comparisons
 
