@@ -15,8 +15,9 @@ knowledge-base/
 │   ├── index.md       # 内容索引（每次收录后更新）
 │   ├── log.md         # 操作日志（追加写入）
 │   ├── overview.md    # 全局概览与核心论点
-│   ├── entities/      # 实体页面（人物、组织、产品、概念）
-│   ├── topics/        # 专题页面（深入讨论）
+│   ├── concepts/      # 概念页面（抽象概念、范式、方法论定义）
+│   ├── entities/      # 实体页面（人物、组织、产品、工具）
+│   ├── topics/        # 专题页面（深入讨论、教程指南）
 │   └── comparisons/   # 对比页面
 └── output/            # 输出产物（非 wiki 页面）
     ├── slides/        # Marp 幻灯片
