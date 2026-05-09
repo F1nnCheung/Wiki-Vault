@@ -1,0 +1,23 @@
+{
+  "id": "conv-1778230006102-bgklnrs47",
+  "providerId": "claude",
+  "title": "Replicate Karpathy LLM wiki as knowledge base",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778230006102,
+  "updatedAt": 1778292720863,
+  "lastResponseAt": 1778290342739,
+  "sessionId": "ea2fe078-74bf-4158-8897-4ba10f5d6dc6",
+  "providerState": {
+    "providerSessionId": "ea2fe078-74bf-4158-8897-4ba10f5d6dc6"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1159,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 74752,
+    "contextWindow": 200000,
+    "contextTokens": 75911,
+    "percentage": 38,
+    "contextWindowIsAuthoritative": true
+  }
+}
