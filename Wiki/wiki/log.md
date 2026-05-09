@@ -64,3 +64,23 @@
   - wiki/overview.md — 新增 Agent 框架对比知识体系板块
   - wiki/index.md — 新增对比/概念/专题板块条目
 - **PDF 转换**：OpenClaw橙皮书-从入门到精通-v1.4.0.pdf → raw/articles/OpenClaw/OpenClaw橙皮书.md（2722 行）
+
+## [2026-05-09] ingest | 批量收录 18 篇 Hemmers Hermes Agent 系列文章
+- **摘要**：处理 `raw/articles/Hemmers/` 下全部 18 篇 Markdown 文章，覆盖 Hermes Agent v0.9.0/v0.10.0/v0.13.0 版本更新、多 Agent 团队搭建、SOUL.md/AGENTS.md 配置、Workspace Web 控制中心、Obsidian 集成、RAG 知识管理、Harness Engineering 方法论
+- **新增专题页（5 个）**：
+  - wiki/topics/hermes-multi-agent.md — 多 Agent 团队搭建指南（Profile 隔离 + Kanban 四角色）
+  - wiki/topics/hermes-configuration.md — SOUL.md & AGENTS.md 配置指南（附可复制模板）
+  - wiki/topics/hermes-workspace-setup.md — Hermes Workspace 六面板 Web 控制中心
+  - wiki/topics/hermes-obsidian-integration.md — Obsidian + Hermes 知识库集成（Source→Draft→Published）
+  - wiki/topics/hermes-rag-setup.md — 个人知识管理 RAG 检索（Ollama + ChromaDB）
+- **新增概念页（1 个）**：
+  - wiki/concepts/harness-engineering.md — Harness Engineering 方法论（Agent = Model + Harness，生成-评估分离）
+- **更新页面**：
+  - wiki/entities/hermes-agent.md — Stars 5.2万→13.7万、新增 v0.12.0/v0.13.0 版本历史、新增多 Agent/视频/语音特性、补充 Hemmers 来源
+  - wiki/topics/hermes-agent-guide.md — 新增 SOUL.md & AGENTS.md 配置、Workspace 安装、多 Agent Profile 章节、Android Termux 支持、版本号更新
+  - wiki/overview.md — 新增 Hermes 深度专题架构图、更新文章计数（27→45）、更新页面计数
+  - wiki/index.md — 新增 Hermes 深度专题板块、新增 Harness Engineering 概念条目、更新 Stars 数据、新增 Hemmers 资料索引
+- **清理操作**：
+  - `Hermes Agent 从入门到精通 V1.2...1.md` → 加 `_dup` 后缀（与带 frontmatter 版本重复）
+  - HTML 文件 `官方出的HermesAgent大全.html` 为微信图片模式，内容无法提取为文本，已转为 Markdown 骨架
+  - 11 个 .webp 文件未被任何文章引用（所有文章使用外部 `mmbiz.qpic.cn` URL），保留不动

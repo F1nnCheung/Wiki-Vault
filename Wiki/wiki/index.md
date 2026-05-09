@@ -32,6 +32,7 @@ updated: 2026-05-09
 - [Agent 自进化](concepts/agent-self-evolution.md) — Prompt 驱动 vs 后台流水线，两种自进化策略的设计取舍
 - [Agent 记忆系统设计](concepts/agent-memory-systems.md) — 三层记忆 vs 单插件槽位，冻结快照与 Session 链
 - [Agent 上下文压缩](concepts/agent-context-compression.md) — 压中间 vs 压头部，Session 链保数据不丢
+- [Harness Engineering（编排工程）](concepts/harness-engineering.md) — Agent = Model + Harness，生成-评估分离的行业共识
 
 ---
 
@@ -52,7 +53,7 @@ updated: 2026-05-09
 
 ### AI Agent 工具
 - [OpenClaw](entities/openclaw.md) — 开源个人 AI Agent（24.7 万 Stars），消息平台交互
-- [Hermes Agent](entities/hermes-agent.md) — 自进化 AI Agent，多平台网关（5.2 万 Stars）
+- [Hermes Agent](entities/hermes-agent.md) — 自进化 AI Agent，多平台网关（13.7 万 Stars）
 
 ---
 
@@ -85,6 +86,13 @@ updated: 2026-05-09
 ### 🏗️ Agent 架构专题
 - [Hermes Agent 五层架构深度拆解](topics/hermes-architecture-deep-dive.md) — 跟一条消息走完五层：适配器→网关→主循环→系统提示→自修复→自进化
 
+### 🤖 Hermes 深度专题
+- [Hermes 多 Agent 团队搭建指南](topics/hermes-multi-agent.md) — Profile 隔离、Kanban 四角色协作、实战案例（12 分钟双 Agent 协同开发）
+- [Hermes 配置指南：SOUL.md & AGENTS.md](topics/hermes-configuration.md) — 装完后第一件事：给 Agent 定性格和规矩（附可复制模板）
+- [Hermes Workspace 设置指南](topics/hermes-workspace-setup.md) — 六面板 Web 控制中心：Chat/Memory/Skills/Terminal/Tools/Conductor
+- [Hermes + Obsidian 知识库集成](topics/hermes-obsidian-integration.md) — Obsidian 做底座，Hermes 做执行层：Source→Topic→Draft→Published 生产线
+- [Hermes 个人知识管理 RAG 检索](topics/hermes-rag-setup.md) — Ollama Embedding + ChromaDB，自然语言检索所有笔记
+
 ---
 
 ## 对比
@@ -105,3 +113,19 @@ updated: 2026-05-09
 - 【万字】OpenClaw vs Hermes：一文深入拆解两大 Agent 框架 — 叶小钗，2026.04
 - OpenClaw vs Hermes：拆解 Hermes Agent 五层架构 — 叶小钗，2026.04
 - OpenClaw橙皮书-从入门到精通-v1.4.0 — 花叔，2026.03，涵盖架构/部署/渠道/Skills/模型/安全
+
+### Hemmers 资料
+18 篇 Hermes Agent 系列文章 + 1 个 HTML 页面 + 11 个 WebP 图片，位于 `raw/articles/Hemmers/`：
+- Hermes Agent v0.13.0 来了：137K 星的开源 AI Agent 又进化了 — 朗朗晴空，2026.05，Kanban/跨轮目标/视频理解/语音克隆
+- Hermes Agent v1.3 从入门到精通：开口就能用 — 小飞哥，2026.04，自然语言操作范式
+- Hermes Agent 从入门到精通 V1.2 — 2026.05，安装/模型/平台/v0.9.0 新功能
+- Hermes Agent 多角色团队搭建指南 — 2026.05，Profile 隔离机制 + Kanban 入门
+- Hermes 装完以后先写这 2 个文件：SOUL.md 和 AGENTS.md — 1Percent，2026.05，附可复制模板
+- Hermes(爱马仕)：如何搭建多 Agent 任务编排系统 — 远飞哥，2026.05，Kanban 四角色架构
+- Hermes(爱马仕)：搭建个人知识管理 RAG 检索 — 远飞哥，2026.04，Ollama+ChromaDB 方案
+- 使用 Hermes 开发多智能体的实践及流程 — Dr.Xiang，2026.05，双 Agent 协同 12 分钟完成爬虫
+- Hermes Agent 从入门到实战 — 量子智元，2026.05，学习循环/三层记忆/Skill 自改进
+- 我把 Hermes Agent 接进 Obsidian 后 — 超级猛，2026.05，内容中台 Source→Draft→Published
+- 手把手：给 Hermes Agent 装一个六面板控制中心 — 2026.05，Workspace 安装配置
+- 从 Claude Code 看 Harness Engineering — 澄旭，2026.05，编排工程方法论
+- 我为什么推荐你安装 Hermes Agent — Jeffrey Hu，2026.04，硬件选择/部署实操
