@@ -46,3 +46,21 @@
   - wiki/topics/openclaw-guide.md — OpenClaw 完整教程（安装→消息平台配置→Skills）
   - wiki/topics/hermes-agent-guide.md — Hermes Agent 完整教程（自进化系统→多平台网关）
 - **更新页面**：wiki/index.md（新增 AI Coding 学习路线和工具教程板块）
+
+## [2026-05-09] ingest | OpenClaw vs Hermes 深度对比系列（2 篇文章 + 1 份橙皮书）
+- **摘要**：处理 `raw/articles/OpenClaw/` 下 3 份资料，构建 Agent 框架对比知识体系
+- **新增对比页（2 个）**：
+  - wiki/comparisons/openclaw-vs-hermes.md — 九维度全面对比（设计哲学/学习闭环/记忆/压缩/安全/执行环境/子Agent/国内生态/选型）
+  - wiki/comparisons/agent-frameworks-moc.md — Agent 框架对比索引（MOC）
+- **新增专题页（1 个）**：
+  - wiki/topics/hermes-architecture-deep-dive.md — 五层架构深度拆解（适配器→网关→主循环→系统提示→自修复→自进化）
+- **新增概念页（3 个）**：
+  - wiki/concepts/agent-self-evolution.md — Agent 自进化（Prompt 驱动 vs 后台流水线）
+  - wiki/concepts/agent-memory-systems.md — Agent 记忆系统设计（三层记忆 vs 单插件）
+  - wiki/concepts/agent-context-compression.md — Agent 上下文压缩（压中间 vs 压头部）
+- **更新页面**：
+  - wiki/entities/openclaw.md — 补充设计哲学、架构特点、安全模型
+  - wiki/entities/hermes-agent.md — 补充五层架构、自进化机制、错误恢复
+  - wiki/overview.md — 新增 Agent 框架对比知识体系板块
+  - wiki/index.md — 新增对比/概念/专题板块条目
+- **PDF 转换**：OpenClaw橙皮书-从入门到精通-v1.4.0.pdf → raw/articles/OpenClaw/OpenClaw橙皮书.md（2722 行）

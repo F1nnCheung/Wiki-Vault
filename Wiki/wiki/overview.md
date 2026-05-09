@@ -6,6 +6,7 @@ created: 2026-05-09
 updated: 2026-05-09
 sources:
   - raw/articles/Claude Code/
+  - raw/articles/OpenClaw/
 related:
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md
@@ -16,11 +17,13 @@ related:
   - topics/claude-code-design-integration.md
   - topics/claude-code-tools.md
   - topics/claude-code-prompt-engineering.md
+  - comparisons/openclaw-vs-hermes.md
+  - topics/hermes-architecture-deep-dive.md
 ---
 
 # 全局概览
 
-本知识库围绕 **Claude Code** 构建，收录了 24 篇中文社区文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code** 和 **Agent 框架对比** 两大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -61,9 +64,31 @@ Claude Code 知识体系
 实体层：Claude Code / MCP / Superpowers / gstack / CC Switch / CCR
 ```
 
+## Agent 框架对比知识体系
+
+```
+OpenClaw vs Hermes 知识体系
+│
+├── 📊 综合对比 ─── 设计哲学 / 学习闭环 / 记忆 / 压缩 / 安全 / 执行环境 / 选型
+│
+├── 🏗️ 架构专题 ─── Hermes 五层架构深度拆解
+│   ├── 适配器模式（20+ 平台统一入口）
+│   ├── Gateway + Profile 隔离
+│   ├── Agent 主循环（迭代预算 / PTC / 工具并行 / 子 Agent）
+│   ├── 系统提示词（模型特定引导 / 安全扫描 / 前缀缓存优化）
+│   └── 自修复（14 种错误分类 / 级联中断 / Session 链）
+│
+└── 🧠 核心概念
+    ├── Agent 自进化（Prompt 驱动 + 后台复盘）
+    ├── Agent 记忆系统（三层记忆 vs 单插件）
+    └── 上下文压缩（压中间 vs 压头部）
+```
+
 ## 关键数据
 
-- 收录文章：24 篇
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法
-- 核心实体：6 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR）
-- 专题页面：9 个
+- 收录文章：27 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + 橙皮书 1 份）
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比
+- 核心实体：8 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent）
+- 专题页面：11 个
+- 概念页面：8 个
+- 对比页面：1 个

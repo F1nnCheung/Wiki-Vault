@@ -21,11 +21,17 @@ updated: 2026-05-09
 
 ## 概念
 
+### AI Coding 概念
 - [Vibe Coding](concepts/vibe-coding.md) — Karpathy 提出，用自然语言描述需求，让 AI「凭感觉」编程
 - [Agentic Engineering](concepts/agentic-engineering.md) — 多 Agent 自主规划→编写→测试→审查，人类退为架构师
 - [AI Agent](concepts/ai-agent.md) — 自主感知、规划、执行、反思的 AI 系统，L1-L5 能力层次
 - [Skills（技能系统）](concepts/skills-concept.md) — AI 的可复用「能力包」，自动发现并按需调用
 - [ID Coding](concepts/id-coding.md) — 终极愿景：意图→服务，编程语言可能消失
+
+### Agent 架构概念
+- [Agent 自进化](concepts/agent-self-evolution.md) — Prompt 驱动 vs 后台流水线，两种自进化策略的设计取舍
+- [Agent 记忆系统设计](concepts/agent-memory-systems.md) — 三层记忆 vs 单插件槽位，冻结快照与 Session 链
+- [Agent 上下文压缩](concepts/agent-context-compression.md) — 压中间 vs 压头部，Session 链保数据不丢
 
 ---
 
@@ -76,11 +82,15 @@ updated: 2026-05-09
 - [OpenClaw 完整教程](topics/openclaw-guide.md) — 安装、消息平台配置、Skills 安装
 - [Hermes Agent 完整教程](topics/hermes-agent-guide.md) — 自进化系统、多平台网关、模型配置
 
+### 🏗️ Agent 架构专题
+- [Hermes Agent 五层架构深度拆解](topics/hermes-architecture-deep-dive.md) — 跟一条消息走完五层：适配器→网关→主循环→系统提示→自修复→自进化
+
 ---
 
 ## 对比
 
-（暂无）
+- [Agent 框架对比索引](comparisons/agent-frameworks-moc.md) — OpenClaw vs Hermes 知识体系导航（MOC）
+- [OpenClaw vs Hermes 深度对比](comparisons/openclaw-vs-hermes.md) — 设计哲学/学习闭环/记忆/压缩/安全/执行环境/选型建议，九维全面对比
 
 ## 输出产物
 
@@ -89,3 +99,9 @@ updated: 2026-05-09
 ## 原始资料
 
 24 篇 Claude Code 中文文章，位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+
+### OpenClaw 资料
+2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 PDF（已转 Markdown），位于 `raw/articles/OpenClaw/`：
+- 【万字】OpenClaw vs Hermes：一文深入拆解两大 Agent 框架 — 叶小钗，2026.04
+- OpenClaw vs Hermes：拆解 Hermes Agent 五层架构 — 叶小钗，2026.04
+- OpenClaw橙皮书-从入门到精通-v1.4.0 — 花叔，2026.03，涵盖架构/部署/渠道/Skills/模型/安全
