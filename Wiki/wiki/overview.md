@@ -8,6 +8,7 @@ sources:
   - raw/articles/Claude Code/
   - raw/articles/OpenClaw/
   - raw/articles/Hemmers/
+  - raw/articles/Obsidian/
 related:
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md
@@ -26,11 +27,19 @@ related:
   - topics/hermes-obsidian-integration.md
   - topics/hermes-rag-setup.md
   - concepts/harness-engineering.md
+  - entities/obsidian.md
+  - topics/obsidian-getting-started.md
+  - topics/obsidian-ai-integration.md
+  - topics/obsidian-capture-workflow.md
+  - topics/obsidian-llm-wiki-practice.md
+  - comparisons/obsidian-notion-tolaria.md
+  - concepts/second-brain.md
+  - concepts/file-over-app.md
 ---
 
 # 全局概览
 
-本知识库围绕 **Claude Code** 和 **Agent 框架对比** 两大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 15 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
