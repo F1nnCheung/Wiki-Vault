@@ -867,3 +867,206 @@ TypeScript 技术栈 → OpenClaw，Python → Hermes
 
 **一句话总结**：Hermes 非常迎合小白用户（灵活、自进化、多平台），OpenClaw 想做生产级平台（安全、稳定、可扩展）——但现阶段 Agent 整体还不成熟，两者都偏探索性质。
 
+
+---
+
+## 第四部分：拓展使用
+
+### 4.1 Obsidian + AI 知识库工作流
+
+**核心认知**：知识库最大的浪费不是「不够大」，而是「存了不用」。
+
+#### 核心方案
+
+Obsidian 做存储底座，AI Agent（Claude Code / Hermes）做执行层。让知识库从「仓库」变成「生产线」：
+
+```
+资料进来 → 判断价值 → 拆成选题 → 生成草稿 → 发布归档
+```
+
+#### 目录设计：给 Agent 认路的
+
+```
+📁 01-Sources     ← 外部资料入库
+📁 02-Accounts    ← 各账号的内容资产
+    └─ 超级猛
+       ├─ Topics    ← 选题池
+       ├─ Drafts    ← 草稿区
+       └─ Published ← 发布归档
+📁 03-Frameworks  ← 内容框架、写作规范、账号定位
+```
+
+最小流转链路：
+```
+Source Note → Topic Note → Draft Note → Published Note
+```
+
+只要这条线跑顺了，知识库就已经从「仓库」变成了「生产线」。
+
+#### 实操流程
+
+**第一步：入库判断**——让 AI 帮你做初筛
+> 判断一篇内容是否值得收入。如果值得，生成 Source Note（核心摘要、关键观点、适合账号、可延展选题、建议目录和文件名）
+
+**第二步：拆选题**——锚住「我要写什么」
+> 基于 Source Note 拆 3 个选题（一句话定义、目标读者、用户痛点、核心承诺、标题候选、简短提纲）
+
+选题四标准：有明确用户痛点、有真实案例、能讲成可复现工作流、能给出可操作方法
+
+**第三步：生成草稿**（别让 AI 直接定稿）
+> ⚠️ 坑：AI 工具文容易写成「某工具是什么、有什么功能、有什么优势」的产品介绍。真正有用的写法是从具体问题切入：「为什么需要它？之前卡在哪？接进来之后哪一步变了？」
+
+AI 产出只当初稿，人工过两轮：
+- 第一轮：删掉正确但没信息量的话
+- 第二轮：补上真实判断和使用细节
+
+**第四步：把固定流程写成 Skill**
+将稳定流程沉淀为 Skill：Source Note 生成规范、Topic Note 字段模板、账号定位/选题偏好/表达风格、公众号 vs 小红书的差异化要求
+
+**第五步：发布后归档形成反馈闭环**
+```
+Source → Topic → Draft → Published → Review → New Topic
+```
+这才叫「内容中台」——不是一个资料库，是一个能持续产生判断的系统。
+
+#### Obsidian 推荐工具组合
+
+| 工具 | 用途 |
+|---|---|
+| Obsidian | 本地 Markdown 知识库底座 |
+| Claude Code | 内容加工、批量处理、知识库分析 |
+| Hermes Agent | 跨平台内容助手（微信/飞书即时交互） |
+| Obsidian Git 插件 | 版本控制 + 多端同步 |
+| Dataview 插件 | 动态查询知识库内容 |
+| Obsidian Web Clipper | 网页内容一键剪藏入库 |
+
+**推荐搭配阅读**：知识库中有 20+ 篇 Obsidian 深度教程，涵盖从入门到 AI 化管理的全流程。
+
+---
+
+### 4.2 Superpowers + gstack 进阶开发闭环
+
+#### 核心理念：大脑 + 手脚
+
+```
+Superpowers（大脑）        gstack（手脚）
+├── brainstorming          ├── /browse（浏览器验证）
+├── writing-plans          ├── /qa（端到端测试）
+├── executing-plans        ├── /ship（发布流水线）
+├── TDD                    ├── /land-and-deploy（部署）
+├── systematic-debugging   ├── /canary（上线监控）
+├── code-review            ├── /retro（周回顾）
+└── verification           └── /careful + /freeze（安全护栏）
+```
+
+#### 完整开发闭环
+
+```
+想法 → brainstorming → writing-plans
+  → /plan-eng-review（多视角审查）
+  → using-git-worktrees（隔离工作环境）
+  → executing-plans + TDD
+  → /browse 或 /qa（真实环境验证）
+  → verification-before-completion
+  → requesting-code-review（独立 reviewer）
+  → finishing-a-development-branch
+  → /ship（发布）→ /land-and-deploy（部署）
+  → /canary（上线监控 30 分钟）
+  → 完成
+```
+
+#### 五条铁律
+
+1. **浏览器只走 `/browse`**：禁用底层 MCP 浏览器原语
+2. **作者不能审自己的代码**：AI 写完代码后在同一上下文自审只会找无关痛痒的瑕疵
+3. **没证据不算完成**：测试报告 + 截图 + QA 报告，三缺一不算
+4. **歧义先 brainstorm**：5 分钟头脑风暴能省 5 小时返工
+5. **危险命令先 `/careful`**：rm -rf / DROP TABLE / force-push 一律先走护栏
+
+#### 任务分流策略
+
+| 任务类型 | 流程深度 | 示例 |
+|---|---|---|
+| **轻量** | 直接实现 + 定向验证 | 改 typo、修单文件 bug、配置调整 |
+| **中等** | 简短 brainstorm + 短 writing-plans + 验证 | 多文件新功能、边界清晰的重构 |
+| **大型** | 完整闭环 | 跨模块架构变更、新公共 API |
+
+---
+
+### 4.3 其他拓展工具与场景
+
+#### Figma → 代码
+
+Claude Code 通过 Figma MCP 实现设计稿秒变代码：
+- 连接 Figma 文件 → AI 读取设计稿 → 生成前端代码
+- 配合 FigJam 快速生成可修改的流程图
+
+#### Playwright MCP：不只是写代码，还能验
+
+```
+读代码 → 修改 → 启动本地服务 → 打开页面
+  → 操作页面 → 根据结果再修 → 输出验证报告
+```
+
+适用：表单验证、登录/注册流程、管理后台按钮操作、页面跳转检查、可访问性检查
+
+#### Claude HUD
+
+让 Claude Code 状态一目了然的可视化面板，实时查看 Agent 在做什么。
+
+#### Repomix
+
+打包整个仓库为一个文件，让 Claude 一次性读懂项目全貌，大幅提升上下文利用效率。
+
+---
+
+## 推荐学习路线图
+
+```
+第1天：读 AI Coding 发展史 + 核心概念
+  ↓
+第2天：选一个主力工具，完成安装和第一个项目
+  ↓
+第3-5天：深入主力工具的进阶功能（MCP/Skills/工作流）
+  ↓
+第6-7天：了解其他工具，形成组合使用策略
+  ↓
+持续：跟踪更新，实践 Superpowers/gstack 等进阶方法论
+```
+
+### 按角色推荐学习路径
+
+**国内初学者（预算为零）**：
+```
+Trae（安装→四种模式→MCP 配置）→ 核心概念学习 → Claude Code（进阶）
+```
+
+**海外/英语开发者**：
+```
+Cursor（安装→Tab/Cmd+K/Composer）→ Claude Code（MCP+Skills）→ Agent 框架
+```
+
+**架构师/技术负责人**：
+```
+Claude Code（四层体系）→ MCP 生态 → Superpowers+gstack → Agentic Engineering
+```
+
+**内容创作者**：
+```
+Obsidian 基础 → Claude Code + Obsidian 工作流 → Hermes Agent 内容中台
+```
+
+### 学习建议
+
+1. **不要贪多**：先选一个主力工具（国内推荐 Trae，海外推荐 Cursor/Claude Code），精通后再扩展
+2. **实践驱动**：每个工具学习后立即用它做一个真实项目
+3. **理解原理**：工具会变，但 MCP/Skills/Agent 的核心概念是通用的
+4. **保持跟进**：AI Coding 领域每月有新变化，定期查看知识库更新
+5. **先跑通最小闭环**：安装 → 第一个项目 → 加入规则文件 → 配置模型 → 逐步添加增强工具
+
+---
+
+> 📚 本学习计划基于 [[Wiki/llm-wiki|LLM Wiki]] 知识库整理。知识库中包含 50+ 篇深度文章，覆盖 Claude Code、Cursor、Trae、Codex、OpenClaw、Hermes、Obsidian 等主题，欢迎深入阅读。
+> 
+> 🔗 推荐进一步阅读：[[Wiki/wiki/topics/ai-coding-history|AI Coding 发展史]] · [[Wiki/wiki/topics/ai-coding-concepts|核心概念]] · [[Wiki/wiki/topics/ai-coding-tools-comparison|工具全景对比]] · [[Wiki/wiki/topics/claude-code-installation|Claude Code 安装配置]] · [[Wiki/wiki/topics/claude-code-mcp-ecosystem|MCP 生态系统]]
+
