@@ -128,3 +128,15 @@
   - wiki/overview.md — 新增实战技巧和精通指南板块、更新文章计数（68→71）、更新专题页面计数（22→24）
   - wiki/index.md — 新增 2 个专题页条目、更新 Claude Code 资料索引（24→27）
 - 知识领域覆盖：项目记忆系统、会话管理哲学、三层能力模型、CLAUDE.md 深度最佳实践、Computer Use 与 GUI 操作、Voice Mode 语音交互、Agent Teams 多智能体协作、Auto 模式安全机制、六反模式、TAOR Agent 循环、产品开发工作流
+
+## [2026-05-10] create | AI Coding 完整学习计划（综合教程）
+- **摘要**：基于知识库全部内容，撰写一份面向新手的完整 AI Coding 学习计划，输出到 `教程/` 文件夹
+- **新增输出产物（1 个）**：
+  - 教程/AI Coding 学习计划.md — 1072 行综合教程，包含四大章节
+- **教程结构**：
+  - 第一部分：AI Coding 简介（发展历程 2024→2026 三阶段、6 个核心概念名词解释）
+  - 第二部分：主流工具完整教程（Claude Code 安装/命令/Skill/MCP、Cursor Tab/Composer/Background Agent、Trae 四种模式、Codex 云端全流程、Copilot 概览）
+  - 第三部分：Agent 框架（OpenClaw 安装/消息平台/Skills、Hermes Agent 安装/自进化/SOUL.md/Workspace/多Profile、两框架九维深度对比）
+  - 第四部分：拓展使用（Obsidian 知识库五步工作流、Superpowers+gstack 完整开发闭环、Figma/Playwright/HUD 等）
+  - 附录：按角色（国内初学者/海外开发者/架构师/内容创作者）推荐学习路径
+- **更新页面**：wiki/index.md（新增输出产物板块 + 学习路线引用）、wiki/overview.md（更新统计数据）、wiki/topics/ai-coding-learning-plan.md（添加交叉引用）

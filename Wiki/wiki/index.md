@@ -13,6 +13,7 @@ updated: 2026-05-09
 
 ## 🗺️ AI Coding 学习路线
 - [AI Coding 学习路线](topics/ai-coding-learning-plan.md) — 从零开始的系统学习路径
+- [AI Coding 完整学习计划](../../教程/AI Coding 学习计划.md) — 📖 综合教程：从入门到精通（含概念/工具/Agent/拓展）
 - [AI Coding 发展史](topics/ai-coding-history.md) — 2024-2026 发展历程与市场格局
 - [AI Coding 核心概念](topics/ai-coding-concepts.md) — Vibe Coding、Agent、MCP、Skills、Claw、Hermes 等
 - [AI Coding 工具全景对比](topics/ai-coding-tools-comparison.md) — Claude Code / Cursor / Codex / Trae / Copilot 对比
@@ -123,7 +124,7 @@ updated: 2026-05-09
 
 ## 输出产物
 
-（暂无）
+- [AI Coding 学习计划](../../教程/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
 
 ## 原始资料
 
