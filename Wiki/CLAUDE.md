@@ -33,7 +33,7 @@ knowledge-base/
 ```yaml
 ---
 title: 页面标题
-type: entity | topic | comparison | overview
+type: entity | topic | comparison | overview ｜ concepts
 tags: [标签1, 标签2]
 created: 2026-05-09
 updated: 2026-05-09
