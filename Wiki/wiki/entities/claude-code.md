@@ -5,9 +5,9 @@ tags: [claude-code, ai-coding, agent, anthropic]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude Code 教程丨安装、使用与配置指南.md
-  - raw/articles/claude/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
-  - raw/articles/claude/全网最全 Claude Code 命令指南：会话、权限、扩展、自动化全搞定！从新手到大神，这一篇就够了.md
+  - raw/articles/Claude Code/Claude Code 教程丨安装、使用与配置指南.md
+  - raw/articles/Claude Code/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
+  - raw/articles/Claude Code/全网最全 Claude Code 命令指南：会话、权限、扩展、自动化全搞定！从新手到大神，这一篇就够了.md
 related:
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md

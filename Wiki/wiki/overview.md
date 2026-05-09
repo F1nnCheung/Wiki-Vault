@@ -5,7 +5,7 @@ tags: []
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/
+  - raw/articles/Claude Code/
 related:
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md

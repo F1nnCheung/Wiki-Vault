@@ -5,8 +5,8 @@ tags: [claude-code, introduction, overview]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/干货｜Prompt、Skill、Project、MCP，一套完整的 AI 工作流！.md
-  - raw/articles/claude/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
+  - raw/articles/Claude Code/干货｜Prompt、Skill、Project、MCP，一套完整的 AI 工作流！.md
+  - raw/articles/Claude Code/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
 related:
   - entities/claude-code.md
   - topics/claude-code-installation.md

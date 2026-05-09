@@ -5,11 +5,11 @@ tags: [claude-code, installation, configuration, setup]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude Code 教程丨安装、使用与配置指南.md
-  - raw/articles/claude/这可能是Claude Code最简单的安装和使用方式了（一键安装、支持国产模型、免登录）.md
-  - raw/articles/claude/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
-  - raw/articles/claude/Claudecode保姆级教程(搭配Skill+mcp).md
-  - raw/articles/claude/Claude 官方客户端 + DeepSeek-V4：免登录，无需订阅！（保姆级教程）.md
+  - raw/articles/Claude Code/Claude Code 教程丨安装、使用与配置指南.md
+  - raw/articles/Claude Code/这可能是Claude Code最简单的安装和使用方式了（一键安装、支持国产模型、免登录）.md
+  - raw/articles/Claude Code/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
+  - raw/articles/Claude Code/Claudecode保姆级教程(搭配Skill+mcp).md
+  - raw/articles/Claude Code/Claude 官方客户端 + DeepSeek-V4：免登录，无需订阅！（保姆级教程）.md
 related:
   - entities/claude-code.md
   - entities/cc-switch.md

@@ -5,10 +5,10 @@ tags: [claude-code, design, figma, ui-ux, frontend]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude Code 连接 Figma 保姆级教程！设计稿秒变代码.md
-  - raw/articles/claude/Claude与FigJam打通，快速生成流程图（可修改）- UX交互设计&产品经理.md
-  - raw/articles/claude/68.4k Star 的 DESIGN.md 仓库：AI 写前端，终于不靠"感觉"了.md
-  - raw/articles/claude/玩转 Claude Code：不可或缺的 UXUI 设计神级插件.md
+  - raw/articles/Claude Code/Claude Code 连接 Figma 保姆级教程！设计稿秒变代码.md
+  - raw/articles/Claude Code/Claude与FigJam打通，快速生成流程图（可修改）- UX交互设计&产品经理.md
+  - raw/articles/Claude Code/68.4k Star 的 DESIGN.md 仓库：AI 写前端，终于不靠"感觉"了.md
+  - raw/articles/Claude Code/玩转 Claude Code：不可或缺的 UXUI 设计神级插件.md
 related:
   - entities/claude-code.md
   - topics/claude-code-skills-ecosystem.md

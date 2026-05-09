@@ -5,9 +5,9 @@ tags: [claude-code, mcp, ecosystem, extension]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/2026年Claude Code 必装 MCP 排行榜：最火20个插件，帮你整理好了！.md
-  - raw/articles/claude/90%的人都在裸奔Claude Code，10大必装MCP推荐.md
-  - raw/articles/claude/给 Claude Code 接上 Playwright MCP：让它不只写代码，还能自己验页面.md
+  - raw/articles/Claude Code/2026年Claude Code 必装 MCP 排行榜：最火20个插件，帮你整理好了！.md
+  - raw/articles/Claude Code/90%的人都在裸奔Claude Code，10大必装MCP推荐.md
+  - raw/articles/Claude Code/给 Claude Code 接上 Playwright MCP：让它不只写代码，还能自己验页面.md
 related:
   - entities/mcp.md
   - entities/claude-code.md

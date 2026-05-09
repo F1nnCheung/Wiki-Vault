@@ -5,8 +5,8 @@ tags: [gstack, toolchain, deployment, browser, execution]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/实战篇 Claude Code + superpowers + gstack 开发流程实录，可直接复制使用，一篇文章讲清楚！.md
-  - raw/articles/claude/别再给Claude Code乱装Skill了，推荐这8个.md
+  - raw/articles/Claude Code/实战篇 Claude Code + superpowers + gstack 开发流程实录，可直接复制使用，一篇文章讲清楚！.md
+  - raw/articles/Claude Code/别再给Claude Code乱装Skill了，推荐这8个.md
 related:
   - entities/superpowers.md
   - entities/claude-code.md

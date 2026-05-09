@@ -5,7 +5,7 @@
 - 初始化 schema、索引、日志
 
 ## [2026-05-09] ingest | 批量收录 24 篇 Claude Code 文章
-- **摘要**：一次性处理 `raw/articles/claude/` 全部 24 篇文章，按 介绍→安装→入门→进阶 四层结构组织
+- **摘要**：一次性处理 `raw/articles/Claude Code/` 全部 24 篇文章，按 介绍→安装→入门→进阶 四层结构组织
 - **新增实体页（6个）**：
   - wiki/entities/claude-code.md — Claude Code 本体
   - wiki/entities/mcp.md — Model Context Protocol

@@ -5,8 +5,8 @@ tags: [claude-code, tools, hud, understand-anything, knowledge-graph]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude HUD - 让 Claude Code 状态一目了然.md
-  - raw/articles/claude/Claude Code 神器来了！Understand-Anything 用知识图谱彻底搞懂代码库.md
+  - raw/articles/Claude Code/Claude HUD - 让 Claude Code 状态一目了然.md
+  - raw/articles/Claude Code/Claude Code 神器来了！Understand-Anything 用知识图谱彻底搞懂代码库.md
 related:
   - entities/claude-code.md
   - topics/claude-code-getting-started.md

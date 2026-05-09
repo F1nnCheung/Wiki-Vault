@@ -5,8 +5,8 @@ tags: [claude-code, commands, getting-started, daily-usage]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude Code 拥有 50 多个命令。大多数开发者只用到 5 个.md
-  - raw/articles/claude/全网最全 Claude Code 命令指南：会话、权限、扩展、自动化全搞定！从新手到大神，这一篇就够了.md
+  - raw/articles/Claude Code/Claude Code 拥有 50 多个命令。大多数开发者只用到 5 个.md
+  - raw/articles/Claude Code/全网最全 Claude Code 命令指南：会话、权限、扩展、自动化全搞定！从新手到大神，这一篇就够了.md
 related:
   - entities/claude-code.md
   - topics/claude-code-installation.md

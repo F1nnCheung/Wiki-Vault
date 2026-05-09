@@ -88,4 +88,4 @@ updated: 2026-05-09
 
 ## 原始资料
 
-24 篇 Claude Code 中文文章，位于 `raw/articles/claude/`：安装配置(5) / 命令提示词(3) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+24 篇 Claude Code 中文文章，位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)

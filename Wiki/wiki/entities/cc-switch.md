@@ -5,8 +5,8 @@ tags: [cc-switch, tool, model-management, gui]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/Claude Code 如何用 CC Switch 优雅地接入 DeepSeek、Kimi、GLM、MiniMax 等模型：一篇不想让你翻车的喂饭教程.md
-  - raw/articles/claude/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
+  - raw/articles/Claude Code/Claude Code 如何用 CC Switch 优雅地接入 DeepSeek、Kimi、GLM、MiniMax 等模型：一篇不想让你翻车的喂饭教程.md
+  - raw/articles/Claude Code/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
 related:
   - entities/claude-code-router.md
   - entities/claude-code.md

@@ -5,9 +5,9 @@ tags: [superpowers, skill, workflow, methodology]
 created: 2026-05-09
 updated: 2026-05-09
 sources:
-  - raw/articles/claude/用了 Superpowers，我的 Claude Code 返工少了九成.md
-  - raw/articles/claude/实战篇 Claude Code + superpowers + gstack 开发流程实录，可直接复制使用，一篇文章讲清楚！.md
-  - raw/articles/claude/Claude Code + MiniMax 2.7 + Superpowers：我是怎么真正交付一套生产系统的.md
+  - raw/articles/Claude Code/用了 Superpowers，我的 Claude Code 返工少了九成.md
+  - raw/articles/Claude Code/实战篇 Claude Code + superpowers + gstack 开发流程实录，可直接复制使用，一篇文章讲清楚！.md
+  - raw/articles/Claude Code/Claude Code + MiniMax 2.7 + Superpowers：我是怎么真正交付一套生产系统的.md
 related:
   - topics/claude-code-superpowers-workflow.md
   - entities/gstack.md
