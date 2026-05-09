@@ -7,6 +7,7 @@ updated: 2026-05-09
 sources:
   - raw/articles/Claude Code/
   - raw/articles/OpenClaw/
+  - raw/articles/Hemmers/
 related:
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md
@@ -19,11 +20,17 @@ related:
   - topics/claude-code-prompt-engineering.md
   - comparisons/openclaw-vs-hermes.md
   - topics/hermes-architecture-deep-dive.md
+  - topics/hermes-multi-agent.md
+  - topics/hermes-configuration.md
+  - topics/hermes-workspace-setup.md
+  - topics/hermes-obsidian-integration.md
+  - topics/hermes-rag-setup.md
+  - concepts/harness-engineering.md
 ---
 
 # 全局概览
 
-本知识库围绕 **Claude Code** 和 **Agent 框架对比** 两大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code** 和 **Agent 框架对比** 两大主线构建，收录了 24 篇 Claude Code 文章 + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -84,11 +91,41 @@ OpenClaw vs Hermes 知识体系
     └── 上下文压缩（压中间 vs 压头部）
 ```
 
+## Hermes Agent 深度专题
+
+```
+Hermes 深度专题
+│
+├── 🏗️ 架构 ─── 五层架构深度拆解（入口→网关→执行→扩展→存储）
+│
+├── 👥 多 Agent ── 多角色团队搭建、Kanban 任务编排
+│   ├── Profile 隔离机制（独立配置/密钥/记忆/会话）
+│   ├── Kanban 四角色（Orchestrator/Dispatcher/Worker/Board）
+│   └── 实战案例（default+coding 协作 12 分钟完成爬虫）
+│
+├── ⚙️ 配置 ──── SOUL.md & AGENTS.md 最佳实践
+│   ├── SOUL.md（全局身份/协作方式）
+│   └── AGENTS.md（项目规则/目录/命令）
+│
+├── 🖥️ Workspace ─ 六面板 Web 控制中心
+│   ├── Chat/Memory/Skills/Terminal/Tools/Conductor
+│   └── Kanban 多代理协作
+│
+├── 📓 Obsidian ─ Obsidian + Hermes 知识库集成
+│   └── Source → Topic → Draft → Published 生产线
+│
+├── 🔍 RAG ──── 个人知识管理 RAG 检索
+│   └── Markdown → Ollama Embedding → ChromaDB → Hermes 检索
+│
+└── 🧠 概念 ──── Harness Engineering
+    └── Agent = Model + Harness，生成-评估分离
+```
+
 ## 关键数据
 
-- 收录文章：27 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + 橙皮书 1 份）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比
+- 收录文章：45 篇（Claude Code 24 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + 橙皮书 1 份）
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成
 - 核心实体：8 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent）
-- 专题页面：11 个
-- 概念页面：8 个
+- 专题页面：16 个
+- 概念页面：9 个
 - 对比页面：1 个

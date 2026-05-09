@@ -7,10 +7,19 @@ updated: 2026-05-09
 sources:
   - raw/articles/OpenClaw/【万字】OpenClaw vs Hermes：一文深入拆解两大 Agent 框架.md
   - raw/articles/OpenClaw/OpenClaw vs Hermes：拆解 Hermes Agent 五层架构.md
+  - raw/articles/Hemmers/Hermes Agent v0.13.0 来了：137K 星的开源 AI Agent 又进化了.md
+  - raw/articles/Hemmers/Hermes Agent v1.3 从入门到精通：开口就能用.md
+  - raw/articles/Hemmers/Hermes Agent 从入门到精通 V1.2：2026年最值得学的 AI Agent 框架.md
+  - raw/articles/Hemmers/Hermes Agent从入门到实战.md
 related:
   - topics/hermes-agent-guide.md
   - topics/hermes-architecture-deep-dive.md
-  - topics/ai-coding-concepts.md
+  - topics/hermes-multi-agent.md
+  - topics/hermes-configuration.md
+  - topics/hermes-workspace-setup.md
+  - topics/hermes-obsidian-integration.md
+  - topics/hermes-rag-setup.md
+  - concepts/harness-engineering.md
   - entities/openclaw.md
   - comparisons/openclaw-vs-hermes.md
   - concepts/agent-self-evolution.md
@@ -22,9 +31,9 @@ related:
 
 Hermes Agent 是 Nous Research 开发的开源自进化 AI Agent（MIT 许可证），Python 编写。核心特色是**自进化**——能从完成任务中自动提炼可复用技能，越用越聪明。
 
-GitHub: 5.2 万+ Stars（2026 年 4 月数据，2 月底开源首月破 2.2 万星，v0.8.0 发布单日新增 6400+ 星）
+GitHub: **137K+ Stars**（2026 年 5 月数据），21,184 Fork。从 2025 年 7 月首次提交至今不到一年，正在成为最活跃的开源 AI Agent 框架。v0.13.0 一周内 295 位贡献者提交 864 个 commit，合并 588 个 PR。
 
-> 注：中文社区有时称其为「爱马仕」（Hermès 谐音梗）。
+> 注：中文社区有时称其为「爱马仕」（Hermès 谐音梗）。137K 星的增长速度在同类项目中极为罕见。
 
 ## 设计哲学：成长优先
 
@@ -63,11 +72,14 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 | **自学习循环** | 自动将成功操作转化为可复用 Skill，无需手动微调 |
 | **多层记忆** | 三层：内置 MEMORY.md + USER.md、外部 8 个 Provider、FTS5 会话搜索 |
 | **22+ LLM 提供商** | OpenAI、Anthropic、Gemini、Groq、DeepSeek、Ollama、Kimi K2.6 等 |
-| **20+ 消息平台** | Telegram、Discord、Slack、WhatsApp、Signal、微信、钉钉、飞书等 |
+| **20 个消息平台** | Telegram、Discord、Slack、WhatsApp、Signal、微信、QQBot、飞书、Google Chat 等 |
 | **CLI + TUI** | React/Ink 交互终端、流式渲染、皮肤引擎 |
 | **40+ 内置工具** | 终端执行、文件 I/O、Web 搜索、浏览器自动化、图片生成、TTS |
 | **子代理委派** | 并行派发子代理，最大深度 1 层，并发上限 3 个 |
 | **Cron 自动化** | 自然语言调度 |
+| **多 Agent 协作** | Kanban 看板（Orchestrator/Dispatcher/Worker/Board 四角色），Profile 隔离，并行任务分解 |
+| **跨轮目标追踪** | `/goal` 命令在多轮对话中持续追踪目标，对标 Ralph 循环 |
+| **多模态** | 视频理解（video_analyze）、语音克隆（xAI Custom Voices）、TTS |
 | **RL 训练工具链** | 批量轨迹生成、轨迹压缩、SWE 基准测试 |
 
 ### 记忆系统
@@ -110,6 +122,8 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 | v0.9.0 | 2026.04.13 | 本地 Web Dashboard、Fast Mode、iMessage/WeChat 支持 |
 | v0.10.0 | 2026.04.16 | Nous Tool Gateway（Web搜索/图片生成/TTS） |
 | v0.11.0 | 2026.04.23 | 全 React/Ink TUI 重写、GPT-5.5 支持、QQBot |
+| v0.12.0 | 2026.04.30 | Curator Release：技能市场、多 Agent Profile、上下文引擎可插拔 |
+| v0.13.0 | 2026.05.07 | 多 Agent Kanban 看板、`/goal` 跨轮目标追踪、video_analyze 视频理解、xAI 语音克隆、第 20 个消息平台（Google Chat）、会话自动恢复、写文件后自动 Lint |
 
 ## 国内生态
 
@@ -125,5 +139,5 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 |------|-------------|----------|
 | 核心差异 | 自进化 + 多平台网关 | 安全优先 + 大社区 |
 | 语言 | Python + Rust CLI | TypeScript |
-| Stars | 5.2 万 | 24.7 万 |
+| Stars | 13.7 万 | 24.7 万 |
 | 研究能力 | 内置 RL 训练工具链 | 纯产品，无训练能力 |
