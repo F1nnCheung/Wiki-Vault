@@ -46,7 +46,6 @@ Vault Root/
 └── 教程/              # 面向新手的学习教程（与 wiki 互补，需同步维护）
     └── *.md           # 综合教程文档，基于 wiki 内容生成
 ```
-```
 
 ## 页面规范
 
@@ -56,15 +55,20 @@ Vault Root/
 
 ```yaml
 ---
-title: 页面标题
-type: entity | topic | concept | comparison | overview
+title: 页面标题（中文）
+type: concept                # 取其一：entity / topic / concept / comparison / overview
 tags: [标签1, 标签2]
 created: 2026-05-09
 updated: 2026-05-09
-sources: [Wiki/raw/articles/主题/example.md]
-related: [topics/xxx.md, entities/yyy.md]
+sources:
+  - raw/articles/主题/example.md
+related:
+  - topics/xxx.md
+  - entities/yyy.md
 ---
 ```
+
+> `sources` 和 `related` 使用 YAML 列表格式（每项 `  - ` 缩进），不用内联数组。`sources` 路径从 vault 根起算（`raw/...` 即 `Wiki/raw/...`）。
 
 ### 命名规范
 
