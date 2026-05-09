@@ -207,3 +207,424 @@ L5: 多 Agent 协同 → 多个 Agent 分工协作，人类监督
 个人助手 1%：OpenClaw / Hermes
 ```
 
+
+---
+
+### 2.2 Claude Code
+
+#### 介绍
+
+Claude Code 是 Anthropic 推出的终端 CLI AI 编程助手。不仅是一个聊天工具——只需描述需求，它就能**自动计划并执行**：读文件、写代码、跑命令、管理 Git。
+
+**核心差异**：Claude Code vs 普通 AI Chat（豆包、DeepSeek）
+
+| 维度 | 普通 AI Chat | Claude Code |
+|---|---|---|
+| 交互方式 | 一问一答 | 规划 + 自主执行 |
+| 文件操作 | 不支持 | 读写项目文件 |
+| 命令执行 | 不支持 | 运行脚本、测试、部署 |
+| Git 管理 | 不支持 | commit、PR、分支操作 |
+| 扩展能力 | 有限 | MCP + Skills 生态 |
+
+**四层能力体系**：
+```
+┌────────────────────────────────┐
+│  Prompt（指令层）               │ ← 自然语言描述需求
+├────────────────────────────────┤
+│  Skill（方法论层）              │ ← 可复用的专业能力包
+├────────────────────────────────┤
+│  Project（上下文层）            │ ← 持久化工作空间
+├────────────────────────────────┤
+│  MCP（工具连接层）              │ ← 连接外部数据源和工具
+└────────────────────────────────┘
+```
+
+**三种运行模式**：
+- **默认模式**（修改前询问）：安全模式，每次编辑需确认
+- **自动模式**（accept edits on）：减少确认，提高效率
+- **规划模式**（plan mode on）：只讨论不修改，用于设计阶段
+
+#### 安装与配置
+
+**前置要求**：Node.js 18+、Git
+
+```bash
+# 官方脚本安装（推荐）
+curl -fsSL https://claude.ai/install.sh | bash
+
+# 或 npm 全局安装
+npm install -g @anthropic-ai/claude-code
+
+# 验证安装
+claude --version
+
+# 启动
+cd your-project
+claude
+```
+
+**桌面客户端**（适合非技术用户）：
+1. 从 claude.ai/download 下载 Claude Desktop Client
+2. 启用开发者模式：Help → Troubleshooting → Enable Developer Mode
+3. 切换到 **Code 模式**（`</>` 图标）
+
+**国内用户配置第三方模型**（Claude 账号容易封禁）：
+
+```json
+// ~/.claude/settings.json
+{
+  "hasCompletedOnboarding": true,
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "你的API Key",
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_MODEL": "deepseek-chat"
+  }
+}
+```
+
+推荐国产模型供应商：
+| 供应商 | 优势 | 推荐模型 |
+|---|---|---|
+| 火山引擎 | Coding Plan 性价比高 | minimax-latest, kimi-k2.6, glm-5.1, deepseek-v3.2 |
+| 阿里云百炼 | 有免费额度 | glm-5, qwen系列 |
+| DeepSeek | 兼容性最好 | deepseek-chat, deepseek-reasoner |
+| 智谱 GLM | 有 Claude Code 专门文档 | glm-5.1 |
+
+**配置的三个层次**：
+| 层 | 文件 | 用途 |
+|---|---|---|
+| 工具层 | `settings.json` | 权限、模型、MCP 配置 |
+| 规则层 | `CLAUDE.md` | 项目规范、编码约定（<200行） |
+| 学习层 | auto memory | AI 自动记录的偏好和经验 |
+
+**进阶配置工具**：
+- **CC Switch**：GUI 管理多工具 Provider/MCP/Skills 配置，支持热切换
+- **Claude Code Router**：按任务类型智能路由到不同模型，降低成本 70%+
+
+安装后第一步：
+```bash
+/init    # 在项目根目录生成 CLAUDE.md
+/memory  # 编辑 CLAUDE.md，补充技术栈和编码规范
+```
+
+#### 基本使用：核心命令
+
+**新手必知 6 个命令**：
+
+| 命令 | 作用 | 场景 |
+|---|---|---|
+| `/help` | 查看帮助 | 不知道怎么办时 |
+| `/clear` | 清空上下文 | 话题完全切换时 |
+| `/compact` | 压缩上下文 | 上下文占用 70%+ 时 |
+| `/model` | 切换模型 | 想换模型时 |
+| `/effort` | 调整推理深度 | 简单任务降配、复杂任务升配 |
+| `/permissions` | 管理权限规则 | 权限弹窗太多时 |
+
+**每日 Top 10 命令**：
+1. `/init` — 生成项目 CLAUDE.md，建立"长期记忆"
+2. `/compact` — 压缩上下文节省 Token（被最严重低估的命令）
+3. `/clear` — 清空会话重新开始
+4. `/model` — 查看和切换模型
+5. `/cost` — 查看 Token 消耗和费用
+6. `/context` — 查看上下文占用状态
+7. `/diff` — 查看代码改动（提交前必看）
+8. `/memory` — 编辑 CLAUDE.md 记忆文件
+9. `/resume` — 恢复历史会话
+10. `/rewind` — 回退操作
+
+> ⚠️ 多数人条件反射式 `/clear`，但 `/compact` 保留主线才是更优选择。
+
+**日常工作流**：
+```
+规划模式 → 描述需求 → 执行 → /context 监控
+  → /compact 压缩 → /diff 检查改动 → 提交
+```
+
+**权限管理三原则**：
+- **allow**（允许）：低风险高频操作（lint、test、git status）
+- **ask**（询问）：中风险操作（修改文件、安装依赖）
+- **deny**（禁止）：高风险操作（.env、git push --force、rm -rf）
+
+#### 进阶使用：Skill 技能系统
+
+Skill 是放在特定目录下的 Markdown 文档，Claude Code 自动发现并按需调用。
+
+与 Slash 命令的区别：
+| 维度 | Skills | Slash 命令 |
+|---|---|---|
+| 触发方式 | 自动发现、智能调用 | 手动输入 `/命令名` |
+| 适用场景 | 复杂、多文件、涉及脚本 | 简单、重复的提示模板 |
+| 安装位置 | `~/.claude/skills/` | `.claude/commands/` |
+
+Skill 文件结构：
+```
+skill-name/
+├── SKILL.md       # 必需：技能说明和元数据
+├── scripts/       # 可选：辅助脚本
+├── templates/     # 可选：文档模板
+└── resources/     # 可选：参考文件
+```
+
+**精选 8 个核心 Skill**：
+
+| Skill | 用途 | 解决什么痛点 |
+|---|---|---|
+| **Repomix** | 打包整个仓库为一个文件 | 一次性读懂项目全貌 |
+| **ccusage** | 实时显示 Token 消耗 | 控制成本 |
+| **frontend-design** | 官方前端设计 Skill | 一句话生成有设计感的 UI |
+| **awesome-design-md** | 设计系统 + 文档规范 | 设计稿直接生成代码级文档 |
+| **claude-mem** | 长期记忆 | 记住项目偏好和架构决策 |
+| **Superpowers** | 全流程增强包 | 14 个方法论的强制流程 |
+| **gstack** | YC 的工程标准 | 生产级开发→部署→监控闭环 |
+| **marketingskills** | 增长/营销 | Landing 页文案、投放策略 |
+
+> 核心原则：Skill 不在多，在配合。十个打架的 Skill 不如两个清晰分工的 Skill。
+
+#### 进阶使用：MCP 生态系统
+
+> ⚠️ 不装 MCP 的 Claude Code 只发挥了约三成功力。
+
+安装方式：
+```bash
+claude mcp add <名称> -- <启动命令>
+# 示例：安装 Playwright
+claude mcp add playwright -- npx @playwright/mcp@latest
+claude mcp list  # 查看已安装
+```
+
+**10 大必装 MCP**：
+
+| MCP | 功能 | 一句话 |
+|---|---|---|
+| **Playwright** | 自动操作浏览器 | 浏览器里能手动做的事，AI 都能帮你自动做 |
+| **Desktop Commander** | 终端命令/进程管理/文件搜索 | 让 AI 像人一样操作整台电脑 |
+| **GitHub** | PR/Issue/代码审查 | 代码仓库全流程管理 |
+| **Context7** | 最新框架文档注入 | 解决 AI 输出过时 API 的问题 |
+| **Firecrawl** | 网页内容抓取 | 批量网页数据采集 |
+| **Fetch** | 轻量 URL 读取 | 简单 HTTP 请求 |
+| **PostgreSQL/SQLite** | 数据库直接操作 | 自然语言查询数据 |
+| **Sequential Thinking** | 分步推理 | 复杂问题结构化思考 |
+| **飞书 MCP** | 飞书文档/多维表格 | 企业协作集成 |
+| **Excel MCP** | Excel 读写/公式/汇总 | 办公表格处理 |
+
+**按角色推荐安装组合**：
+| 角色 | 推荐组合 |
+|---|---|
+| **前端** | Filesystem + Git + Figma + UI UX Pro Max |
+| **后端** | Git + Prisma + FastAPI-MCP + SecureCode |
+| **数据分析** | Context7 + mcp-run-python + 数据库MCP |
+| **全栈** | Filesystem + Git + Pipedream + Claude Mem |
+| **新手起步** | Filesystem + Git + GitHub |
+
+**避坑指南**：
+1. 不要一次性装几十个：按项目选 2-4 个核心 MCP
+2. 使用项目级配置 `.mcp.json` 而非全局配置
+3. 先装 Playwright——最能直观感受 MCP 价值的入口
+
+#### 高阶进阶指令
+
+| 命令 | 作用 |
+|---|---|
+| `/btw` (By the way) | 不中断主任务快速提问，不污染对话历史 |
+| `/fast` | 极速模式，简化回复 |
+| `/plan` | 只读规划模式 |
+| `/todos` | 跨会话任务管理 |
+| `/simplify` | 2026 全新代码评审（时代评审） |
+| `/batch` | 大规模拆分改造 |
+| `/loop` | 持续观察/轮询 |
+
+#### 相关资源
+
+- 技能生态：github.com/anthropics/skills、skillsmp.com、skillhub.cn
+- MCP 生态：github.com/modelcontextprotocol/servers
+- 社区教程：Claude Code 保姆级完整教程（知识库中有 10+ 篇深度文章）
+
+
+---
+
+### 2.3 Cursor
+
+#### 介绍
+
+Cursor 是 Anysphere 开发的 AI 原生 IDE（基于 VS Code），2026 年估值 290 亿美元，被 19% 的开发者选为最爱。官网：cursor.com
+
+**定位**：全能均衡型 AI IDE，适合从 VS Code 迁移的日常全能开发者。
+
+#### 安装
+
+1. 访问 **cursor.com** 下载安装包
+2. 安装后首次启动可选择从 VS Code 导入配置
+3. 注册/登录 Cursor 账号
+4. 选择订阅计划（Free / Pro $20 / Business $40）
+
+#### 基本使用
+
+| 功能 | 快捷键 | 说明 |
+|---|---|---|
+| **Tab 补全** | `Tab` | <100ms 延迟，多行代码预测 |
+| **Cmd+K** | `Cmd/Ctrl + K` | 选中代码，自然语言修改 |
+| **Composer** | `Cmd/Ctrl + I` | 跨文件编辑 Agent |
+| **Chat** | `Cmd/Ctrl + L` | 侧边栏 AI 对话 |
+| **@ 引用** | `@` | 引用文件/文件夹/文档 |
+
+**@ 引用技巧**：
+```
+@file       引用单个文件
+@folder     引用整个文件夹
+@web        引用网页内容
+@docs       引用官方文档
+@codebase   引用整个代码库
+```
+
+#### 进阶使用
+
+**Background Agents（Cursor 3）**：
+```
+启动 Agent 任务 → Agent 在云端运行，不阻塞 IDE → 完成后通知你 Review 结果
+```
+
+**多模型配置**（Settings → Models）：Claude 系列、GPT-4o/GPT-5、Gemini 2.5、自定义 API endpoint
+
+**.cursorrules 项目规则**：
+```markdown
+# .cursorrules
+你是一个 TypeScript 全栈开发者。
+技术栈：Next.js 14 + Prisma + Tailwind CSS
+编码规范：
+- 所有函数必须有类型注解
+- 组件使用 Server Components 优先
+```
+
+#### 插件与扩展
+
+Cursor 完全兼容 VS Code 插件生态。推荐：GitLens、Prettier、Tailwind CSS IntelliSense、Error Lens、Thunder Client
+
+---
+
+### 2.4 Trae
+
+#### 介绍
+
+Trae 是字节跳动推出的 AI 原生 IDE，**永久免费**，2026 年中国市场份额 41.2%。内置豆包、DeepSeek、GLM、Qwen 等顶级模型，中文理解准确率 98%。
+
+官网：trae.cn（国内）/ trae.ai（国际）
+
+**定位**：国内开发者首选，永久免费，中文优化。
+
+#### 安装
+
+1. 访问 **https://www.trae.cn**（认准 `.cn` 域名）
+2. 点击「下载 IDE」，约 100MB
+3. 用**手机号**或**稀土掘金账号**登录
+4. 可选：从 VS Code / Cursor 导入配置
+
+#### 基本使用：四种开发模式
+
+| 模式 | 快捷键 | 适用场景 |
+|---|---|---|
+| **Chat** | `Cmd/Ctrl + L` | 代码解释、Bug 排查、技术咨询 |
+| **Builder** | `Cmd/Ctrl + B` | 快速搭建 CRUD、数据看板 |
+| **SOLO** | `Cmd/Ctrl + I` | 一句话生成完整项目 |
+| **IDE** | 默认 | 传统编码 + AI 补全 |
+
+**CUE 智能补全**：代码补全、多行修改、智能导入、智能重命名
+
+#### 进阶使用
+
+**MCP Server 配置**（`.trae/mcp.json`）：
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
+```
+
+**火山引擎 Coding Plan**：注册火山引擎 → 开通 Coding Plan → 在 Trae 设置中配置 API Key，可接入更多商业模型。
+
+**规则配置**（`.trae/rules.md`）：定义项目规则、技术栈规范。
+
+#### Trae vs Cursor 快速对比
+
+| 维度 | Trae | Cursor |
+|---|---|---|
+| 定价 | **免费** | $20-200/月 |
+| 中文 | **98%** | 75% |
+| 国内速度 | **极速** | 一般 |
+| 国际化 | 弱 | 强 |
+
+---
+
+### 2.5 Codex
+
+#### 介绍
+
+Codex 是 OpenAI 推出的云端 AI 编程 Agent，集成于 ChatGPT。核心能力：「无人值守」编程——给它任务描述，从需求分析到部署完成全流程自动化。
+
+入口：chatgpt.com → 切换到 Codex 模式
+
+#### 安装与配置
+
+Codex 是云端服务，无需本地安装：
+1. 访问 **chatgpt.com**，登录 OpenAI 账号
+2. 切换到 Codex 模式
+3. 连接 GitHub 账号（授权仓库访问）
+
+CLI 工具（可选）：
+```bash
+npm install -g @openai/codex
+codex login
+codex init
+```
+
+#### 基本使用
+
+工作流：
+```
+描述任务 → Codex 分析仓库 → 制定计划（展示确认）
+  → 执行（创建文件/修改代码/安装依赖）
+  → 运行测试，修复错误 → 提交 PR
+```
+
+任务类型：新功能开发、重构（class→函数组件）、Bug 修复、代码迁移（JS→TS）、文档生成
+
+**最佳实践**：
+- 任务描述要具体（不要说"优化代码"，说"把 fetch 改成 axios，加上超时和重试"）
+- 提供上下文，链接相关文件
+- 分步执行，大任务拆成小步骤
+- 始终 Review PR before merging
+
+#### 进阶使用：Spec-Driven 开发
+
+```markdown
+# spec/auth.md
+## POST /api/auth/login
+- 参数：{ email: string, password: string }
+- 返回：{ token: string, user: User }
+- 错误：401（凭证无效）、429（频率限制）
+```
+
+引用 Spec：「根据 @spec/auth.md 的接口定义，实现 src/auth/ 模块」
+
+#### 适用场景
+
+| ✅ 适合 | ❌ 不适合 |
+|---|---|
+| 从零搭建新项目 | 与现有复杂项目深度集成 |
+| 批量代码迁移/重构 | 需要精细业务逻辑 |
+| 自动化脚本和工具 | 强依赖内部服务的系统 |
+| 生成文档和测试 | 安全性要求极高的代码 |
+
+---
+
+### 2.6 GitHub Copilot
+
+**定位**：性价比之王，470 万付费用户，42% 市场份额。
+
+适合预算有限的个人开发者、不想改变编码习惯的保守型团队。核心优势是不改变工作流（IDE 插件形态），短板是 Agent 能力弱、创新迭代慢。
+
+---
+
