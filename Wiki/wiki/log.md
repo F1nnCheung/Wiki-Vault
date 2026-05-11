@@ -140,3 +140,11 @@
   - 第四部分：拓展使用（Obsidian 知识库五步工作流、Superpowers+gstack 完整开发闭环、Figma/Playwright/HUD 等）
   - 附录：按角色（国内初学者/海外开发者/架构师/内容创作者）推荐学习路径
 - **更新页面**：wiki/index.md（新增输出产物板块 + 学习路线引用）、wiki/overview.md（更新统计数据）、wiki/topics/ai-coding-learning-plan.md（添加交叉引用）
+
+## [2026-05-11] ingest | Superpowers 深度实战指南：从入门到精通
+- 新增页面：Wiki/wiki/concepts/superpowers-design-philosophy.md（设计哲学概念页）
+- 更新页面：Wiki/wiki/entities/superpowers.md（大幅扩展：跨 8 平台定位 + 架构全景 + 三种 Bootstrap 路径 + 14 技能详解含铁律 + 7 平台安装 + 设计哲学概述 + 调试指南 + 贡献标准）
+- 更新页面：Wiki/wiki/topics/claude-code-superpowers-workflow.md（新增跨平台 Bootstrap 路径表 + React Todo List 完整实战演练 + 补充不适用的场景）
+- 更新页面：Wiki/wiki/index.md（实体页简介更新为跨平台定位 + 新增设计哲学概念页条目）
+- 教程同步：教程/AI Coding 学习计划.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
+- 摘要：处理 AgentBuff 2026-05-08 文章（1048 行）。核心新知：Superpowers 不仅是 Claude Code 插件，而是跨 8 平台方法论框架（三种 Bootstrap 路径）；每个技能有铁律+HARD-GATE+Red Flags+Common Rationalizations 四层防线；设计哲学（人的搭档语言/CSO）是全新内容；补充了 React Todo List 完整实战演练

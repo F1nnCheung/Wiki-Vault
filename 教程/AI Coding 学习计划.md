@@ -1048,6 +1048,8 @@ Source → Topic → Draft → Published → Review → New Topic
 
 ### 4.2 Superpowers + gstack 进阶开发闭环
 
+> ℹ️ Superpowers 是一个跨平台方法论框架（支持 Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Copilot CLI / Factory Droid 等 8 个平台）。本教程以 Claude Code + gstack 为主线展示最完整的开发闭环。更多设计哲学见 [[Wiki/wiki/concepts/superpowers-design-philosophy|Superpowers 设计哲学]]。
+
 #### 核心理念：大脑 + 手脚
 
 ```

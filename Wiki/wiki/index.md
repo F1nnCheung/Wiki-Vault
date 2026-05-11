@@ -34,6 +34,7 @@ updated: 2026-05-09
 - [Agent 记忆系统设计](concepts/agent-memory-systems.md) — 三层记忆 vs 单插件槽位，冻结快照与 Session 链
 - [Agent 上下文压缩](concepts/agent-context-compression.md) — 压中间 vs 压头部，Session 链保数据不丢
 - [Harness Engineering（编排工程）](concepts/harness-engineering.md) — Agent = Model + Harness，生成-评估分离的行业共识
+- [Superpowers 设计哲学](concepts/superpowers-design-philosophy.md) — 铁律+硬门控 / 合理化防范 / 人的搭档 / CSO 四大设计原则
 
 ### Obsidian / 知识管理概念
 - [第二大脑（Second Brain）](concepts/second-brain.md) — 外部化的、可持久积累的认知基础设施
@@ -46,7 +47,7 @@ updated: 2026-05-09
 ### Claude Code 生态
 - [Claude Code](entities/claude-code.md) — Anthropic 终端 AI 编程 Agent，四层能力体系
 - [MCP（Model Context Protocol）](entities/mcp.md) — AI 连接外部工具的开源标准协议
-- [Superpowers](entities/superpowers.md) — 14 个强制流程 Skill，返工减 90%
+- [Superpowers](entities/superpowers.md) — 跨 8 个平台的 14 个强制流程 Skill，返工减 90%
 - [gstack](entities/gstack.md) — YC 合伙人 Garry Tan 的执行工具链
 - [CC Switch](entities/cc-switch.md) — 跨平台 GUI 模型配置管理工具（52.8k Stars）
 - [Claude Code Router](entities/claude-code-router.md) — 智能模型路由层，降本 70%+
