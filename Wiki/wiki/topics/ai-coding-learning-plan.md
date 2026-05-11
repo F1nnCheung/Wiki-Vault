@@ -15,7 +15,7 @@ related:
 
 # AI Coding 学习路线
 
-> 📖 想要一份包含完整安装步骤、命令速查、MCP/Skills 生态图谱的综合教程？查看 [[教程/AI Coding 学习计划|AI Coding 完整学习计划]]
+> 📖 想要一份包含完整安装步骤、命令速查、MCP/Skills 生态图谱的综合教程？查看 [[教程/AI-Coding/AI Coding 学习计划|AI Coding 完整学习计划]]
 
 ## 🎯 学习目标
 
