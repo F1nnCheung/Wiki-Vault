@@ -1,7 +1,7 @@
 ---
 title: 知识库索引
 type: overview
-updated: 2026-05-09
+updated: 2026-05-13
 ---
 
 # 知识库索引
@@ -46,6 +46,7 @@ updated: 2026-05-09
 
 ### Claude Code 生态
 - [Claude Code](entities/claude-code.md) — Anthropic 终端 AI 编程 Agent，四层能力体系
+- [Everything Claude Code (ECC)](entities/everything-claude-code.md) — Anthropic 黑客松获胜项目，Agent Harness 性能优化系统（180K+ Stars）
 - [MCP（Model Context Protocol）](entities/mcp.md) — AI 连接外部工具的开源标准协议
 - [Superpowers](entities/superpowers.md) — 跨 8 个平台的 14 个强制流程 Skill，返工减 90%
 - [gstack](entities/gstack.md) — YC 合伙人 Garry Tan 的执行工具链
@@ -71,6 +72,7 @@ updated: 2026-05-09
 
 ### 📖 Claude Code 介绍篇
 - [Claude Code 介绍](topics/claude-code-introduction.md) — 什么是 Claude Code、四层能力、三种模式
+- [ECC 完整指南](topics/ecc-complete-guide.md) — Everything Claude Code 从零到精通：安装/Agent/Skills/Hook/持续学习/安全/高级用法
 
 ### 🔧 Claude Code 安装篇
 - [Claude Code 安装与配置](topics/claude-code-installation.md) — CLI/桌面客户端、国内模型接入、CCR/CC Switch
@@ -131,6 +133,10 @@ updated: 2026-05-09
 ## 原始资料
 
 27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+
+### ECC 资料
+1 篇 ECC 介绍文章，位于 `raw/articles/`：
+- 132页！Anthropic黑客松获胜者everything-claude-code完整教程来了！— 灰尘，2026.05，ECC 项目介绍 + 132 页 PDF 教程
 
 ### OpenClaw 资料
 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 PDF（已转 Markdown），位于 `raw/articles/OpenClaw/`：

@@ -3,7 +3,7 @@ title: Claude Code
 type: entity
 tags: [claude-code, ai-coding, agent, anthropic]
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-13
 sources:
   - raw/articles/Claude Code/Claude Code 教程丨安装、使用与配置指南.md
   - raw/articles/Claude Code/Claude Code 保姆级完整教程（包含10个章节，包括接入国内大模型）.md
@@ -18,6 +18,8 @@ related:
   - topics/claude-code-practical-techniques.md
   - topics/claude-code-mastery-guide.md
   - entities/mcp.md
+  - entities/everything-claude-code.md
+  - topics/ecc-complete-guide.md
 ---
 
 # Claude Code
@@ -88,3 +90,7 @@ Claude Code 是 Anthropic 推出的终端 AI 编程助手（Agent），不仅支
 ```
 
 核心原则：**护栏，不是手册（Guardrails, Not Manuals）。**Boris 团队的 CLAUDE.md 只有约 2500 tokens（约 100 行）。每次 Claude 犯错就加一条规则——文件是活的，一直在长。
+
+## Claude Code 生态：Harness 性能优化
+
+[[entities/everything-claude-code|Everything Claude Code (ECC)]] 是 Claude Code 生态中最完整的 Harness 性能优化系统，来自 Anthropic 黑客松获胜项目（180K+ Stars）。ECC 将 Claude Code 的 Harness 能力工程化为可安装的系统组件——60 个 Agent、228 个 Skill、Hook 自动化、持续学习、安全扫描——跨越 Claude Code、Codex、Cursor、OpenCode 等 7+ 个 AI 编码框架。参见 [[topics/ecc-complete-guide|ECC 完整指南]]。

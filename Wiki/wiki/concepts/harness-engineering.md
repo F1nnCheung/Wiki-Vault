@@ -3,14 +3,16 @@ title: Harness Engineering（编排工程）
 type: concept
 tags: [harness-engineering, agent, model, orchestration, context-engineering]
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-13
 sources:
   - raw/articles/Hemmers/从 Claude Code 看 Harness Engineering：2026 年 Agent 真正拉开差距的地方.md
 related:
   - entities/hermes-agent.md
   - entities/claude-code.md
+  - entities/everything-claude-code.md
   - concepts/agentic-engineering.md
   - concepts/ai-agent.md
+  - topics/ecc-complete-guide.md
 ---
 
 # Harness Engineering（编排工程）
@@ -174,3 +176,18 @@ Agent 能操作真实环境后风险也随之增加。Harness 通过权限、策
 - 用 Hook 固化确定性动作（格式化、lint、test、build）
 - 用 SubAgent 拆分复杂任务，实现上下文隔离
 - 用权限控制管理风险：低风险 allow，高风险 ask/deny
+
+## 十、Harness Engineering 的标杆实践：ECC
+
+[[entities/everything-claude-code|Everything Claude Code]] 是目前最完整的 Harness Engineering 开源实践。它明确定位为 **Agent Harness 性能优化系统**（The performance optimization system for AI agent harnesses），将 Harness 的六大核心能力工程化为可安装的系统组件：
+
+| Harness 能力 | ECC 对应组件 |
+|-------------|-------------|
+| **执行环境** | 60 个专业化 Agent，覆盖 12+ 语言和框架 |
+| **状态管理** | SQLite 状态存储 + Session 适配器 + Hook 持久化 |
+| **任务编排** | Subagent 编排 + PM2 多 Agent 工作流 + 并行化策略 |
+| **上下文管理** | Token 优化 + SessionStart 注入 + 智能压缩 |
+| **反馈与验证** | 验证循环（Checkpoint/Continuous）+ 评估框架（pass@k） |
+| **约束与治理** | Rules 体系（17 个语言包）+ AgentShield 安全审计 + Prompt Defense Baseline |
+
+ECC 特别强调 Harness 的 **可拆卸性**：通过选择式安装（Selective Install）和 Hook 运行时控制（`ECC_HOOK_PROFILE`），实现按需装配而非全量堆叠。参见 [[topics/ecc-complete-guide|ECC 完整指南]]。

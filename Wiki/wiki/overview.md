@@ -3,13 +3,16 @@ title: 全局概览
 type: overview
 tags: []
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-13
 sources:
   - raw/articles/Claude Code/
   - raw/articles/OpenClaw/
   - raw/articles/Hemmers/
   - raw/articles/Obsidian/
+  - raw/articles/132页！Anthropic黑客松获胜者everything-claude-code完整教程来了！.md
 related:
+  - entities/everything-claude-code.md
+  - topics/ecc-complete-guide.md
   - topics/claude-code-introduction.md
   - topics/claude-code-installation.md
   - topics/claude-code-getting-started.md
@@ -39,7 +42,7 @@ related:
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南） + 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南） + Everything Claude Code（180K+ Stars 的 Anthropic 黑客松获胜项目）+ 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -52,6 +55,8 @@ related:
 4. **国内用户有成熟替代方案**：通过 CC Switch、CCR、桌面客户端 3P 模式等工具，可以无缝接入 DeepSeek、GLM、MiniMax 等国产模型，完全不需 Anthropic 账号。
 
 5. **设计集成正在重塑前端开发**：从 Figma MCP 的设计稿转代码，到 DESIGN.md 的设计系统规则，AI 前端开发正从「Vibe Coding」进入「Vibe Design」阶段。
+
+6. **Harness Engineering 是 Agent 效能倍增器**：Everything Claude Code（ECC）证明了 Harness 可以工程化为可安装的系统——60 个 Agent + 228 个 Skill + Hook 自动化 + 持续学习 + 安全扫描，将 Claude Code 裸用的「三成功力」提升到接近极限。ECC 的 Skills-first 架构、选择式安装、跨框架支持，代表了 Agent Harness 的最佳实践方向。
 
 ## 知识结构
 
@@ -79,7 +84,7 @@ Claude Code 知识体系
     ├── 精通指南（花叔 v2.0.0）── 三层模型、CLAUDE.md 深度实践、Computer Use/Voice Mode、Agent Teams、六反模式
     └── 提示词工程 ── 5 大场景 20 个模板
 
-实体层：Claude Code / MCP / Superpowers / gstack / CC Switch / CCR
+实體层：Claude Code / MCP / Superpowers / gstack / CC Switch / CCR / ECC
 ```
 
 ## Agent 框架对比知识体系
@@ -177,10 +182,10 @@ Obsidian 知识体系
 
 ## 关键数据
 
-- 收录文章：71 篇（Claude Code 27 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
+- 收录文章：72 篇（Claude Code 27 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南
-- 核心实体：10 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、OpenClaw、Hermes Agent、Obsidian、Tolaria）
-- 专题页面：24 个
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、**Harness 性能优化**
+- 核心实体：11 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、**ECC**、OpenClaw、Hermes Agent、Obsidian、Tolaria）
+- 专题页面：25 个
 - 概念页面：11 个
 - 对比页面：2 个

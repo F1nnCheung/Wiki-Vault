@@ -3,12 +3,13 @@ title: Agentic Engineering（智能体工程）
 type: concept
 tags: [agentic-engineering, agent, karpathy, paradigm]
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-13
 sources: []
 related:
   - concepts/vibe-coding.md
   - concepts/ai-agent.md
   - topics/ai-coding-history.md
+  - entities/everything-claude-code.md
 ---
 
 # Agentic Engineering（智能体工程）
@@ -57,6 +58,7 @@ Vibe Coding（2025）          Agentic Engineering（2026）
 
 ## 实践工具
 
+- **[[entities/everything-claude-code|Everything Claude Code]]**：最完整的 Agentic Engineering 开源实现——60 个专业化 Agent + 228 个 Skill，覆盖规划→编码→审查→测试→安全全流程
 - **Superpowers + gstack**：将 Agentic Engineering 流程编码为 Claude Code 可遵循的强制流程
 - **Claude Code**：支持多 Agent 并行（Subagent）
 - **Codex**：云端多步自动化
