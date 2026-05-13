@@ -22,6 +22,7 @@ related:
   - topics/claude-code-design-integration.md
   - topics/claude-code-tools.md
   - topics/claude-code-prompt-engineering.md
+  - topics/claude-md-12-rules.md
   - comparisons/openclaw-vs-hermes.md
   - topics/hermes-architecture-deep-dive.md
   - topics/hermes-multi-agent.md

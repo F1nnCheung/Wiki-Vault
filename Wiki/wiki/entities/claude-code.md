@@ -18,6 +18,7 @@ related:
   - topics/claude-code-getting-started.md
   - topics/claude-code-practical-techniques.md
   - topics/claude-code-mastery-guide.md
+  - topics/claude-md-12-rules.md
   - entities/mcp.md
   - entities/everything-claude-code.md
   - topics/ecc-complete-guide.md
@@ -174,7 +175,7 @@ globs: src/api/**/*.ts
 
 **护栏，不是手册（Guardrails, Not Manuals）。**Boris 团队的 CLAUDE.md 只有约 2500 tokens（约 100 行）。每次 Claude 犯错就加一条规则——文件是活的，一直在长。
 
-一条好规则的检验标准：**「这条规则防止什么具体错误？」**Karpathy 的 4 条防止的是静默假设、过度设计、附带破坏、弱成功标准。辰北加的 8 条防止的是无预算循环、缺检查点多步操作、测试不测实质、静默成功掩盖静默失败。
+一条好规则的检验标准：**「这条规则防止什么具体错误？」**Karpathy 的 4 条防止的是静默假设、过度设计、附带破坏、弱成功标准。辰北加的 8 条防止的是无预算循环、缺检查点多步操作、测试不测实质、静默成功掩盖静默失败。完整 12 条规则的深度拆解、翻车现场和数据验证，参见 [[topics/claude-md-12-rules|CLAUDE.md 12 条规则深度解析]]。
 
 用 `/memory` 命令可验证实际加载了哪些文件——加载失败是静默的。
 
