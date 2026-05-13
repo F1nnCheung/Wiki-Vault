@@ -479,8 +479,9 @@ skill-name/
 | **Superpowers** | 全流程增强包 | 14 个方法论的强制流程 |
 | **gstack** | YC 的工程标准 | 生产级开发→部署→监控闭环 |
 | **marketingskills** | 增长/营销 | Landing 页文案、投放策略 |
+| **Everything Claude Code** | 一站式 Harness 系统 | 60 Agent + 228 Skill + Hook + 持续学习 + 安全扫描，社区最大单一 Skill 集合（[[Wiki/wiki/entities/everything-claude-code\|ECC]]） |
 
-> 核心原则：Skill 不在多，在配合。十个打架的 Skill 不如两个清晰分工的 Skill。
+> 核心原则：Skill 不在多，在配合。十个打架的 Skill 不如两个清晰分工的 Skill。如果你想要开箱即用的一整套 Skill + Agent 体系，[[Wiki/wiki/entities/everything-claude-code|ECC]] 是最完整的选择。
 
 #### 进阶使用：MCP 生态系统
 
@@ -802,7 +803,7 @@ clawhub install skill-name    # 安装
 openclaw skills list          # 查看已安装
 ```
 
-**推荐 Skills**：skill-vetter（安全扫描）、boot-md（启动上下文注入）、command-logger（操作日志）、session-memory（跨会话持久记忆）
+**推荐 Skills**：skill-vetter（安全扫描）、boot-md（启动上下文注入）、command-logger（操作日志）、session-memory（跨会话持久记忆）。如果你想一步到位，[[Wiki/wiki/entities/everything-claude-code|ECC]] 提供了最完整的 Skill 和 Agent 集合
 
 #### 安全建议
 
@@ -1097,7 +1098,9 @@ Superpowers（大脑）        gstack（手脚）
 
 ---
 
-### 4.3 其他拓展工具与场景
+### 4.3 Everything Claude Code + 其他拓展工具与场景
+
+> 🆕 **新增**：[[Wiki/wiki/entities/everything-claude-code|Everything Claude Code (ECC)]]（180K+ Stars）是目前最完整的一站式 Harness 优化系统——60 个 Agent + 228 个 Skill + Hook 自动化 + 持续学习 + 安全扫描，详见 [[Wiki/wiki/topics/ecc-complete-guide|ECC 完整指南]] 和本节的 ECC 专题。
 
 #### Figma → 代码
 

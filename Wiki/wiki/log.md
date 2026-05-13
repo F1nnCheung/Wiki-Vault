@@ -3,7 +3,7 @@
 ## [2026-05-13] ingest | Everything Claude Code (ECC)
 - **新增页面**：Wiki/wiki/entities/everything-claude-code.md（实体页）、Wiki/wiki/topics/ecc-complete-guide.md（完整指南专题）
 - **更新页面**：Wiki/wiki/concepts/skills-concept.md（添加 ECC Skills 体系段落 + related 交叉引用）、Wiki/wiki/concepts/harness-engineering.md（新增第十节 ECC 标杆实践 + related）、Wiki/wiki/concepts/agentic-engineering.md（实践工具新增 ECC 条目 + related）、Wiki/wiki/entities/claude-code.md（新增 Harness 性能优化段落 + related）、Wiki/wiki/overview.md（新增第 6 核心论点 + 更新统计数据）、Wiki/wiki/index.md（索引新增 ECC 实体 + 专题 + 原始资料条目）
-- **教程同步**：待检查
+- **教程同步**：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/04-进阶使用-Skill.md（Skill 生态资源表新增 ECC + 更新时间）、教程/AI-Coding/04-拓展使用/03-其他拓展工具与场景.md（新增 ECC 专题章节 + 与逐个安装 Skill 的对比表 + 更新时间）、教程/AI-Coding/AI Coding 学习计划.md（精选 Skill 表新增 ECC + Obsidian 推荐 Skill 段落新增 ECC + 4.3 章节标题更新）
 - **摘要**：从 GitHub 仓库（200K+ Stars, Anthropic 黑客松获胜）和 132 页中文教程文章中提取信息，创建 ECC 实体页面（60 个 Agent / 228 个 Skill / 75 个命令 / 17 个语言规则包 / Hook 自动化 / 持续学习 / 跨 7+ 框架）和完整指南专题页面（安装/Agent 体系/Skills 生态/Hook 自动化/持续学习/安全/多 Agent 编排/跨框架/ECC 2.0/故障排除），同步更新了 5 个相关页面（skills-concept、harness-engineering、agentic-engineering、claude-code、overview）
 
 ## [2026-05-13] ingest | Superpowers 深度实战指南：从入门到精通（插件系统增量）
