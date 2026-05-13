@@ -106,7 +106,7 @@ Prompt Engineering ⊂ Context Engineering ⊂ Harness Engineering
 
 模型上下文窗口有限，长任务不断积累历史。Harness 动态组装上下文——保留、压缩或重新注入信息，让模型每轮都优先看到当前任务最相关的内容。
 
-**Claude Code 体现**：/compact 压缩长对话；CLAUDE.md / rules files 提供项目规则；Skills 只在被使用时才加载；SubAgents 把探索工作隔离到独立上下文窗口。
+**Claude Code 体现**：/compact 压缩长对话；CLAUDE.md / rules files 提供项目规则（见 [[entities/claude-code#CLAUDE.md 层级结构|CLAUDE.md 层级结构详解]]，包含完整层级、拼接机制、加载时机）；Skills 只在被使用时才加载；SubAgents 把探索工作隔离到独立上下文窗口。
 
 ### 4.5 反馈与验证：让 Agent 知道自己做得对不对
 

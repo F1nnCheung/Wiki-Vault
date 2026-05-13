@@ -166,3 +166,9 @@
 - 更新页面：Wiki/wiki/entities/mcp.md（「安装方式」补充 -s 参数示例；「配置范围」改为表格格式含存储位置）
 - 更新页面：Wiki/wiki/topics/claude-code-mcp-ecosystem.md（「避坑指南」#2 补充具体命令参数）
 - 摘要：来自用户提问。教程此前只提「推荐项目级配置」，未写明 claude mcp add -s project/user 具体参数。三页同步补充完毕
+
+## [2026-05-14] update | CLAUDE.md 层级结构与优先级机制详解
+- 更新页面：Wiki/wiki/entities/claude-code.md（CLAUDE.md 层级结构章节全面扩展：新增托管策略/本地覆盖/规则文件/自动记忆层级、父目录vs子目录按需加载区分、拼接而非覆盖的核心原理、@import 语法、路径作用域 globs 机制）
+- 更新页面：Wiki/wiki/concepts/harness-engineering.md（4.4 上下文管理新增交叉引用指向 CLAUDE.md 层级结构详解）
+- 教程同步：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/02-安装与配置.md（「规则层详解」新增层级结构子章节，含 5 层级对照表和拼接机制说明）
+- 摘要：来自用户提问「CLAUDE.md 分不分层级，有没有优先级」。知识库原有 4 级基本层级，补充到完整 8 级（含按需加载/启动加载区分、拼接机制、globs 规则文件）

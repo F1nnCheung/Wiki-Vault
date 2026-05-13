@@ -45,7 +45,7 @@ updated: 2026-05-13
 ## 实体
 
 ### Claude Code 生态
-- [Claude Code](entities/claude-code.md) — Anthropic 终端 AI 编程 Agent，四层能力体系
+- [Claude Code](entities/claude-code.md) — Anthropic 终端 AI 编程 Agent，四层能力体系，含 CLAUDE.md 层级结构详解
 - [Everything Claude Code (ECC)](entities/everything-claude-code.md) — Anthropic 黑客松获胜项目，Agent Harness 性能优化系统（180K+ Stars）
 - [MCP（Model Context Protocol）](entities/mcp.md) — AI 连接外部工具的开源标准协议
 - [Superpowers](entities/superpowers.md) — 跨 8 个平台的 14 个强制流程 Skill，返工减 90%
