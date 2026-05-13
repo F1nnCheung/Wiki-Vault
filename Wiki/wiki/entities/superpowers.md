@@ -11,6 +11,7 @@ sources:
   - raw/articles/Superpowers 深度实战指南：从入门到精通.md
 related:
   - topics/claude-code-superpowers-workflow.md
+  - topics/superpowers-plugin-system.md
   - concepts/superpowers-design-philosophy.md
   - entities/gstack.md
   - entities/claude-code.md

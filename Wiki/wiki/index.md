@@ -84,6 +84,7 @@ updated: 2026-05-09
 - [MCP 生态系统](topics/claude-code-mcp-ecosystem.md) — Top 15 排行榜、按角色推荐
 - [Skills 生态系统](topics/claude-code-skills-ecosystem.md) — 8 个核心 Skill、UI/UX 设计 Skill
 - [Superpowers + gstack 工作流](topics/claude-code-superpowers-workflow.md) — 完整开发闭环
+- [Superpowers 插件系统与多平台适配](topics/superpowers-plugin-system.md) — 多平台装配层 / 跨平台钩子兼容 / 版本管理 / 贡献标准
 - [设计集成与前端开发](topics/claude-code-design-integration.md) — Figma MCP、DESIGN.md
 - [辅助工具](topics/claude-code-tools.md) — Claude HUD、Understand-Anything
 - [从入门到精通指南（花叔 v2.0.0）](topics/claude-code-mastery-guide.md) — 三层模型、CLAUDE.md 深度实践、Computer Use/Voice Mode、Agent Teams、六反模式
