@@ -233,6 +233,8 @@ Spec-Driven："参照 spec/auth.md 接口定义，实现 src/pages/Login.tsx"
 
 **Rule 的核心价值**：不用每次新会话都重复解释项目背景、技术栈、编码规范。Rule 文件越完善，AI 的「理解偏差」越少。
 
+> 📖 **延伸阅读**：[[Wiki/wiki/topics/claude-md-12-rules|CLAUDE.md 12 条规则深度解析]]——从 Karpathy 原版 4 条到辰北 8 条增量，每条规则都来自真实翻车现场。文末附可复制完整模板，实验数据显示失误率从 41% 降至 3%。
+
 ---
 
 ### 1.3 六维概念对比：Skills / MCP / Agent / Rule / Prompt / 命令

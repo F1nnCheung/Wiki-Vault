@@ -90,6 +90,7 @@ updated: 2026-05-13
 - [设计集成与前端开发](topics/claude-code-design-integration.md) — Figma MCP、DESIGN.md
 - [辅助工具](topics/claude-code-tools.md) — Claude HUD、Understand-Anything
 - [从入门到精通指南（花叔 v2.0.0）](topics/claude-code-mastery-guide.md) — 三层模型、CLAUDE.md 深度实践、Computer Use/Voice Mode、Agent Teams、六反模式
+- [CLAUDE.md 12 条规则深度解析](topics/claude-md-12-rules.md) — Karpathy 4 条 + 辰北 8 条，41%→3% 失误率，含完整模板与翻车复盘
 
 ### 🛠️ AI Coding 工具教程
 - [Trae 完整教程](topics/trae-guide.md) — 安装、Chat/Builder/SOLO/IDE 四种模式、MCP 配置
@@ -133,6 +134,10 @@ updated: 2026-05-13
 ## 原始资料
 
 27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+
+### Claude Code / CLAUDE.md 资料
+1 篇 CLAUDE.md 规则深度文章，位于 `raw/articles/`：
+- [让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘](../raw/articles/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md) — 辰北，2026.05，Karpathy 原版 4 条 + 8 条增量规则，含 30 代码库 6 周实验数据
 
 ### ECC 资料
 1 篇 ECC 介绍文章，位于 `raw/articles/`：

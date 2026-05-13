@@ -183,10 +183,10 @@ Obsidian 知识体系
 
 ## 关键数据
 
-- 收录文章：72 篇（Claude Code 27 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
+- 收录文章：73 篇（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、**Harness 性能优化**
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、**Harness 性能优化**、**CLAUDE.md 规则体系**
 - 核心实体：11 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、**ECC**、OpenClaw、Hermes Agent、Obsidian、Tolaria）
-- 专题页面：25 个
+- 专题页面：26 个
 - 概念页面：11 个
 - 对比页面：2 个
