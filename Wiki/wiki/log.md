@@ -3,7 +3,7 @@
 ## [2026-05-13] ingest | 让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘
 - **新增页面**：Wiki/wiki/topics/claude-md-12-rules.md（CLAUDE.md 12 条规则深度解析：Karpathy 原版 4 条 + 辰北 8 条增量，含每条规则的翻车现场、实验数据、完整模板和使用指南）
 - **更新页面**：Wiki/wiki/entities/claude-code.md（CLAUDE.md 章节新增 12 条规则专题引用 + related 交叉引用）、Wiki/wiki/overview.md（知识结构树新增 CLAUDE.md 规则条目 + 统计数据更新 73 篇/26 专题）、Wiki/wiki/index.md（索引新增专题页条目 + 原始资料条目）
-- **教程同步**：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增 12 条规则引用）
+- **教程同步**：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增引用）、教程/AI-Coding/AI Coding 学习计划.md（Rule 概念段落新增延伸阅读）、教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/06-高阶指令.md（Q&A 段落新增 12 条规则引用）
 - **摘要**：处理辰北 2026.05 发布的 CLAUDE.md 规则深度文章。文章基于 Karpathy 发帖吐槽 Claude 编码的三种典型翻车模式，Forrest Chang 的 4 条规则模板（12 万 star），加上作者在 30 个代码库 6 周实验中的 8 条增量规则。核心数据：失误率从 41% 降至 3%（4 条）再压 8 个百分点（12 条），合规率仅从 78% 降至 76%。专题页完整覆盖了 12 条规则的设计逻辑、防止的失败模式、真实翻车现场和实验数据。
 
 ## [2026-05-13] ingest | Everything Claude Code (ECC)
