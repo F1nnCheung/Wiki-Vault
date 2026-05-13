@@ -3,7 +3,7 @@ title: 2.2.5 Claude Code 进阶：MCP 生态系统
 type: tutorial
 tags: [claude-code, mcp, ecosystem, extension, playwright]
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 sources:
   - Wiki/wiki/topics/claude-code-mcp-ecosystem.md
   - Wiki/wiki/entities/mcp.md
@@ -49,11 +49,17 @@ AI ←→ MCP 协议 ←→ MCP Server ←→ 外部系统
 ### 基本命令
 
 ```bash
-# 安装 MCP
+# 安装 MCP（默认 local，仅当前目录）
 claude mcp add <名称> -- <启动命令>
 
-# 示例：安装 Playwright
-claude mcp add playwright -- npx @playwright/mcp@latest
+# 指定安装范围：-s local（默认）| project（项目级）| user（用户级）
+claude mcp add <名称> -s <范围> -- <启动命令>
+
+# 示例：用户级安装 Playwright（所有项目可用）
+claude mcp add playwright -s user -- npx @playwright/mcp@latest
+
+# 示例：项目级安装（生成 .mcp.json，可 git 提交给团队共享）
+claude mcp add playwright -s project -- npx @playwright/mcp@latest
 
 # 查看已安装的 MCP
 claude mcp list
@@ -62,9 +68,21 @@ claude mcp list
 claude mcp remove <名称>
 ```
 
+### 三种安装范围
+
+| 参数 | 范围 | 存储位置 | 适用场景 |
+|------|------|----------|----------|
+| `-s local` | 当前目录 | 项目的 `.claude.json` | 默认值，仅当前项目 |
+| `-s project` | **项目级** 🔑 | 项目根目录 `.mcp.json` | 可 git 提交，团队共享 |
+| `-s user` | 用户级 | `~/.claude.json` | 所有项目通用 |
+
+> 🔑 **优先级**：同名 MCP 多处定义时，Local > Project > User
+
+**推荐策略**：与项目强相关的 MCP（Playwright、数据库连接）用 `-s project`，与项目无关的通用工具（Sequential Thinking）用 `-s user`。
+
 ### 配置文件
 
-推荐使用项目级配置 `.mcp.json` 而非全局配置：
+使用 `-s project` 安装后，会自动生成项目根目录的 `.mcp.json`：
 
 ```json
 {
@@ -80,6 +98,8 @@ claude mcp remove <名称>
   }
 }
 ```
+
+> ⚠️ 项目中有 `.mcp.json` 时，Claude Code 首次会要求手动审批才能激活其中的 MCP 服务器。可用 `claude mcp reset-project-choices` 重置审批状态。
 
 ---
 
@@ -160,8 +180,14 @@ Playwright MCP 方式：
 
 ### 2. 使用项目级配置
 
-❌ 全局配置 `.claude/mcp.json` → 所有项目共享，容易冲突
-✅ 项目级配置 `.mcp.json` → 每个项目独立配置
+❌ 默认 `local` 或 `-s user` → 配置不跟随代码，换机器/换人就丢失
+✅ `-s project` → 生成 `.mcp.json`，随代码 git 提交，团队开箱即用
+
+```bash
+# 好的做法：项目级安装，配置跟着代码走
+claude mcp add playwright -s project -- npx @playwright/mcp@latest
+claude mcp add github -s project -- npx @anthropic/mcp-github
+```
 
 ### 3. 先装 Playwright
 

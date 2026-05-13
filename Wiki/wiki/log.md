@@ -148,3 +148,9 @@
 - 更新页面：Wiki/wiki/index.md（实体页简介更新为跨平台定位 + 新增设计哲学概念页条目）
 - 教程同步：教程/AI-Coding/AI Coding 学习计划.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
 - 摘要：处理 AgentBuff 2026-05-08 文章（1048 行）。核心新知：Superpowers 不仅是 Claude Code 插件，而是跨 8 平台方法论框架（三种 Bootstrap 路径）；每个技能有铁律+HARD-GATE+Red Flags+Common Rationalizations 四层防线；设计哲学（人的搭档语言/CSO）是全新内容；补充了 React Todo List 完整实战演练
+
+## [2026-05-13] update | MCP 安装范围参数补充
+- 更新页面：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/05-进阶使用-MCP.md（「基本命令」补充 -s 范围参数及示例；「配置文件」改为「三种安装范围」对照表，含 Local/Project/User 存储位置与优先级；「避坑指南」#2 补充具体命令）
+- 更新页面：Wiki/wiki/entities/mcp.md（「安装方式」补充 -s 参数示例；「配置范围」改为表格格式含存储位置）
+- 更新页面：Wiki/wiki/topics/claude-code-mcp-ecosystem.md（「避坑指南」#2 补充具体命令参数）
+- 摘要：来自用户提问。教程此前只提「推荐项目级配置」，未写明 claude mcp add -s project/user 具体参数。三页同步补充完毕
