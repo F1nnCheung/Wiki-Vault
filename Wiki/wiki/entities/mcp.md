@@ -57,11 +57,11 @@ claude mcp list
 
 ## 核心 MCP 分类
 
-| 类别 | 推荐 MCP | 用途 |
-|---|---|---|
-| 基础必装 | Filesystem + Git + GitHub | 覆盖 90% 日常需求 |
-| 浏览器 | Playwright | AI 操作浏览器验证页面 |
-| 文档 | Context7 | 最新文档注入防幻觉 |
-| 数据库 | PostgreSQL/SQLite | 自然语言查询 |
-| 部署 | Vercel / Supabase | 一键部署 |
-| 设计 | Figma MCP | 设计稿转代码 |
+| 类别   | 推荐 MCP                    | 用途           |
+| ---- | ------------------------- | ------------ |
+| 基础必装 | Filesystem + Git + GitHub | 覆盖 90% 日常需求  |
+| 浏览器  | Playwright                | AI 操作浏览器验证页面 |
+| 文档   | Context7                  | 最新文档注入防幻觉    |
+| 数据库  | PostgreSQL/SQLite         | 自然语言查询       |
+| 部署   | Vercel / Supabase         | 一键部署         |
+| 设计   | Figma MCP                 | 设计稿转代码       |
