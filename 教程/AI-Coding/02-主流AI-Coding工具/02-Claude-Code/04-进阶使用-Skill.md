@@ -202,14 +202,14 @@ ls ~/.claude/skills/    # 查看已安装
 
 ## Skill 生态资源
 
-| 资源 | 地址 | 说明 |
-|---|---|---|
-| **ECC Skills 体系** | github.com/affaan-m/everything-claude-code | **228 个 Skill**，目前最大的单一 Skill 集合，覆盖编码标准/测试/后端/前端/安全/学习/运维/业务等 10+ 领域 |
-| 官方仓库 | github.com/anthropics/skills | Anthropic 维护的官方 Skill |
-| 社区网站 | skillsmp.com | Skill 搜索引擎 |
-| Awesome 列表 | github.com/ComposioHQ/awesome-claude-skills | 56.8k Stars |
-| 中文资源 | skillhub.cn | 国内 Skill 社区 |
-| OpenClaw Hub | clawhub.ai | OpenClaw Skill 市场 |
+| 资源                | 地址                                          | 说明                                                                   |
+| ----------------- | ------------------------------------------- | -------------------------------------------------------------------- |
+| **ECC Skills 体系** | github.com/affaan-m/everything-claude-code  | **228 个 Skill**，目前最大的单一 Skill 集合，覆盖编码标准/测试/后端/前端/安全/学习/运维/业务等 10+ 领域 |
+| 官方仓库              | github.com/anthropics/skills                | Anthropic 维护的官方 Skill                                                |
+| 社区网站              | skillsmp.com                                | Skill 搜索引擎                                                           |
+| Awesome 列表        | github.com/ComposioHQ/awesome-claude-skills | 56.8k Stars                                                          |
+| 中文资源              | skillhub.cn                                 | 国内 Skill 社区                                                          |
+| OpenClaw Hub      | clawhub.ai                                  | OpenClaw Skill 市场                                                    |
 
 ---
 

@@ -124,13 +124,13 @@ claude mcp remove <名称>
 
 不是每个 MCP 都要装。按你的角色选择 2-4 个核心 MCP：
 
-| 角色 | 推荐组合 | 覆盖场景 |
-|---|---|---|
-| **前端** | Filesystem + Git + Figma + UI UX Pro Max | 文件管理、版本控制、设计稿转代码、UI 质量 |
-| **后端** | Git + Prisma + FastAPI-MCP + SecureCode | 版本控制、ORM、API 文档、安全 |
-| **数据分析** | Context7 + mcp-run-python + 数据库MCP | 文档查询、Python 执行、数据操作 |
-| **全栈** | Filesystem + Git + Pipedream + Claude Mem | 全链路覆盖 |
-| **新手起步** | Filesystem + Git + GitHub | 覆盖 90% 日常需求 |
+| 角色       | 推荐组合                                      | 覆盖场景                   |
+| -------- | ----------------------------------------- | ---------------------- |
+| **前端**   | Filesystem + Git + Figma + UI UX Pro Max  | 文件管理、版本控制、设计稿转代码、UI 质量 |
+| **后端**   | Git + Prisma + FastAPI-MCP + SecureCode   | 版本控制、ORM、API 文档、安全     |
+| **数据分析** | Context7 + mcp-run-python + 数据库MCP        | 文档查询、Python 执行、数据操作    |
+| **全栈**   | Filesystem + Git + Pipedream + Claude Mem | 全链路覆盖                  |
+| **新手起步** | Filesystem + Git + GitHub                 | 覆盖 90% 日常需求            |
 
 ---
 
