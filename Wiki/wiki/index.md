@@ -143,6 +143,9 @@ updated: 2026-05-28
 ### 📚 RAG 与知识库技术
 - [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
 
+### ✍️ AI 学术写作
+- [Gemini 3.5 + 六个 Skill 学术论文写作](topics/gemini-academic-writing.md) — 定框架→引言→文献综述→方法→结果分析→结论，六步 Skill 管线化工作流
+
 ---
 
 ## 对比
@@ -181,7 +184,7 @@ updated: 2026-05-28
 - OpenClaw橙皮书-从入门到精通-v1.4.0 — 花叔，2026.03，涵盖架构/部署/渠道/Skills/模型/安全
 
 ### Hemmers 资料
-18 篇 Hermes Agent 系列文章 + 1 个 HTML 页面 + 11 个 WebP 图片，位于 `raw/articles/Hemmers/`：
+20 篇 Hermes Agent 系列文章 + 1 个 HTML 页面 + 11 个 WebP 图片，位于 `raw/articles/Hemmers/`：
 - Hermes Agent v0.13.0 来了：137K 星的开源 AI Agent 又进化了 — 朗朗晴空，2026.05，Kanban/跨轮目标/视频理解/语音克隆
 - Hermes Agent v1.3 从入门到精通：开口就能用 — 小飞哥，2026.04，自然语言操作范式
 - Hermes Agent 从入门到精通 V1.2 — 2026.05，安装/模型/平台/v0.9.0 新功能
@@ -195,6 +198,8 @@ updated: 2026-05-28
 - 手把手：给 Hermes Agent 装一个六面板控制中心 — 2026.05，Workspace 安装配置
 - 从 Claude Code 看 Harness Engineering — 澄旭，2026.05，编排工程方法论
 - 我为什么推荐你安装 Hermes Agent — Jeffrey Hu，2026.04，硬件选择/部署实操
+- [Hermes Agent 架构详解](../raw/articles/Hemmers/Hermes%20Agent%20架构详解.md) — AI灰鲸，2026.05，Agent Loop/可中断API/Prompt Cache(降费75%)/双层压缩系统
+- [从零到精通：Hermes Agent 完整上手指南（2026版）](../raw/articles/Hemmers/从零到精通：Hermes%20Agent%20完整上手指南（2026版），Github%209万星的底层解析：记忆、技能、GEPA.md) — AI潮局，2026.05，SOUL身份层/三层记忆/技能自进化/GEPA模型
 
 ### Obsidian 资料
 15 篇 Obsidian 知识管理中文文章，位于 `raw/articles/Obsidian/`：入门与指南(5) / AI 集成(5) / 信息收集(3) / 生态与替代品(2)
@@ -270,6 +275,10 @@ updated: 2026-05-28
 ### AI Agent 编排框架资料
 1 篇 AI Agent 编排框架文章，位于 `raw/articles/AI Agent/`：
 - [AI Agent 编排框架横向对比：LangChain vs LangGraph vs Spring AI Alibaba Graph](../raw/articles/AI%20Agent/AI%20Agent%20编排框架横向对比：LangChain%20vs%20LangGraph%20vs%20Spring%20AI%20Alibaba%20Graph.md) — 修行者华军，2026.05，执行模型/Agent 模式/企业特性/开发体验四维对比
+
+### Gemini / 学术写作资料
+1 篇 Gemini 学术写作文章，位于 `raw/articles/`：
+- [Gemini 3.5+六个 Skill，高质量论文初稿一气呵成！](../raw/articles/Gemini%203.5+六个skill，高质量论文初稿一气呵成！.md) — 七哥，2026.05，六个 Skill 覆盖定框架→引言→文献综述→方法→结果分析→结论
 
 ### VibeCoding 实战资料
 1 篇 VibeCoding 实战文章，位于 `raw/articles/VibeCoding/`：

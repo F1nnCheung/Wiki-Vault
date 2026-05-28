@@ -6,6 +6,7 @@ created: 2026-05-09
 updated: 2026-05-09
 sources:
   - raw/articles/OpenClaw/OpenClaw vs Hermes：拆解 Hermes Agent 五层架构.md
+  - raw/articles/Hemmers/Hermes Agent 架构详解.md
 related:
   - entities/hermes-agent.md
   - comparisons/openclaw-vs-hermes.md

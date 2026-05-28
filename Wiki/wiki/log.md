@@ -1,5 +1,13 @@
 # 操作日志
 
+## [2026-05-28] ingest | Hemmers 补充 3 篇（架构详解/完整上手指南/安装推荐）
+- **更新页面**：
+  - Wiki/wiki/topics/hermes-architecture-deep-dive.md（新增 1 篇 source：可中断 API/Prompt Cache 降费 75%/双层压缩详解）
+  - Wiki/wiki/topics/hermes-agent-guide.md（新增 2 篇 sources：GEPA 模型/三层记忆详解/硬件选型指南）
+  - Wiki/wiki/overview.md（文章数 103→105，Hemmers 18→20）
+  - Wiki/wiki/index.md（Hemmers 资料 18→20 篇完整索引，新增 架构详解/从零到精通 条目）
+- **摘要**：Hemmers 3 篇均为现有页面的补充内容。核心增量：架构详解补充了 Agent Loop 可中断机制、Fallback 链、Prompt Cache 策略；从零到精通补充了 GEPA（Goal-Execute-Plan-Act）模型和技能自进化机制；安装推荐补充了硬件选型指南（云/迷你主机/旧电脑）。
+
 ## [2026-05-28] ingest | Codex 补充 5 篇（入门教程 + 工具对比 + 国内安装）
 - **更新页面**：
   - Wiki/wiki/topics/codex-guide.md（新增 3 篇 sources：小白视角界面详解/新手入门路径/下载安装到看懂界面）

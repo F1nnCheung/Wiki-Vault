@@ -8,6 +8,8 @@ sources:
   - raw/articles/Hemmers/Hermes Agent v1.3 从入门到精通：开口就能用.md
   - raw/articles/Hemmers/Hermes Agent 从入门到精通 V1.2：2026年最值得学的 AI Agent 框架.md
   - raw/articles/Hemmers/Hermes Agent从入门到实战.md
+  - raw/articles/Hemmers/从零到精通：Hermes Agent 完整上手指南（2026版），Github 9万星的底层解析：记忆、技能、GEPA.md
+  - raw/articles/Hemmers/我为什么推荐你安装 Hermes Agent.md
   - raw/articles/Hemmers/Hermes 装完以后，先写这 2 个文件：SOUL.md 和 AGENTS.md（附可复制模板）.md
   - raw/articles/Hemmers/手把手：给 Hermes Agent 装一个六面板控制中心.md
   - raw/articles/Hemmers/Hermes Agent 多角色团队搭建指南.md
