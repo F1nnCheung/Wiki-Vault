@@ -6,6 +6,7 @@ created: 2026-05-28
 updated: 2026-05-28
 sources:
   - raw/articles/Codex/DeepSeek 模型接入 Codex（AI 编程助手）的超级详细保姆级安装部署教程.md
+  - raw/articles/Codex/国内可用！Codex 一步步安装配置指南.md
 related:
   - entities/codex.md
   - entities/cc-switch.md

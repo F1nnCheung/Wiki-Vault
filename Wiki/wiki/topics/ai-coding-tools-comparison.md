@@ -3,8 +3,9 @@ title: AI Coding 工具全景对比
 type: topic
 tags: [ai-coding, tools, comparison, cursor, codex, trae, copilot]
 created: 2026-05-09
-updated: 2026-05-09
-sources: []
+updated: 2026-05-28
+sources:
+  - raw/articles/Codex/Cursor、Claude Code、Codex、Copilot：AI 编程工具进入"四国杀".md
 related:
   - entities/cursor.md
   - entities/codex.md
@@ -87,3 +88,20 @@ related:
 ```
 
 **核心原则**：先精通一个，再扩展组合。工具是手段，理解概念才是目的。
+
+---
+
+## 从 IDE 到 Agent：入口之争
+
+2026 年 AI 编程工具的竞争，正在从「谁生成代码更快」升级为「**谁能成为程序员每天打开的第一个入口**」。
+
+| 工具 | 入口形态 | 核心策略 |
+|------|---------|---------|
+| **Claude Code** | 终端 CLI | Agent 住进终端，直接操作文件、Git、命令 |
+| **Cursor** | AI 原生 IDE | 编辑器本身 AI 化，从 Tab 到 Agent |
+| **Codex** | 云端 Agent 平台 | 不依赖 IDE，在云上独立完成工程任务 |
+| **Copilot** | IDE 插件 + Agent | 从自动补全拓展到 Issue→PR→Review 全流程 |
+
+过去开发工具的核心是编辑器。现在开发工具的核心正在变成 **Agent**——竞的不是编辑器市场份额，而是「你早上打开电脑，第一个启动的是谁」。
+
+> 📖 相关：[[claude-code|Claude Code]] · [[cursor|Cursor]] · [[codex|Codex]] · [[claude-code-skills-recommendations|Skills 分级推荐]]

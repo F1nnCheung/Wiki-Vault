@@ -228,19 +228,20 @@ updated: 2026-05-28
 - 06-附录 — 插件清单/工具清单/快捷键速查/FAQs
 
 ### Codex 资料
-12 篇 Codex 中文文章，位于 `raw/articles/Codex/`：
+13 篇 Codex 中文文章，位于 `raw/articles/Codex/`：
 - OpenAI Codex 完全方法论：6 个阶段，从装上到吃透 — 莲花明，2026.05，六阶段方法论/沙箱系统/AGENTS.md/TDD/云端/与CC混用
 - OpenAI Codex 完整教程 2026：100 分钟 — 邵猛，2026.05，Riley Brown 视频拆解：产品定位/核心机制/六项目实战
 - Codex (APP) 保姆级全攻略 — 技术爬爬虾，2026.04，12 章完整教程：安装→沙箱→记忆→插件→Skills→MCP→部署→电脑自动化
 - 从0到1带你速通Codex — 数字生命卡兹克，2026.05，最新教程：安装/配置/Skills/MCP/实战网页+App
 - DeepSeek 模型接入 Codex — 鲲鹏论AI，2026.05，mimo2codex+CC Switch 本地转发方案
-- Codex App 从0到1完整入门教程 — 逸尘，2026.05，小白视角：界面详解/设置逐项解释/插件/MCP
+- [Codex App 从0到1完整入门教程](../raw/articles/Codex/Codex%20App%20从0到1完整入门教程：把这个超级APP的每一个细节抽丝剥茧讲清楚.md) — 逸尘，2026.05，小白视角：界面三栏详解/设置逐项解释/项目vs对话/插件+Skills+MCP+自动化概念
 - 1.1万字 Codex保姆级教程 — nobody，2026.05，Windows 新手：项目文件夹配置/规则/插件/Skills
 - Codex 从入门到精通 — AI4ALL，2026.05，六步方法论：建目录→拆chat→专注产物→Skill→Automation
-- Codex 新手入门教程 — AI评测老李，2026.05，开通路径/Computer Use 体验/额度管理
+- [Codex 新手入门教程，看这篇就够了](../raw/articles/Codex/Codex%20新手入门教程，看这篇就够了.md) — AI评测老李，2026.05，开通路径（Plus/Pro/API）/Computer Use 体验/额度管理
 - Codex零基础保姆式安装教程 — 欧工666，2026.05，四大入口对比/Windows安装/Git配置
-- 《Codex从0到1完整入门教程》 — 水哥，2026.05，纯小白：下载→登录→界面详解
-- Cursor、Claude Code、Codex、Copilot：AI 编程工具进入"四国杀" — 工具对比
+- [《Codex从0到1完整入门教程》下载安装到看懂界面](../raw/articles/Codex/《Codex从0到1完整入门教程》下载安装到看懂界面，一篇讲清楚。.md) — 水哥，2026.05，微信指数 508 万+/下载→登录→界面详解
+- [Cursor、Claude Code、Codex、Copilot：AI 编程工具进入"四国杀"](../raw/articles/Codex/Cursor、Claude%20Code、Codex、Copilot：AI%20编程工具进入"四国杀".md) — 鲁大猿，2026.05，入口之争：从IDE到Agent/四工具定位对比
+- [国内可用！Codex 一步步安装配置指南](../raw/articles/Codex/国内可用！Codex%20一步步安装配置指南.md) — 海鱼星，2026.05，Windows 离线下载（rg-adguard）/msix→rar/中转 API 配置
 
 ### 知识库技术资料
 11 篇知识库技术中文文章，位于 `raw/articles/知识库/`：

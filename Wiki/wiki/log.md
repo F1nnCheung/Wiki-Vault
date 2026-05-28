@@ -1,5 +1,14 @@
 # 操作日志
 
+## [2026-05-28] ingest | Codex 补充 5 篇（入门教程 + 工具对比 + 国内安装）
+- **更新页面**：
+  - Wiki/wiki/topics/codex-guide.md（新增 3 篇 sources：小白视角界面详解/新手入门路径/下载安装到看懂界面）
+  - Wiki/wiki/topics/codex-deepseek-integration.md（新增 1 篇 source + Windows 离线下载方案）
+  - Wiki/wiki/topics/ai-coding-tools-comparison.md（新增 1 篇 source + "从 IDE 到 Agent：入口之争" 章节）
+  - Wiki/wiki/overview.md（文章数 102→103，Codex 12→13）
+  - Wiki/wiki/index.md（Codex 资料 12→13 篇完整索引，新增 国内可用 条目）
+- **摘要**：Codex 5 篇均为现有页面的补充内容，不新增独立页面。核心增量：(1) codex-guide 新增 3 个小白入门视角的 sources；(2) codex-deepseek-integration 新增 Windows 离线下载+国内中转 API 方案；(3) ai-coding-tools-comparison 新增「入口之争」视角——四工具从 IDE 到 Agent 的竞争格局。
+
 ## [2026-05-28] ingest | AI Agent 编排框架横向对比（1 篇）
 - **新增页面**：
   - Wiki/wiki/comparisons/agent-orchestration-frameworks.md（LangChain vs LangGraph vs Spring AI Alibaba Graph：执行模型/Agent 模式/企业特性/开发体验四维对比 + 选型公式）

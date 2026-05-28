@@ -9,6 +9,9 @@ sources:
   - raw/articles/Codex/1.1万字 Codex保姆级教程：小白从安装到跑通项目.md
   - raw/articles/Codex/OpenAI Codex 完全方法论：6 个阶段，从装上到吃透（长文 · 全是可抄的）.md
   - raw/articles/Codex/从0到1带你速通Codex，我整理的终极保姆教程来了。.md
+  - raw/articles/Codex/Codex App 从0到1完整入门教程：把这个超级APP的每一个细节抽丝剥茧讲清楚.md
+  - raw/articles/Codex/Codex 新手入门教程，看这篇就够了.md
+  - raw/articles/Codex/《Codex从0到1完整入门教程》下载安装到看懂界面，一篇讲清楚。.md
 related:
   - entities/codex.md
   - topics/codex-deepseek-integration.md
