@@ -159,6 +159,7 @@ updated: 2026-05-28
 
 ## 输出产物
 
+- [知识库技术学习指南](../../教程/知识库/知识库技术学习指南.md) — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
 - [AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
 
 ## 原始资料
