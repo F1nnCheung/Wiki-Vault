@@ -101,7 +101,12 @@ nav.forEach(([title, links]) => {
   links.forEach(([path, label]) => {
     const div = card.createEl("div");
     div.style.cssText = "margin:1px 0;";
-    div.appendChild(dv.fileLink(path, false, label));
+    const a = div.createEl("a");
+    a.textContent = label;
+    a.setAttr("data-href", path + ".md");
+    a.setAttr("href", path + ".md");
+    a.addClass("internal-link");
+    a.style.cssText = "font-size:0.88em; color:var(--text-normal); text-decoration:none;";
   });
 });
 ```
@@ -141,7 +146,8 @@ tut.forEach(([path, title, desc]) => {
   const link = card.createEl("a");
   link.style.cssText = "font-weight:700; font-size:0.93em; text-decoration:none; color:var(--text-normal); display:block; margin-bottom:2px;";
   link.textContent = title;
-  link.href = path;
+  link.setAttr("data-href", path + ".md");
+  link.setAttr("href", path + ".md");
   link.addClass("internal-link");
   const sub = card.createEl("div");
   sub.style.cssText = "font-size:0.78em; color:var(--text-muted);";
@@ -170,7 +176,12 @@ if (!notes.length) {
   pre.style.cssText = "color:var(--text-muted);";
   pre.textContent = "🔄 基于今日日期推荐：";
 
-  ctr.appendChild(dv.fileLink(note.path, false, note.name || "未命名"));
+  const linkEl = ctr.createEl("a");
+  linkEl.textContent = note.name || "未命名";
+  linkEl.setAttr("data-href", note.path);
+  linkEl.setAttr("href", note.path);
+  linkEl.addClass("internal-link");
+  linkEl.style.cssText = "font-weight:600; color:var(--text-accent); text-decoration:none; margin-left:4px;";
 }
 ```
 
