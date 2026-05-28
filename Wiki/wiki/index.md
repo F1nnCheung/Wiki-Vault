@@ -37,7 +37,8 @@ updated: 2026-05-28
 - [Superpowers 设计哲学](concepts/superpowers-design-philosophy.md) — 铁律+硬门控 / 合理化防范 / 人的搭档 / CSO 四大设计原则
 
 ### RAG 与知识图谱概念
-- [RAG 三种架构](concepts/rag-architectures.md) — Classic RAG（检索）→ Graph RAG（连接）→ Agentic RAG（推理），含选型指南
+- [RAG 三种架构](concepts/rag-architectures.md) — Classic RAG（检索）→ Graph RAG（连接）→ Agentic RAG（推理），含微调策略/评估/优化三维度
+- [知识图谱](concepts/knowledge-graph.md) — 实体 + 关系 + 三元组 + 本体，把散落的关系显式化，让计算机理解和复用
 - [代码知识图谱](concepts/code-knowledge-graph.md) — 从「检索文件」走向「查询关系」，让 AI 编程助手具备项目记忆层
 
 ### Obsidian / 知识管理概念
@@ -139,6 +140,9 @@ updated: 2026-05-28
 ### 🚀 AI 原生创业
 - [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
 
+### 📚 RAG 与知识库技术
+- [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
+
 ---
 
 ## 对比
@@ -238,11 +242,18 @@ updated: 2026-05-28
 - Cursor、Claude Code、Codex、Copilot：AI 编程工具进入"四国杀" — 工具对比
 
 ### 知识库技术资料
-4 篇知识库技术中文文章，位于 `raw/articles/知识库/`：
-- AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
-- 一文看懂三种 RAG 架构 — 兔兔AGI，2026.05，Classic RAG/Graph RAG/Agentic RAG 对比+选型指南
-- 开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略 — 兔兔AGI，2026.05，AST解析/多模态图谱/MCP集成
-- 开源一款零服务器代码知识图谱引擎：GitNexus — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG
+11 篇知识库技术中文文章，位于 `raw/articles/知识库/`：
+- [AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki](../raw/articles/知识库/AI%20知识库技术演进拆解：从%20RAG%20到%20NotebookLM，再到%20LLM%20Wiki.md) — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
+- [一文看懂三种 RAG 架构：Classic RAG、Graph RAG 与 Agentic RAG](../raw/articles/知识库/一文看懂三种%20RAG%20架构：Classic%20RAG、Graph%20RAG%20与%20Agentic%20RAG.md) — 兔兔AGI，2026.05，三种架构对比+选型指南
+- [一文看懂三种 RAG 架构（补充版）](../raw/articles/知识库/一文看懂三种%20RAG%20架构：Classic%20RAG、Graph%20RAG%20与%20Agentic%20RAG%201.md) — 兔兔AGI，2026.05，以问题形状为纲的深度解读
+- [RAG 优化 20 法：从"搜得到"到"答得好"](../raw/articles/知识库/RAG%20优化%2020%20法：从"搜得到"到"答得好"%201.md) — 水果派哲思，2026.04，五阶段优化管线/场景组合推荐
+- [RAG-向量数据库 Milvus](../raw/articles/知识库/RAG-向量数据库Milvus.md) — idong，2026.04，六大索引类型/相似度量/L2/IP/COSINE
+- [RAG-搞懂嵌入向量的生成](../raw/articles/知识库/RAG-搞懂嵌入向量的生成.md) — idong，2026.05，Dense/Sparse/Multi-Vector/BGE-M3
+- [RAG-查询前处理](../raw/articles/知识库/RAG-查询前处理.md) — idong，2026.05，查询改写/拆分/HyDE/路由四种预处理
+- [RAG 我懂你：从架构到知识库构建](../raw/articles/知识库/RAG我懂你：从架构到知识库构建.md) — 二进制左右，2026.05，四象限微调策略/知识库构建管线/评估体系/优化策略
+- [知识图谱入门：从一张关系网到 AI 知识底座](../raw/articles/知识库/知识图谱入门：从一张关系网到%20AI%20知识底座.md) — 水果派哲思，2026.04，三元组/本体/构建流程/GraphRAG
+- [开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略](../raw/articles/知识库/开源%20AI%20编程可查询的软件工程知识图谱：Graphify%20完整上手攻略.md) — 兔兔AGI，2026.05，AST解析/多模态图谱/MCP集成
+- [开源一款零服务器代码知识图谱引擎：GitNexus](../raw/articles/知识库/开源一款零服务器代码知识图谱引擎，支持多语言解析、Graph%20RAG%20问答、AI%20代理集成的代码分析平台.md) — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG
 
 ### Home Assistant 资料
 2 篇 Home Assistant 中文文章，位于 `raw/articles/Home Assistant/`：

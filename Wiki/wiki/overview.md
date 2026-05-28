@@ -45,7 +45,7 @@ related:
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理**、**知识库技术（RAG/图谱）**、**智能家居（Home Assistant + Hermes）** 和 **AI 原生创业（OPC）** 七大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 4 篇知识库技术文章 + **2 篇 Home Assistant 文章** + **2 篇 OPC/AI 创业文章** + **1 篇 VibeCoding 实战文章**，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理**、**知识库技术（RAG/图谱）**、**智能家居（Home Assistant + Hermes）** 和 **AI 原生创业（OPC）** 七大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 11 篇知识库技术文章（RAG 架构/优化/图谱/代码图谱） + **2 篇 Home Assistant 文章** + **2 篇 OPC/AI 创业文章** + **1 篇 VibeCoding 实战文章**，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -230,17 +230,31 @@ Codex 知识体系
     └── 高手玩法：Codex 做审查+Debug，Claude Code 做架构，互补而非二选一
 ```
 
-## 知识库技术：RAG 架构与代码图谱
+## 知识库技术：RAG 架构、优化与知识图谱
 
-从 RAG 到知识图谱，知识库技术经历了三代演进。本板块覆盖 RAG 三种架构的对比选型和代码知识图谱工具。
+从 RAG 到知识图谱，知识库技术经历了三代演进。本板块覆盖 RAG 架构对比、20 种优化方法、知识图谱概念、代码图谱工具四大分支。
 
 ```
 知识库技术体系
 │
-├── 📊 RAG 三种架构
-│   ├── Classic RAG — 检索：找资料（chunk→embedding→向量库→Top K→生成）
-│   ├── Graph RAG — 连接：找关系（知识图谱实体+关系遍历）
-│   └── Agentic RAG — 推理：决定下一步（多步骤动态调查，Agent 自主选择工具）
+├── 📊 RAG 架构与优化
+│   ├── 三种检索架构
+│   │   ├── Classic RAG — 检索：找资料（chunk→embedding→向量库→Top K→生成）
+│   │   ├── Graph RAG — 连接：找关系（知识图谱实体+关系遍历）
+│   │   └── Agentic RAG — 推理：决定下一步（多步骤动态调查，Agent 自主选择工具）
+│   ├── 微调策略四象限（无微调/检索器微调/模型微调/协同微调）
+│   ├── RAG 优化 20 法 — 从「能跑」到「能用」的五阶段优化管线
+│   │   ├── 数据入库（语义分块/元数据过滤/Graph RAG/反向提问）
+│   │   ├── 检索前（查询重写/多路查询/HyDE/路由）
+│   │   ├── 检索阶段（稠密+稀疏混合检索/RRF/微调嵌入）
+│   │   ├── 检索后（重排/上下文压缩/MMR）
+│   │   └── 生成阶段（Prompt 护栏/自我反思/引用溯源）
+│   └── 系统评估（检索质量+生成质量双维度指标）
+│
+├── 🧠 知识图谱
+│   ├── 三元组（实体-关系-实体）→ 本体（Ontology）→ 置信度与溯源
+│   ├── 构建流程：问题→Schema→数据源→抽取→消歧→融合→校验→存储→应用→迭代
+│   └── 应用：搜索/推荐/风控/医疗/企业 KM/GraphRAG
 │
 ├── 🔧 代码知识图谱工具
 │   ├── GitNexus（3.55 万 Stars）— 零服务器浏览器端引擎，14 语言，16 MCP 工具
@@ -248,7 +262,8 @@ Codex 知识体系
 │
 └── 🧠 核心概念
     ├── 代码知识图谱 — 从「检索文件」到「查询关系」
-    └── 三种 RAG 选型 — 看问题形状，不看架构名字
+    ├── 知识图谱 — 把散落的关系显式化，让计算机理解和复用
+    └── RAG 选型心法 — 看问题形状，不看架构名字
 ```
 
 ## 智能家居：Home Assistant + Hermes
@@ -300,10 +315,10 @@ AI 原生创业知识体系
 
 ## 关键数据
 
-- 收录文章：**94 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + Codex 12 篇 + 知识库技术 4 篇 + **Home Assistant 2 篇** + **OPC 2 篇** + **VibeCoding 1 篇** + 橙皮书 1 份）
+- 收录文章：**101 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + Codex 12 篇 + 知识库技术 11 篇 + **Home Assistant 2 篇** + **OPC 2 篇** + **VibeCoding 1 篇** + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、RAG 架构与知识图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**、**Obsidian 主页设计**
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、RAG 架构与优化、知识图谱、GraphRAG、代码图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**、**Obsidian 主页设计**
 - 核心实体：**15 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、**Home Assistant**）
-- 专题页面：**30 个**
-- 概念页面：**14 个**
+- 专题页面：**31 个**
+- 概念页面：**15 个**
 - 对比页面：2 个

@@ -1,5 +1,15 @@
 # 操作日志
 
+## [2026-05-28] ingest | 知识库 7 篇（RAG 架构/优化/知识图谱）
+- **新增页面**：
+  - Wiki/wiki/topics/rag-optimization-techniques.md（RAG 优化 20 法：五阶段管线 / Milvus 索引选型 / 嵌入模型选择 / 场景组合推荐）
+  - Wiki/wiki/concepts/knowledge-graph.md（知识图谱：三元组/本体/构建流程/GraphRAG/应用场景）
+- **更新页面**：
+  - Wiki/wiki/concepts/rag-architectures.md（新增微调策略四象限/知识库构建管线/RAG 系统评估/优化策略；新增 sources 2 篇；新增 related 交叉引用）
+  - Wiki/wiki/overview.md（知识库技术体系大幅扩展为四分支；文章数 94→101；专题 30→31；概念 14→15）
+  - Wiki/wiki/index.md（新增概念条目 1 个 + 专题条目 1 个；知识库技术资料 4→11 篇完整索引）
+- **摘要**：完成知识库目录全部 7 篇未处理文章。核心产出：RAG 优化 20 法专题页（合并 Milvus/Embedding/查询前处理/RAG优化 4 篇文章）+ 知识图谱概念页 + rag-architectures 新增微调策略、评估体系和优化策略三个理论维度。知识库技术从「4 篇资料 + 架构对比」升级为「11 篇资料 + 架构/优化/图谱/代码图谱四分支」完整体系。
+
 ## [2026-05-28] ingest | 批量收录 Claude Code 增量（4篇）+ Obsidian 增量（3篇）
 - **新增页面**：
   - Wiki/wiki/topics/claude-code-skills-recommendations.md（Skills 分级推荐：渐进式披露机制/五级梯队 11 个 Skill/8 种角色定制方案/5 个常见坑）

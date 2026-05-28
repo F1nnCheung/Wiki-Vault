@@ -62,6 +62,8 @@ queries = 运行时（查询）
 - LLM Wiki 是有状态的——知识建立在先前知识之上
 - 没有嵌入、没有向量搜索、没有基础设施开销
 
+> 📖 RAG 本身并非「不好」，只是更适合不同场景。深入了解 RAG 的架构选型和优化方法，见 [[Wiki/wiki/concepts/rag-architectures|RAG 三种架构]] 和 [[Wiki/wiki/topics/rag-optimization-techniques|RAG 优化 20 法]]。
+
 ---
 
 ## 目录设计：给 Agent 认路的
