@@ -99,6 +99,7 @@ updated: 2026-05-28
 ### 🧠 Claude Code 进阶篇
 - [MCP 生态系统](topics/claude-code-mcp-ecosystem.md) — Top 15 排行榜、按角色推荐
 - [Skills 生态系统](topics/claude-code-skills-ecosystem.md) — 8 个核心 Skill、UI/UX 设计 Skill
+- [Skills 分级推荐](topics/claude-code-skills-recommendations.md) — 11 个 Skill 五级梯队 + 8 种角色定制方案
 - [Superpowers + gstack 工作流](topics/claude-code-superpowers-workflow.md) — 完整开发闭环
 - [Superpowers 插件系统与多平台适配](topics/superpowers-plugin-system.md) — 多平台装配层 / 跨平台钩子兼容 / 版本管理 / 贡献标准
 - [设计集成与前端开发](topics/claude-code-design-integration.md) — Figma MCP、DESIGN.md
@@ -154,11 +155,15 @@ updated: 2026-05-28
 
 ## 原始资料
 
-27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(3) / Superpowers(3) / 设计集成(4) / 辅助工具(2)
+27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(4) / Superpowers(3) / 设计集成(4) / 辅助工具(2) / 工具对比(1)
+- [Claude Code 还是 Codex？老金告你怎么选！](../raw/articles/Claude%20Code/Claude%20Code还是Codex？老金告你怎么选！.md) — 老金，2026.05，四种用户类型（许愿/现场/派单/调度）选型框架
+- [Claude Code 十一个常用 Skill 推荐（含各职业最佳 Skill）](../raw/articles/Claude%20Code/Claude%20Code十一个常用Skill推荐（含各职业最佳Skill）.md) — 萝卜啊，2026.05，五级梯队 + 8 角色定制的完整 Skill 推荐方案
 
 ### Claude Code / CLAUDE.md 资料
-1 篇 CLAUDE.md 规则深度文章，位于 `raw/articles/`：
-- [让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘](../raw/articles/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md) — 辰北，2026.05，Karpathy 原版 4 条 + 8 条增量规则，含 30 代码库 6 周实验数据
+3 篇 CLAUDE.md 规则深度文章，位于 `raw/articles/Claude Code/`：
+- [让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘](../raw/articles/Claude%20Code/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md) — 辰北，2026.05，Karpathy 原版 4 条 + 8 条增量规则，含 30 代码库 6 周实验数据
+- [CLAUDE.md 的12条规则，让编程错误率从 41% 降至 3%](../raw/articles/Claude%20Code/CLAUDE.md%20的12条规则，让编程错误率从%2041%25%20降至%203%25.md) — 来杯凉白开，2026.05，Karpathy 4 条基础 + 辰北 8 条高级规则中英对照
+- [最佳 Claude Code 配置：Andrej Karpathy 的 CLAUDE.md，134+k star了！](../raw/articles/Claude%20Code/最佳%20Claude%20Code%20配置：Andrej%20Karpathy%20的%20CLAUDE.md，134+k%20star了！.md) — ChallengeHub，2026.05，Karpathy 推文→Forrest Chang 仓库→11 万 Star 现象拆解
 
 ### ECC 资料
 1 篇 ECC 介绍文章，位于 `raw/articles/`：
@@ -188,21 +193,24 @@ updated: 2026-05-28
 
 ### Obsidian 资料
 15 篇 Obsidian 知识管理中文文章，位于 `raw/articles/Obsidian/`：入门与指南(5) / AI 集成(5) / 信息收集(3) / 生态与替代品(2)
-- 万字长文：个人如何用 Obsidian 搭建本地知识库 — 南哥，2026.04，全方位指南：PARA/Zettelkasten/MOC/20 插件/AI 集成/Karpathy Wiki
-- Claude Code+Obsidian：让 AI 当你的知识管家 — 强西，2026.05，Markdown 是 LLM 母语/CLAUDE.md/obsidian-skills
-- 别再手动整理笔记了！Claude+Obsidian 打造永不遗忘的 AI 知识系统 — Harry，2026.05，Claudian 插件介绍
-- Obsidian CLI 基础使用教程 AI 化知识管理全过程 — ShikiLab，2026.03，CLI+Claude Code+MiniMax 配置
-- 从崩溃到兴奋，5 小时把 DeepSeek V4 接入 Obsidian 实现自动化 — 小观，2026.04，踩坑全记录
-- 新手别折腾了：Obsidian + DeepSeek 组合便宜又能直接用 — 西湖太极熊，2026.05，Copilot+DeepSeek 方案
-- 手把手实践 Karpathy 爆红的 AI 知识库 — 多颗糖，2026.04，LLM Wiki 搭建教程
-- 推荐 obsidian-wiki（14+ Agent 共享 Wiki Skills） — 灵境星匠，2026.05，7 种实现对比+LangChain 实战
-- 公开我的 Obsidian LLM Wiki 的脚本 — V二君，2026.04，双平台 Python 知识蒸馏脚本
-- 建立 Obsidian 个人知识库的正确驾驶方式 — isEris，2026.04，插件 vs 脚本方案反思
-- 我简直爱死这个 Obsidian 插件了：Web Clipper 打通浏览器 — 蒋先森，2026.03，浏览器一键保存
-- 微信文章 5 秒保存到 Obsidian 知识库 — Kevin，2026.04，笔记同步助手配置
-- 微信文章一键入库 Obsidian — 枫林，2026.04，Messager 插件+五步知识内化法
-- Tolaria：结合 Obsidian 和 Notion 优势的开源笔记新品 — 火箭君，2026.04，后发优势分析
-- 一个装上就不想换的 Obsidian 主题：Baseline — 毕小烦，2026.04，主题深度评测+迁移指南
+- 万字长文：个人如何用 Obsidian 搭建本地知识库 — 南哥，2026.04，全方位指南
+- Claude Code+Obsidian：让 AI 当你的知识管家 — 强西，2026.05
+- 别再手动整理笔记了！Claude+Obsidian 打造永不遗忘的 AI 知识系统 — Harry，2026.05
+- Obsidian CLI 基础使用教程 AI 化知识管理全过程 — ShikiLab，2026.03
+- 从崩溃到兴奋，5 小时把 DeepSeek V4 接入 Obsidian 实现自动化 — 小观，2026.04
+- 新手别折腾了：Obsidian + DeepSeek 组合便宜又能直接用 — 西湖太极熊，2026.05
+- 手把手实践 Karpathy 爆红的 AI 知识库 — 多颗糖，2026.04
+- 推荐 obsidian-wiki（14+ Agent 共享 Wiki Skills） — 灵境星匠，2026.05
+- 公开我的 Obsidian LLM Wiki 的脚本 — V二君，2026.04
+- 建立 Obsidian 个人知识库的正确驾驶方式 — isEris，2026.04
+- 我简直爱死这个 Obsidian 插件了：Web Clipper 打通浏览器 — 蒋先森，2026.03
+- 微信文章 5 秒保存到 Obsidian 知识库 — Kevin，2026.04
+- 微信文章一键入库 Obsidian — 枫林，2026.04
+- Tolaria：结合 Obsidian 和 Notion 优势的开源笔记新品 — 火箭君，2026.04
+- 一个装上就不想换的 Obsidian 主题：Baseline — 毕小烦，2026.04
+- [Obsidian 入门45：对自己好一点，给 Obsidian 建个个人主页](../raw/articles/Obsidian/Obsidian%20入门45：对自己好一点，给%20Obsidian%20建个个人主页.md) — 林大友，2026.05，HomePage 插件 + Dataview 三区块仪表盘
+- [我的 Obsidian 新主页，让我更期待每日打开记录](../raw/articles/Obsidian/我的Obsidian新主页，让我更期待每日打开记录.md) — 西湖太极熊，2026.05，从"功能中心"到"生活空间"的主页哲学
+- [用 Markdown 做笔记，用 HTML 做呈现](../raw/articles/Obsidian/用%20Markdown%20做笔记，用%20HTML%20做呈现.md) — 唐巧，2026.05，MD+HTML 双格式 = AI 友好 + 人类友好
 
 ### Obsidian 教程资料
 8 篇 Obsidian 系统教程（含大纲和 6 章正文 + 总教程），位于 `raw/articles/Obsidian/`：

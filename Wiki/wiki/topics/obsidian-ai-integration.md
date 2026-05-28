@@ -3,13 +3,14 @@ title: Obsidian AI 集成方案
 type: topic
 tags: [obsidian, ai, claude-code, deepseek, copilot, minmax, ollama]
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-28
 sources:
   - raw/articles/Obsidian/Claude Code+Obsidian ：让 AI 当你的知识管家.md
   - raw/articles/Obsidian/Obsidian Cli 基础使用教程 AI化知识管理全过程.md
   - raw/articles/Obsidian/别再手动整理笔记了！Claude+Obsidian打造永不遗忘的AI知识系统.md
   - raw/articles/Obsidian/从崩溃到兴奋，5小时把DeepSeek V4接入Obsidian实现自动化.md
   - raw/articles/Obsidian/新手别折腾了：这套 Obsidian + DeepSeek 组合，便宜又能直接用！.md
+  - raw/articles/Obsidian/用 Markdown 做笔记，用 HTML 做呈现.md
 related:
   - entities/obsidian.md
   - entities/claude-code.md
@@ -215,6 +216,21 @@ git checkout -- 文件名    # 恢复单个文件
 | 代码能力 | 强 | 更强 |
 | 中文内容创作 | 较好 | 优秀 |
 | 国内可用性 | 需网络环境 | 需网络环境/第三方中转 |
+
+## 方案七：Markdown + HTML 双格式（AI 友好 + 人类友好）
+
+Anthropic Claude Code 团队成员 Thariq（@trq212）提出了一种新的笔记发布范式：
+
+- **Markdown** 用于 AI 处理——LLM 的母语，token 效率高
+- **HTML** 用于人类阅读——排版精美、视觉呈现好
+
+工作流：与 Agent 对话 → 整理为 Markdown → 多轮对话调整内容 → 基于 Markdown 生成 HTML。
+
+> 唐巧（2026.05）：用 Markdown 做笔记，用 HTML 做呈现，兼得了 Markdown 对 LLM 的友好度和 HTML 对人类的内容呈现友好度。"这种工作方式已经在我们公司执行一段时间了，体验比较好。"
+
+代价是需要保留两份文件（.md + .html），但两者都不大，且可以让 Agent 自动维护同步。
+
+---
 
 ## 总结建议
 

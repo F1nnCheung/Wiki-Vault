@@ -1,5 +1,22 @@
 # 操作日志
 
+## [2026-05-28] ingest | 批量收录 Claude Code 增量（4篇）+ Obsidian 增量（3篇）
+- **新增页面**：
+  - Wiki/wiki/topics/claude-code-skills-recommendations.md（Skills 分级推荐：渐进式披露机制/五级梯队 11 个 Skill/8 种角色定制方案/5 个常见坑）
+- **更新页面**：
+  - Wiki/wiki/topics/claude-md-12-rules.md（新增 2 篇 sources：Karpathy 现象文章 + 12 条规则中英对照）
+  - Wiki/wiki/entities/codex.md（新增 CC vs Codex 用户类型框架：许愿型/现场型/派单型/调度型）
+  - Wiki/wiki/topics/claude-code-skills-ecosystem.md（新增 Skills 分级推荐交叉引用）
+  - Wiki/wiki/topics/obsidian-plugins-advanced.md（新增插件七：HomePage 个人主页 + 三大经典 Dataview 模块）
+  - Wiki/wiki/topics/obsidian-getting-started.md（新增"搭建你的个人主页"章节：功能中心型 vs 生活空间型两种哲学）
+  - Wiki/wiki/topics/obsidian-ai-integration.md（新增方案七：Markdown + HTML 双格式范式）
+  - Wiki/wiki/overview.md（Skills 生态条目更新 + 专题页面 29→30 + 知识领域更新）
+  - Wiki/wiki/index.md（新增专题条目 1 个 + CLAUDE.md 资料 2 条 + CC 资料 2 条 + Obsidian 资料 3 条）
+- **未新增**（已在之前批次处理，内容已完整覆盖）：
+  - Claude 官方客户端 + DeepSeek-V4（installation.md 第 73-78 行已覆盖 3P 模式）
+  - Claude与FigJam打通（design-integration.md 第 42-47 行已覆盖 FigJam Connector）
+- **摘要**：处理 Claude Code 增量 4 篇 + Obsidian 增量 3 篇共 7 篇新增资料。核心产出：Skills 分级推荐专题页填补了"该装什么 Skill"的实操空白（五级梯队+8角色），CC vs Codex 用户类型框架补充了从"工具特性对比"到"你在什么位置"的新视角，Obsidian 主页设计（HomePage 插件+两种哲学）和 MD+HTML 双格式丰富了知识管理工作流。另有 2 篇 Claude Code 文章确认已在之前批次处理完毕。
+
 ## [2026-05-28] ingest | 批量收录 Home Assistant（2篇）+ OPC（2篇）+ VibeCoding（1篇）
 - **新增页面**：
   - Wiki/wiki/entities/home-assistant.md（Home Assistant 实体页：开源跨品牌智能家居中控/Docker 群晖部署/HACS/五品牌集成方案/远程访问）

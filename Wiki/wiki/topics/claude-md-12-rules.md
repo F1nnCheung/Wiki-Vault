@@ -3,9 +3,11 @@ title: CLAUDE.md 12 条规则深度解析
 type: topic
 tags: [claude-code, claude-md, rules, coding-standards, agent, prompt-engineering]
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-28
 sources:
-  - raw/articles/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md
+  - raw/articles/Claude Code/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md
+  - raw/articles/Claude Code/CLAUDE.md 的12条规则，让编程错误率从 41% 降至 3%.md
+  - raw/articles/Claude Code/最佳 Claude Code 配置：Andrej Karpathy 的 CLAUDE.md，134+k star了！.md
 related:
   - entities/claude-code.md
   - topics/claude-code-mastery-guide.md

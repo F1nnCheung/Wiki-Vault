@@ -204,6 +204,7 @@ ls ~/.claude/skills/    # 查看已安装
 
 | 资源                | 地址                                          | 说明                                                                   |
 | ----------------- | ------------------------------------------- | -------------------------------------------------------------------- |
+| **Skills 分级推荐** | [[Wiki/wiki/topics/claude-code-skills-recommendations\|Skills 分级推荐]] | 📖 **必读**：11 个 Skill 五级梯队 + 8 种角色定制方案，解决"该装什么 Skill"的核心问题 |
 | **ECC Skills 体系** | github.com/affaan-m/everything-claude-code  | **228 个 Skill**，目前最大的单一 Skill 集合，覆盖编码标准/测试/后端/前端/安全/学习/运维/业务等 10+ 领域 |
 | 官方仓库              | github.com/anthropics/skills                | Anthropic 维护的官方 Skill                                                |
 | 社区网站              | skillsmp.com                                | Skill 搜索引擎                                                           |
@@ -225,4 +226,4 @@ ls ~/.claude/skills/    # 查看已安装
 
 ---
 
-> 📚 参考：[[Wiki/wiki/topics/claude-code-skills-ecosystem|Skills 生态系统]] · [[Wiki/wiki/concepts/skills-concept|Skills 概念]] · [[Wiki/wiki/concepts/superpowers-design-philosophy|Superpowers 设计哲学]]
+> 📚 参考：[[Wiki/wiki/topics/claude-code-skills-ecosystem|Skills 生态系统]] · [[Wiki/wiki/topics/claude-code-skills-recommendations|Skills 分级推荐]] · [[Wiki/wiki/concepts/skills-concept|Skills 概念]] · [[Wiki/wiki/concepts/superpowers-design-philosophy|Superpowers 设计哲学]]

@@ -11,10 +11,12 @@ sources:
   - raw/articles/Codex/Codex 从入门到精通.md
   - raw/articles/Codex/Codex零基础保姆式安装教程.md
   - raw/articles/Codex/DeepSeek 模型接入 Codex（AI 编程助手）的超级详细保姆级安装部署教程.md
+  - raw/articles/Claude Code/Claude Code还是Codex？老金告你怎么选！.md
 related:
   - topics/codex-guide.md
   - topics/codex-deepseek-integration.md
   - topics/ai-coding-tools-comparison.md
+  - topics/claude-code-skills-recommendations.md
   - entities/claude-code.md
   - concepts/harness-engineering.md
   - concepts/skills-concept.md
@@ -193,6 +195,19 @@ OpenAI 2026 年 3 月 30 日发布 `codex-plugin-cc`，在 Claude Code 中一条
 - **Codex** 做代码审查和 debug（逻辑精确、token 省）
 
 > Codex 和 Claude Code 不是二选一的题，2026 年真正会用 AI 的人，手里两把都有，看活下菜。
+
+### 用户类型视角：从"哪个工具更强"到"你在什么位置"
+
+老金（2026.05）提出了一个更实用的选型框架——先判断自己的用户类型，再选工具：
+
+| 用户类型 | 特征 | 适合工具 | 关键动作 |
+|----------|------|----------|----------|
+| **许愿型** | 需求模糊，一句"帮我做个页面"丢给 AI | 先别纠结工具 | 把愿望改成任务：目标+范围+验收标准 |
+| **现场型** | 想看 AI 怎么找文件、为什么改这里、边跑边判断 | **Claude Code** | 让 AI 先讲改动路径再动手，关键时刻能喊停 |
+| **派单型** | 多任务并行，不想每件事都蹲在现场 | **Codex** | 写好边界和验收口，不只"能跑"要看"能收" |
+| **调度型** | 根据任务特性分配——脏活留现场、清楚活派出去 | **两者都用** | 设计工作流而非绑定工具：什么留现场、什么派出去、什么先问方案 |
+
+**核心洞见**：AI 编程不是把人从项目里拿掉，而是把人逼到更关键的位置上——目标是什么、边界在哪里、结果怎么收、什么时候该停。同一个"帮我做一下"，有人交出去的是愿望，有人交出去的是任务。
 
 ---
 

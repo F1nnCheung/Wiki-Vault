@@ -80,7 +80,7 @@ Claude Code 知识体系
 │
 └── 🧠 进阶篇
     ├── MCP 生态 ── Playwright、Context7、GitHub 等 20+ 核心 MCP
-    ├── Skills 生态 ── 8 个核心 Skill、7 个 UI/UX Skill
+    ├── Skills 生态 ── 8 个核心 Skill、7 个 UI/UX Skill、11 个分级推荐
     ├── Superpowers+gstack ── 完整开发闭环（想法→上线）
     ├── 设计集成 ── Figma MCP、DESIGN.md、UI/UX Skill 体系
     ├── 辅助工具 ── Claude HUD、Understand-Anything
@@ -302,8 +302,8 @@ AI 原生创业知识体系
 
 - 收录文章：**94 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + Codex 12 篇 + 知识库技术 4 篇 + **Home Assistant 2 篇** + **OPC 2 篇** + **VibeCoding 1 篇** + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、RAG 架构与知识图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、RAG 架构与知识图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**、**Obsidian 主页设计**
 - 核心实体：**15 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、**Home Assistant**）
-- 专题页面：**29 个**
+- 专题页面：**30 个**
 - 概念页面：**14 个**
 - 对比页面：2 个

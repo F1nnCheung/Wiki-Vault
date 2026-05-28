@@ -3,7 +3,7 @@ title: Claude Code Skills 生态系统
 type: topic
 tags: [claude-code, skills, plugins, ecosystem]
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-28
 sources:
   - raw/articles/Claude Code/2026用上这48个Skills，你就跑赢了95%的人.md
   - raw/articles/Claude Code/别再给Claude Code乱装Skill了，推荐这8个.md
@@ -12,6 +12,7 @@ related:
   - entities/mcp.md
   - topics/claude-code-mcp-ecosystem.md
   - topics/claude-code-superpowers-workflow.md
+  - topics/claude-code-skills-recommendations.md
 ---
 
 # Claude Code Skills 生态系统
