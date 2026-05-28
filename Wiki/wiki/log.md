@@ -1,5 +1,13 @@
 # 操作日志
 
+## [2026-05-28] ingest | Gemini 学术论文写作（1 篇）
+- **新增页面**：
+  - Wiki/wiki/topics/gemini-academic-writing.md（Gemini 3.5 + 六个 Skill：定框架→引言→文献综述→方法→结果分析→结论，含 Skill 设计模式）
+- **更新页面**：
+  - Wiki/wiki/overview.md（文章数 105→106，专题 31→32）
+  - Wiki/wiki/index.md（新增专题条目 1 个 + Gemini 资料 1 条）
+- **摘要**：处理 Gemini 学术写作 1 篇。核心产出：将学术论文初稿六步流程封装为六个 Skill，每个 Skill 含 Goals/Constraints/Skills/Workflows 四维结构。关联知识库已有 Skills 生态体系。
+
 ## [2026-05-28] ingest | Hemmers 补充 3 篇（架构详解/完整上手指南/安装推荐）
 - **更新页面**：
   - Wiki/wiki/topics/hermes-architecture-deep-dive.md（新增 1 篇 source：可中断 API/Prompt Cache 降费 75%/双层压缩详解）
