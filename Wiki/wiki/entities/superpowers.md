@@ -438,7 +438,7 @@ description: "Use when [触发条件]..."
 
 ## 设计哲学
 
-详见 [[concepts/superpowers-design-philosophy|Superpowers 设计哲学]]。核心四点：
+详见 [[../concepts/superpowers-design-philosophy|Superpowers 设计哲学]]。核心四点：
 
 1. **铁律模式** — 每个技能有一条不可违反的 Iron Law + HARD-GATE
 2. **合理化防范** — Red Flags 自检表 + Common Rationalizations 反驳表，预见并堵死代理的每一种借口
@@ -459,7 +459,7 @@ description: "Use when [触发条件]..."
 
 两者配合形成完整闭环：想法 → brainstorming → writing-plans → worktrees → 执行+TDD → 浏览器验证 → 独立审查 → 发布上线。
 
-完整工作流详见 [[topics/claude-code-superpowers-workflow|Superpowers + gstack 工作流]]。
+完整工作流详见 [[../topics/claude-code-superpowers-workflow|Superpowers + gstack 工作流]]。
 
 ## 自定义技能
 

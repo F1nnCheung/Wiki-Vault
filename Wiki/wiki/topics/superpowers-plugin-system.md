@@ -58,7 +58,7 @@ superpowers/
 
 ## Bootstrap 路径回顾
 
-详见 [[entities/superpowers#工作原理：三种 Bootstrap 路径|Superpowers 工作原理]]。三路径速览：
+详见 [[../entities/superpowers#工作原理：三种 Bootstrap 路径|Superpowers 工作原理]]。三路径速览：
 
 1. **路径 A（Hook 驱动）**：Claude Code / Cursor / GitHub Copilot CLI — `hooks/session-start` 读取 `using-superpowers` 技能正文，转义为 JSON 后嵌入 `<EXTREMELY_IMPORTANT>` 上下文
 2. **路径 B（插件 Transform）**：OpenCode — 插件注册技能目录 + 消息变换注入 bootstrap
@@ -293,7 +293,7 @@ Claude Code 的 `hooks/hooks.json`：
 
 ## 延伸阅读
 
-- [[entities/superpowers|Superpowers]] — 框架全貌、14 个技能详解、安装配置
-- [[concepts/superpowers-design-philosophy|Superpowers 设计哲学]] — 铁律 + 硬门控 / 合理化防范 / 人的搭档 / CSO
-- [[topics/claude-code-superpowers-workflow|Superpowers + gstack 工作流]] — 完整开发闭环与实战
-- [[topics/claude-code-skills-ecosystem|Skills 生态系统]] — Skill 生态全景
+- [[../entities/superpowers|Superpowers]] — 框架全貌、14 个技能详解、安装配置
+- [[../concepts/superpowers-design-philosophy|Superpowers 设计哲学]] — 铁律 + 硬门控 / 合理化防范 / 人的搭档 / CSO
+- [[claude-code-superpowers-workflow|Superpowers + gstack 工作流]] — 完整开发闭环与实战
+- [[claude-code-skills-ecosystem|Skills 生态系统]] — Skill 生态全景

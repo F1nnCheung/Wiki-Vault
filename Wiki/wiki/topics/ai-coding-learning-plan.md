@@ -105,3 +105,5 @@ related:
   ↓
 持续：跟踪更新，实践 Superpowers/gstack 等进阶方法论
 ```
+
+> 📖 导航：[[../overview|全局概览]] · [[ai-coding-concepts|核心概念]] · [[ai-coding-history|发展史]] · [[ai-coding-tools-comparison|工具对比]] · [[../../教程/AI-Coding/AI Coding 学习计划|完整教程]]

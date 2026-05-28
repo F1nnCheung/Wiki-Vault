@@ -208,7 +208,7 @@ cat 敏感文件 → read_secrets
 
 ## 五、记忆系统
 
-详见 [[agent-memory-systems|Agent 记忆系统设计]]。这里补充几个关键设计细节：
+详见 [[../concepts/agent-memory-systems|Agent 记忆系统设计]]。这里补充几个关键设计细节：
 
 - **冻结快照**：记忆在会话开始时注入，会话期间不变（为前缀缓存）
 - **写入安全扫描**：记忆写入要过 threat patterns 检测（prompt injection、role hijack、exfil、SSH backdoor 等）
@@ -261,7 +261,7 @@ should_fallback: bool            # 切到 fallback 模型？
 
 ## 八、自进化
 
-这是 Hermes 区别于 OpenClaw 的核心所在。详见 [[agent-self-evolution|Agent 自进化]]。
+这是 Hermes 区别于 OpenClaw 的核心所在。详见 [[../concepts/agent-self-evolution|Agent 自进化]]。
 
 ### 回复发出后的后台三件事
 

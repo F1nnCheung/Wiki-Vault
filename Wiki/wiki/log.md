@@ -278,3 +278,19 @@
 - **新增产物**：教程/知识库/知识库技术学习指南.md（451 行综合教程）
 - **覆盖内容**：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 & 嵌入模型 / 工具生态 / 推荐学习路线图
 - **摘要**：基于 wiki 中 7 个核心技术页面，生成一份面向学习者的知识库技术综合教程，涵盖从 Classic RAG 到 Agentic RAG、从知识图谱到 LLM Wiki 的完整知识体系，附带按阶段的学习路线图。
+
+## [2026-05-28] lint | 知识库全面巡检与增强
+- **诊断范围**：78 个 wiki 页面（16 概念 + 17 实体 + 41 专题 + 4 对比）
+- **发现问题**：
+  - 断裂 wikilinks：~60 处跨目录链接缺少 `../` 前缀，~15 处同目录链接多余 `topics/` 前缀
+  - 导航缺失：6 个核心枢纽页面（rag-architectures / knowledge-graph / code-knowledge-graph / obsidian-llm-wiki-practice / rag-optimization-techniques / ai-coding-learning-plan）均无 overview 导航链接
+- **修复操作**：
+  - 修复 ~75 处 wikilinks：批量修正 agent-frameworks-moc / agentic-engineering / ai-coding-concepts / ai-coding-learning-plan / ai-coding-tools-comparison / agent-self-evolution / hermes-agent / claude-code / openclaw / superpowers 等 20+ 文件
+  - 为 6 个核心枢纽页面添加 overview 导航 footer
+  - 为 5 个知识库技术页面添加「知识库技术学习指南」教程交叉引用
+- **质量指标**：
+  - Frontmatter 完整性：100%（78/78）
+  - 入链 > 5 的枢纽页面：48 个
+  - 无真正孤立页面
+  - Top 实体入链：claude-code(40) > hermes-agent(22) > openclaw(18) = obsidian(18) > mcp(16)
+- **摘要**：完成知识库首次全面巡检。修复了 wiki 子目录之间大量断裂的 wikilink（主要问题是页面在 entities/concepts/topics/comparisons 子目录间互链时缺少 `../` 前缀），为关键枢纽页面补充了 overview 导航入口，将新生成的「知识库技术学习指南」教程与 5 个核心技术页面建立双向引用。知识库整体健康度良好。

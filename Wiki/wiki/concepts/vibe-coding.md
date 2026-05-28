@@ -65,7 +65,7 @@ HBuilderX + UniApp + UniCloud
 |------|------|------|
 | 1. 原型设计 | **Figma** | 自然语言描述需求，自动生成 UI 原型 |
 | 2. 项目框架 | **HBuilderX** | UniApp + UniCloud 搭建多端项目模板 |
-| 3. AI 编码 | **Trae**（[[entities/trae|Trae]]） | 根据原型图 1:1 复刻前端页面 |
+| 3. AI 编码 | **Trae**（[[../entities/trae|Trae]]） | 根据原型图 1:1 复刻前端页面 |
 | 4. 运行调试 | **微信开发者工具** | 编译运行，真机预览 |
 
 ### 进阶技巧

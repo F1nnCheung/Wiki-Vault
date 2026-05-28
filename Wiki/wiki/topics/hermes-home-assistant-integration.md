@@ -179,4 +179,4 @@ Home Assistant（:8123）
 
 ---
 
-> 📚 参考：[[entities/hermes-agent|Hermes Agent]] · [[entities/home-assistant|Home Assistant]] · Hermes Home Assistant 文档
+> 📚 参考：[[../entities/hermes-agent|Hermes Agent]] · [[../entities/home-assistant|Home Assistant]] · Hermes Home Assistant 文档

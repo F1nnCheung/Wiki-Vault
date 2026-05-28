@@ -127,10 +127,10 @@ HACS（Home Assistant Community Store）是 HA 的「应用商店」，安装第
 
 Home Assistant 提供了 REST API，可与 AI Agent 框架深度集成：
 
-- **[[Hermes Agent|Hermes]]**：通过 Long-Lived Access Token + toolset 实现自然语言控制（见 [[hermes-home-assistant-integration|Hermes + HA 集成]]）
+- **[[Hermes Agent|Hermes]]**：通过 Long-Lived Access Token + toolset 实现自然语言控制（见 [[../topics/hermes-home-assistant-integration|Hermes + HA 集成]]）
 - **Claude Code**：可通过 MCP 或自定义工具调用 HA API
 - **场景价值**：从「手动点 APP」进化到「说一句话控制全家」，再进化到「AI 根据上下文自动判断执行」
 
 ---
 
-> 📚 参考：[[topics/hermes-home-assistant-integration|Hermes + Home Assistant 集成教程]]
+> 📚 参考：[[../topics/hermes-home-assistant-integration|Hermes + Home Assistant 集成教程]]

@@ -76,5 +76,7 @@ BM25 关键词匹配 + 语义向量 + 倒数排名融合（RRF），兼顾精确
 
 ## 代表工具
 
-- **[[gitnexus|GitNexus]]**（3.55 万 Stars）：零服务器、浏览器端运行的代码知识图谱引擎，支持 14 种语言，16 个 MCP 工具
-- **[[graphify|Graphify]]**：终端 CLI 工具，支持代码+文档+图片+视频的多模态项目图谱
+- **[[../entities/gitnexus|GitNexus]]**（3.55 万 Stars）：零服务器、浏览器端运行的代码知识图谱引擎，支持 14 种语言，16 个 MCP 工具
+- **[[../entities/graphify|Graphify]]**：终端 CLI 工具，支持代码+文档+图片+视频的多模态项目图谱
+
+> 📖 导航：[[overview|全局概览]] · [[knowledge-graph|知识图谱]] · [[rag-architectures|RAG 三种架构]] · [[../entities/gitnexus|GitNexus]] · [[../entities/graphify|Graphify]] · [[../../教程/知识库/知识库技术学习指南|知识库技术教程]]

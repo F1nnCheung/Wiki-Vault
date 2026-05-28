@@ -51,11 +51,11 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 - **智能审批**：用便宜辅助模型判断风险，低风险自动通过
 - **多后端**：6 种执行环境后端，灵活切换
 
-详见 [[agent-self-evolution|Agent 自进化]]。
+详见 [[../concepts/agent-self-evolution|Agent 自进化]]。
 
 ## 五层架构
 
-详见 [[hermes-architecture-deep-dive|Hermes Agent 五层架构深度拆解]]。
+详见 [[../topics/hermes-architecture-deep-dive|Hermes Agent 五层架构深度拆解]]。
 
 | 层 | 名称 | 核心 |
 |---|------|------|
@@ -84,7 +84,7 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 
 ### 记忆系统
 
-详见 [[agent-memory-systems|Agent 记忆系统设计]]。
+详见 [[../concepts/agent-memory-systems|Agent 记忆系统设计]]。
 
 - **内置记忆**：MEMORY.md（2200 字符）+ USER.md（1375 字符），冻结快照（会话开始时注入，期间不变）
 - **外部记忆**：8 个 MemoryProvider（Honcho/Mem0/Hindsight/Holographic/ByteRover 等）
@@ -92,7 +92,7 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 
 ### 上下文压缩
 
-详见 [[agent-context-compression|Agent 上下文压缩]]。
+详见 [[../concepts/agent-context-compression|Agent 上下文压缩]]。
 
 - 保护两端、压缩中间的迭代摘要策略
 - Session 链机制（压缩后开新 session，`parent_session_id` 关联）
@@ -133,7 +133,7 @@ Hermes 回答的核心问题是：**"Agent 怎么才能越来越强？"**
 
 ## 与 OpenClaw 的对比
 
-详见 [[openclaw-vs-hermes|OpenClaw vs Hermes 深度对比]]。
+详见 [[../comparisons/openclaw-vs-hermes|OpenClaw vs Hermes 深度对比]]。
 
 | 维度 | Hermes Agent | OpenClaw |
 |------|-------------|----------|

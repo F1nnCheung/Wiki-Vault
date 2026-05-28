@@ -117,6 +117,6 @@ Superpowers 的四条设计原则回答的是同一个根本问题：**如何让
 
 ## 延伸阅读
 
-- [[entities/superpowers|Superpowers]] — 框架全貌、14 个技能详解、安装配置
-- [[topics/claude-code-superpowers-workflow|Superpowers + gstack 工作流]] — 完整开发闭环与实战
-- [[topics/claude-code-skills-ecosystem|Skills 生态系统]] — Skill 生态全景
+- [[../entities/superpowers|Superpowers]] — 框架全貌、14 个技能详解、安装配置
+- [[../topics/claude-code-superpowers-workflow|Superpowers + gstack 工作流]] — 完整开发闭环与实战
+- [[../topics/claude-code-skills-ecosystem|Skills 生态系统]] — Skill 生态全景

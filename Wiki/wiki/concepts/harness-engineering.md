@@ -106,7 +106,7 @@ Prompt Engineering ⊂ Context Engineering ⊂ Harness Engineering
 
 模型上下文窗口有限，长任务不断积累历史。Harness 动态组装上下文——保留、压缩或重新注入信息，让模型每轮都优先看到当前任务最相关的内容。
 
-**Claude Code 体现**：/compact 压缩长对话；CLAUDE.md / rules files 提供项目规则（见 [[entities/claude-code#CLAUDE.md 层级结构|CLAUDE.md 层级结构详解]]，包含完整层级、拼接机制、加载时机）；Skills 只在被使用时才加载；SubAgents 把探索工作隔离到独立上下文窗口。
+**Claude Code 体现**：/compact 压缩长对话；CLAUDE.md / rules files 提供项目规则（见 [[../entities/claude-code#CLAUDE.md 层级结构|CLAUDE.md 层级结构详解]]，包含完整层级、拼接机制、加载时机）；Skills 只在被使用时才加载；SubAgents 把探索工作隔离到独立上下文窗口。
 
 ### 4.5 反馈与验证：让 Agent 知道自己做得对不对
 
@@ -179,7 +179,7 @@ Agent 能操作真实环境后风险也随之增加。Harness 通过权限、策
 
 ## 十、Harness Engineering 的标杆实践：ECC
 
-[[entities/everything-claude-code|Everything Claude Code]] 是目前最完整的 Harness Engineering 开源实践。它明确定位为 **Agent Harness 性能优化系统**（The performance optimization system for AI agent harnesses），将 Harness 的六大核心能力工程化为可安装的系统组件：
+[[../entities/everything-claude-code|Everything Claude Code]] 是目前最完整的 Harness Engineering 开源实践。它明确定位为 **Agent Harness 性能优化系统**（The performance optimization system for AI agent harnesses），将 Harness 的六大核心能力工程化为可安装的系统组件：
 
 | Harness 能力 | ECC 对应组件 |
 |-------------|-------------|
@@ -190,4 +190,4 @@ Agent 能操作真实环境后风险也随之增加。Harness 通过权限、策
 | **反馈与验证** | 验证循环（Checkpoint/Continuous）+ 评估框架（pass@k） |
 | **约束与治理** | Rules 体系（17 个语言包）+ AgentShield 安全审计 + Prompt Defense Baseline |
 
-ECC 特别强调 Harness 的 **可拆卸性**：通过选择式安装（Selective Install）和 Hook 运行时控制（`ECC_HOOK_PROFILE`），实现按需装配而非全量堆叠。参见 [[topics/ecc-complete-guide|ECC 完整指南]]。
+ECC 特别强调 Harness 的 **可拆卸性**：通过选择式安装（Selective Install）和 Hook 运行时控制（`ECC_HOOK_PROFILE`），实现按需装配而非全量堆叠。参见 [[../topics/ecc-complete-guide|ECC 完整指南]]。

@@ -61,7 +61,7 @@ git clone <repo> ~/.claude/skills/my-skill
 
 ### 社区 Skills 生态
 
-参见 [[topics/claude-code-skills-ecosystem|Skills 生态系统]]：
+参见 [[../topics/claude-code-skills-ecosystem|Skills 生态系统]]：
 - Superpowers：方法论框架（14 个子 Skill）
 - gstack：执行工具链
 - frontend-design：前端 UI 生成
@@ -70,4 +70,4 @@ git clone <repo> ~/.claude/skills/my-skill
 
 ### ECC Skills 体系
 
-[[entities/everything-claude-code|Everything Claude Code (ECC)]] 提供了目前最大的单一 Skills 集合——**228 个 Skill**，覆盖编码标准、测试、后端/前端模式、安全审查、持续学习、运维部署、商业运营等 10+ 个领域。ECC 明确采用 **Skills-first** 架构：`skills/` 是规范的工作流表面，`commands/` 是正逐步退役的遗留兼容层。参见 [[topics/ecc-complete-guide|ECC 完整指南]]。
+[[../entities/everything-claude-code|Everything Claude Code (ECC)]] 提供了目前最大的单一 Skills 集合——**228 个 Skill**，覆盖编码标准、测试、后端/前端模式、安全审查、持续学习、运维部署、商业运营等 10+ 个领域。ECC 明确采用 **Skills-first** 架构：`skills/` 是规范的工作流表面，`commands/` 是正逐步退役的遗留兼容层。参见 [[../topics/ecc-complete-guide|ECC 完整指南]]。
