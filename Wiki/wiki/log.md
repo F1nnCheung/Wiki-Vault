@@ -1,5 +1,14 @@
 # 操作日志
 
+## [2026-05-28] ingest | AI Agent 编排框架横向对比（1 篇）
+- **新增页面**：
+  - Wiki/wiki/comparisons/agent-orchestration-frameworks.md（LangChain vs LangGraph vs Spring AI Alibaba Graph：执行模型/Agent 模式/企业特性/开发体验四维对比 + 选型公式）
+- **更新页面**：
+  - Wiki/wiki/comparisons/agent-frameworks-moc.md（新增编排框架对比入口）
+  - Wiki/wiki/overview.md（Agent 框架对比体系新增编排框架分支；文章数 101→102；对比页 2→3）
+  - Wiki/wiki/index.md（新增对比条目 1 个 + AI Agent 资料 1 条）
+- **摘要**：处理 AI Agent 编排框架对比 1 篇。核心产出：三大编排框架（LangChain/LangGraph/Spring AI Alibaba Graph）横向对比页，覆盖执行模型、Agent 模式、企业级特性、开发体验四个维度，提炼出「技术栈 × 任务复杂度 × 企业级需求」选型公式。
+
 ## [2026-05-28] ingest | 知识库 7 篇（RAG 架构/优化/知识图谱）
 - **新增页面**：
   - Wiki/wiki/topics/rag-optimization-techniques.md（RAG 优化 20 法：五阶段管线 / Milvus 索引选型 / 嵌入模型选择 / 场景组合推荐）

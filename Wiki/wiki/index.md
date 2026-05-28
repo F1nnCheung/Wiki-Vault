@@ -147,8 +147,9 @@ updated: 2026-05-28
 
 ## 对比
 
-- [Agent 框架对比索引](comparisons/agent-frameworks-moc.md) — OpenClaw vs Hermes 知识体系导航（MOC）
+- [Agent 框架对比索引](comparisons/agent-frameworks-moc.md) — OpenClaw vs Hermes 知识体系导航（MOC） + 编排框架对比
 - [OpenClaw vs Hermes 深度对比](comparisons/openclaw-vs-hermes.md) — 设计哲学/学习闭环/记忆/压缩/安全/执行环境/选型建议，九维全面对比
+- [Agent 编排框架对比](comparisons/agent-orchestration-frameworks.md) — LangChain vs LangGraph vs Spring AI Alibaba Graph，三大编排框架横向对比
 
 ### PKM 工具对比
 - [Obsidian vs Notion vs Tolaria](comparisons/obsidian-notion-tolaria.md) — 本地优先 vs 云端优先 vs 两者兼顾，三款知识管理工具全面对比
@@ -264,6 +265,10 @@ updated: 2026-05-28
 2 篇 OPC 中文文章，位于 `raw/articles/OPC/`：
 - 6种OPC商业模式 — 小麦，2026.05，OPC定义（系统vs时间）/六大商业模式/中美对比/Pieter Levels案例/真实痛点
 - Anthropic 2026《创始人手册：打造AI原生初创公司》精读长文 — AI潮局，2026.05，三大AI杠杆/四阶段方法论/创始人=指挥家/三大新坑
+
+### AI Agent 编排框架资料
+1 篇 AI Agent 编排框架文章，位于 `raw/articles/AI Agent/`：
+- [AI Agent 编排框架横向对比：LangChain vs LangGraph vs Spring AI Alibaba Graph](../raw/articles/AI%20Agent/AI%20Agent%20编排框架横向对比：LangChain%20vs%20LangGraph%20vs%20Spring%20AI%20Alibaba%20Graph.md) — 修行者华军，2026.05，执行模型/Agent 模式/企业特性/开发体验四维对比
 
 ### VibeCoding 实战资料
 1 篇 VibeCoding 实战文章，位于 `raw/articles/VibeCoding/`：

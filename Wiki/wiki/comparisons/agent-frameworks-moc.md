@@ -21,6 +21,7 @@ related:
 ## 入口
 
 - [[openclaw-vs-hermes|OpenClaw vs Hermes 深度对比]] — 从设计哲学到执行环境的九维度全面对比，含选型建议
+- [[agent-orchestration-frameworks|Agent 编排框架对比]] — LangChain vs LangGraph vs Spring AI Alibaba Graph，三大编排框架横向对比
 
 ## 架构专题
 
