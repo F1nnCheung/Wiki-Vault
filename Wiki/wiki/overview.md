@@ -45,7 +45,7 @@ related:
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理** 和 **知识库技术（RAG/图谱）** 五大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 4 篇知识库技术文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理**、**知识库技术（RAG/图谱）**、**智能家居（Home Assistant + Hermes）** 和 **AI 原生创业（OPC）** 七大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 4 篇知识库技术文章 + **2 篇 Home Assistant 文章** + **2 篇 OPC/AI 创业文章** + **1 篇 VibeCoding 实战文章**，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -251,12 +251,59 @@ Codex 知识体系
     └── 三种 RAG 选型 — 看问题形状，不看架构名字
 ```
 
+## 智能家居：Home Assistant + Hermes
+
+Home Assistant 是开源智能家居的中控平台，Hermes Agent 为其注入自然语言理解能力。两者结合实现了「说话就能控制全家」的智能家居体验。
+
+```
+Home Assistant + Hermes 智能家居
+│
+├── 🏠 Home Assistant — 开源跨品牌智能家居中控
+│   ├── Docker 部署（群晖 NAS 方案）
+│   ├── HACS 插件商店
+│   ├── 品牌集成：米家 / 海尔 / 美的 / 海信 / Apple HomeKit
+│   └── 远程访问（花生壳内网穿透）
+│
+├── 🤖 Hermes + HA 集成 — 自然语言控制
+│   ├── Long-Lived Access Token + toolset 自动加载
+│   ├── 五大场景：自然语言 / 条件逻辑 / Cron 定时 / Telegram 远程 / Philips Hue
+│   ├── 记忆系统：记住偏好，一句话触发完整场景
+│   └── 社区实验：本地 LLM 接管门铃对讲
+│
+└── 🔌 实体层：Home Assistant、Hermes Agent
+```
+
+## AI 原生创业：OPC 与 Anthropic 创始人手册
+
+AI 让「一个人 = 一家公司」从理想变为现实。本板块覆盖 OPC 概念、六种商业模式、中美对比，以及 Anthropic 官方发布的 AI 原生创业四阶段方法论。
+
+```
+AI 原生创业知识体系
+│
+├── 🏗️ OPC（一人公司）— 出售系统，而非时间
+│   ├── 定义：自由职业 vs OPC（时间 vs 系统）
+│   ├── 三大驱动力：AI 效率 10x / 大厂裁员潮 / 政策转向
+│   ├── 六种商业模式：内容 / 咨询 / 微SaaS / 跨境 / 撮合 / AI Agent 定制
+│   ├── 中美对比：美国技术驱动 vs 中国生态培育
+│   └── 真实痛点：孤独 / 收入天花板 / 融资困难 / 认知壁垒
+│
+├── 📖 Anthropic 创始人手册 — 四阶段方法论
+│   ├── 三大 AI 杠杆：研究调研 / 智能体编程 / 流程自动化
+│   ├── 构思阶段：验证问题（最大坑：跳过验证直接开发）
+│   ├── MVP 阶段：CLAUDE.md 防复利技术债
+│   ├── 发布阶段：从执行者到系统设计者
+│   ├── 扩展阶段：领域知识为护城河
+│   └── 核心理念：创始人 = AI 智能体的指挥家
+│
+└── 🔌 实体层：Claude Code、Claude Cowork
+```
+
 ## 关键数据
 
-- 收录文章：89 篇（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + **Codex 12 篇** + **知识库技术 4 篇** + 橙皮书 1 份）
+- 收录文章：**94 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + Codex 12 篇 + 知识库技术 4 篇 + **Home Assistant 2 篇** + **OPC 2 篇** + **VibeCoding 1 篇** + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、**OpenAI Codex 全体系**、**RAG 架构与知识图谱**
-- 核心实体：13 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、**Codex**、OpenClaw、Hermes Agent、Obsidian、Tolaria、**GitNexus**、**Graphify**）
-- 专题页面：27 个
-- 概念页面：13 个
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、RAG 架构与知识图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**
+- 核心实体：**15 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、**Home Assistant**）
+- 专题页面：**29 个**
+- 概念页面：**14 个**
 - 对比页面：2 个

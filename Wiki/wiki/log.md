@@ -1,5 +1,19 @@
 # 操作日志
 
+## [2026-05-28] ingest | 批量收录 Home Assistant（2篇）+ OPC（2篇）+ VibeCoding（1篇）
+- **新增页面**：
+  - Wiki/wiki/entities/home-assistant.md（Home Assistant 实体页：开源跨品牌智能家居中控/Docker 群晖部署/HACS/五品牌集成方案/远程访问）
+  - Wiki/wiki/topics/hermes-home-assistant-integration.md（Hermes + HA 集成专题：Token 配置/五大场景实战/记忆系统/门铃对讲社区案例）
+  - Wiki/wiki/concepts/opc-one-person-company.md（OPC 概念页：定义（系统vs时间）/六种商业模式/中美对比/真实痛点）
+  - Wiki/wiki/topics/ai-native-startup-playbook.md（Anthropic 创始人手册专题：三大 AI 杠杆/创业四阶段/创始人=指挥家/三大新坑）
+- **更新页面**：
+  - Wiki/wiki/concepts/vibe-coding.md（新增实践案例章节：Figma→Trae→HBuilderX→微信开发者工具完整工具链；更新 frontmatter 增加 source 和 related；新增 entities/trae 交叉引用）
+  - Wiki/wiki/overview.md（新增智能家居知识体系 + AI 原生创业知识体系两大板块；统计数据更新 89→94篇/27→29专题/13→14概念/13→15实体）
+  - Wiki/wiki/index.md（新增概念条目1个 + 实体条目1个 + 专题条目2个；新增 Home Assistant 2篇/OPC 2篇/VibeCoding 1篇 原始资料索引）
+- **教程同步**：
+  - 无需更新（本次新增内容涉及智能家居和 AI 创业两个全新领域，现有教程聚焦 AI Coding 主题，暂无相关章节需要同步）
+- **摘要**：处理 Home Assistant（2篇）+ OPC（2篇）+ VibeCoding（1篇）共 5 篇新增资料。新增智能家居领域的两个页面（Home Assistant 实体 + Hermes 集成），覆盖了群晖 NAS Docker 部署、五品牌集成方案、自然语言控制五大场景等完整内容。新增 AI 原生创业领域的两个页面（OPC 概念 + Anthropic 创始人手册），覆盖了六种商业模式、中美对比、三大 AI 杠杆、创业四阶段等方法论。更新 Vibe Coding 概念页增加微信小程序实战案例。智能家居和 AI 创业是知识库的全新领域扩展，后续可考虑在教程中增加相关章节。
+
 ## [2026-05-28] ingest | 批量收录 12 篇 Codex 文章 + 4 篇知识库技术文章
 - **新增页面**：
   - Wiki/wiki/topics/codex-deepseek-integration.md（DeepSeek 接入 Codex 完整教程：mimo2codex + CC Switch 本地转发方案）

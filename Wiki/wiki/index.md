@@ -44,6 +44,9 @@ updated: 2026-05-28
 - [第二大脑（Second Brain）](concepts/second-brain.md) — 外部化的、可持久积累的认知基础设施
 - [File over App](concepts/file-over-app.md) — 数据属于用户，文件比应用更长寿的软件哲学
 
+### 创业 / 组织形态概念
+- [OPC（一人公司）](concepts/opc-one-person-company.md) — 出售系统而非时间，一个人 + AI = 一家公司，六种商业模式与中美对比
+
 ---
 
 ## 实体
@@ -69,6 +72,9 @@ updated: 2026-05-28
 ### 知识管理工具
 - [Obsidian](entities/obsidian.md) — 本地优先、Markdown 原生的个人知识管理工具，2700+ 插件生态
 - [Tolaria](entities/tolaria.md) — 2026 年新兴开源 PKM，取 Obsidian（本地 Markdown）+ Notion（友好界面）之长
+
+### 智能家居
+- [Home Assistant](entities/home-assistant.md) — 开源智能家居中控平台，跨品牌统一控制（米家/海尔/美的/海信/HomeKit）
 
 ### 知识图谱与代码分析
 - [GitNexus](entities/gitnexus.md) — 零服务器代码知识图谱引擎（3.55 万 Stars），浏览器端 WASM 运行，14 语言 + 16 MCP 工具 + Graph RAG
@@ -125,6 +131,12 @@ updated: 2026-05-28
 - [Obsidian LLM Wiki 实践](topics/obsidian-llm-wiki-practice.md) — 七种 Karpathy Wiki 开源实现 + Python 知识蒸馏脚本 + LLM Wiki v2 扩展
 - [Obsidian Git 云同步指南](topics/obsidian-git-sync.md) — 免费 Git+GitHub 多端同步，电脑端+手机端完整教程
 - [Obsidian 插件进阶指南](topics/obsidian-plugins-advanced.md) — 图片管理/文档导出/Dataview/Templater/Calendar/QuickAdd 深度配置
+
+### 🏠 智能家居与 AI Agent
+- [Hermes + Home Assistant 集成](topics/hermes-home-assistant-integration.md) — 自然语言控制全家设备，五大场景实战（条件逻辑/Cron/Telegram/记忆/门铃对讲）
+
+### 🚀 AI 原生创业
+- [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
 
 ---
 
@@ -223,3 +235,17 @@ updated: 2026-05-28
 - 一文看懂三种 RAG 架构 — 兔兔AGI，2026.05，Classic RAG/Graph RAG/Agentic RAG 对比+选型指南
 - 开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略 — 兔兔AGI，2026.05，AST解析/多模态图谱/MCP集成
 - 开源一款零服务器代码知识图谱引擎：GitNexus — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG
+
+### Home Assistant 资料
+2 篇 Home Assistant 中文文章，位于 `raw/articles/Home Assistant/`：
+- Hermes Agent + Home Assistant：用自然语言控制你的整个家 — AI赋能说，2026.05，Token 配置/五大场景/Cron/Telegram/门铃对讲案例
+- 真正全屋智能HomeAssistant：跨平台接入群晖NAS——整合米家、海尔、美的、海信、Homekit — 温泉，2026.05，Docker部署/HACS/五品牌集成/花生壳远程访问
+
+### OPC / AI 创业资料
+2 篇 OPC 中文文章，位于 `raw/articles/OPC/`：
+- 6种OPC商业模式 — 小麦，2026.05，OPC定义（系统vs时间）/六大商业模式/中美对比/Pieter Levels案例/真实痛点
+- Anthropic 2026《创始人手册：打造AI原生初创公司》精读长文 — AI潮局，2026.05，三大AI杠杆/四阶段方法论/创始人=指挥家/三大新坑
+
+### VibeCoding 实战资料
+1 篇 VibeCoding 实战文章，位于 `raw/articles/VibeCoding/`：
+- VibeCoding——从0到1开发微信小程序 — 子言sugar，2026.05，Figma→Trae→HBuilderX→微信开发者工具 完整工具链
