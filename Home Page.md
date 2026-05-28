@@ -5,56 +5,50 @@ created: 2026-05-28
 updated: 2026-05-28
 ---
 
-<!-- ═══════════════ 顶部问候 ═══════════════ -->
-<div style="text-align: center; padding: 28px 0 4px 0;">
-<h1 style="font-size: 2.2em; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.02em;">📚 知识库</h1>
-<p style="font-size: 1.05em; color: var(--text-muted); margin: 0;">
-今天是 <code style="font-size: 1em;">`=dateformat(date(today), "yyyy 年 M 月 d 日 (EEE)")`</code>，欢迎回来
-</p>
-</div>
+```dataviewjs
+// ═══════════════ 顶部问候 ═══════════════
+const root = dv.container;
+
+const header = root.createEl("div");
+header.style.cssText = "text-align: center; padding: 24px 0 0 0; margin-bottom: 16px;";
+
+const h1 = header.createEl("h1");
+h1.style.cssText = "font-size: 2em; font-weight: 700; margin: 0 0 4px 0; letter-spacing: -0.02em;";
+h1.textContent = "📚 知识库";
+
+const dateLine = header.createEl("p");
+dateLine.style.cssText = "font-size: 1em; color: var(--text-muted); margin: 0;";
+const now = moment();
+dateLine.textContent = `今天是 ${now.format("YYYY 年 M 月 D 日 (ddd)")}，欢迎回来`;
+```
 
 ---
 
-<!-- ═══════════════ 数据概览卡片 ═══════════════ -->
-
 ```dataviewjs
+// ═══════════════ 数据概览卡片 ═══════════════
 const wikiPages = dv.pages('"Wiki/wiki"');
-const concepts = wikiPages.where(p => p.type === "concept").length;
+const articles = dv.pages('"Wiki/raw/articles"').file.length;
 const entities = wikiPages.where(p => p.type === "entity").length;
 const topics = wikiPages.where(p => p.type === "topic").length;
-const comparisons = wikiPages.where(p => p.type === "comparison").length;
-const total = wikiPages.length;
-const articles = dv.pages('"Wiki/raw/articles"').file.length;
 
-const container = dv.container;
-container.style.display = "flex";
-container.style.gap = "10px";
-container.style.flexWrap = "wrap";
-container.style.justifyContent = "center";
-container.style.margin = "0 0 20px 0";
+const row = dv.container;
+row.style.cssText = "display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;";
 
-const stats = [
-  { label: "Wiki 页面", value: total, icon: "📚" },
-  { label: "原始文章", value: articles, icon: "📄" },
-  { label: "综合教程", value: 3, icon: "📖" },
-  { label: "核心实体", value: entities, icon: "🏢" },
-  { label: "专题页面", value: topics, icon: "📝" },
-];
-
-stats.forEach(s => {
-  const card = container.createEl("div");
-  card.style.cssText = `
-    flex: 1; min-width: 95px; max-width: 140px;
-    background: var(--background-secondary);
-    border-radius: 10px; padding: 12px 10px; text-align: center;
-    border: 1px solid var(--background-modifier-border);
-  `;
+[
+  { v: wikiPages.length, l: "Wiki 页面", i: "📚" },
+  { v: articles, l: "原始文章", i: "📄" },
+  { v: 3, l: "综合教程", i: "📖" },
+  { v: entities, l: "核心实体", i: "🏢" },
+  { v: topics, l: "专题页面", i: "📝" },
+].forEach(s => {
+  const card = row.createEl("div");
+  card.style.cssText = "flex:1; min-width:90px; max-width:130px; background:var(--background-secondary); border-radius:10px; padding:12px 8px; text-align:center; border:1px solid var(--background-modifier-border);";
   const num = card.createEl("div");
-  num.style.cssText = "font-size: 1.8em; font-weight: 800; color: var(--text-accent);";
-  num.textContent = s.value;
+  num.style.cssText = "font-size:1.7em; font-weight:800; color:var(--text-accent);";
+  num.textContent = String(s.v);
   const lbl = card.createEl("div");
-  lbl.style.cssText = "font-size: 0.75em; color: var(--text-muted); margin-top: 2px;";
-  lbl.textContent = `${s.icon} ${s.label}`;
+  lbl.style.cssText = "font-size:0.73em; color:var(--text-muted); margin-top:2px;";
+  lbl.textContent = `${s.i} ${s.l}`;
 });
 ```
 
@@ -63,75 +57,51 @@ stats.forEach(s => {
 ## 🧭 快速导航
 
 ```dataviewjs
-const navSections = [
-  {
-    icon: "📖", title: "知识库",
-    links: [
-      ["Wiki/wiki/index", "📋 知识库索引"],
-      ["Wiki/wiki/overview", "🗺️ 全局概览"],
-      ["Wiki/wiki/log", "📝 操作日志"],
-      ["知识库技术学习指南", "🧠 知识库技术指南"],
-    ]
-  },
-  {
-    icon: "🤖", title: "Claude Code",
-    links: [
-      ["Claude Code 介绍", "📘 介绍与概念"],
-      ["Claude Code 安装与配置", "🔧 安装与配置"],
-      ["Claude Code 命令与日常使用", "⚡ 命令与使用"],
-      ["Claude Code 提示词工程", "🎯 提示词工程"],
-      ["MCP 生态系统", "🔌 MCP 生态"],
-      ["Skills 生态系统", "🎒 Skills 生态"],
-    ]
-  },
-  {
-    icon: "📓", title: "Obsidian 知识管理",
-    links: [
-      ["Obsidian 入门指南", "🔰 入门指南"],
-      ["Obsidian AI 集成方案", "🤖 AI 集成方案"],
-      ["Obsidian 信息收集工作流", "📥 信息收集"],
-      ["Obsidian Git 云同步指南", "☁️ Git 云同步"],
-      ["Obsidian 插件进阶指南", "🔌 插件进阶"],
-    ]
-  },
-  {
-    icon: "🏗️", title: "Agent 框架 & 更多",
-    links: [
-      ["Agent 框架对比索引", "⚔️ 框架对比"],
-      ["OpenClaw vs Hermes 深度对比", "🔍 深度对比"],
-      ["Hermes Agent 完整教程", "🏠 Hermes 教程"],
-      ["AI Coding 工具全景对比", "🛠️ 工具对比"],
-      ["AI 原生创业手册", "🚀 AI 原生创业"],
-      ["Hermes + Home Assistant 集成", "🏡 智能家居"],
-    ]
-  },
+const nav = [
+  ["📖 知识库", [
+    ["Wiki/wiki/index", "📋 知识库索引"],
+    ["Wiki/wiki/overview", "🗺️ 全局概览"],
+    ["Wiki/wiki/log", "📝 操作日志"],
+    ["教程/知识库/知识库技术学习指南", "🧠 知识库技术"],
+  ]],
+  ["🤖 Claude Code", [
+    ["Wiki/wiki/topics/claude-code-introduction", "📘 介绍"],
+    ["Wiki/wiki/topics/claude-code-installation", "🔧 安装"],
+    ["Wiki/wiki/topics/claude-code-getting-started", "⚡ 命令"],
+    ["Wiki/wiki/topics/claude-code-prompt-engineering", "🎯 提示词"],
+    ["Wiki/wiki/topics/claude-code-mcp-ecosystem", "🔌 MCP"],
+    ["Wiki/wiki/topics/claude-code-skills-ecosystem", "🎒 Skills"],
+  ]],
+  ["📓 Obsidian", [
+    ["Wiki/wiki/topics/obsidian-getting-started", "🔰 入门"],
+    ["Wiki/wiki/topics/obsidian-ai-integration", "🤖 AI 集成"],
+    ["Wiki/wiki/topics/obsidian-capture-workflow", "📥 收集"],
+    ["Wiki/wiki/topics/obsidian-git-sync", "☁️ 同步"],
+    ["Wiki/wiki/topics/obsidian-plugins-advanced", "🔌 插件"],
+  ]],
+  ["🏗️ Agent & 更多", [
+    ["Wiki/wiki/comparisons/openclaw-vs-hermes", "⚔️ OC vs Hermes"],
+    ["Wiki/wiki/topics/hermes-agent-guide", "🏠 Hermes"],
+    ["Wiki/wiki/topics/ai-coding-tools-comparison", "🛠️ 工具对比"],
+    ["Wiki/wiki/topics/ai-native-startup-playbook", "🚀 创业"],
+    ["Wiki/wiki/topics/hermes-home-assistant-integration", "🏡 智能家居"],
+  ]],
 ];
 
-const container = dv.container;
-container.style.display = "grid";
-container.style.gridTemplateColumns = "repeat(auto-fit, minmax(240px, 1fr))";
-container.style.gap = "12px";
-container.style.marginBottom = "20px";
+const grid = dv.container;
+grid.style.cssText = "display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin-bottom:20px;";
 
-navSections.forEach(section => {
-  const card = container.createEl("div");
-  card.style.cssText = `
-    background: var(--background-primary-alt);
-    border-radius: 10px; padding: 14px 16px 10px 16px;
-    border: 1px solid var(--background-modifier-border);
-  `;
-  const h3 = card.createEl("h3");
-  h3.style.cssText = "margin: 0 0 8px 0; font-size: 1em;";
-  h3.textContent = `${section.icon} ${section.title}`;
+nav.forEach(([title, links]) => {
+  const card = grid.createEl("div");
+  card.style.cssText = "background:var(--background-primary-alt); border-radius:10px; padding:14px 16px 10px; border:1px solid var(--background-modifier-border);";
+  const h3 = card.createEl("div");
+  h3.style.cssText = "font-weight:700; font-size:0.95em; margin-bottom:6px;";
+  h3.textContent = title;
 
-  section.links.forEach(([page, label]) => {
-    const row = card.createEl("div");
-    row.style.cssText = "margin: 2px 0;";
-    const link = row.createEl("a");
-    link.style.cssText = "font-size: 0.88em; color: var(--text-normal); text-decoration: none;";
-    link.textContent = label;
-    link.href = page;
-    link.addClass("internal-link");
+  links.forEach(([path, label]) => {
+    const div = card.createEl("div");
+    div.style.cssText = "margin:1px 0;";
+    div.appendChild(dv.fileLink(path, false, label));
   });
 });
 ```
@@ -156,51 +126,26 @@ LIMIT 10
 ## 📖 教程入口
 
 ```dataviewjs
-const tutorials = [
-  {
-    icon: "📖", title: "AI Coding 学习计划",
-    desc: "从零开始的系统学习路径（1072 行）",
-    sub: "发展历程 → 五大工具教程 → Agent 框架 → 拓展使用",
-    link: "教程/AI-Coding/AI Coding 学习计划",
-  },
-  {
-    icon: "🧠", title: "知识库技术学习指南",
-    desc: "知识库技术总纲（451 行）",
-    sub: "RAG 三大架构 → 优化 20 法 → 知识图谱 → LLM Wiki",
-    link: "教程/知识库/知识库技术学习指南",
-  },
-  {
-    icon: "📓", title: "Obsidian 完整教程",
-    desc: "从入门到 AI 集成的 9 章系统教程",
-    sub: "入门 → 核心功能 → 插件系统 → Git 同步 → AI 集成",
-    link: "教程/Obsidian/01-入门与核心理念",
-  },
+const tut = [
+  ["教程/AI-Coding/AI Coding 学习计划", "📖 AI Coding 学习计划", "从零开始的系统学习路径（1072 行）→ 发展历程 / 五大工具 / Agent / 拓展"],
+  ["教程/知识库/知识库技术学习指南", "🧠 知识库技术学习指南", "知识库技术总纲（451 行）→ RAG / 优化 20 法 / 知识图谱 / LLM Wiki"],
+  ["教程/Obsidian/01-入门与核心理念", "📓 Obsidian 完整教程", "从入门到 AI 集成的 9 章系统教程 → 入门 / 核心功能 / 插件 / Git / AI"],
 ];
 
-const container = dv.container;
-container.style.display = "flex";
-container.style.flexDirection = "column";
-container.style.gap = "10px";
-container.style.marginBottom = "20px";
+const list = dv.container;
+list.style.cssText = "display:flex; flex-direction:column; gap:8px; margin-bottom:20px;";
 
-tutorials.forEach(t => {
-  const card = container.createEl("a");
-  card.style.cssText = `
-    display: block; background: var(--background-primary-alt);
-    border-radius: 10px; padding: 12px 16px; text-decoration: none;
-    border-left: 4px solid var(--text-accent);
-    transition: background 0.15s;
-  `;
-  card.href = t.link;
-  card.addClass("internal-link");
-
-  const header = card.createEl("div");
-  header.style.cssText = "font-weight: 600; font-size: 0.95em; margin-bottom: 2px;";
-  header.textContent = `${t.icon} ${t.title} — ${t.desc}`;
-
+tut.forEach(([path, title, desc]) => {
+  const card = list.createEl("div");
+  card.style.cssText = "background:var(--background-primary-alt); border-radius:10px; padding:12px 16px; border-left:4px solid var(--text-accent);";
+  const link = card.createEl("a");
+  link.style.cssText = "font-weight:700; font-size:0.93em; text-decoration:none; color:var(--text-normal); display:block; margin-bottom:2px;";
+  link.textContent = title;
+  link.href = path;
+  link.addClass("internal-link");
   const sub = card.createEl("div");
-  sub.style.cssText = "font-size: 0.8em; color: var(--text-muted);";
-  sub.textContent = t.sub;
+  sub.style.cssText = "font-size:0.78em; color:var(--text-muted);";
+  sub.textContent = desc;
 });
 ```
 
@@ -209,40 +154,28 @@ tutorials.forEach(t => {
 ## 🔄 今日推荐阅读
 
 ```dataviewjs
-const allNotes = dv.pages('"Wiki/wiki"').file
-    .filter(f => f.path && f.path.endsWith(".md"));
+const notes = dv.pages('"Wiki/wiki"').file.filter(f => f.path?.endsWith(".md"));
+const ctr = dv.container;
+ctr.style.cssText = "background:var(--background-primary-alt); border-radius:10px; padding:14px 18px; border-left:4px solid var(--text-accent); margin-bottom:20px;";
 
-const container = dv.container;
-container.style.cssText = `
-  background: var(--background-primary-alt);
-  border-radius: 10px; padding: 14px 18px;
-  border-left: 4px solid var(--text-accent);
-  margin-bottom: 20px;
-`;
-
-if (allNotes.length === 0) {
-  container.innerHTML = `<span style="color: var(--text-muted);">暂无页面</span>`;
+if (!notes.length) {
+  ctr.textContent = "暂无页面";
 } else {
   const today = new Date().toISOString().slice(0, 10);
   const seed = parseInt(today.replace(/-/g, ""));
-  const randomIndex = Math.abs(Math.floor(Math.sin(seed) * allNotes.length)) % allNotes.length;
-  const randomNote = allNotes[randomIndex];
+  const idx = Math.abs(Math.floor(Math.sin(seed) * notes.length)) % notes.length;
+  const note = notes[idx];
 
-  const prefix = container.createEl("span");
-  prefix.style.cssText = "color: var(--text-muted);";
-  prefix.textContent = "🔄 基于今日日期推荐：";
+  const pre = ctr.createEl("span");
+  pre.style.cssText = "color:var(--text-muted);";
+  pre.textContent = "🔄 基于今日日期推荐：";
 
-  const linkEl = container.createEl("a");
-  linkEl.style.cssText = "font-weight: 600; color: var(--text-accent); text-decoration: none; margin-left: 4px;";
-  linkEl.textContent = randomNote.name || "未命名";
-  linkEl.href = randomNote.path;
-  linkEl.addClass("internal-link");
+  ctr.appendChild(dv.fileLink(note.path, false, note.name || "未命名"));
 }
 ```
 
 ---
 
-<!-- ═══════════════ 页脚 ═══════════════ -->
-<div style="text-align: center; padding: 4px 0 20px 0; color: var(--text-muted); font-size: 0.82em; font-style: italic; border-top: 1px solid var(--background-modifier-border); margin-top: 4px;">
+<div style="text-align: center; padding-top: 12px; margin-top: 8px; border-top: 1px solid var(--background-modifier-border); color: var(--text-muted); font-size: 0.8em; font-style: italic;">
 "工具是次要的。找到自己的方式，才重要。" — 林大友
 </div>
