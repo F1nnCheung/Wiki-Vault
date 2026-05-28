@@ -1,7 +1,7 @@
 ---
 title: 知识库索引
 type: overview
-updated: 2026-05-13
+updated: 2026-05-28
 ---
 
 # 知识库索引
@@ -36,6 +36,10 @@ updated: 2026-05-13
 - [Harness Engineering（编排工程）](concepts/harness-engineering.md) — Agent = Model + Harness，生成-评估分离的行业共识
 - [Superpowers 设计哲学](concepts/superpowers-design-philosophy.md) — 铁律+硬门控 / 合理化防范 / 人的搭档 / CSO 四大设计原则
 
+### RAG 与知识图谱概念
+- [RAG 三种架构](concepts/rag-architectures.md) — Classic RAG（检索）→ Graph RAG（连接）→ Agentic RAG（推理），含选型指南
+- [代码知识图谱](concepts/code-knowledge-graph.md) — 从「检索文件」走向「查询关系」，让 AI 编程助手具备项目记忆层
+
 ### Obsidian / 知识管理概念
 - [第二大脑（Second Brain）](concepts/second-brain.md) — 外部化的、可持久积累的认知基础设施
 - [File over App](concepts/file-over-app.md) — 数据属于用户，文件比应用更长寿的软件哲学
@@ -55,7 +59,7 @@ updated: 2026-05-13
 
 ### AI Coding 工具
 - [Cursor](entities/cursor.md) — AI 原生 IDE，估值 290 亿美元
-- [Codex](entities/codex.md) — OpenAI 云端编程 Agent，全流程自动化
+- [Codex](entities/codex.md) — OpenAI 统一 AI Agent 平台（App/CLI/IDE/Cloud），沙箱安全系统、Computer Use、Automation、Skill，与 Claude Code 并称双强
 - [Trae](entities/trae.md) — 字节跳动 AI IDE，永久免费，中国市场份额 41.2%
 
 ### AI Agent 工具
@@ -65,6 +69,10 @@ updated: 2026-05-13
 ### 知识管理工具
 - [Obsidian](entities/obsidian.md) — 本地优先、Markdown 原生的个人知识管理工具，2700+ 插件生态
 - [Tolaria](entities/tolaria.md) — 2026 年新兴开源 PKM，取 Obsidian（本地 Markdown）+ Notion（友好界面）之长
+
+### 知识图谱与代码分析
+- [GitNexus](entities/gitnexus.md) — 零服务器代码知识图谱引擎（3.55 万 Stars），浏览器端 WASM 运行，14 语言 + 16 MCP 工具 + Graph RAG
+- [Graphify](entities/graphify.md) — 多模态项目知识图谱 CLI 工具，支持代码+文档+图片+视频的关系查询
 
 ---
 
@@ -95,7 +103,8 @@ updated: 2026-05-13
 ### 🛠️ AI Coding 工具教程
 - [Trae 完整教程](topics/trae-guide.md) — 安装、Chat/Builder/SOLO/IDE 四种模式、MCP 配置
 - [Cursor 完整教程](topics/cursor-guide.md) — Tab 补全、Cmd+K、Composer、Background Agents
-- [Codex 完整教程](topics/codex-guide.md) — 云端 Agent、Spec-Driven 开发、适用场景
+- [Codex 完整教程](topics/codex-guide.md) — 安装/沙箱/Plan模式/Steering/Skills/MCP/Automation/Computer Use/Git 完整工作流
+- [Codex + DeepSeek 接入教程](topics/codex-deepseek-integration.md) — mimo2codex + CC Switch 本地转发方案，零修改核心文件
 - [OpenClaw 完整教程](topics/openclaw-guide.md) — 安装、消息平台配置、Skills 安装
 - [Hermes Agent 完整教程](topics/hermes-agent-guide.md) — 自进化系统、多平台网关、模型配置
 
@@ -192,3 +201,25 @@ updated: 2026-05-13
 - 04-第三方插件 — Custom Attachment Location/Enhancing Export/Dataview/Templater/Calendar/QuickAdd
 - 05-AI接入 — Gemini CLI 配置与智能化工作流
 - 06-附录 — 插件清单/工具清单/快捷键速查/FAQs
+
+### Codex 资料
+12 篇 Codex 中文文章，位于 `raw/articles/Codex/`：
+- OpenAI Codex 完全方法论：6 个阶段，从装上到吃透 — 莲花明，2026.05，六阶段方法论/沙箱系统/AGENTS.md/TDD/云端/与CC混用
+- OpenAI Codex 完整教程 2026：100 分钟 — 邵猛，2026.05，Riley Brown 视频拆解：产品定位/核心机制/六项目实战
+- Codex (APP) 保姆级全攻略 — 技术爬爬虾，2026.04，12 章完整教程：安装→沙箱→记忆→插件→Skills→MCP→部署→电脑自动化
+- 从0到1带你速通Codex — 数字生命卡兹克，2026.05，最新教程：安装/配置/Skills/MCP/实战网页+App
+- DeepSeek 模型接入 Codex — 鲲鹏论AI，2026.05，mimo2codex+CC Switch 本地转发方案
+- Codex App 从0到1完整入门教程 — 逸尘，2026.05，小白视角：界面详解/设置逐项解释/插件/MCP
+- 1.1万字 Codex保姆级教程 — nobody，2026.05，Windows 新手：项目文件夹配置/规则/插件/Skills
+- Codex 从入门到精通 — AI4ALL，2026.05，六步方法论：建目录→拆chat→专注产物→Skill→Automation
+- Codex 新手入门教程 — AI评测老李，2026.05，开通路径/Computer Use 体验/额度管理
+- Codex零基础保姆式安装教程 — 欧工666，2026.05，四大入口对比/Windows安装/Git配置
+- 《Codex从0到1完整入门教程》 — 水哥，2026.05，纯小白：下载→登录→界面详解
+- Cursor、Claude Code、Codex、Copilot：AI 编程工具进入"四国杀" — 工具对比
+
+### 知识库技术资料
+4 篇知识库技术中文文章，位于 `raw/articles/知识库/`：
+- AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
+- 一文看懂三种 RAG 架构 — 兔兔AGI，2026.05，Classic RAG/Graph RAG/Agentic RAG 对比+选型指南
+- 开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略 — 兔兔AGI，2026.05，AST解析/多模态图谱/MCP集成
+- 开源一款零服务器代码知识图谱引擎：GitNexus — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG

@@ -183,12 +183,80 @@ Obsidian 知识体系
 └── 🔌 实体层 ─── Obsidian、Tolaria
 ```
 
+## OpenAI Codex 知识体系
+
+Codex 已从「云端编程助手」演化为集编程、浏览器操作、电脑自动化、AI 生图于一体的统一 AI Agent 操作平台。2026 年与 Claude Code 并称双强，token 效率约为 Claude Code 的 4 倍。
+
+```
+Codex 知识体系
+│
+├── 🏗️ 核心概念 ─── 四大产品形态（App/CLI/IDE/Cloud）共享配置
+│   ├── 沙箱安全系统（3 档沙箱 × 3 档审批 = 9 种安全组合）
+│   ├── 项目 = 文件夹（产物全部在用户硬盘）
+│   └── Steering 异步纠偏（接管方向盘，不等当前步骤结束）
+│
+├── 🔧 安装与配置 ── Windows/Mac 双平台
+│   ├── App 安装（图形界面，三栏布局）
+│   ├── CLI 安装（npm/brew，交互+非交互双模式）
+│   └── DeepSeek 接入（mimo2codex + CC Switch 本地转发方案）
+│
+├── 🚀 实战篇 ─── 从入门到精通的完整工作流
+│   ├── 项目与任务管理（多项目并行、序列化 prompt）
+│   ├── Plan 模式（先出计划确认，再执行）
+│   ├── Fork Chat（对话分叉 + Git 回滚 = 双重撤销）
+│   ├── TDD 闭环（先写测试→确认失败→写实现→不许改测试）
+│   └── 六阶段方法论（搞懂→装上→划笼子→教规矩→装缰绳→规模化）
+│
+├── 🧠 扩展体系 ── Plugin / Skill / MCP 三层
+│   ├── Plugin 市场（第三方服务能力扩展包）
+│   ├── Skills（官方/第三方/自建，Skill Creator 自然语言生成）
+│   └── MCP 集成（Supabase 等外部服务标准化接入）
+│
+├── 🤖 高级能力
+│   ├── Computer Use（Mac 虚拟鼠标后台操作桌面应用）
+│   ├── Automation（chat 一键转定时任务，Skill+Automation=个人 RPA）
+│   ├── 云端运行环境（任务丢 OpenAI 云上跑，下班丢给它，第二天收 PR）
+│   ├── AI 生图（GPT-Image-2，当前最强生图模型）
+│   └── 记忆系统（AGENTS.md 项目级+全局级，测试命令自动执行）
+│
+├── 🔄 Git 深度集成 ── 对话式 Git 操作
+│   ├── Worktree 并行开发（同一项目多分支，不同文件夹互不干扰）
+│   ├── Fork + 回滚（对话+代码双重撤销）
+│   └── IDE 联动（一键在 VSCode/Cursor/Windsurf 打开）
+│
+└── 🆚 与 Claude Code 对比 ── 执行型工程师 vs 协作者
+    ├── Codex：边界清楚的活、review、debug（token 效率 4 倍优势）
+    ├── Claude Code：从零想架构、初始功能（交互推理强、上下文深）
+    └── 高手玩法：Codex 做审查+Debug，Claude Code 做架构，互补而非二选一
+```
+
+## 知识库技术：RAG 架构与代码图谱
+
+从 RAG 到知识图谱，知识库技术经历了三代演进。本板块覆盖 RAG 三种架构的对比选型和代码知识图谱工具。
+
+```
+知识库技术体系
+│
+├── 📊 RAG 三种架构
+│   ├── Classic RAG — 检索：找资料（chunk→embedding→向量库→Top K→生成）
+│   ├── Graph RAG — 连接：找关系（知识图谱实体+关系遍历）
+│   └── Agentic RAG — 推理：决定下一步（多步骤动态调查，Agent 自主选择工具）
+│
+├── 🔧 代码知识图谱工具
+│   ├── GitNexus（3.55 万 Stars）— 零服务器浏览器端引擎，14 语言，16 MCP 工具
+│   └── Graphify — 终端 CLI，多模态项目图谱（代码+文档+图片+视频）
+│
+└── 🧠 核心概念
+    ├── 代码知识图谱 — 从「检索文件」到「查询关系」
+    └── 三种 RAG 选型 — 看问题形状，不看架构名字
+```
+
 ## 关键数据
 
-- 收录文章：73 篇（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + 橙皮书 1 份）
+- 收录文章：89 篇（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 18 篇 + Obsidian 23 篇 + **Codex 12 篇** + **知识库技术 4 篇** + 橙皮书 1 份）
 - 输出产物：1 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md)，1072 行综合教程）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、**Harness 性能优化**、**CLAUDE.md 规则体系**
-- 核心实体：11 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、**ECC**、OpenClaw、Hermes Agent、Obsidian、Tolaria）
-- 专题页面：26 个
-- 概念页面：11 个
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、**OpenAI Codex 全体系**、**RAG 架构与知识图谱**
+- 核心实体：13 个（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、**Codex**、OpenClaw、Hermes Agent、Obsidian、Tolaria、**GitNexus**、**Graphify**）
+- 专题页面：27 个
+- 概念页面：13 个
 - 对比页面：2 个

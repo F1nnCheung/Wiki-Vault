@@ -1,5 +1,25 @@
 # 操作日志
 
+## [2026-05-28] ingest | 批量收录 12 篇 Codex 文章 + 4 篇知识库技术文章
+- **新增页面**：
+  - Wiki/wiki/topics/codex-deepseek-integration.md（DeepSeek 接入 Codex 完整教程：mimo2codex + CC Switch 本地转发方案）
+  - Wiki/wiki/concepts/rag-architectures.md（RAG 三种架构：Classic RAG/Graph RAG/Agentic RAG 对比 + 选型指南）
+  - Wiki/wiki/entities/graphify.md（Graphify 实体：多模态项目知识图谱 CLI 工具）
+  - Wiki/wiki/entities/gitnexus.md（GitNexus 实体：零服务器代码知识图谱引擎，3.55 万 Stars，14 语言 + 16 MCP 工具）
+  - Wiki/wiki/concepts/code-knowledge-graph.md（代码知识图谱概念：从检索文件到查询关系）
+- **更新页面**：
+  - Wiki/wiki/entities/codex.md（全面重写：从51行→200+行，新增四大产品形态/沙箱安全系统/Computer Use/Automation/Skills三层体系/六阶段方法论/与Claude Code详细对比表）
+  - Wiki/wiki/topics/codex-guide.md（全面重写：从130行→300+行，新增界面详解/项目任务管理/沙箱权限/Memory系统/Plugins+Skills+MCP/Automation/Computer Use/Git Worktree/Cloud环境/TDD闭环/十三大章节）
+  - Wiki/wiki/overview.md（新增 OpenAI Codex 知识体系 + 知识库技术体系两大板块；统计数据更新 73→89篇/26→27专题/11→13概念/11→13实体/2→2对比）
+  - Wiki/wiki/index.md（新增概念条目2个 + 实体条目3个 + 专题条目2个 + 更新 Codex 实体+教程描述 + 新增 Codex 12 篇资料索引 + 知识库技术 4 篇资料索引）
+- **教程同步**：
+  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/01-介绍与安装.md（全面重写：四大产品形态/沙箱/定价/DeepSeek接入/与CC互补定位）
+  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/02-基本使用与Spec-Driven开发.md（全面重写：界面速览/Plan+Steering+Fork/AGENTS.md/TDD闭环/Git Worktree/Plugin+Skill+MCP三层）
+  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/03-适用场景.md（全面重写：从「4%配角」→「65%日常首选」，Codex vs CC 分工/场景矩阵/组合策略）
+  - 教程/AI-Coding/02-主流AI-Coding工具/01-工具全景对比.md（Codex 条目更新：从「全流程自动化」→「AI Agent 操作平台」，工具占比更新）
+  - 教程/AI-Coding/AI Coding 学习计划.md（Codex 章节全面更新：四大形态/核心工作流/适用场景表格/工具占比更新）
+- **摘要**：处理 Codex（12篇）+ 知识库技术（4篇）共 16 篇新增资料。Codex 从过时的「云端编程助手」定位更新为「统一 AI Agent 操作平台」，覆盖四大产品形态/沙箱/Computer Use/Automation/六阶段方法论等全部新能力。知识库技术板块新增三种 RAG 架构对比和代码知识图谱工具（GitNexus/Graphify）。本轮是优先级方案的第一批（Codex+知识库），还有 Home Assistant/OPC/VibeCoding/Claude Code增量/Obsidian增量 待处理。
+
 ## [2026-05-13] ingest | 让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘
 - **新增页面**：Wiki/wiki/topics/claude-md-12-rules.md（CLAUDE.md 12 条规则深度解析：Karpathy 原版 4 条 + 辰北 8 条增量，含每条规则的翻车现场、实验数据、完整模板和使用指南）
 - **更新页面**：Wiki/wiki/entities/claude-code.md（CLAUDE.md 章节新增 12 条规则专题引用 + related 交叉引用）、Wiki/wiki/overview.md（知识结构树新增 CLAUDE.md 规则条目 + 统计数据更新 73 篇/26 专题）、Wiki/wiki/index.md（索引新增专题页条目 + 原始资料条目）

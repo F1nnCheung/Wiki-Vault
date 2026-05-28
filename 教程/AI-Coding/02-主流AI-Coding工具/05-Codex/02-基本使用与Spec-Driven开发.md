@@ -1,196 +1,208 @@
 ---
-title: 2.5.2 Codex 基本使用与 Spec-Driven 开发
+title: 2.5.2 Codex 基本使用
 type: tutorial
-tags: [codex, basic-usage, spec-driven, workflow]
+tags: [codex, basic-usage, workflow, sandbox, plan-mode, steering, agents-md]
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-28
 sources:
   - Wiki/wiki/topics/codex-guide.md
+  - Wiki/wiki/entities/codex.md
   - 教程/AI-Coding/AI Coding 学习计划.md
 related:
   - 01-介绍与安装.md
   - 03-适用场景.md
 ---
 
-# 2.5.2 Codex 基本使用与 Spec-Driven 开发
+# 2.5.2 Codex 基本使用
 
-> Codex 的核心使用模式是「下任务 → 等结果 → Review」。描述越精确，结果越好；模糊的需求是 Codex 最大的敌人。
-
----
-
-## 基本工作流
-
-```
-你：描述任务
-  ↓
-Codex：分析仓库结构（读文件、理解项目）
-  ↓
-Codex：制定执行计划
-  ↓ （展示给你确认）
-你：确认 / 调整计划
-  ↓
-Codex：执行（创建文件、修改代码、安装依赖）
-  ↓
-Codex：运行测试 → 发现错误 → 自动修复 → 再测试
-  ↓
-Codex：提交 PR
-  ↓
-你：Review PR → Merge
-```
+> Codex 的核心工作方式是「委派 + 异步」：一次性给足上下文，发出去后信任 Agent 完成 5-15 分钟工作，期间转去发起下一个任务。
 
 ---
 
-## 任务描述技巧
+## 界面速览（Codex App）
 
-### 好描述 vs 差描述
+Codex App 采用经典**三栏布局**：
+
+| 区域 | 功能 |
+|------|------|
+| **左侧栏** | 任务列表（按项目分组）、对话搜索（Ctrl+G）、插件入口、自动化入口 |
+| **中间** | 对话窗口 + 权限控制 + 上下文指示器 + 模型选择 + 速度选项 |
+| **右侧** | 多功能区（文件树/内置浏览器/代码变更/预览） |
+
+**任务状态标识**：🔵蓝色=完成 / 🟢绿色=等待批准 / 🔄转圈=工作中
+
+---
+
+## 项目与任务管理
+
+### 项目 = 文件夹
+
+每个项目对应你电脑的真实目录。Codex 在里面读写文件，所有产物落在你的硬盘：
+- 可用资源管理器/Finder 正常操作
+- 跨 chat 通过 `@文件名` 互相引用
+- 删除项目只从侧边栏移除，文件不丢
+
+**建议按项目拆分目录**，不要把不同任务塞进一个大杂烩文件夹。
+
+### 多任务并行
+
+Codex 支持同时运行多个 chat。核心技巧是 **序列化 prompt**：
+1. 一次性给足上下文（避免来回打补丁）
+2. 发出去后**信任 Agent** 独立完成
+3. 转去发起下一个任务
+4. 蓝点提示回来 review
+
+### Plan 模式（强烈推荐）
+
+开启 Plan 模式后，Codex 先输出完整工作计划与你确认，确认后再执行。**所有复杂任务必须先开 Plan 模式。**
+
+### Steering（引导/Steer）
+
+当 AI 执行过程中理解偏了/方向错了，点击「引导」按钮（或 Ctrl+Enter），立即插入纠正指令——不等当前步骤结束。默认模式下新输入会排队，点 Steer 则是中途接管方向盘。
+
+### Fork Chat（分叉）
+
+在某条历史消息处右键「派生到本地」，复制对话但不复制代码改动。等价于 Git branch 应用到对话状态。
+
+---
+
+## 记忆系统：AGENTS.md
+
+AGENTS.md 是项目的「持久说明书」，每次对话自动加载。**最关键的一项：写清测试命令。**
+
+```markdown
+# AGENTS.md
+
+## 技术栈
+- TypeScript + React，包管理用 pnpm
+
+## 代码规范
+- 禁止 any，禁止 console.log 进提交
+
+## 怎么验证（Codex 完成任务前会自动跑）
+- 单元测试：pnpm test
+- 类型检查：pnpm typecheck
+- 上面两个都绿，这个任务才算做完
+```
+
+写了测试命令后，Codex 交活之前会自己跑 `pnpm test`，不绿自己接着改——**这是「用好 Codex」和「用 Codex」之间最大的分水岭。**
+
+### 全局 AGENTS.md
+
+设置 → 个性化 → 自定义指令 编辑，对所有项目生效。推荐加入安全规则：
 
 ```
-❌ 差："优化代码"
-  → Codex 不知道你想要什么，可能做无用功
-
-✅ 好："把 src/api/ 下所有请求函数从 fetch 改成 axios，
-   加上 10s 超时和 3 次重试，错误统一用 AppError 类"
-  → Codex 精确知道要做什么
-```
-
-### 任务描述的要素
-
-一个完整的任务描述应包含：
-
-```
-1. 目标：要做什么（不是要优化，而是要具体改什么）
-2. 范围：哪些文件/目录（限制 AI 的操作范围）
-3. 约束：技术限制（超时、重试次数、错误类型）
-4. 参考：关联文件/文档（给 AI 提供上下文）
-```
-
-### 实操示例
-
-```
-✅ 新功能开发：
-"给 Next.js 项目添加 JWT 认证系统：
-- 参考 src/types/user.ts 的 User 类型
-- 创建 src/lib/auth.ts（jose 库，HS256）
-- 创建 src/middleware.ts（保护 /dashboard/* 路由）
-- 创建 src/app/api/auth/login/route.ts
-- 写单元测试"
-
-✅ 重构：
-"把 src/components/ 下所有 class 组件改成函数组件 + Hooks：
-- 保持功能完全不变
-- Props 类型放在同文件的 interface 中
-- 删除所有 this. 引用"
-
-✅ Bug 修复：
-"修复 issue #42：登录后跳转到 /dashboard 时白屏
-- 可能是 useEffect 依赖数组问题
-- 重点检查 src/app/dashboard/page.tsx 的认证状态检查"
+禁止批量删除文件或目录。
+不要使用：del /s、rd /s、rm -rf、Remove-Item -Recurse
+需要删除文件时，只能一次删除一个明确路径的文件。
 ```
 
 ---
 
-## 支持的任务类型
+## 扩展能力使用
 
-| 类型 | 示例 | 预计耗时 |
-|---|---|---|
-| **新功能** | 「添加暗色模式切换」 | 5-15 分钟 |
-| **重构** | 「把 class 组件改成函数组件」 | 10-30 分钟 |
-| **Bug 修复** | 「修复登录后白屏的问题」 | 3-10 分钟 |
-| **代码迁移** | 「从 JavaScript 迁移到 TypeScript」 | 30 分钟-2 小时 |
-| **文档生成** | 「给所有 API 添加 JSDoc 注释」 | 5-15 分钟 |
-| **测试生成** | 「给 src/utils/ 下所有函数写测试」 | 10-30 分钟 |
+Codex 的能力扩展分三层：
+
+| 层级 | 说明 | 使用方式 |
+|------|------|----------|
+| **Plugin** | 第三方服务的软件包 | 插件市场一键安装 |
+| **Skill** | 可复用工作流配方（SKILL.md） | 官方市场 / GitHub 下载放 `.codex/skills/` / Skill Creator 自建 |
+| **MCP** | 外部服务标准协议接入 | 设置 → MCP 服务器 → 配置 URL |
+
+### 安装第三方 Skill
+
+1. GitHub 下载 skill 压缩包
+2. 放入项目 `.codex/skills/` 目录
+3. 对话中 `/` 唤起
+
+### 自建 Skill
+
+Codex 内置 **Skill Creator**——用自然语言描述工作流，自动生成 SKILL.md。例如告诉它「当我提供视频和字幕文件时，第一步读 SRT 生成 Markdown，第二步用 ffmpeg 截图，第三步替换占位符」。
+
+---
+
+## Git 工作流
+
+Codex 支持**对话式 Git 操作**：
+
+### Worktree 并行开发
+同一项目创建多个工作树分支，不同文件夹互不干扰，并行开发后合并回主干。
+
+### Fork + 回滚（双重撤销）
+1. Fork Chat：在出问题前的消息处右键「派生到本地」
+2. Git 回退：复制目标 commit hash → 让 Codex `git reset` 回去
+3. = 对话历史 + 代码双重回滚
+
+### IDE 联动
+右上角一键在 VSCode / Cursor / Windsurf 中打开项目。
+
+---
+
+## TDD 闭环（给自主 Agent 装缰绳）
+
+这是用 Codex 做复杂开发最可靠的模式：
+
+1. 先让 Codex **写测试**，别写实现
+2. 跑一遍，确认这些测试**全部失败**（证明测试有效）
+3. 把这批失败的测试 commit 存档
+4. 再让 Codex 写实现：**实现到所有测试通过，并且不许改测试本身**
+
+测试就是那根缰绳——它怎么折腾都行，只要测试全绿且测试没被动过，这活就可信。
 
 ---
 
 ## Spec-Driven 开发
 
-这是 Codex 最高效的使用模式——用规格文件精确约束 AI 的行为。
-
-### 什么是 Spec 文件
-
-Spec 文件是用 Markdown 编写的功能和接口规格说明。它告诉 Codex：**「这就是你该实现的东西，照着做。」**
+用规格文件精确约束 AI 的行为。写 10 分钟 Spec，节省 1 小时返工。
 
 ### Spec 文件示例
 
 ```markdown
 # spec/auth.md
 
-## 认证系统接口规范
+## 认证系统接口
 
 ### POST /api/auth/login
-- 功能：用户邮箱密码登录
 - 参数：{ email: string, password: string }
-- 返回：{ token: string, user: { id, email, name } }
-- 错误：
-  - 400：参数格式不正确
-  - 401：邮箱或密码错误
-  - 429：请求过于频繁（每分钟最多 5 次）
-
-### POST /api/auth/register
-- 功能：用户注册
-- 参数：{ email: string, password: string, name: string }
-- 验证规则：
-  - email：合法邮箱格式
-  - password：至少 8 位，包含大小写字母和数字
-  - name：2-50 个字符
-- 返回：{ token: string, user: { id, email, name } }
-- 错误：
-  - 400：参数校验失败（返回具体字段和原因）
-  - 409：邮箱已被注册
+- 返回：{ token: string, user: User }
+- 错误：401（凭证无效）、429（频率限制）
 
 ### Middleware
 - 保护 /api/user/* 路由
 - 从 Authorization header 提取 Bearer token
-- 验证 token 有效性
-- 将 user 信息注入 request context
 ```
 
-### 如何使用 Spec
+### 使用方式
 
 ```
-在 Codex 中输入：
-"根据 @spec/auth.md 的接口定义，实现完整的认证模块：
-- src/lib/auth.ts（jose 库，HS256 算法）
-- src/app/api/auth/login/route.ts
-- src/app/api/auth/register/route.ts
-- src/middleware.ts（保护 /api/user/* 路由）
-- 测试文件"
+根据 @spec/auth.md 的接口定义，实现完整的认证模块。
+先写测试，确认测试全部失败后，再写实现。
 ```
 
-### Spec-Driven 的好处
-
-| 不写 Spec | 写 Spec |
-|---|---|
-| AI 自由发挥，结果不可控 | AI 按规格执行，结果可预测 |
-| 需要多次返工纠正 | 一次到位率高 |
-| 验收标准模糊 | Spec 就是验收标准 |
-| Token 浪费在纠正上 | Token 花在实现上 |
-
-> 💡 **核心原则**：花 10 分钟写 Spec，节省 1 小时返工。
+Spec-Driven 的好处：Codex 按规格执行（结果可预测）、Spec 就是验收标准、Token 花在实现上而不是返工纠正上。
 
 ---
 
-## 安全建议
+## 安全底线
 
-### 使用 Codex 的注意事项
-
-1. **隔离仓库**：给 Codex 独立的 fork 或分支，不要直接在 main 上操作
-2. **Review 每个 PR**：绝不盲目合并 Codex 的 PR
-3. **敏感信息**：绝对不要在任务描述中包含 API Key、密码等
-4. **限制权限**：按仓库授权 GitHub 访问，不給全账号权限
-5. **先小后大**：先用简单任务验证效果，再提交复杂任务
+| 场景 | 推荐配置 |
+|------|----------|
+| **日常开发** | workspace-write + on-request + 自动审查 |
+| **读代码/做规划** | 切 read-only |
+| **全局规则** | AGENTS.md 加批量删除禁令 |
+| **危险操作** | 绝不要轻易用 danger-full-access |
 
 ---
 
 ## 本章小结
 
-1. Codex 工作流：描述任务 → 确认计划 → 自动执行 → Review PR
-2. 任务描述的关键：具体、有范围、有约束、有参考
-3. Spec-Driven 开发是最佳实践——先写规格，再让 AI 执行
-4. 花 10 分钟写 Spec = 节省 1 小时返工
-5. 安全第一：隔离仓库、Review 每个 PR、不给敏感信息
+1. 界面三栏布局：任务列表/对话/多功能区
+2. 核心工作节奏：写好 prompt → 发出去 → 信任等待 → 蓝点回来 review
+3. Plan 模式 + Steering + Fork Chat 是三大操作法宝
+4. **AGENTS.md 中写测试命令**是最大分水岭
+5. TDD 闭环：先写测试→确认失败→写实现→不许改测试
 
-> 📖 **下一步**：阅读 [[03-适用场景]]，了解 Codex 适合和不适合的场景，避免用错工具。
+> 📖 **下一步**：阅读 [[03-适用场景]]，了解 Codex 的适用边界以及如何与 Claude Code 配合使用。
 
 ---
 
