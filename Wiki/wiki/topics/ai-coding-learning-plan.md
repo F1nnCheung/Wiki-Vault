@@ -27,14 +27,14 @@ related:
 
 ### 1.1 AI Coding 发展历程
 
-阅读 [[topics/ai-coding-history|AI Coding 发展史]]，理解：
+阅读 [[ai-coding-history|AI Coding 发展史]]，理解：
 - **2024 代码补全时代**：Copilot 模式——人主导、AI 辅助
 - **2025 智能体元年**：Vibe Coding 概念提出、Claude Code/Cursor/Codex 涌现
 - **2026 智能体工程落地**：多 Agent 协同、从 Vibe Coding 到 Agentic Engineering
 
 ### 1.2 核心概念解析
 
-阅读 [[topics/ai-coding-concepts|核心概念]]，掌握：
+阅读 [[ai-coding-concepts|核心概念]]，掌握：
 
 | 概念 | 一句话 |
 |---|---|
@@ -50,24 +50,24 @@ related:
 
 ### 2.1 工具全景对比
 
-先读 [[topics/ai-coding-tools-comparison|AI Coding 工具全景对比]]，了解各工具定位，再根据需要选择学习。
+先读 [[ai-coding-tools-comparison|AI Coding 工具全景对比]]，了解各工具定位，再根据需要选择学习。
 
 ### 2.2 必学工具（按优先级）
 
 | 优先级 | 工具 | 教程 | 适合谁 |
 |---|---|---|---|
-| ⭐⭐⭐⭐⭐ | **Trae** | [[topics/trae-guide|Trae 完整教程]] | 国内开发者首选，永久免费 |
-| ⭐⭐⭐⭐⭐ | **Claude Code** | [[topics/claude-code-installation|安装配置]] → [[topics/claude-code-getting-started|命令入门]] | 追求最强能力的开发者 |
-| ⭐⭐⭐⭐ | **Cursor** | [[topics/cursor-guide|Cursor 完整教程]] | VS Code 用户、全能型需求 |
-| ⭐⭐⭐⭐ | **Codex** | [[topics/codex-guide|Codex 完整教程]] | 自动化脚本、批量处理 |
+| ⭐⭐⭐⭐⭐ | **Trae** | [[trae-guide|Trae 完整教程]] | 国内开发者首选，永久免费 |
+| ⭐⭐⭐⭐⭐ | **Claude Code** | [[claude-code-installation|安装配置]] → [[claude-code-getting-started|命令入门]] | 追求最强能力的开发者 |
+| ⭐⭐⭐⭐ | **Cursor** | [[cursor-guide|Cursor 完整教程]] | VS Code 用户、全能型需求 |
+| ⭐⭐⭐⭐ | **Codex** | [[codex-guide|Codex 完整教程]] | 自动化脚本、批量处理 |
 | ⭐⭐⭐ | **GitHub Copilot** | 官方文档 | 预算有限、不改变习惯 |
 
 ### 2.3 进阶 Agent 工具
 
 | 工具 | 教程 | 定位 |
 |---|---|---|
-| **OpenClaw** | [[topics/openclaw-guide|OpenClaw 完整教程]] | 个人 AI Agent，连接消息平台 |
-| **Hermes Agent** | [[topics/hermes-agent-guide|Hermes Agent 完整教程]] | 自进化 AI Agent，多平台网关 |
+| **OpenClaw** | [[openclaw-guide|OpenClaw 完整教程]] | 个人 AI Agent，连接消息平台 |
+| **Hermes Agent** | [[hermes-agent-guide|Hermes Agent 完整教程]] | 自进化 AI Agent，多平台网关 |
 
 ---
 
@@ -75,11 +75,11 @@ related:
 
 学完基础和工具后，深入以下专题：
 
-1. **MCP 生态** → [[topics/claude-code-mcp-ecosystem|MCP 生态系统]]
-2. **Skills 体系** → [[topics/claude-code-skills-ecosystem|Skills 生态系统]]
-3. **Superpowers + gstack** → [[topics/claude-code-superpowers-workflow|完整开发闭环]]
-4. **设计集成** → [[topics/claude-code-design-integration|Figma + DESIGN.md]]
-5. **提示词工程** → [[topics/claude-code-prompt-engineering|Prompt Engineering]]
+1. **MCP 生态** → [[claude-code-mcp-ecosystem|MCP 生态系统]]
+2. **Skills 体系** → [[claude-code-skills-ecosystem|Skills 生态系统]]
+3. **Superpowers + gstack** → [[claude-code-superpowers-workflow|完整开发闭环]]
+4. **设计集成** → [[claude-code-design-integration|Figma + DESIGN.md]]
+5. **提示词工程** → [[claude-code-prompt-engineering|Prompt Engineering]]
 
 ---
 

@@ -51,7 +51,7 @@ related:
 
 ## MCP（Model Context Protocol）
 
-参见 [[entities/mcp|MCP 实体页]]。
+参见 [[../entities/mcp|MCP 实体页]]。
 
 **一句话**：AI 连接外部工具和数据源的开放标准协议。类比 USB-C——标准化的连接方式。
 
@@ -92,7 +92,7 @@ L5: 多 Agent 协同 → 多个 Agent 分工协作
 
 ## Claw / OpenClaw
 
-参见 [[entities/openclaw|OpenClaw 实体页]]。
+参见 [[../entities/openclaw|OpenClaw 实体页]]。
 
 **一句话**：开源的个人 AI Agent，运行在你的电脑上，通过 WhatsApp/Telegram/Discord 等消息平台与你交互。
 
@@ -102,7 +102,7 @@ L5: 多 Agent 协同 → 多个 Agent 分工协作
 
 ## Hermes Agent
 
-参见 [[entities/hermes-agent|Hermes Agent 实体页]]。
+参见 [[../entities/hermes-agent|Hermes Agent 实体页]]。
 
 **一句话**：Nous Research 开发的自进化 AI Agent，能从完成任务中自动提炼可复用技能，越用越聪明。
 

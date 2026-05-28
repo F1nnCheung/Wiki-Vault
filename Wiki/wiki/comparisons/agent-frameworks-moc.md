@@ -25,13 +25,13 @@ related:
 
 ## 架构专题
 
-- [[hermes-architecture-deep-dive|Hermes Agent 五层架构深度拆解]] — 跟一条消息走完五层架构：适配器→网关→主循环→系统提示→记忆→自修复→自进化
+- [[../topics/hermes-architecture-deep-dive|Hermes Agent 五层架构深度拆解]] — 跟一条消息走完五层架构：适配器→网关→主循环→系统提示→记忆→自修复→自进化
 
 ## 核心概念
 
-- [[agent-self-evolution|Agent 自进化]] — Prompt 驱动 vs 后台流水线，两种自进化策略的设计取舍
-- [[agent-memory-systems|Agent 记忆系统设计]] — 三层记忆 vs 单插件槽位，冻结快照与 Session 链
-- [[agent-context-compression|Agent 上下文压缩]] — 压中间 vs 压头部，Session 链保数据不丢
+- [[../concepts/agent-self-evolution|Agent 自进化]] — Prompt 驱动 vs 后台流水线，两种自进化策略的设计取舍
+- [[../concepts/agent-memory-systems|Agent 记忆系统设计]] — 三层记忆 vs 单插件槽位，冻结快照与 Session 链
+- [[../concepts/agent-context-compression|Agent 上下文压缩]] — 压中间 vs 压头部，Session 链保数据不丢
 
 ## 实体
 

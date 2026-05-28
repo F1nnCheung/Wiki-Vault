@@ -43,19 +43,19 @@ related:
 - **适合**：架构师、技术债清理、核心模块深度开发
 - **优势**：200 万 Token 上下文、Computer Use、最强代码审查
 - **短板**：无实时代码补全、国内访问极不稳定、学习曲线陡
-- **教程**：[[topics/claude-code-installation|安装配置]] / [[topics/claude-code-getting-started|命令入门]]
+- **教程**：[[claude-code-installation|安装配置]] / [[claude-code-getting-started|命令入门]]
 
 ### 🥈 Cursor — 全能均衡型 AI IDE
 - **适合**：日常全能开发、从 VS Code 迁移
 - **优势**：Tab 补全 <100ms、Composer 跨文件编辑、Background Agents
 - **短板**：国内 IP 限制部分模型、大项目索引慢
-- **教程**：[[topics/cursor-guide|Cursor 完整教程]]
+- **教程**：[[cursor-guide|Cursor 完整教程]]
 
 ### 🥉 Codex — 全流程自动化
 - **适合**：自动化脚本、批量处理、代码迁移
 - **优势**：云端独立运行、需求到部署全流程
 - **短板**：价格昂贵、无代码补全、复杂任务容易"走偏"
-- **教程**：[[topics/codex-guide|Codex 完整教程]]
+- **教程**：[[codex-guide|Codex 完整教程]]
 
 ### 💰 Copilot — 性价比之王
 - **适合**：预算有限的个人开发者、保守型团队
@@ -66,14 +66,14 @@ related:
 - **适合**：国内开发者、学生、预算为零
 - **优势**：永久免费、中文 98%、国内极速、数据合规
 - **短板**：基座模型与海外顶级有差距
-- **教程**：[[topics/trae-guide|Trae 完整教程]]
+- **教程**：[[trae-guide|Trae 完整教程]]
 
 ## Agent 工具补充
 
 | 工具 | Stars | 定位 | 教程 |
 |---|---|---|---|
-| **OpenClaw** | 24.7 万 | 个人 AI Agent，消息平台交互 | [[topics/openclaw-guide|教程]] |
-| **Hermes Agent** | 5.2 万 | 自进化 AI Agent，多平台网关 | [[topics/hermes-agent-guide|教程]] |
+| **OpenClaw** | 24.7 万 | 个人 AI Agent，消息平台交互 | [[openclaw-guide|教程]] |
+| **Hermes Agent** | 5.2 万 | 自进化 AI Agent，多平台网关 | [[hermes-agent-guide|教程]] |
 
 ## 推荐组合策略
 
