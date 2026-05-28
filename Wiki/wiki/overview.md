@@ -3,12 +3,14 @@ title: 全局概览
 type: overview
 tags: []
 created: 2026-05-09
-updated: 2026-05-13
+updated: 2026-05-28
 sources:
   - raw/articles/Claude Code/
+  - raw/articles/Codex/
   - raw/articles/OpenClaw/
   - raw/articles/Hemmers/
   - raw/articles/Obsidian/
+  - raw/articles/知识库/
   - raw/articles/132页！Anthropic黑客松获胜者everything-claude-code完整教程来了！.md
 related:
   - entities/everything-claude-code.md
@@ -43,7 +45,7 @@ related:
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**Agent 框架对比** 和 **Obsidian 知识管理** 三大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南） + Everything Claude Code（180K+ Stars 的 Anthropic 黑客松获胜项目）+ 2 篇 OpenClaw vs Hermes 深度对比文章 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理** 和 **知识库技术（RAG/图谱）** 五大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 4 篇知识库技术文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
