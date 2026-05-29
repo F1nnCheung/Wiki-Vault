@@ -12,7 +12,7 @@ related:
   - 04-进阶使用-Skill.md
   - 06-高阶指令.md
 ---
-
+e
 # 2.2.5 Claude Code 进阶：MCP 生态系统
 
 > ⚠️ 社区共识：不装 MCP 的 Claude Code 只发挥了约三成功力。MCP 给 AI 连接外部世界的「手脚」——浏览器、数据库、GitHub、Figma……
