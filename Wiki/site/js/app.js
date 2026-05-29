@@ -391,6 +391,9 @@ function handleSearch() {
     navigate("browse");
   } else if (state.currentView === "browse") {
     renderBrowse();
+  } else if (query && (state.currentView === "page" || state.currentView === "tutorial")) {
+    // 从详情页搜索时跳转到浏览视图
+    navigate("browse");
   }
 }
 
@@ -437,9 +440,17 @@ function renderHome() {
 
   // 教程入口
   if (d.tutorials && d.tutorials.length) {
+    const { tree, rootFiles } = buildTutorialTree(d.tutorials);
     html += '<h2 id="tutorial-section" style="font-size:1.1rem; margin:28px 0 12px; font-family:var(--font-display);">📖 教程入口</h2>';
+    // 根级教程文件（无文件夹归属，不缩进）
+    if (rootFiles.length > 0) {
+      html += '<div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px;">' +
+        rootFiles.map(t =>
+          '<a href="#" class="tutorial-file-link" data-action="open-tutorial" data-tutpath="' + esc(t.path) + '">📄 ' + esc(t.title) + '</a>'
+        ).join("") + '</div>';
+    }
     html += '<div style="display:flex;flex-direction:column;gap:6px;">' +
-      buildTutorialTree(d.tutorials).map(n => renderTutorialNode(n, 0)).join("") + '</div>';
+      tree.map(n => renderTutorialNode(n, 0)).join("") + '</div>';
   }
 
   html += '<div class="site-footer">共 ' + s.wiki_pages + ' 个 Wiki 页面 · ' +
@@ -769,8 +780,12 @@ function debounce(fn, ms) {
 
 function buildTutorialTree(tutorials) {
   const byFolder = {};
+  const rootFiles = [];
   for (const t of tutorials) {
-    if (t.folder === "root") continue;
+    if (t.folder === "root") {
+      rootFiles.push(t);
+      continue;
+    }
     if (!byFolder[t.folder]) byFolder[t.folder] = [];
     byFolder[t.folder].push(t);
   }
@@ -799,7 +814,12 @@ function buildTutorialTree(tutorials) {
   }
   const topLevel = Object.values(nodes).filter(n => !n.fullPath.includes("/"));
   topLevel.forEach(sortNode);
-  return topLevel.sort((a, b) => a.name.localeCompare(b.name, "zh"));
+  topLevel.sort((a, b) => a.name.localeCompare(b.name, "zh"));
+
+  // 根级文件排序
+  rootFiles.sort((a, b) => a.path.localeCompare(b.path, "zh"));
+
+  return { tree: topLevel, rootFiles };
 }
 
 function countAllFiles(node) {
