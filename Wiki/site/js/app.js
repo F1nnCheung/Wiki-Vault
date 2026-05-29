@@ -262,6 +262,14 @@ function bindGlobalDelegation() {
       if (action === "home") { navigate("home"); return; }
       if (action === "browse") { navigate("browse"); return; }
       if (action === "back") { navigate("browse"); return; }
+      if (action === "open-tutorial") {
+        const tp = ab.dataset.tutpath;
+        if (tp) {
+          const obsUrl = "obsidian://open?vault=" + encodeURIComponent("Wiki Vault") + "&file=" + encodeURIComponent(tp);
+          window.open(obsUrl, "_blank");
+        }
+        return;
+      }
     }
 
     // 统计卡片中 "browse" 是特殊值，表示全部页面
@@ -269,6 +277,11 @@ function bindGlobalDelegation() {
     if (sc2) {
       const statType = sc2.dataset.stat;
       if (statType === "browse") { navigate("browse"); return; }
+      if (statType === "tutorials") {
+        const el = document.getElementById("tutorial-section");
+        if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+        return;
+      }
       navigate("browse", { type: statType }); return;
     }
   });
@@ -375,12 +388,12 @@ function renderHome() {
 
   const statCards = [
     { n: s.wiki_pages, l: "Wiki 页面", i: "📚", v: "browse" },
-    { n: s.tutorials, l: "教程文档", i: "📖", v: null },
+    { n: s.tutorials, l: "教程文档", i: "📖", v: "tutorials" },
     { n: s.entities, l: "核心实体", i: "🏢", v: "entity" },
     { n: s.topics, l: "专题页面", i: "📝", v: "topic" },
     { n: s.concepts, l: "核心概念", i: "💡", v: "concept" },
     { n: s.comparisons, l: "对比分析", i: "⚖️", v: "comparison" },
-    { n: s.total_tags, l: "标签", i: "🏷️", v: null },
+    { n: s.total_tags, l: "标签", i: "🏷️", v: "browse" },
   ];
 
   const today = new Date();
@@ -409,12 +422,17 @@ function renderHome() {
   // 教程入口
   if (d.tutorials && d.tutorials.length) {
     const folders = [...new Set(d.tutorials.map(t => t.folder))].filter(f => f !== "root");
-    html += '<h2 style="font-size:1.1rem; margin:28px 0 12px; font-family:var(--font-display);">📖 教程入口</h2>';
+    html += '<h2 id="tutorial-section" style="font-size:1.1rem; margin:28px 0 12px; font-family:var(--font-display);">📖 教程入口</h2>';
     html += '<div style="display:flex;flex-direction:column;gap:8px;">' +
       folders.map(folder => {
-        const count = d.tutorials.filter(t => t.folder === folder).length;
-        return '<div class="tutorial-entry"><strong>📁 ' + esc(folder) + '</strong>' +
-          '<span style="color:var(--text-muted);font-size:0.78em;margin-left:8px;">' + count + ' 个文档</span></div>';
+        const files = d.tutorials.filter(t => t.folder === folder);
+        const folderId = 'tut-folder-' + esc(folder).replace(/[\/\s]/g, '-');
+        return '<details class="tutorial-folder" id="' + folderId + '">' +
+          '<summary class="tutorial-folder-summary"><strong>📁 ' + esc(folder) + '</strong>' +
+          '<span style="color:var(--text-muted);font-size:0.78em;margin-left:8px;">' + files.length + ' 个文档</span></summary>' +
+          '<div class="tutorial-files">' +
+          files.map(t => '<a href="#" class="tutorial-file-link" data-action="open-tutorial" data-tutpath="' + esc(t.path) + '">📄 ' + esc(t.title) + '</a>').join("") +
+          '</div></details>';
       }).join("") + '</div>';
   }
 
