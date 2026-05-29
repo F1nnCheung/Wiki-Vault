@@ -3,10 +3,12 @@ title: 知识库技术 03 — RAG 优化管线 20 法
 type: tutorial
 tags: [知识库, RAG, 优化, embedding, 重排, 混合检索]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 sources:
   - Wiki/wiki/topics/rag-optimization-techniques.md
   - Wiki/wiki/concepts/rag-architectures.md
+  - Wiki/wiki/concepts/hybrid-retrieval.md
+  - Wiki/wiki/concepts/rag-evaluation.md
 related:
   - 02-RAG三大架构.md
   - 06-向量数据库与嵌入模型.md

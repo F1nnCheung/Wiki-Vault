@@ -1,5 +1,22 @@
 # 操作日志
 
+## [2026-05-29] ingest | 知识库技术 18 篇 + Hemmers 1 篇，共 19 篇新增资料
+
+- **新增页面**：
+  - Wiki/wiki/concepts/rag-evaluation.md（RAG 评估体系：检索层+生成层分层评估/Recall@K+MRR+NDCG+RAGAS/黄金测试集+对抗样本/离线+在线+持续监控三管线）
+  - Wiki/wiki/concepts/hybrid-retrieval.md（混合检索：BM25 词法+向量语义互补/RRF+凸组合融合/检索策略选择决策树/与 Agentic RAG 的关系）
+  - Wiki/wiki/topics/agentic-rag-patterns.md（Agentic RAG 四种模式：路由型/多步型/CRAG 纠错型/自适应型 + A-RAG 层级检索 + NaviRAG 主动导航 + LangGraph 完整代码）
+  - Wiki/wiki/topics/vector-graph-rag.md（Vector Graph RAG：三 Collection 逻辑图/子图扩展代替图遍历/Recall@5=87.8%/不依赖图数据库的多跳推理方案）
+- **更新页面**：
+  - Wiki/wiki/concepts/rag-architectures.md（新增「RAG 五阶段演进史」章节：Naive→Advanced→Modular→Agentic→长上下文时代；评估章节指向新的专用页面；新增 sources 3 篇 + related 3 条）
+  - Wiki/wiki/topics/rag-optimization-techniques.md（新增 sources 2 篇 + related 2 条：RAG 全链路技术详解/向量检索算法全解析）
+  - Wiki/wiki/concepts/knowledge-graph.md（新增「Neo4j 实战」章节：图数据库 vs 关系型 vs 向量库三维对比 + LLM 自动生成 Cypher；新增「向量空间表示」章节：实体和关系的向量化替代方案；新增 sources 2 篇 + related 2 条）
+  - Wiki/wiki/topics/hermes-agent-guide.md（新增：推荐 Skills 目录 107+ 分级/生产环境部署 Docker+systemd/推荐配置清单/FAQ；新增 source 1 篇）
+  - Wiki/wiki/overview.md（文章数 106→124，专题 32→34，概念 15→17；知识领域新增 RAG 五阶段进化史/混合检索/评估体系/Agentic RAG 模式/A-RAG/NaviRAG/Vector Graph RAG）
+  - Wiki/wiki/index.md（新增概念条目2个 + 专题条目2个 + 更新 RAG 架构条目描述；知识库技术资料 11→29 篇完整索引；Hemmers 资料 20→21 篇）
+- **教程同步**：待检查「教程/知识库技术/」中 7 章教程是否需要更新
+- **摘要**：处理 19 篇新增资料（RAG 18 篇 + Hermes 1 篇）。RAG 板块从「架构对比 + 优化 20 法」两层扩展到「演进史（五阶段）+ 架构对比 + 混合检索 + 评估体系 + Agentic RAG 四种模式 + Vector Graph RAG + 知识图谱（含 Neo4j + 向量表示）」七层完整知识体系。Hermes 板块新增 1168 行实战指南（107+ Skill 分级推荐/Docker 部署/Cron/Kanban/FAQ）。知识库 RAG 技术从之前的主要缺口（缺评估、缺混合检索、缺 Agentic RAG 细节）到现在的全面覆盖。
+
 ## [2026-05-29] output | 创建 OPC 一人公司教程
 
 - **新增文件**：

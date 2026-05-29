@@ -3,9 +3,10 @@ title: 知识库技术 02 — RAG 三大架构
 type: tutorial
 tags: [知识库, RAG, Classic-RAG, Graph-RAG, Agentic-RAG]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 sources:
   - Wiki/wiki/concepts/rag-architectures.md
+  - Wiki/wiki/topics/agentic-rag-patterns.md
 related:
   - 01-知识库技术总览.md
   - 03-RAG优化管线.md

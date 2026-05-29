@@ -323,3 +323,160 @@ hermes profile use coder
 - **research** — 研究助手：文献检索、知识整理、竞品分析
 
 详见 [[hermes-multi-agent|Hermes 多 Agent 团队搭建指南]]。
+
+## 推荐 Skills 目录
+
+Hermes 有 107+ 个技能，以下按场景分类推荐最值得安装的：
+
+### 开发效率
+
+| 技能 | 用途 | 推荐指数 |
+|------|------|----------|
+| `systematic-debugging` | 四阶段根因调试法，遇到 bug 先看这个 | ⭐⭐⭐⭐⭐ |
+| `writing-plans` | 写实现计划，大任务拆成可执行小步骤 | ⭐⭐⭐⭐⭐ |
+| `github-pr-workflow` | GitHub PR 全流程：分支、提交、CI、合并 | ⭐⭐⭐⭐ |
+| `github-code-review` | PR 代码审查，支持 diff 和内联评论 | ⭐⭐⭐⭐ |
+| `codebase-inspection` | pygount 分析代码库：行数、语言、比例 | ⭐⭐⭐ |
+| `requesting-code-review` | 提交前自动审查：安全扫描、质量门控、自动修复 | ⭐⭐⭐⭐ |
+
+### 内容创作
+
+| 技能 | 用途 | 推荐指数 |
+|------|------|----------|
+| `humanizer` | 去除 AI 写作痕迹，让文本读起来像人写的 | ⭐⭐⭐⭐⭐ |
+| `tech-article-writing` | 技术文章写作：对比/工具介绍/分析类 | ⭐⭐⭐⭐⭐ |
+| `architecture-diagram` | 暗色主题 SVG 架构/云/基础设施图 | ⭐⭐⭐⭐ |
+| `baoyu-image-gen` | AI 图片生成（多后端支持） | ⭐⭐⭐⭐ |
+| `baoyu-slide-deck` | 从内容生成专业 PPT 图片 | ⭐⭐⭐⭐ |
+| `obsidian` | Obsidian 笔记管理：读取、搜索、创建、编辑 | ⭐⭐⭐⭐ |
+
+### 研究搜索
+
+| 技能 | 用途 | 推荐指数 |
+|------|------|----------|
+| `tavily-search` | Tavily API 网络搜索，返回精炼结果和摘要 | ⭐⭐⭐⭐⭐ |
+| `multi-search-engine` | 17 个搜索引擎集成（8 国内 + 9 国际），无需 API Key | ⭐⭐⭐⭐ |
+| `arxiv` | arXiv 论文搜索：关键词、作者、分类 | ⭐⭐⭐⭐ |
+| `tech-repo-research` | 研究 GitHub 仓库并生成对比/概览文章 | ⭐⭐⭐⭐ |
+
+### 自动化与运维
+
+| 技能 | 用途 | 推荐指数 |
+|------|------|----------|
+| `hermes-agent` | Hermes 自身配置、扩展、贡献全套指南 | ⭐⭐⭐⭐⭐ |
+| `self-improvement` | 自我改进：捕获错误、纠正和新发现的工作流 | ⭐⭐⭐⭐⭐ |
+| `openclaw-auto-updater` | 定时自动更新 Hermes 和技能，带重试机制 | ⭐⭐⭐⭐ |
+| `kanban-worker` | Kanban 工作流指南，多 Agent 协作任务 | ⭐⭐⭐ |
+| `webhook-subscriptions` | Webhook 订阅：事件驱动的 Agent 运行 | ⭐⭐⭐ |
+
+> 每次做完一件事，让 Agent 把它保存为 skill——一旦成功走通一次就能变成可复用的技能。每月审查 `~/.hermes/skills/` 保持库干净。
+
+---
+
+## 生产环境部署
+
+### Docker 容器（推荐生产环境）
+
+```bash
+docker pull nousresearch/hermes-agent
+docker run -d \
+  --name hermes \
+  -v ~/.hermes:/root/.hermes \
+  -e DASHSCOPE_API_KEY=your_key \
+  nousresearch/hermes-agent
+```
+
+### systemd 服务（VPS 长期运行）
+
+```bash
+sudo tee /etc/systemd/system/hermes-gateway.service << 'EOF'
+[Unit]
+Description=Hermes Agent Gateway
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+ExecStart=/path/to/hermes gateway run
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl enable hermes-gateway
+sudo systemctl start hermes-gateway
+```
+
+### Redis 调优（持久化记忆场景）
+
+```bash
+appendonly yes
+appendfsync everysec
+maxmemory 2gb
+maxmemory-policy allkeys-lru
+```
+
+### 防火墙配置
+
+```bash
+# 按需开放网关端口
+sudo ufw allow 8080/tcp
+# 生产环境限制 IP
+sudo ufw allow from 192.168.1.0/24 to any port 8080
+```
+
+---
+
+## 推荐配置清单
+
+```yaml
+# config.yaml 推荐配置
+model:
+  default: "anthropic/claude-sonnet-4"
+  context_length: 128000
+
+agent:
+  max_turns: 90
+
+compression:
+  enabled: true
+  threshold: 0.50
+  target_ratio: 0.20
+
+display:
+  skin: "default"
+  tool_progress: true
+  show_reasoning: false
+  show_cost: true
+
+security:
+  redact_secrets: true
+
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+
+approvals:
+  mode: "smart"
+```
+
+---
+
+## 常见问题
+
+**Q: 改了配置/装了新技能，但没生效？**
+Hermes 在会话启动时加载配置。对话内输入 `/reset` 或 `/new` 重新开始会话。
+
+**Q: Gateway 频繁崩溃？**
+查看日志 `grep -i "failed to send\|error" ~/.hermes/logs/gateway.log | tail -20`；重置崩溃状态 `systemctl --user reset-failed hermes-gateway`。
+
+**Q: Discord Bot 收不到消息？**
+必须在 Discord Developer Portal → Bot → Privileged Gateway Intents → 开启 Message Content Intent。
+
+**Q: 辅助模型（vision/compression/session_search）不工作？**
+`auto` 模式找不到后端。设置 `OPENROUTER_API_KEY` 或 `GOOGLE_API_KEY`，或显式配置：`hermes config set auxiliary.vision.provider <provider>`。
+
+**Q: 技能安装后看不到？**
+`hermes skills list` 确认已安装，`hermes skills config` 检查平台启用状态，对话内 `/skill <name>` 显式加载。

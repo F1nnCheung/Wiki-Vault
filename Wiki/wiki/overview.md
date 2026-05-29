@@ -3,7 +3,7 @@ title: 全局概览
 type: overview
 tags: []
 created: 2026-05-09
-updated: 2026-05-28
+updated: 2026-05-29
 sources:
   - raw/articles/Claude Code/
   - raw/articles/Codex/
@@ -32,6 +32,7 @@ related:
   - topics/hermes-workspace-setup.md
   - topics/hermes-obsidian-integration.md
   - topics/hermes-rag-setup.md
+  - topics/hermes-agent-guide.md
   - concepts/harness-engineering.md
   - entities/obsidian.md
   - topics/obsidian-getting-started.md
@@ -41,11 +42,15 @@ related:
   - comparisons/obsidian-notion-tolaria.md
   - concepts/second-brain.md
   - concepts/file-over-app.md
+  - concepts/rag-evaluation.md
+  - concepts/hybrid-retrieval.md
+  - topics/agentic-rag-patterns.md
+  - topics/vector-graph-rag.md
 ---
 
 # 全局概览
 
-本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理**、**知识库技术（RAG/图谱）**、**智能家居（Home Assistant + Hermes）** 和 **AI 原生创业（OPC）** 七大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 12 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + 18 篇 Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + 11 篇知识库技术文章（RAG 架构/优化/图谱/代码图谱） + **2 篇 Home Assistant 文章** + **2 篇 OPC/AI 创业文章** + **1 篇 VibeCoding 实战文章**，系统化整理了从概念到实战的完整知识体系。
+本知识库围绕 **Claude Code**、**OpenAI Codex**、**Agent 框架对比**、**Obsidian 知识管理**、**知识库技术（RAG/图谱）**、**智能家居（Home Assistant + Hermes）** 和 **AI 原生创业（OPC）** 七大主线构建，收录了 27 篇 Claude Code 文章（含 1 本 10 章完整指南）+ Everything Claude Code（180K+ Stars）+ 13 篇 Codex 文章 + 2 篇 OpenClaw vs Hermes 深度对比 + 1 份橙皮书 + **21 篇** Hemmers Hermes Agent 系列文章 + 23 篇 Obsidian 知识管理文章 + **29 篇**知识库技术文章（RAG 架构/进化史/Agentic RAG/混合检索/评估体系/知识图谱/Vector Graph RAG/向量检索算法） + 2 篇 Home Assistant 文章 + 2 篇 OPC/AI 创业文章 + 1 篇 VibeCoding 实战文章，系统化整理了从概念到实战的完整知识体系。
 
 ## 核心论点
 
@@ -321,10 +326,10 @@ AI 原生创业知识体系
 
 ## 关键数据
 
-- 收录文章：**106 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 20 篇 + Obsidian 23 篇 + Codex 13 篇 + 知识库技术 11 篇 + AI Agent 编排 1 篇 + Gemini 1 篇 + **Home Assistant 2 篇** + **OPC 2 篇** + **VibeCoding 1 篇** + 橙皮书 1 份）
+- 收录文章：**124 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 21 篇 + Obsidian 23 篇 + Codex 13 篇 + 知识库技术 29 篇 + AI Agent 编排 1 篇 + Gemini 1 篇 + Home Assistant 2 篇 + OPC 2 篇 + VibeCoding 1 篇 + 橙皮书 1 份）
 - 输出产物：4 份（[AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md) · [知识库技术学习指南](../../教程/知识库技术/知识库技术学习指南.md) · [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) · [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md)）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、RAG 架构与优化、知识图谱、GraphRAG、代码图谱、**智能家居自动化（Home Assistant + Hermes）**、**AI 原生创业方法论（OPC + Anthropic 手册）**、**VibeCoding 实战**、**Obsidian 主页设计**
-- 核心实体：**15 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、**Home Assistant**）
-- 专题页面：**32 个**
-- 概念页面：**15 个**
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、**RAG 五阶段进化史、混合检索（BM25+向量）、RAG 评估体系（检索+生成两层）、Agentic RAG 四种模式、A-RAG 层级检索、NaviRAG 主动导航、Vector Graph RAG**、知识图谱、GraphRAG、代码图谱、智能家居自动化（Home Assistant + Hermes）、AI 原生创业方法论（OPC + Anthropic 手册）、VibeCoding 实战、Obsidian 主页设计
+- 核心实体：**15 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、Home Assistant）
+- 专题页面：**34 个**
+- 概念页面：**17 个**
 - 对比页面：3 个

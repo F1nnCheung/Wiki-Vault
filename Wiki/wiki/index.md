@@ -37,8 +37,12 @@ updated: 2026-05-29
 - [Superpowers 设计哲学](concepts/superpowers-design-philosophy.md) — 铁律+硬门控 / 合理化防范 / 人的搭档 / CSO 四大设计原则
 
 ### RAG 与知识图谱概念
-- [RAG 三种架构](concepts/rag-architectures.md) — Classic RAG（检索）→ Graph RAG（连接）→ Agentic RAG（推理），含微调策略/评估/优化三维度
-- [知识图谱](concepts/knowledge-graph.md) — 实体 + 关系 + 三元组 + 本体，把散落的关系显式化，让计算机理解和复用
+- [RAG 架构：从经典检索到智能体驱动](concepts/rag-architectures.md) — Classic RAG（检索）→ Graph RAG（连接）→ Agentic RAG（推理），含五阶段演进史、微调策略、评估三大维度
+- [Agentic RAG 四种模式](topics/agentic-rag-patterns.md) — 路由型 / 多步型 / CRAG 纠错型 / 自适应型 + A-RAG 层级检索 + NaviRAG 主动导航
+- [RAG 评估体系](concepts/rag-evaluation.md) — Recall@K/MRR/NDCG + RAGAS 四大指标，检索层与生成层分开度量
+- [混合检索](concepts/hybrid-retrieval.md) — BM25 词法 + 向量语义，RRF/凸组合融合策略，与 Agentic RAG 的关系
+- [Vector Graph RAG](topics/vector-graph-rag.md) — 不引入图数据库，仅用向量数据库（Milvus）解决多跳推理
+- [知识图谱](concepts/knowledge-graph.md) — 实体 + 关系 + 三元组 + 本体 + Neo4j 实战 + 向量空间表示
 - [代码知识图谱](concepts/code-knowledge-graph.md) — 从「检索文件」走向「查询关系」，让 AI 编程助手具备项目记忆层
 
 ### Obsidian / 知识管理概念
@@ -189,10 +193,11 @@ updated: 2026-05-29
 - OpenClaw橙皮书-从入门到精通-v1.4.0 — 花叔，2026.03，涵盖架构/部署/渠道/Skills/模型/安全
 
 ### Hemmers 资料
-20 篇 Hermes Agent 系列文章 + 1 个 HTML 页面 + 11 个 WebP 图片，位于 `raw/articles/Hemmers/`：
+21 篇 Hermes Agent 系列文章 + 1 个 HTML 页面 + 11 个 WebP 图片，位于 `raw/articles/Hemmers/`：
 - Hermes Agent v0.13.0 来了：137K 星的开源 AI Agent 又进化了 — 朗朗晴空，2026.05，Kanban/跨轮目标/视频理解/语音克隆
 - Hermes Agent v1.3 从入门到精通：开口就能用 — 小飞哥，2026.04，自然语言操作范式
 - Hermes Agent 从入门到精通 V1.2 — 2026.05，安装/模型/平台/v0.9.0 新功能
+- [Hermes Agent 最佳实践：从入门到精通的完整指南（2026）](../raw/articles/Hemmers/Hermes%20Agent%20最佳实践：从入门到精通的完整指南（2026）.md) — 坚强粑粑，2026.05，107+ Skill 分级推荐/Context Files/Docker 部署/推荐配置/Cron/Kanban/FAQ，1168 行完整指南
 - Hermes Agent 多角色团队搭建指南 — 2026.05，Profile 隔离机制 + Kanban 入门
 - Hermes 装完以后先写这 2 个文件：SOUL.md 和 AGENTS.md — 1Percent，2026.05，附可复制模板
 - Hermes(爱马仕)：如何搭建多 Agent 任务编排系统 — 远飞哥，2026.05，Kanban 四角色架构
@@ -254,18 +259,45 @@ updated: 2026-05-29
 - [国内可用！Codex 一步步安装配置指南](../raw/articles/Codex/国内可用！Codex%20一步步安装配置指南.md) — 海鱼星，2026.05，Windows 离线下载（rg-adguard）/msix→rar/中转 API 配置
 
 ### 知识库技术资料
-11 篇知识库技术中文文章，位于 `raw/articles/知识库/`：
+29 篇知识库技术中文文章，位于 `raw/articles/知识库/`，覆盖 RAG 进化史/混合检索/评估体系/Agentic RAG/知识图谱/Vector Graph RAG/向量检索算法 七大方向：
+
+**RAG 架构与进化**
 - [AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki](../raw/articles/知识库/AI%20知识库技术演进拆解：从%20RAG%20到%20NotebookLM，再到%20LLM%20Wiki.md) — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
 - [一文看懂三种 RAG 架构：Classic RAG、Graph RAG 与 Agentic RAG](../raw/articles/知识库/一文看懂三种%20RAG%20架构：Classic%20RAG、Graph%20RAG%20与%20Agentic%20RAG.md) — 兔兔AGI，2026.05，三种架构对比+选型指南
-- [一文看懂三种 RAG 架构（补充版）](../raw/articles/知识库/一文看懂三种%20RAG%20架构：Classic%20RAG、Graph%20RAG%20与%20Agentic%20RAG%201.md) — 兔兔AGI，2026.05，以问题形状为纲的深度解读
+- [RAG 进化史：从基础检索到智能体驱动](../raw/articles/知识库/RAG%20进化史：从基础检索到智能体驱动.md) — Byte，2026.05，Naive→Advanced→Modular→Agentic→长上下文时代五阶段演进
+- [RAG：发展演进全景](../raw/articles/知识库/RAG：发展演进全景.md) — 2026.05，RAG 发展路线图全景梳理
+- [第 8 期：企业为什么需要 RAG，而不是直接微调模型](../raw/articles/知识库/第%208%20期：企业为什么需要%20RAG，而不是直接微调模型.md) — 2026.05，长上下文时代 RAG 从窗口补丁到注意力筛选器的定位转变
+
+**Agentic RAG 深度**
+- [Agentic RAG 深度解析：让 Agent 自己决定要不要检索、检索几次](../raw/articles/知识库/Agentic%20RAG%20深度解析：让%20Agent%20自己决定要不要检索、检索几次，这才是%20RAG%20的正确打开方式.md) — Jameszyh，2026.05，四种模式全景 + CRAG LangGraph 完整实现
+- [A-RAG 解读：能做好混合检索策略的RAG，才是真 Agentic RAG](../raw/articles/知识库/A-RAG%20解读：能做好混合检索策略的RAG，才是真%20Agentic%20RAG.md) — 尹珉，2026.04，中科大层级检索接口三条件
+- [Agentic RAG不说人话更能打，延迟暴降90%](../raw/articles/知识库/Agentic%20RAG不说人话更能打，延迟暴降90%.md) — 2026.05，非自然语言检索的性能优势
+- [清华提出NaviRAG：让RAG学会"主动导航"](../raw/articles/知识库/清华提出NaviRAG：让RAG学会"主动导航"，长文问答F1涨4.8分.md) — 2026.05，长文问答主动导航式阅读
+
+**RAG 检索与优化**
 - [RAG 优化 20 法：从"搜得到"到"答得好"](../raw/articles/知识库/RAG%20优化%2020%20法：从"搜得到"到"答得好"%201.md) — 水果派哲思，2026.04，五阶段优化管线/场景组合推荐
+- [RAG 全链路技术详解](../raw/articles/知识库/RAG%20全链路技术详解.md) — 天猫品牌行业架构，2026.05，文档加载/智能切分/Meta-Chunking/索引构建/检索优化/生成调优/Graph RAG 进阶
+- [RAG 检索质量提升实战：从 Query、多路召回到重排序](../raw/articles/知识库/RAG%20检索质量提升实战：从%20Query、多路召回到重排序，怎么一层一层把结果拉稳.md) — 2026.05，Query→多路召回→重排序逐层优化
+- [RAG：混合检索](../raw/articles/知识库/RAG：混合检索.md) — 小橙子，2026.05，BM25 + 向量检索互补/RRF 融合/检索策略选择决策树
+- [从入门到精通：RAG 核心向量检索算法全解析](../raw/articles/知识库/从入门到精通：RAG%20核心向量检索算法全解析.md) — 2026.05，向量检索算法深度解析
 - [RAG-向量数据库 Milvus](../raw/articles/知识库/RAG-向量数据库Milvus.md) — idong，2026.04，六大索引类型/相似度量/L2/IP/COSINE
 - [RAG-搞懂嵌入向量的生成](../raw/articles/知识库/RAG-搞懂嵌入向量的生成.md) — idong，2026.05，Dense/Sparse/Multi-Vector/BGE-M3
 - [RAG-查询前处理](../raw/articles/知识库/RAG-查询前处理.md) — idong，2026.05，查询改写/拆分/HyDE/路由四种预处理
 - [RAG 我懂你：从架构到知识库构建](../raw/articles/知识库/RAG我懂你：从架构到知识库构建.md) — 二进制左右，2026.05，四象限微调策略/知识库构建管线/评估体系/优化策略
+
+**RAG 评估**
+- [RAG：评估体系](../raw/articles/知识库/RAG：评估体系.md) — OpenClaw小助手，2026.05，检索层+生成层失败模式/三层指标体系/测试集构建/开源评估框架
+- [RAG 效果评估：Recall@K、MRR、NDCG、RAGAS 四大指标一次讲透](../raw/articles/知识库/RAG%20效果评估：Recall@K、MRR、NDCG、RAGAS%20四大指标一次讲透.md) — Jameszyh，2026.05，含 TypeScript 代码实现
+- [工业级 RAG 评估方案：2大指标、三大流程 落地优化](../raw/articles/知识库/工业级%20RAG%20%20不可或缺%20的%20RAG%20评估方案：2大指标、三大流程%20落地优化，让RAG从Demo走向生产.md) — 尼恩，2026.05，离线评估+在线评估+持续监控三管线
+
+**知识图谱 & Vector Graph RAG**
 - [知识图谱入门：从一张关系网到 AI 知识底座](../raw/articles/知识库/知识图谱入门：从一张关系网到%20AI%20知识底座.md) — 水果派哲思，2026.04，三元组/本体/构建流程/GraphRAG
+- [Neo4j 知识图谱：实体建模+Cypher查询+LangChain接入](../raw/articles/知识库/Neo4j%20知识图谱：实体建模+Cypher查询+LangChain接入.md) — Jameszyh，2026.05，图数据库 vs 关系型 vs 向量库三维对比/LLM 自动生成 Cypher
+- [向量空间表示：如何把实体和关系表示为向量](../raw/articles/知识库/向量空间表示：如何把实体和关系表示为向量.md) — 2026.05，图结构的向量化替代方案
+- [Vector Graph RAG 开源！一套向量数据库同时搞定语义检索+RAG多跳](../raw/articles/知识库/Vector%20Graph%20RAG%20开源！一套向量数据库同时搞定语义检索+RAG多跳.md) — 张晨，2026.04，三 Collection 逻辑图/子图扩展/Recall@5=87.8%
 - [开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略](../raw/articles/知识库/开源%20AI%20编程可查询的软件工程知识图谱：Graphify%20完整上手攻略.md) — 兔兔AGI，2026.05，AST解析/多模态图谱/MCP集成
 - [开源一款零服务器代码知识图谱引擎：GitNexus](../raw/articles/知识库/开源一款零服务器代码知识图谱引擎，支持多语言解析、Graph%20RAG%20问答、AI%20代理集成的代码分析平台.md) — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG
+- [RAG 2.0 落地实战：从「检索增强」到「知识推理」的工程跃迁](../raw/articles/知识库/RAG%202.0%20落地实战：从「检索增强」到「知识推理」的工程跃迁.md) — 2026.05
 
 ### Home Assistant 资料
 2 篇 Home Assistant 中文文章，位于 `raw/articles/Home Assistant/`：
