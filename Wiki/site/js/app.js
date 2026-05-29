@@ -25,6 +25,7 @@ async function init() {
   initTheme();
   applyTheme();
   createScrollToTop();
+  createProgressBar();
 
   try {
     const resp = await fetch("data/data.json");
@@ -135,6 +136,25 @@ function navigate(view, params = {}) {
 }
 
 // ═══════════════════════════════════════════════════════
+//  阅读进度条
+// ═══════════════════════════════════════════════════════
+
+function createProgressBar() {
+  const bar = document.createElement("div");
+  bar.className = "reading-progress";
+  bar.id = "readingProgress";
+  document.body.appendChild(bar);
+
+  $("#mainContent").addEventListener("scroll", () => {
+    const main = $("#mainContent");
+    const scrollTop = main.scrollTop;
+    const scrollHeight = main.scrollHeight - main.clientHeight;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    bar.style.width = Math.min(pct, 100) + "%";
+  });
+}
+
+// ═══════════════════════════════════════════════════════
 //  滚动到顶按钮
 // ═══════════════════════════════════════════════════════
 
@@ -215,9 +235,12 @@ function bindEvents() {
 
 function bindGlobalDelegation() {
   $("#app").addEventListener("click", (e) => {
+    // 阻止所有 # 锚点的默认跳转
+    if (e.target.closest('a[href="#"]')) e.preventDefault();
+
     // Wiki 链接 (data-page)
     const wl = e.target.closest("[data-page]");
-    if (wl) { e.preventDefault(); navigate("page", { path: wl.dataset.page }); return; }
+    if (wl) { navigate("page", { path: wl.dataset.page }); return; }
 
     // 页面卡片 (data-path)
     const pc = e.target.closest("[data-path]");
@@ -366,7 +389,7 @@ function renderHome() {
 
   let html = '<div class="page-header" style="text-align:center; padding-top:12px;">' +
     '<h1 style="font-size:2.1em;">📚 知识库</h1>' +
-    '<p class="subtitle">今天是 ' + dateStr + '，欢迎回来</p></div>';
+    '<p class="subtitle">' + greetByTime() + '，今天是 ' + dateStr + '</p></div>';
 
   html += '<div class="stats-grid">' +
     statCards.map(c =>
@@ -471,7 +494,7 @@ function renderBrowse() {
     ).join("") + '</div>';
 
   if (pages.length === 0) {
-    html += '<div class="empty-state"><div class="empty-icon">🔍</div><p>没有找到匹配的页面</p></div>';
+    html += '<div class="empty-state"><div class="empty-icon">🔍</div><p>没有找到匹配的页面</p><p style="font-size:0.82em;margin-top:4px;">试试其他关键词，或 <a href="#" data-action="browse" style="color:var(--accent);">浏览全部页面</a></p></div>';
   } else {
     html += '<div class="page-list">' + pages.map(p => renderPageCard(p, state.searchQuery)).join("") + '</div>';
   }
@@ -517,10 +540,12 @@ function renderPageDetail() {
     (page.type !== 'overview' ? '<span class="breadcrumb-sep">›</span><a href="#" data-filter="' + page.type + '">' + getTypeIcon(page.type) + ' ' + typeLabelCN + '</a>' : '') +
     '<span class="breadcrumb-sep">›</span>' +
     '<span class="breadcrumb-current">' + esc(page.title) + '</span>' +
+    '<button class="copy-link-btn" onclick="copyPageUrl()" title="复制链接" aria-label="复制链接">🔗</button>' +
     '</nav>' +
     '<div class="detail-meta">' +
     '<span class="detail-type">' + getTypeIcon(page.type) + ' ' + typeLabel + '</span>' +
-    (page.created ? '<span class="detail-dates">创建: ' + page.created + '</span>' : '') +
+    (page.word_count ? '<span class="detail-dates">' + page.word_count.toLocaleString() + ' 字</span>' : '') +
+    (page.word_count ? '<span class="detail-dates">约 ' + Math.max(1, Math.ceil(page.word_count / 400)) + ' 分钟</span>' : '') +
     (page.updated ? '<span class="detail-dates">更新: ' + page.updated + '</span>' : '') +
     '</div>' +
     '<h1>' + esc(page.title) + '</h1>';
@@ -608,6 +633,15 @@ function findPage(path) {
   return null;
 }
 
+function greetByTime() {
+  const h = new Date().getHours();
+  if (h < 6) return "🌙 夜深了";
+  if (h < 12) return "☀️ 早上好";
+  if (h < 15) return "🌤️ 下午好";
+  if (h < 19) return "🌅 傍晚好";
+  return "🌙 晚上好";
+}
+
 function relTime(dateStr) {
   if (!dateStr) return "";
   const d = new Date(dateStr);
@@ -656,3 +690,14 @@ window.addEventListener("DOMContentLoaded", init);
 
 // 全局暴露（兼容内联 onclick）
 window.appNav = navigate;
+
+function copyPageUrl() {
+  const url = location.origin + location.pathname + location.hash;
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.querySelector(".copy-link-btn");
+    if (btn) { btn.textContent = "✓"; btn.classList.add("copied");
+      setTimeout(() => { btn.textContent = "🔗"; btn.classList.remove("copied"); }, 2000);
+    }
+  }).catch(() => { /* clipboard not available */ });
+}
+window.copyPageUrl = copyPageUrl;

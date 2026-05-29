@@ -218,6 +218,15 @@ body {
   border-color: var(--accent); box-shadow: var(--shadow-lg);
 }
 
+/* ── 阅读进度条 ── */
+.reading-progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  z-index: 300; width: 0%;
+  transition: width 0.1s linear;
+  border-radius: 0 1px 1px 0;
+}
+
 /* ── 主内容区 ── */
 .main-content {
   flex: 1; min-width: 0; max-width: 960px;
@@ -483,6 +492,18 @@ body {
   color: var(--text-primary); font-weight: 600;
   font-family: var(--font-display);
 }
+
+.copy-link-btn {
+  margin-left: auto; padding: 4px 8px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color); background: var(--bg-secondary);
+  color: var(--text-muted); cursor: pointer; font-size: 0.82rem;
+  transition: all var(--transition); flex-shrink: 0;
+}
+
+.copy-link-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-light); }
+.copy-link-btn.copied { color: #2e7d32; border-color: #2e7d32; background: #e8f5e9; }
+
+[data-theme="dark"] .copy-link-btn.copied { color: #66bb6a; border-color: #66bb6a; background: #1a3020; }
 
 .page-detail .back-btn {
   display: inline-flex; align-items: center; gap: 6px;
