@@ -201,8 +201,8 @@ function bindEvents() {
     if ((e.ctrlKey || e.metaKey) && e.key === "k") {
       e.preventDefault(); $("#searchInput").focus();
     }
-    if (e.key === "Escape" && state.currentView === "page") {
-      navigate("browse");
+    if (e.key === "Escape" && (state.currentView === "page" || state.currentView === "tutorial")) {
+      navigate(state.currentView === "page" ? "browse" : "home");
     }
   });
 
@@ -793,7 +793,8 @@ function buildTutorialTree(tutorials) {
   // 提取顶层节点 + 排序
   function sortNode(n) {
     n.children.sort((a, b) => a.name.localeCompare(b.name, "zh"));
-    n.files.sort((a, b) => a.title.localeCompare(b.title, "zh"));
+    // 按文件路径排序以保留数字前缀定义的章节顺序（01-、02- 等）
+    n.files.sort((a, b) => a.path.localeCompare(b.path, "zh"));
     n.children.forEach(sortNode);
   }
   const topLevel = Object.values(nodes).filter(n => !n.fullPath.includes("/"));
