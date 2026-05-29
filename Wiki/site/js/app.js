@@ -87,6 +87,9 @@ function parseHash(hash) {
   const pageMatch = h.match(/^\/page\/(.+)$/);
   if (pageMatch) return { view: "page", path: decodeURIComponent(pageMatch[1]) };
 
+  const tutorialMatch = h.match(/^\/tutorial\/(.+)$/);
+  if (tutorialMatch) return { view: "tutorial", path: decodeURIComponent(tutorialMatch[1]) };
+
   return { view: "home" };
 }
 
@@ -99,6 +102,8 @@ function buildHash(view, params = {}) {
       return "#/browse";
     case "page":
       return "#/page/" + encodeURIComponent(params.path);
+    case "tutorial":
+      return "#/tutorial/" + encodeURIComponent(params.path);
     default: return "#/";
   }
 }
@@ -275,8 +280,7 @@ function bindGlobalDelegation() {
       if (action === "open-tutorial") {
         const tp = ab.dataset.tutpath;
         if (tp) {
-          const obsUrl = "obsidian://open?vault=" + encodeURIComponent("Wiki Vault") + "&file=" + encodeURIComponent(tp);
-          window.open(obsUrl, "_blank");
+          navigate("tutorial", { path: tp });
         }
         return;
       }
@@ -316,8 +320,9 @@ function closeSidebar() {
 // ═══════════════════════════════════════════════════════
 
 function updateSidebarActive() {
-  // 页面详情视为"全部页面"的子视图
-  const activeView = state.currentView === "page" ? "browse" : state.currentView;
+  // 页面详情视为"全部页面"的子视图，教程详情视为"首页"的子视图
+  const activeView = state.currentView === "page" ? "browse" :
+                     state.currentView === "tutorial" ? "home" : state.currentView;
   $$(".nav-item[data-view]").forEach(item => {
     item.classList.toggle("active", item.dataset.view === activeView && !state.currentType);
   });
@@ -364,6 +369,7 @@ function renderView() {
       case "home": renderHome(); break;
       case "browse": renderBrowse(); break;
       case "page": renderPageDetail(); break;
+      case "tutorial": renderTutorialDetail(); break;
       default: renderHome();
     }
     requestAnimationFrame(() => {
@@ -601,6 +607,65 @@ function renderPageDetail() {
 }
 
 // ═══════════════════════════════════════════════════════
+//  教程详情渲染（含 TOC 自动生成）
+// ═══════════════════════════════════════════════════════
+
+function renderTutorialDetail() {
+  const tutorial = findTutorial(state.currentPage);
+  if (!tutorial) {
+    $("#app").innerHTML = '<div class="empty-state"><div class="empty-icon">📄</div><p>教程未找到</p></div>';
+    return;
+  }
+
+  // 生成 TOC（从 h2 提取）
+  const tocResult = generateTOC(tutorial.html || "");
+
+  // 面包屑：首页 › 教程 › 文件夹层级 › 标题
+  const folderParts = tutorial.folder === "root" ? [] : tutorial.folder.split("/");
+  let html = '<div class="page-detail">' +
+    '<nav class="breadcrumb">' +
+    '<a href="#" data-action="home">📚 首页</a>' +
+    '<span class="breadcrumb-sep">›</span>' +
+    '<a href="#" data-action="home">📖 教程</a>';
+
+  for (const part of folderParts) {
+    html += '<span class="breadcrumb-sep">›</span>' +
+      '<span class="breadcrumb-current">' + esc(part) + '</span>';
+  }
+
+  html += '<span class="breadcrumb-sep">›</span>' +
+    '<span class="breadcrumb-current">' + esc(tutorial.title) + '</span>' +
+    '<button class="copy-link-btn" onclick="copyPageUrl()" title="复制链接" aria-label="复制链接">🔗</button>' +
+    '</nav>' +
+    '<div class="detail-meta">' +
+    '<span class="detail-type">📖 教程</span>' +
+    (tutorial.word_count ? '<span class="detail-dates">' + tutorial.word_count.toLocaleString() + ' 字</span>' : '') +
+    (tutorial.word_count ? '<span class="detail-dates">约 ' + Math.max(1, Math.ceil(tutorial.word_count / 400)) + ' 分钟</span>' : '') +
+    '</div>' +
+    '<h1>' + esc(tutorial.title) + '</h1>';
+
+  // 标签
+  if (tutorial.tags && tutorial.tags.length) {
+    html += '<div class="detail-tags">' +
+      tutorial.tags.map(t => '<button class="tag" data-tag="' + esc(t) + '">#' + esc(t) + '</button>').join("") +
+      '</div>';
+  }
+
+  // 目录
+  if (tocResult.headings.length > 1) {
+    html += '<details class="toc-container" open><summary class="toc-title">📑 目录</summary><nav class="toc-list">' +
+      tocResult.headings.map(h => '<a href="#' + h.id + '" class="toc-link">' + esc(h.text) + '</a>').join("") +
+      '</nav></details>';
+  }
+
+  // 教程内容（已带 id 的版本）
+  html += '<div class="wiki-content">' + tocResult.html + '</div>';
+
+  html += '</div>';
+  $("#app").innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════
 //  TOC 自动生成（从 h2 标签提取）
 // ═══════════════════════════════════════════════════════
 
@@ -642,6 +707,11 @@ function findPage(path) {
     if (page) return page;
   }
   return null;
+}
+
+function findTutorial(path) {
+  if (!state.data || !path) return null;
+  return state.data.tutorials.find(t => t.path === path) || null;
 }
 
 function greetByTime() {

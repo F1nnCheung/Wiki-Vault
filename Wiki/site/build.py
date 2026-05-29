@@ -96,18 +96,40 @@ def scan_raw_articles() -> int:
     return count
 
 
-def scan_tutorials() -> list[dict]:
-    """扫描教程目录"""
+def scan_tutorials(page_map: dict) -> list[dict]:
+    """扫描教程目录，生成完整内容（含 HTML、摘要、字数）"""
     tutorials = []
     if TUTORIAL_DIR.exists():
         for f in sorted(TUTORIAL_DIR.rglob("*.md")):
             rel_path = str(f.relative_to(VAULT_ROOT))
             text = f.read_text(encoding="utf-8", errors="ignore")
             fm, content = extract_frontmatter_and_content(text)
+
+            # 转换 Wiki 链接
+            content = convert_markdown_links(content, page_map)
+
+            # Markdown → HTML
+            try:
+                html_content = md_converter.convert(content)
+            except Exception:
+                html_content = content.replace("\n", "<br>")
+
+            # 提取摘要
+            summary = get_first_paragraph(content)
+
+            # 处理标签
+            tags = fm.get("tags", [])
+            if isinstance(tags, str):
+                tags = [t.strip() for t in tags.split(",")]
+
             tutorials.append({
                 "path": rel_path,
                 "title": fm.get("title", f.stem),
                 "folder": str(f.parent.relative_to(TUTORIAL_DIR)) if f.parent != TUTORIAL_DIR else "root",
+                "html": html_content,
+                "summary": summary,
+                "word_count": len(content),
+                "tags": tags,
             })
     return tutorials
 
@@ -211,7 +233,7 @@ def main():
 
     # 扫描原始文章
     article_count = scan_raw_articles()
-    tutorials = scan_tutorials()
+    tutorials = scan_tutorials(page_map)
 
     # 构建最终数据结构
     data = {
