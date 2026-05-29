@@ -492,12 +492,13 @@ function renderBrowse() {
   let html = '<div class="page-header"><h1>' + title + '</h1>' +
     '<p class="subtitle">共 ' + pages.length + ' 个页面</p></div>';
 
-  // 类型筛选栏
+  // 类型筛选栏 — 注意 entity 的复数是不规则的
+  const statPlural = { concept: "concepts", entity: "entities", topic: "topics", comparison: "comparisons", overview: "overviews" };
   html += '<div class="filter-bar">' +
     '<button class="filter-btn' + (!state.currentType && !state.currentTag ? ' active' : '') + '" data-filter="">全部</button>' +
     Object.entries(d.type_labels).map(([type, label]) =>
       '<button class="filter-btn' + (state.currentType === type ? ' active' : '') + '" data-filter="' + type + '">' +
-      getTypeIcon(type) + ' ' + label + ' (' + (d.stats[type + 's'] || 0) + ')</button>'
+      getTypeIcon(type) + ' ' + label + ' (' + (d.stats[statPlural[type]] || 0) + ')</button>'
     ).join("") + '</div>';
 
   if (pages.length === 0) {
