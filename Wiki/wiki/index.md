@@ -283,7 +283,7 @@ updated: 2026-05-29
 
 ### Gemini / 学术写作资料
 1 篇 Gemini 学术写作文章，位于 `raw/articles/`：
-- [Gemini 3.5+六个 Skill，高质量论文初稿一气呵成！](../raw/articles/Gemini%203.5+六个skill，高质量论文初稿一气呵成！.md) — 七哥，2026.05，六个 Skill 覆盖定框架→引言→文献综述→方法→结果分析→结论
+- [Gemini 3.5+六个 Skill，高质量论文初稿一气呵成！](../raw/articles/VibeCoding/Gemini%203.5+六个skill，高质量论文初稿一气呵成！.md) — 七哥，2026.05，六个 Skill 覆盖定框架→引言→文献综述→方法→结果分析→结论
 
 ### VibeCoding 实战资料
 1 篇 VibeCoding 实战文章，位于 `raw/articles/VibeCoding/`：
