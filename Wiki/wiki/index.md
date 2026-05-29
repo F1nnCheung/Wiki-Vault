@@ -13,7 +13,7 @@ updated: 2026-05-29
 
 ## 🗺️ AI Coding 学习路线
 - [AI Coding 学习路线](topics/ai-coding-learning-plan.md) — 从零开始的系统学习路径
-- [AI Coding 完整学习计划](../../教程/AI-Coding/AI Coding 学习计划.md) — 📖 综合教程：从入门到精通（含概念/工具/Agent/拓展）
+- [AI Coding 完整学习计划](../../教程/AiCoding/AI Coding 学习计划.md) — 📖 综合教程：从入门到精通（含概念/工具/Agent/拓展）
 - [AI Coding 发展史](topics/ai-coding-history.md) — 2024-2026 发展历程与市场格局
 - [AI Coding 核心概念](topics/ai-coding-concepts.md) — Vibe Coding、Agent、MCP、Skills、Claw、Hermes 等
 - [AI Coding 工具全景对比](topics/ai-coding-tools-comparison.md) — Claude Code / Cursor / Codex / Trae / Copilot 对比
@@ -168,7 +168,7 @@ updated: 2026-05-29
 ## 输出产物
 
 - [知识库技术学习指南](../../教程/知识库技术/知识库技术学习指南.md) — 📖 总纲（451 行），含 [[../../教程/知识库技术/01-知识库技术总览|7 章详细教程]]：总览 → RAG 架构 → 优化 20 法 → 知识图谱 → LLM Wiki → 向量数据库 → 工具选型 — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
-- [AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
+- [AI Coding 学习计划](../../教程/AiCoding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
 - [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
 - [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
 

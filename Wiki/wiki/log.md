@@ -132,23 +132,23 @@
   - Wiki/wiki/overview.md（新增 OpenAI Codex 知识体系 + 知识库技术体系两大板块；统计数据更新 73→89篇/26→27专题/11→13概念/11→13实体/2→2对比）
   - Wiki/wiki/index.md（新增概念条目2个 + 实体条目3个 + 专题条目2个 + 更新 Codex 实体+教程描述 + 新增 Codex 12 篇资料索引 + 知识库技术 4 篇资料索引）
 - **教程同步**：
-  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/01-介绍与安装.md（全面重写：四大产品形态/沙箱/定价/DeepSeek接入/与CC互补定位）
-  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/02-基本使用与Spec-Driven开发.md（全面重写：界面速览/Plan+Steering+Fork/AGENTS.md/TDD闭环/Git Worktree/Plugin+Skill+MCP三层）
-  - 教程/AI-Coding/02-主流AI-Coding工具/05-Codex/03-适用场景.md（全面重写：从「4%配角」→「65%日常首选」，Codex vs CC 分工/场景矩阵/组合策略）
-  - 教程/AI-Coding/02-主流AI-Coding工具/01-工具全景对比.md（Codex 条目更新：从「全流程自动化」→「AI Agent 操作平台」，工具占比更新）
-  - 教程/AI-Coding/AI Coding 学习计划.md（Codex 章节全面更新：四大形态/核心工作流/适用场景表格/工具占比更新）
+  - 教程/AiCoding/02-主流AiCoding工具/05-Codex/01-介绍与安装.md（全面重写：四大产品形态/沙箱/定价/DeepSeek接入/与CC互补定位）
+  - 教程/AiCoding/02-主流AiCoding工具/05-Codex/02-基本使用与Spec-Driven开发.md（全面重写：界面速览/Plan+Steering+Fork/AGENTS.md/TDD闭环/Git Worktree/Plugin+Skill+MCP三层）
+  - 教程/AiCoding/02-主流AiCoding工具/05-Codex/03-适用场景.md（全面重写：从「4%配角」→「65%日常首选」，Codex vs CC 分工/场景矩阵/组合策略）
+  - 教程/AiCoding/02-主流AiCoding工具/01-工具全景对比.md（Codex 条目更新：从「全流程自动化」→「AI Agent 操作平台」，工具占比更新）
+  - 教程/AiCoding/AI Coding 学习计划.md（Codex 章节全面更新：四大形态/核心工作流/适用场景表格/工具占比更新）
 - **摘要**：处理 Codex（12篇）+ 知识库技术（4篇）共 16 篇新增资料。Codex 从过时的「云端编程助手」定位更新为「统一 AI Agent 操作平台」，覆盖四大产品形态/沙箱/Computer Use/Automation/六阶段方法论等全部新能力。知识库技术板块新增三种 RAG 架构对比和代码知识图谱工具（GitNexus/Graphify）。本轮是优先级方案的第一批（Codex+知识库），还有 Home Assistant/OPC/VibeCoding/Claude Code增量/Obsidian增量 待处理。
 
 ## [2026-05-13] ingest | 让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘
 - **新增页面**：Wiki/wiki/topics/claude-md-12-rules.md（CLAUDE.md 12 条规则深度解析：Karpathy 原版 4 条 + 辰北 8 条增量，含每条规则的翻车现场、实验数据、完整模板和使用指南）
 - **更新页面**：Wiki/wiki/entities/claude-code.md（CLAUDE.md 章节新增 12 条规则专题引用 + related 交叉引用）、Wiki/wiki/overview.md（知识结构树新增 CLAUDE.md 规则条目 + 统计数据更新 73 篇/26 专题）、Wiki/wiki/index.md（索引新增专题页条目 + 原始资料条目）
-- **教程同步**：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增引用）、教程/AI-Coding/AI Coding 学习计划.md（Rule 概念段落新增延伸阅读）、教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/06-高阶指令.md（Q&A 段落新增 12 条规则引用）
+- **教程同步**：教程/AiCoding/02-主流AiCoding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增引用）、教程/AiCoding/AI Coding 学习计划.md（Rule 概念段落新增延伸阅读）、教程/AiCoding/02-主流AiCoding工具/02-Claude-Code/06-高阶指令.md（Q&A 段落新增 12 条规则引用）
 - **摘要**：处理辰北 2026.05 发布的 CLAUDE.md 规则深度文章。文章基于 Karpathy 发帖吐槽 Claude 编码的三种典型翻车模式，Forrest Chang 的 4 条规则模板（12 万 star），加上作者在 30 个代码库 6 周实验中的 8 条增量规则。核心数据：失误率从 41% 降至 3%（4 条）再压 8 个百分点（12 条），合规率仅从 78% 降至 76%。专题页完整覆盖了 12 条规则的设计逻辑、防止的失败模式、真实翻车现场和实验数据。
 
 ## [2026-05-13] ingest | Everything Claude Code (ECC)
 - **新增页面**：Wiki/wiki/entities/everything-claude-code.md（实体页）、Wiki/wiki/topics/ecc-complete-guide.md（完整指南专题）
 - **更新页面**：Wiki/wiki/concepts/skills-concept.md（添加 ECC Skills 体系段落 + related 交叉引用）、Wiki/wiki/concepts/harness-engineering.md（新增第十节 ECC 标杆实践 + related）、Wiki/wiki/concepts/agentic-engineering.md（实践工具新增 ECC 条目 + related）、Wiki/wiki/entities/claude-code.md（新增 Harness 性能优化段落 + related）、Wiki/wiki/overview.md（新增第 6 核心论点 + 更新统计数据）、Wiki/wiki/index.md（索引新增 ECC 实体 + 专题 + 原始资料条目）
-- **教程同步**：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/04-进阶使用-Skill.md（Skill 生态资源表新增 ECC + 更新时间）、教程/AI-Coding/04-拓展使用/03-其他拓展工具与场景.md（新增 ECC 专题章节 + 与逐个安装 Skill 的对比表 + 更新时间）、教程/AI-Coding/AI Coding 学习计划.md（精选 Skill 表新增 ECC + Obsidian 推荐 Skill 段落新增 ECC + 4.3 章节标题更新）
+- **教程同步**：教程/AiCoding/02-主流AiCoding工具/02-Claude-Code/04-进阶使用-Skill.md（Skill 生态资源表新增 ECC + 更新时间）、教程/AiCoding/04-拓展使用/03-其他拓展工具与场景.md（新增 ECC 专题章节 + 与逐个安装 Skill 的对比表 + 更新时间）、教程/AiCoding/AI Coding 学习计划.md（精选 Skill 表新增 ECC + Obsidian 推荐 Skill 段落新增 ECC + 4.3 章节标题更新）
 - **摘要**：从 GitHub 仓库（200K+ Stars, Anthropic 黑客松获胜）和 132 页中文教程文章中提取信息，创建 ECC 实体页面（60 个 Agent / 228 个 Skill / 75 个命令 / 17 个语言规则包 / Hook 自动化 / 持续学习 / 跨 7+ 框架）和完整指南专题页面（安装/Agent 体系/Skills 生态/Hook 自动化/持续学习/安全/多 Agent 编排/跨框架/ECC 2.0/故障排除），同步更新了 5 个相关页面（skills-concept、harness-engineering、agentic-engineering、claude-code、overview）
 
 ## [2026-05-13] ingest | Superpowers 深度实战指南：从入门到精通（插件系统增量）
@@ -289,7 +289,7 @@
 ## [2026-05-10] create | AI Coding 完整学习计划（综合教程）
 - **摘要**：基于知识库全部内容，撰写一份面向新手的完整 AI Coding 学习计划，输出到 `教程/` 文件夹
 - **新增输出产物（1 个）**：
-  - 教程/AI-Coding/AI Coding 学习计划.md — 1072 行综合教程，包含四大章节
+  - 教程/AiCoding/AI Coding 学习计划.md — 1072 行综合教程，包含四大章节
 - **教程结构**：
   - 第一部分：AI Coding 简介（发展历程 2024→2026 三阶段、6 个核心概念名词解释）
   - 第二部分：主流工具完整教程（Claude Code 安装/命令/Skill/MCP、Cursor Tab/Composer/Background Agent、Trae 四种模式、Codex 云端全流程、Copilot 概览）
@@ -303,11 +303,11 @@
 - 更新页面：Wiki/wiki/entities/superpowers.md（大幅扩展：跨 8 平台定位 + 架构全景 + 三种 Bootstrap 路径 + 14 技能详解含铁律 + 7 平台安装 + 设计哲学概述 + 调试指南 + 贡献标准）
 - 更新页面：Wiki/wiki/topics/claude-code-superpowers-workflow.md（新增跨平台 Bootstrap 路径表 + React Todo List 完整实战演练 + 补充不适用的场景）
 - 更新页面：Wiki/wiki/index.md（实体页简介更新为跨平台定位 + 新增设计哲学概念页条目）
-- 教程同步：教程/AI-Coding/AI Coding 学习计划.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
+- 教程同步：教程/AiCoding/AI Coding 学习计划.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
 - 摘要：处理 AgentBuff 2026-05-08 文章（1048 行）。核心新知：Superpowers 不仅是 Claude Code 插件，而是跨 8 平台方法论框架（三种 Bootstrap 路径）；每个技能有铁律+HARD-GATE+Red Flags+Common Rationalizations 四层防线；设计哲学（人的搭档语言/CSO）是全新内容；补充了 React Todo List 完整实战演练
 
 ## [2026-05-13] update | MCP 安装范围参数补充
-- 更新页面：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/05-进阶使用-MCP.md（「基本命令」补充 -s 范围参数及示例；「配置文件」改为「三种安装范围」对照表，含 Local/Project/User 存储位置与优先级；「避坑指南」#2 补充具体命令）
+- 更新页面：教程/AiCoding/02-主流AiCoding工具/02-Claude-Code/05-进阶使用-MCP.md（「基本命令」补充 -s 范围参数及示例；「配置文件」改为「三种安装范围」对照表，含 Local/Project/User 存储位置与优先级；「避坑指南」#2 补充具体命令）
 - 更新页面：Wiki/wiki/entities/mcp.md（「安装方式」补充 -s 参数示例；「配置范围」改为表格格式含存储位置）
 - 更新页面：Wiki/wiki/topics/claude-code-mcp-ecosystem.md（「避坑指南」#2 补充具体命令参数）
 - 摘要：来自用户提问。教程此前只提「推荐项目级配置」，未写明 claude mcp add -s project/user 具体参数。三页同步补充完毕
@@ -315,7 +315,7 @@
 ## [2026-05-14] update | CLAUDE.md 层级结构与优先级机制详解
 - 更新页面：Wiki/wiki/entities/claude-code.md（CLAUDE.md 层级结构章节全面扩展：新增托管策略/本地覆盖/规则文件/自动记忆层级、父目录vs子目录按需加载区分、拼接而非覆盖的核心原理、@import 语法、路径作用域 globs 机制）
 - 更新页面：Wiki/wiki/concepts/harness-engineering.md（4.4 上下文管理新增交叉引用指向 CLAUDE.md 层级结构详解）
-- 教程同步：教程/AI-Coding/02-主流AI-Coding工具/02-Claude-Code/02-安装与配置.md（「规则层详解」新增层级结构子章节，含 5 层级对照表和拼接机制说明）
+- 教程同步：教程/AiCoding/02-主流AiCoding工具/02-Claude-Code/02-安装与配置.md（「规则层详解」新增层级结构子章节，含 5 层级对照表和拼接机制说明）
 - 摘要：来自用户提问「CLAUDE.md 分不分层级，有没有优先级」。知识库原有 4 级基本层级，补充到完整 8 级（含按需加载/启动加载区分、拼接机制、globs 规则文件）
 
 ## [2026-05-28] output | 知识库技术学习指南
