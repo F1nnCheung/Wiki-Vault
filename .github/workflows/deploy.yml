@@ -1,0 +1,69 @@
+name: Deploy Wiki Site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Wiki/wiki/**"        # wiki 页面变更
+      - "Wiki/raw/**"         # 原始资料变更
+      - "Wiki/site/**"        # 网站源码变更
+      - ".github/workflows/deploy.yml"  # 工作流自身变更
+  workflow_dispatch:          # 允许手动触发
+
+# 设置 GITHUB_TOKEN 权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 避免并发部署
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r Wiki/site/requirements.txt
+
+      - name: 构建知识库数据
+        run: python3 Wiki/site/build.py
+
+      - name: 验证数据文件
+        run: |
+          python3 -c "
+          import json
+          with open('Wiki/site/data/data.json') as f:
+              d = json.load(f)
+          print(f'页面: {d[\"stats\"][\"wiki_pages\"]}, 概念: {d[\"stats\"][\"concepts\"]}, 实体: {d[\"stats\"][\"entities\"]}, 专题: {d[\"stats\"][\"topics\"]}')
+          "
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: Wiki/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
