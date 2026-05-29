@@ -375,7 +375,6 @@ function renderHome() {
 
   const statCards = [
     { n: s.wiki_pages, l: "Wiki 页面", i: "📚", v: "browse" },
-    { n: s.articles, l: "原始文章", i: "📄", v: null },
     { n: s.tutorials, l: "教程文档", i: "📖", v: null },
     { n: s.entities, l: "核心实体", i: "🏢", v: "entity" },
     { n: s.topics, l: "专题页面", i: "📝", v: "topic" },
@@ -419,8 +418,8 @@ function renderHome() {
       }).join("") + '</div>';
   }
 
-  html += '<div class="site-footer">基于 ' + s.wiki_pages + ' 个 Wiki 页面、' + s.articles +
-    ' 篇原始资料构建 · 更新于 ' + d.generated_at + '</div>';
+  html += '<div class="site-footer">共 ' + s.wiki_pages + ' 个 Wiki 页面 · ' +
+    s.tutorials + ' 份教程 · 更新于 ' + d.generated_at + '</div>';
 
   $("#app").innerHTML = html;
 }
@@ -576,13 +575,6 @@ function renderPageDetail() {
           '<button class="related-link" data-page="' + esc(rp.path) + '">' + getTypeIcon(rp.type) + ' ' + esc(rp.title) + '</button>'
         ).join("") + '</div></div>';
     }
-  }
-
-  // 原始资料
-  if (page.sources && page.sources.length) {
-    html += '<div class="related-section" style="margin-top:16px;"><h3>📚 原始资料来源</h3>' +
-      '<ul style="font-size:0.84em;color:var(--text-muted);padding-left:20px;margin:0;">' +
-      page.sources.map(s => '<li>' + esc(s) + '</li>').join("") + '</ul></div>';
   }
 
   html += '</div>';
