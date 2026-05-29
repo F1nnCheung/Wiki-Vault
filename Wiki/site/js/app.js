@@ -422,19 +422,9 @@ function renderHome() {
 
   // 教程入口
   if (d.tutorials && d.tutorials.length) {
-    const folders = [...new Set(d.tutorials.map(t => t.folder))].filter(f => f !== "root");
     html += '<h2 id="tutorial-section" style="font-size:1.1rem; margin:28px 0 12px; font-family:var(--font-display);">📖 教程入口</h2>';
-    html += '<div style="display:flex;flex-direction:column;gap:8px;">' +
-      folders.map(folder => {
-        const files = d.tutorials.filter(t => t.folder === folder);
-        const folderId = 'tut-folder-' + esc(folder).replace(/[\/\s]/g, '-');
-        return '<details class="tutorial-folder" id="' + folderId + '">' +
-          '<summary class="tutorial-folder-summary"><strong>📁 ' + esc(folder) + '</strong>' +
-          '<span style="color:var(--text-muted);font-size:0.78em;margin-left:8px;">' + files.length + ' 个文档</span></summary>' +
-          '<div class="tutorial-files">' +
-          files.map(t => '<a href="#" class="tutorial-file-link" data-action="open-tutorial" data-tutpath="' + esc(t.path) + '">📄 ' + esc(t.title) + '</a>').join("") +
-          '</div></details>';
-      }).join("") + '</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px;">' +
+      buildTutorialTree(d.tutorials).map(n => renderTutorialNode(n, 0)).join("") + '</div>';
   }
 
   html += '<div class="site-footer">共 ' + s.wiki_pages + ' 个 Wiki 页面 · ' +
@@ -691,6 +681,74 @@ function debounce(fn, ms) {
     clearTimeout(timer);
     timer = setTimeout(() => fn.apply(this, args), ms);
   };
+}
+
+// ═══════════════════════════════════════════════════════
+//  教程树结构（按文件夹层级合并展示）
+// ═══════════════════════════════════════════════════════
+
+function buildTutorialTree(tutorials) {
+  const byFolder = {};
+  for (const t of tutorials) {
+    if (t.folder === "root") continue;
+    if (!byFolder[t.folder]) byFolder[t.folder] = [];
+    byFolder[t.folder].push(t);
+  }
+
+  const nodes = {};
+  function getNode(path) {
+    if (nodes[path]) return nodes[path];
+    const parts = path.split("/");
+    const name = parts[parts.length - 1];
+    nodes[path] = { name, fullPath: path, files: byFolder[path] || [], children: [] };
+    if (parts.length > 1) {
+      const parentPath = parts.slice(0, -1).join("/");
+      getNode(parentPath).children.push(nodes[path]);
+    }
+    return nodes[path];
+  }
+
+  for (const folder of Object.keys(byFolder)) { getNode(folder); }
+
+  // 提取顶层节点 + 排序
+  function sortNode(n) {
+    n.children.sort((a, b) => a.name.localeCompare(b.name, "zh"));
+    n.files.sort((a, b) => a.title.localeCompare(b.title, "zh"));
+    n.children.forEach(sortNode);
+  }
+  const topLevel = Object.values(nodes).filter(n => !n.fullPath.includes("/"));
+  topLevel.forEach(sortNode);
+  return topLevel.sort((a, b) => a.name.localeCompare(b.name, "zh"));
+}
+
+function countAllFiles(node) {
+  return node.files.length + node.children.reduce((s, c) => s + countAllFiles(c), 0);
+}
+
+function renderTutorialNode(node, depth) {
+  const indent = depth > 0 ? ' style="margin-left:' + (depth * 16) + 'px"' : "";
+  const hasContent = node.files.length > 0 || node.children.length > 0;
+  if (!hasContent) return "";
+
+  const total = countAllFiles(node);
+  const icon = node.children.length ? "📁" : "📂";
+  const cls = depth === 0 ? "tutorial-folder tutorial-folder--top" : "tutorial-folder tutorial-folder--sub";
+
+  let html = '<details class="' + cls + '"' + indent;
+  if (depth === 0) html += ' open';
+  html += '><summary class="tutorial-folder-summary"><strong>' + icon + ' ' + esc(node.name) + '</strong>' +
+    '<span class="tut-count">' + total + ' 篇</span></summary>';
+
+  if (node.files.length > 0) {
+    html += '<div class="tutorial-files">' +
+      node.files.map(t =>
+        '<a href="#" class="tutorial-file-link" data-action="open-tutorial" data-tutpath="' + esc(t.path) + '">📄 ' + esc(t.title) + '</a>'
+      ).join("") + '</div>';
+  }
+
+  html += node.children.map(c => renderTutorialNode(c, depth + 1)).join("");
+  html += '</details>';
+  return html;
 }
 
 // ═══════════════════════════════════════════════════════
