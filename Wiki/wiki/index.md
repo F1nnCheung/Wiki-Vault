@@ -1,7 +1,7 @@
 ---
 title: 知识库索引
 type: overview
-updated: 2026-05-28
+updated: 2026-05-29
 ---
 
 # 知识库索引
@@ -136,6 +136,7 @@ updated: 2026-05-28
 
 ### 🏠 智能家居与 AI Agent
 - [Hermes + Home Assistant 集成](topics/hermes-home-assistant-integration.md) — 自然语言控制全家设备，五大场景实战（条件逻辑/Cron/Telegram/记忆/门铃对讲）
+- [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章）：概览 → HA 基础 → Docker 部署 → 品牌集成 → AI 语音控制 → 远程访问进阶
 
 ### 🚀 AI 原生创业
 - [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
@@ -161,6 +162,7 @@ updated: 2026-05-28
 
 - [知识库技术学习指南](../../教程/知识库技术/知识库技术学习指南.md) — 📖 总纲（451 行），含 [[../../教程/知识库技术/01-知识库技术总览|7 章详细教程]]：总览 → RAG 架构 → 优化 20 法 → 知识图谱 → LLM Wiki → 向量数据库 → 工具选型 — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
 - [AI Coding 学习计划](../../教程/AI-Coding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
+- [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
 
 ## 原始资料
 
