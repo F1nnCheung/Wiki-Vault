@@ -148,6 +148,8 @@ updated: 2026-05-29
 
 ### 📚 RAG 与知识库技术
 - [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
+- [Agentic RAG 四种模式](topics/agentic-rag-patterns.md) — 路由型 / 多步型 / CRAG / 自适应型 + A-RAG 层级检索 + NaviRAG，含 LangGraph 完整实现
+- [Vector Graph RAG](topics/vector-graph-rag.md) — 不引入图数据库，仅用 Milvus 向量库解决多跳推理，Recall@5=87.8%
 
 ### ✍️ AI 学术写作
 - [Gemini 3.5 + 六个 Skill 学术论文写作](topics/gemini-academic-writing.md) — 定框架→引言→文献综述→方法→结果分析→结论，六步 Skill 管线化工作流
