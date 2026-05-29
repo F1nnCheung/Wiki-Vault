@@ -324,6 +324,7 @@ function updateSidebarCounts() {
   $("#navEntityCount").textContent = state.data.stats.entities;
   $("#navTopicCount").textContent = state.data.stats.topics;
   $("#navComparisonCount").textContent = state.data.stats.comparisons;
+  $("#navTagCount").textContent = state.data.stats.total_tags;
 }
 
 function renderTagCloud() {
@@ -389,12 +390,11 @@ function renderHome() {
 
   const statCards = [
     { n: s.wiki_pages, l: "Wiki 页面", i: "📚", v: "browse" },
-    { n: topFolders.size, l: "教程文档", i: "📖", v: "tutorials" },
+    { n: topFolders.size, l: "教程", i: "📖", v: "tutorials" },
     { n: s.entities, l: "核心实体", i: "🏢", v: "entity" },
     { n: s.topics, l: "专题页面", i: "📝", v: "topic" },
     { n: s.concepts, l: "核心概念", i: "💡", v: "concept" },
     { n: s.comparisons, l: "对比分析", i: "⚖️", v: "comparison" },
-    { n: s.total_tags, l: "标签", i: "🏷️", v: "browse" },
   ];
 
   const today = new Date();
