@@ -9,9 +9,13 @@ sources:
   - raw/articles/知识库/RAG-向量数据库Milvus.md
   - raw/articles/知识库/RAG-搞懂嵌入向量的生成.md
   - raw/articles/知识库/RAG-查询前处理.md
+  - raw/articles/知识库/RAG 全链路技术详解.md
+  - raw/articles/知识库/从入门到精通：RAG 核心向量检索算法全解析.md
 related:
   - concepts/rag-architectures.md
   - concepts/knowledge-graph.md
+  - concepts/rag-evaluation.md
+  - concepts/hybrid-retrieval.md
   - topics/obsidian-llm-wiki-practice.md
 ---
 
