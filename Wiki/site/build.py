@@ -22,7 +22,7 @@ TUTORIAL_DIR = VAULT_ROOT / "教程"
 OUTPUT_FILE = Path(__file__).resolve().parent / "data" / "data.json"
 
 # Markdown 转换器（支持表格、代码高亮、围栏代码块）
-md_converter = md_lib.Markdown(extensions=["tables", "fenced_code", "codehilite", "toc"])
+md_converter = md_lib.Markdown(extensions=["tables", "fenced_code"])
 
 
 def extract_frontmatter_and_content(text: str) -> tuple[dict, str]:
