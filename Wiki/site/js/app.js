@@ -389,7 +389,6 @@ function renderHome() {
   const topFolders = new Set(d.tutorials.map(t => t.folder.split("/")[0]));
 
   const statCards = [
-    { n: s.wiki_pages, l: "Wiki 页面", i: "📚", v: "browse" },
     { n: topFolders.size, l: "教程", i: "📖", v: "tutorials" },
     { n: s.entities, l: "核心实体", i: "🏢", v: "entity" },
     { n: s.topics, l: "专题页面", i: "📝", v: "topic" },
@@ -638,7 +637,7 @@ function greetByTime() {
   const h = new Date().getHours();
   if (h < 6) return "🌙 夜深了";
   if (h < 12) return "☀️ 早上好";
-  if (h < 15) return "🌤️ 下午好";
+  if (h < 18) return "🌤️ 下午好";
   if (h < 19) return "🌅 傍晚好";
   return "🌙 晚上好";
 }
