@@ -734,9 +734,7 @@ function renderTutorialNode(node, depth) {
   const icon = node.children.length ? "📁" : "📂";
   const cls = depth === 0 ? "tutorial-folder tutorial-folder--top" : "tutorial-folder tutorial-folder--sub";
 
-  let html = '<details class="' + cls + '"' + indent;
-  if (depth === 0) html += ' open';
-  html += '><summary class="tutorial-folder-summary"><strong>' + icon + ' ' + esc(node.name) + '</strong>' +
+  let html = '<details class="' + cls + '"' + indent + '><summary class="tutorial-folder-summary"><strong>' + icon + ' ' + esc(node.name) + '</strong>' +
     '<span class="tut-count">' + total + ' 篇</span></summary>';
 
   if (node.files.length > 0) {
