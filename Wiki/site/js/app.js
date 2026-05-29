@@ -231,10 +231,13 @@ function bindGlobalDelegation() {
     const fb = e.target.closest("[data-filter]");
     if (fb) { navigate("browse", fb.dataset.filter ? { type: fb.dataset.filter } : {}); return; }
 
-    // 返回按钮 (data-action)
+    // 动作按钮 (data-action: back, home, browse)
     const ab = e.target.closest("[data-action]");
     if (ab) {
+      e.preventDefault();
       const action = ab.dataset.action;
+      if (action === "home") { navigate("home"); return; }
+      if (action === "browse") { navigate("browse"); return; }
       if (action === "back") { navigate("browse"); return; }
     }
 
@@ -267,8 +270,10 @@ function closeSidebar() {
 // ═══════════════════════════════════════════════════════
 
 function updateSidebarActive() {
+  // 页面详情视为"全部页面"的子视图
+  const activeView = state.currentView === "page" ? "browse" : state.currentView;
   $$(".nav-item[data-view]").forEach(item => {
-    item.classList.toggle("active", item.dataset.view === state.currentView && !state.currentType);
+    item.classList.toggle("active", item.dataset.view === activeView && !state.currentType);
   });
   $$(".nav-item[data-type]").forEach(item => {
     item.classList.toggle("active", item.dataset.type === state.currentType);
@@ -481,7 +486,7 @@ function renderPageCard(page, hl) {
     '<div class="page-title">' + hlText(page.title, hl) + '</div>' +
     (page.summary ? '<div class="page-summary">' + hlText(page.summary, hl) + '</div>' : '') +
     '<div class="page-meta">' + (page.tags || []).slice(0, 3).map(t => '<span class="page-tag">#' + esc(t) + '</span>').join("") + '</div>' +
-    (page.updated ? '<div class="page-date">更新: ' + page.updated + '</div>' : '') +
+    (page.updated ? '<div class="page-date">更新: ' + relTime(page.updated) + '</div>' : '') +
     '</div></div>';
 }
 
@@ -502,8 +507,17 @@ function renderPageDetail() {
   // 生成 TOC（从 h2 提取）
   const tocResult = generateTOC(page.html);
 
+  // 面包屑
+  const typeLabelCN = d.type_labels[page.type] || page.type;
   let html = '<div class="page-detail">' +
-    '<button class="back-btn" data-action="back">← 返回</button>' +
+    '<nav class="breadcrumb">' +
+    '<a href="#" data-action="home">📚 首页</a>' +
+    '<span class="breadcrumb-sep">›</span>' +
+    '<a href="#" data-action="browse">📋 全部页面</a>' +
+    (page.type !== 'overview' ? '<span class="breadcrumb-sep">›</span><a href="#" data-filter="' + page.type + '">' + getTypeIcon(page.type) + ' ' + typeLabelCN + '</a>' : '') +
+    '<span class="breadcrumb-sep">›</span>' +
+    '<span class="breadcrumb-current">' + esc(page.title) + '</span>' +
+    '</nav>' +
     '<div class="detail-meta">' +
     '<span class="detail-type">' + getTypeIcon(page.type) + ' ' + typeLabel + '</span>' +
     (page.created ? '<span class="detail-dates">创建: ' + page.created + '</span>' : '') +
@@ -592,6 +606,20 @@ function findPage(path) {
     if (page) return page;
   }
   return null;
+}
+
+function relTime(dateStr) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  const now = new Date();
+  const diff = Math.floor((now - d) / 86400000);
+  if (diff === 0) return "今天";
+  if (diff === 1) return "昨天";
+  if (diff < 7) return diff + " 天前";
+  if (diff < 30) return Math.floor(diff / 7) + " 周前";
+  if (diff < 365) return Math.floor(diff / 30) + " 个月前";
+  return dateStr;
 }
 
 function getTypeIcon(type) {
