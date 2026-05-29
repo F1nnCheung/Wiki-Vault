@@ -10,6 +10,7 @@ const state = {
   currentType: null,
   currentTag: null,
   currentPage: null,
+  currentTutFolder: null,
   searchQuery: "",
   theme: "light",
 };
@@ -90,6 +91,9 @@ function parseHash(hash) {
   const tutorialMatch = h.match(/^\/tutorial\/(.+)$/);
   if (tutorialMatch) return { view: "tutorial", path: decodeURIComponent(tutorialMatch[1]) };
 
+  const tutFolderMatch = h.match(/^\/tutorials\/(.+)$/);
+  if (tutFolderMatch) return { view: "tutorialFolder", folder: decodeURIComponent(tutFolderMatch[1]) };
+
   return { view: "home" };
 }
 
@@ -104,6 +108,8 @@ function buildHash(view, params = {}) {
       return "#/page/" + encodeURIComponent(params.path);
     case "tutorial":
       return "#/tutorial/" + encodeURIComponent(params.path);
+    case "tutorialFolder":
+      return "#/tutorials/" + encodeURIComponent(params.folder);
     default: return "#/";
   }
 }
@@ -119,6 +125,7 @@ function handleHashChange() {
   state.currentType = parsed.type || null;
   state.currentTag = parsed.tag || null;
   state.currentPage = parsed.path || null;
+  state.currentTutFolder = parsed.folder || null;
 
   if (parsed.view === "home") {
     state.searchQuery = "";
@@ -201,7 +208,7 @@ function bindEvents() {
     if ((e.ctrlKey || e.metaKey) && e.key === "k") {
       e.preventDefault(); $("#searchInput").focus();
     }
-    if (e.key === "Escape" && (state.currentView === "page" || state.currentView === "tutorial")) {
+    if (e.key === "Escape" && (state.currentView === "page" || state.currentView === "tutorial" || state.currentView === "tutorialFolder")) {
       navigate(state.currentView === "page" ? "browse" : "home");
     }
   });
@@ -284,6 +291,13 @@ function bindGlobalDelegation() {
         }
         return;
       }
+      if (action === "tutorial-folder") {
+        const tf = ab.dataset.folder;
+        if (tf !== undefined) {
+          navigate("tutorialFolder", { folder: tf });
+        }
+        return;
+      }
     }
 
     // 统计卡片中 "browse" 是特殊值，表示全部页面
@@ -320,9 +334,9 @@ function closeSidebar() {
 // ═══════════════════════════════════════════════════════
 
 function updateSidebarActive() {
-  // 页面详情视为"全部页面"的子视图，教程详情视为"首页"的子视图
+  // 页面详情视为"全部页面"的子视图，教程/教程文件夹视为"首页"的子视图
   const activeView = state.currentView === "page" ? "browse" :
-                     state.currentView === "tutorial" ? "home" : state.currentView;
+                     (state.currentView === "tutorial" || state.currentView === "tutorialFolder") ? "home" : state.currentView;
   $$(".nav-item[data-view]").forEach(item => {
     item.classList.toggle("active", item.dataset.view === activeView && !state.currentType);
   });
@@ -370,6 +384,7 @@ function renderView() {
       case "browse": renderBrowse(); break;
       case "page": renderPageDetail(); break;
       case "tutorial": renderTutorialDetail(); break;
+      case "tutorialFolder": renderTutorialFolder(); break;
       default: renderHome();
     }
     requestAnimationFrame(() => {
@@ -391,7 +406,7 @@ function handleSearch() {
     navigate("browse");
   } else if (state.currentView === "browse") {
     renderBrowse();
-  } else if (query && (state.currentView === "page" || state.currentView === "tutorial")) {
+  } else if (query && (state.currentView === "page" || state.currentView === "tutorial" || state.currentView === "tutorialFolder")) {
     // 从详情页搜索时跳转到浏览视图
     navigate("browse");
   }
@@ -631,17 +646,20 @@ function renderTutorialDetail() {
   // 生成 TOC（从 h2 提取）
   const tocResult = generateTOC(tutorial.html || "");
 
-  // 面包屑：首页 › 教程 › 文件夹层级 › 标题
+  // 面包屑：首页 › 教程 › 文件夹层级（可点击） › 标题（不可点击）
   const folderParts = tutorial.folder === "root" ? [] : tutorial.folder.split("/");
   let html = '<div class="page-detail">' +
     '<nav class="breadcrumb">' +
     '<a href="#" data-action="home">📚 首页</a>' +
     '<span class="breadcrumb-sep">›</span>' +
-    '<a href="#" data-action="home">📖 教程</a>';
+    '<a href="#" data-action="tutorial-folder" data-folder="">📖 教程</a>';
 
-  for (const part of folderParts) {
+  // 每个文件夹层级的路径逐步累积，使每个层级都可点击
+  let accumulatedFolder = "";
+  for (let i = 0; i < folderParts.length; i++) {
+    accumulatedFolder = accumulatedFolder ? accumulatedFolder + "/" + folderParts[i] : folderParts[i];
     html += '<span class="breadcrumb-sep">›</span>' +
-      '<span class="breadcrumb-current">' + esc(part) + '</span>';
+      '<a href="#" data-action="tutorial-folder" data-folder="' + esc(accumulatedFolder) + '">' + esc(folderParts[i]) + '</a>';
   }
 
   html += '<span class="breadcrumb-sep">›</span>' +
@@ -671,6 +689,134 @@ function renderTutorialDetail() {
 
   // 教程内容（已带 id 的版本）
   html += '<div class="wiki-content">' + tocResult.html + '</div>';
+
+  // 上/下一步导航
+  const prevTut = tutorial.prev_path ? findTutorial(tutorial.prev_path) : null;
+  const nextTut = tutorial.next_path ? findTutorial(tutorial.next_path) : null;
+  if (prevTut || nextTut) {
+    html += '<nav class="chapter-nav">';
+    if (prevTut) {
+      html += '<a href="#" class="chapter-nav-link chapter-nav-prev" data-action="open-tutorial" data-tutpath="' + esc(prevTut.path) + '">' +
+        '<span class="chapter-nav-label">← 上一章</span>' +
+        '<span class="chapter-nav-title">' + esc(prevTut.title) + '</span></a>';
+    } else {
+      html += '<span class="chapter-nav-link chapter-nav-prev chapter-nav-empty"></span>';
+    }
+    if (nextTut) {
+      html += '<a href="#" class="chapter-nav-link chapter-nav-next" data-action="open-tutorial" data-tutpath="' + esc(nextTut.path) + '">' +
+        '<span class="chapter-nav-label">下一章 →</span>' +
+        '<span class="chapter-nav-title">' + esc(nextTut.title) + '</span></a>';
+    } else {
+      html += '<span class="chapter-nav-link chapter-nav-next chapter-nav-empty"></span>';
+    }
+    html += '</nav>';
+  }
+
+  html += '</div>';
+  $("#app").innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════
+//  教程文件夹视图渲染
+// ═══════════════════════════════════════════════════════
+
+function renderTutorialFolder() {
+  const folder = state.currentTutFolder || "";
+  const d = state.data;
+  const tutorials = d.tutorials || [];
+
+  // 筛选该文件夹下的教程
+  const directFiles = tutorials.filter(t => {
+    const f = t.folder === "root" ? "" : t.folder;
+    return f === folder;
+  });
+
+  // 筛选子文件夹
+  const subFolderSet = new Set();
+  const folderPrefix = folder ? folder + "/" : "";
+  tutorials.forEach(t => {
+    const f = t.folder === "root" ? "" : t.folder;
+    if (f !== folder && f.startsWith(folderPrefix)) {
+      const sub = f.slice(folderPrefix.length).split("/")[0];
+      subFolderSet.add(folder ? folder + "/" + sub : sub);
+    }
+  });
+
+  // 统计每个子文件夹的教程数量
+  const subFolders = Array.from(subFolderSet).sort((a, b) => a.localeCompare(b, "zh")).map(sf => {
+    const parts = sf.split("/");
+    return {
+      name: parts[parts.length - 1],
+      fullPath: sf,
+      count: tutorials.filter(t => {
+        const f = t.folder === "root" ? "" : t.folder;
+        return f === sf || f.startsWith(sf + "/");
+      }).length,
+    };
+  });
+
+  // 面包屑
+  const folderParts = folder ? folder.split("/") : [];
+  let html = '<div class="page-detail">' +
+    '<nav class="breadcrumb">' +
+    '<a href="#" data-action="home">📚 首页</a>' +
+    '<span class="breadcrumb-sep">›</span>' +
+    '<a href="#" data-action="tutorial-folder" data-folder="">📖 教程</a>';
+
+  let accumulated = "";
+  for (const part of folderParts) {
+    accumulated = accumulated ? accumulated + "/" + part : part;
+    html += '<span class="breadcrumb-sep">›</span>' +
+      '<a href="#" data-action="tutorial-folder" data-folder="' + esc(accumulated) + '">' + esc(part) + '</a>';
+  }
+
+  html += '</nav>';
+
+  // 标题
+  const displayName = folder ? folderParts[folderParts.length - 1] : "全部教程";
+  html += '<h1 style="font-family:var(--font-display); font-size:1.6rem; margin-bottom:6px;">📁 ' + esc(displayName) + '</h1>';
+  html += '<p class="subtitle" style="margin-bottom:20px;">共 ' + directFiles.length + ' 篇教程，' + subFolders.length + ' 个子文件夹</p>';
+
+  // 子文件夹列表
+  if (subFolders.length > 0) {
+    html += '<h2 style="font-size:1rem; margin-bottom:10px; font-family:var(--font-display);">📂 子文件夹</h2>';
+    html += '<div class="tut-folder-grid">';
+    for (const sf of subFolders) {
+      html += '<a href="#" class="tut-folder-card" data-action="tutorial-folder" data-folder="' + esc(sf.fullPath) + '">' +
+        '<span class="tut-folder-icon">📁</span>' +
+        '<span class="tut-folder-name">' + esc(sf.name) + '</span>' +
+        '<span class="tut-folder-count">' + sf.count + ' 篇</span></a>';
+    }
+    html += '</div>';
+  }
+
+  // 直接文件列表
+  if (directFiles.length > 0) {
+    html += '<h2 style="font-size:1rem; margin:20px 0 10px; font-family:var(--font-display);">📄 教程列表</h2>';
+    html += '<div class="page-list">';
+    for (const t of directFiles) {
+      // 找到该教程的上一章和下一章，用于显示顺序信息
+      const siblings = directFiles;
+      const idx = siblings.indexOf(t);
+      const numLabel = siblings.length > 1 ? '<span class="tut-order">' + (idx + 1) + ' / ' + siblings.length + '</span>' : '';
+
+      html += '<div class="page-card" data-action="open-tutorial" data-tutpath="' + esc(t.path) + '">' +
+        '<div class="page-type-badge topic">📄</div>' +
+        '<div class="page-info">' +
+        '<div class="page-title">' + esc(t.title) + numLabel + '</div>' +
+        (t.summary ? '<div class="page-summary">' + esc(t.summary) + '</div>' : '') +
+        '<div class="page-meta">' +
+        (t.word_count ? '<span class="page-date">' + t.word_count.toLocaleString() + ' 字</span>' : '') +
+        (t.word_count ? '<span class="page-date">约 ' + Math.max(1, Math.ceil(t.word_count / 400)) + ' 分钟</span>' : '') +
+        '</div></div></div>';
+    }
+    html += '</div>';
+  }
+
+  // 空状态
+  if (directFiles.length === 0 && subFolders.length === 0) {
+    html += '<div class="empty-state"><div class="empty-icon">📂</div><p>该文件夹下暂无教程</p></div>';
+  }
 
   html += '</div>';
   $("#app").innerHTML = html;

@@ -131,6 +131,13 @@ def scan_tutorials(page_map: dict) -> list[dict]:
                 "word_count": len(content),
                 "tags": tags,
             })
+
+    # 按路径排序后，为每份教程分配 prev / next 路径
+    tutorials.sort(key=lambda t: t["path"])
+    for i, t in enumerate(tutorials):
+        t["prev_path"] = tutorials[i - 1]["path"] if i > 0 else None
+        t["next_path"] = tutorials[i + 1]["path"] if i + 1 < len(tutorials) else None
+
     return tutorials
 
 
