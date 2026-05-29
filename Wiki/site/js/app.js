@@ -238,6 +238,16 @@ function bindGlobalDelegation() {
     // 阻止所有 # 锚点的默认跳转
     if (e.target.closest('a[href="#"]')) e.preventDefault();
 
+    // TOC 链接：滚动到对应标题而非修改 URL hash
+    const tocLink = e.target.closest('a.toc-link[href^="#"]');
+    if (tocLink) {
+      e.preventDefault();
+      const id = tocLink.getAttribute("href").slice(1);
+      const el = document.getElementById(id);
+      if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      return;
+    }
+
     // Wiki 链接 (data-page)
     const wl = e.target.closest("[data-page]");
     if (wl) { navigate("page", { path: wl.dataset.page }); return; }
@@ -384,9 +394,9 @@ function handleSearch() {
 
 function renderHome() {
   const d = state.data;
-  const s = d.stats;
-  const recent = d.recent_updates;
-  const topFolders = new Set(d.tutorials.map(t => t.folder.split("/")[0]));
+  const s = d.stats || {};
+  const recent = d.recent_updates || [];
+  const topFolders = new Set((d.tutorials || []).map(t => t.folder.split("/")[0]));
 
   const statCards = [
     { n: topFolders.size, l: "教程", i: "📖", v: "tutorials" },
