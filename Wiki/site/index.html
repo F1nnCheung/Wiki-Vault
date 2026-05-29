@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fcf9f4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1b1d20" media="(prefers-color-scheme: dark)" />
   <title>知识库 — Wiki Vault</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
@@ -18,7 +20,7 @@
   <!-- ── 侧边栏 ── -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <a href="#" class="sidebar-logo" onclick="window.app?.navigate('home');return false;">
+      <a href="#" class="sidebar-logo" onclick="window.appNav('home');return false;">
         <span class="icon">📚</span> 知识库
       </a>
       <div class="sidebar-subtitle">Claude Code · AI Coding · Obsidian</div>
@@ -77,9 +79,10 @@
         type="text"
         class="search-input"
         id="searchInput"
-        placeholder="搜索知识库… (Ctrl+K)"
+        placeholder="搜索知识库…"
         autocomplete="off"
       />
+      <span class="search-hint" id="searchHint">Ctrl+K</span>
       <button class="search-clear" id="searchClear" aria-label="清除">✕</button>
     </div>
 
@@ -88,6 +91,7 @@
       <div class="empty-state">
         <div class="empty-icon">📚</div>
         <p>正在加载知识库数据…</p>
+        <p style="font-size:0.78em;margin-top:8px;color:var(--text-muted);">若长时间无响应，请运行 <code>python3 build.py</code></p>
       </div>
     </div>
   </main>
