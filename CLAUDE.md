@@ -176,7 +176,7 @@ related:
 ## [2026-05-09] ingest | 资料标题
 - 新增页面：Wiki/wiki/topics/xxx.md
 - 更新页面：Wiki/wiki/entities/xxx.md
-- 教程同步：教程/AiCoding/AI Coding 学习计划.md（更新了 xxx 章节）
+- 教程同步：教程/AI Coding/AI Coding 学习计划.md（更新了 xxx 章节）
 - 摘要：一句话描述本次操作
 
 ## [2026-05-09] lint | 巡检

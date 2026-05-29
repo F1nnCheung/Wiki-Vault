@@ -15,7 +15,7 @@ related:
 
 # AI Coding 学习路线
 
-> 📖 想要一份包含完整安装步骤、命令速查、MCP/Skills 生态图谱的综合教程？查看 [[教程/AiCoding/AI Coding 学习计划|AI Coding 完整学习计划]]
+> 📖 想要一份包含完整安装步骤、命令速查、MCP/Skills 生态图谱的综合教程？查看 [[教程/AI Coding/AI Coding 学习计划|AI Coding 完整学习计划]]
 
 ## 🎯 学习目标
 
@@ -106,4 +106,4 @@ related:
 持续：跟踪更新，实践 Superpowers/gstack 等进阶方法论
 ```
 
-> 📖 导航：[[../overview|全局概览]] · [[ai-coding-concepts|核心概念]] · [[ai-coding-history|发展史]] · [[ai-coding-tools-comparison|工具对比]] · [[../../教程/AiCoding/AI Coding 学习计划|完整教程]]
+> 📖 导航：[[../overview|全局概览]] · [[ai-coding-concepts|核心概念]] · [[ai-coding-history|发展史]] · [[ai-coding-tools-comparison|工具对比]] · [[../../教程/AI Coding/AI Coding 学习计划|完整教程]]
