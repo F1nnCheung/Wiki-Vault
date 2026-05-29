@@ -103,6 +103,8 @@ function buildHash(view, params = {}) {
 }
 
 function handleHashChange() {
+  // 跳过 TOC 锚点（#toc-0 等），不触发路由
+  if (/^#toc-\d+$/.test(location.hash)) return;
   if (location.hash === state._lastHash) return;
   state._lastHash = location.hash;
 
@@ -225,13 +227,24 @@ function bindGlobalDelegation() {
     const tb = e.target.closest("[data-tag]");
     if (tb) { navigate("browse", { tag: tb.dataset.tag }); return; }
 
-    // 统计卡片 (data-stat)
-    const sc = e.target.closest("[data-stat]");
-    if (sc) { navigate("browse", { type: sc.dataset.stat }); return; }
-
     // 筛选按钮 (data-filter)
     const fb = e.target.closest("[data-filter]");
     if (fb) { navigate("browse", fb.dataset.filter ? { type: fb.dataset.filter } : {}); return; }
+
+    // 返回按钮 (data-action)
+    const ab = e.target.closest("[data-action]");
+    if (ab) {
+      const action = ab.dataset.action;
+      if (action === "back") { navigate("browse"); return; }
+    }
+
+    // 统计卡片中 "browse" 是特殊值，表示全部页面
+    const sc2 = e.target.closest("[data-stat]");
+    if (sc2) {
+      const statType = sc2.dataset.stat;
+      if (statType === "browse") { navigate("browse"); return; }
+      navigate("browse", { type: statType }); return;
+    }
   });
 }
 
@@ -455,18 +468,18 @@ function renderBrowse() {
   if (pages.length === 0) {
     html += '<div class="empty-state"><div class="empty-icon">🔍</div><p>没有找到匹配的页面</p></div>';
   } else {
-    html += '<div class="page-list">' + pages.map(p => renderPageCard(p)).join("") + '</div>';
+    html += '<div class="page-list">' + pages.map(p => renderPageCard(p, state.searchQuery)).join("") + '</div>';
   }
 
   $("#app").innerHTML = html;
 }
 
-function renderPageCard(page) {
+function renderPageCard(page, hl) {
   return '<div class="page-card" data-path="' + esc(page.path) + '">' +
     '<div class="page-type-badge ' + page.type + '">' + getTypeIcon(page.type) + '</div>' +
     '<div class="page-info">' +
-    '<div class="page-title">' + esc(page.title) + '</div>' +
-    (page.summary ? '<div class="page-summary">' + esc(page.summary) + '</div>' : '') +
+    '<div class="page-title">' + hlText(page.title, hl) + '</div>' +
+    (page.summary ? '<div class="page-summary">' + hlText(page.summary, hl) + '</div>' : '') +
     '<div class="page-meta">' + (page.tags || []).slice(0, 3).map(t => '<span class="page-tag">#' + esc(t) + '</span>').join("") + '</div>' +
     (page.updated ? '<div class="page-date">更新: ' + page.updated + '</div>' : '') +
     '</div></div>';
@@ -584,6 +597,14 @@ function findPage(path) {
 function getTypeIcon(type) {
   const icons = { concept: "💡", entity: "🏢", topic: "📝", comparison: "⚖️", overview: "🗺️" };
   return icons[type] || "📄";
+}
+
+function hlText(text, query) {
+  const safe = esc(text);
+  if (!query) return safe;
+  const q = esc(query);
+  const re = new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi");
+  return safe.replace(re, '<span class="search-highlight">$1</span>');
 }
 
 function esc(str) {
