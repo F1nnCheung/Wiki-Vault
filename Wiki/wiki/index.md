@@ -171,6 +171,7 @@ updated: 2026-05-29
 - [AI Coding 学习计划](../../教程/AI Coding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
 - [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
 - [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
+- [AI Agent 学习指南](../../教程/AI%20Agent/AI%20Agent%20学习指南.md) — 📖 综合教程（5 章），涵盖：Agent 基础概念 → 核心架构（Harness/记忆/压缩/自进化）→ 主流工具（Claude Code/Codex/OpenClaw/Hermes）→ 多 Agent 协作（Agentic Engineering/编排框架）→ 实战指南（安装/配置/安全/集成）
 
 ## 原始资料
 

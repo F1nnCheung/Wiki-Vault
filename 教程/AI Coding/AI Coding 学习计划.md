@@ -1167,4 +1167,6 @@ Obsidian 基础 → Claude Code + Obsidian 工作流 → Hermes Agent 内容中�
 > 📚 本学习计划基于 [[Wiki/llm-wiki|LLM Wiki]] 知识库整理。知识库中包含 50+ 篇深度文章，覆盖 Claude Code、Cursor、Trae、Codex、OpenClaw、Hermes、Obsidian 等主题，欢迎深入阅读。
 > 
 > 🔗 推荐进一步阅读：[[Wiki/wiki/topics/ai-coding-history|AI Coding 发展史]] · [[Wiki/wiki/topics/ai-coding-concepts|核心概念]] · [[Wiki/wiki/topics/ai-coding-tools-comparison|工具全景对比]] · [[Wiki/wiki/topics/claude-code-installation|Claude Code 安装配置]] · [[Wiki/wiki/topics/claude-code-mcp-ecosystem|MCP 生态系统]]
+>
+> 🤖 **AI Agent 深度学习**：如果想系统学习 AI Agent（而不仅是 AI Coding），请阅读 [[../AI Agent/AI Agent 学习指南|AI Agent 学习指南]]——从 Agent 概念、Harness Engineering、记忆/自进化到多 Agent 协作的完整教程。
 

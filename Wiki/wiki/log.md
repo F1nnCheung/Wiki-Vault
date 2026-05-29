@@ -1,5 +1,20 @@
 # 操作日志
 
+## [2026-05-29] output | 创建 AI Agent 学习教程
+
+- **新增页面**：
+  - 教程/AI Agent/AI Agent 学习指南.md（总纲：五阶段学习路线 + 角色推荐路径 + 核心概念速查表）
+  - 教程/AI Agent/01-AI Agent基础概念.md（L1-L5 能力层次 / 五大核心组件 / 发展简史 / 关键概念区分）
+  - 教程/AI Agent/02-Agent核心架构.md（Harness Engineering / 编排循环 / 三层记忆 / 上下文压缩 / 自进化 / 五层架构）
+  - 教程/AI Agent/03-主流Agent工具.md（Claude Code / Codex / OpenClaw / Hermes Agent 全面对比与选型）
+  - 教程/AI Agent/04-多Agent协作与编排.md（Agentic Engineering / 生成-评估分离 / 编排框架对比 / Kanban 四角色 / ECC）
+  - 教程/AI Agent/05-Agent实战指南.md（从零搭建 / 规则文件 / 安全配置 / Workspace / Obsidian 集成 / 进阶场景）
+- **更新页面**：Wiki/wiki/index.md（新增输出产物条目）
+- **摘要**：基于知识库 60+ Agent 相关页面，系统化整理了从入门到进阶的 AI Agent 完整学习教程（6 个文件，约 4300 行），覆盖概念→架构→工具→协作→实战五大阶段。
+- **教程同步**：教程/AI Coding/AI Coding 学习计划.md（末尾「推荐进一步阅读」添加了 AI Agent 学习指南链接）
+- **更新页面**：Wiki/wiki/overview.md（输出产物由 4 份更新为 5 份）
+- **网站同步**：Wiki/site/data/data.json 已重建（85 wiki 页 + 18 概念 + 17 实体 + 43 专题 + 3 对比 + 128 原始文章 + 63 教程）
+
 ## [2026-05-29] ingest | 知识库技术 18 篇 + Hemmers 1 篇，共 19 篇新增资料
 
 - **新增页面**：
