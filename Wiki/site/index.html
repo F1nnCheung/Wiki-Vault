@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>知识库 — Wiki Vault</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+</head>
+<body>
+
+  <!-- 移动端菜单按钮 -->
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+
+  <!-- 侧边栏叠加层（移动端） -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ── 侧边栏 ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="#" class="sidebar-logo" onclick="window.app?.navigate('home');return false;">
+        <span class="icon">📚</span> 知识库
+      </a>
+      <div class="sidebar-subtitle">Claude Code · AI Coding · Obsidian</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">导航</div>
+        <button class="nav-item active" data-view="home">
+          <span>🏠</span> 首页
+        </button>
+        <button class="nav-item" data-view="browse">
+          <span>📋</span> 全部页面
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">按类型浏览</div>
+        <button class="nav-item" data-view="concept" onclick="window.app?.navigate('browse', {type: 'concept'}); return false;">
+          <span>💡</span> 概念
+          <span class="count" id="navConceptCount">-</span>
+        </button>
+        <button class="nav-item" data-view="entity" onclick="window.app?.navigate('browse', {type: 'entity'}); return false;">
+          <span>🏢</span> 实体
+          <span class="count" id="navEntityCount">-</span>
+        </button>
+        <button class="nav-item" data-view="topic" onclick="window.app?.navigate('browse', {type: 'topic'}); return false;">
+          <span>📝</span> 专题
+          <span class="count" id="navTopicCount">-</span>
+        </button>
+        <button class="nav-item" data-view="comparison" onclick="window.app?.navigate('browse', {type: 'comparison'}); return false;">
+          <span>⚖️</span> 对比
+          <span class="count" id="navComparisonCount">-</span>
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">标签</div>
+        <div class="tag-cloud" id="tagCloud">
+          <span style="color:var(--text-muted); font-size:0.8em;">加载中…</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="theme-toggle">
+      <button class="theme-btn" id="themeBtn">🌙 暗色模式</button>
+    </div>
+  </aside>
+
+  <!-- ── 主内容区 ── -->
+  <main class="main-content" id="mainContent">
+    <!-- 搜索栏 -->
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="搜索知识库… (Ctrl+K)"
+        autocomplete="off"
+      />
+      <button class="search-clear" id="searchClear" aria-label="清除">✕</button>
+    </div>
+
+    <!-- 动态内容区 -->
+    <div id="app">
+      <div class="empty-state">
+        <div class="empty-icon">📚</div>
+        <p>正在加载知识库数据…</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -117,10 +117,8 @@ def main():
     tag_counts = {}
     type_counts = {"concept": 0, "entity": 0, "topic": 0, "comparison": 0, "overview": 0}
 
-    # 扫描所有 wiki 页面
+    # 扫描所有 wiki 页面（全部纳入）
     md_files = sorted(WIKI_DIR.rglob("*.md"))
-    # 排除 index.md 和 log.md (单独处理)
-    md_files = [f for f in md_files if f.name not in ("index.md", "log.md")]
 
     # 第一步：收集所有页面路径建立映射
     page_map = {}
