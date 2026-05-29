@@ -385,10 +385,11 @@ function renderHome() {
   const d = state.data;
   const s = d.stats;
   const recent = d.recent_updates;
+  const topFolders = new Set(d.tutorials.map(t => t.folder.split("/")[0]));
 
   const statCards = [
     { n: s.wiki_pages, l: "Wiki 页面", i: "📚", v: "browse" },
-    { n: s.tutorials, l: "教程文档", i: "📖", v: "tutorials" },
+    { n: topFolders.size, l: "教程文档", i: "📖", v: "tutorials" },
     { n: s.entities, l: "核心实体", i: "🏢", v: "entity" },
     { n: s.topics, l: "专题页面", i: "📝", v: "topic" },
     { n: s.concepts, l: "核心概念", i: "💡", v: "concept" },
@@ -437,7 +438,7 @@ function renderHome() {
   }
 
   html += '<div class="site-footer">共 ' + s.wiki_pages + ' 个 Wiki 页面 · ' +
-    s.tutorials + ' 份教程 · 更新于 ' + d.generated_at + '</div>';
+    topFolders.size + ' 个教程系列 · 更新于 ' + d.generated_at + '</div>';
 
   $("#app").innerHTML = html;
 }
