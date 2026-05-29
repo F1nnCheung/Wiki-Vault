@@ -62,7 +62,7 @@ const nav = [
     ["Wiki/wiki/index", "📋 知识库索引"],
     ["Wiki/wiki/overview", "🗺️ 全局概览"],
     ["Wiki/wiki/log", "📝 操作日志"],
-    ["教程/知识库/知识库技术学习指南", "🧠 知识库技术"],
+    ["教程/知识库技术/知识库技术学习指南", "🧠 知识库技术"],
   ]],
   ["🤖 Claude Code", [
     ["Wiki/wiki/topics/claude-code-introduction", "📘 介绍"],
@@ -133,7 +133,7 @@ LIMIT 10
 ```dataviewjs
 const tut = [
   ["教程/AI-Coding/AI Coding 学习计划", "📖 AI Coding 学习计划", "从零开始的系统学习路径（1072 行）→ 发展历程 / 五大工具 / Agent / 拓展"],
-  ["教程/知识库/知识库技术学习指南", "🧠 知识库技术学习指南", "知识库技术总纲（451 行）→ RAG / 优化 20 法 / 知识图谱 / LLM Wiki"],
+  ["教程/知识库技术/知识库技术学习指南", "🧠 知识库技术学习指南", "知识库技术总纲（451 行）→ RAG / 优化 20 法 / 知识图谱 / LLM Wiki"],
   ["教程/Obsidian/01-入门与核心理念", "📓 Obsidian 完整教程", "从入门到 AI 集成的 9 章系统教程 → 入门 / 核心功能 / 插件 / Git / AI"],
 ];
 
