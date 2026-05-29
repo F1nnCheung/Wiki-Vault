@@ -82,13 +82,35 @@ function bindEvents() {
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key === "k") {
       e.preventDefault();
-      searchInput.focus();
+      $("#searchInput").focus();
+    }
+    if (e.key === "Escape") {
+      if (state.currentView === "page") {
+        navigate("browse");
+      }
     }
   });
 
-  // 侧边栏导航点击
-  $$(".nav-item[data-view]").forEach(item => {
-    item.addEventListener("click", () => navigate(item.dataset.view));
+  // 全局 wiki-link 点击代理
+  $("#app").addEventListener("click", (e) => {
+    const link = e.target.closest(".wiki-link[data-page]");
+    if (link) {
+      e.preventDefault();
+      navigate("page", { path: link.dataset.page });
+    }
+  });
+
+  // 侧边栏导航点击 — 统一处理 data-view 和 data-type
+  $$(".nav-item[data-view], .nav-item[data-type]").forEach(item => {
+    item.addEventListener("click", () => {
+      const view = item.dataset.view;
+      const type = item.dataset.type;
+      if (type) {
+        navigate("browse", { type });
+      } else if (view) {
+        navigate(view);
+      }
+    });
   });
 
   // 点击侧边栏外关闭
@@ -155,9 +177,15 @@ function navigate(view, params = {}) {
 
 // ── 更新侧边栏 ──
 function updateSidebar() {
+  // 更新 view 导航项的激活状态
   $$(".nav-item[data-view]").forEach(item => {
     const view = item.dataset.view;
     item.classList.toggle("active", view === state.currentView && !state.currentType);
+  });
+
+  // 更新 type 导航项的激活状态
+  $$(".nav-item[data-type]").forEach(item => {
+    item.classList.toggle("active", item.dataset.type === state.currentType);
   });
 
   // 更新计数
@@ -530,17 +558,28 @@ function handleSearch() {
 
 // ── 辅助函数 ──
 function findPage(path) {
-  if (!state.data) return null;
+  if (!state.data || !path) return null;
   // 精确匹配
   let page = state.data.pages.find(p => p.path === path);
   if (page) return page;
-  // 模糊匹配
-  const cleanPath = path.replace(".md", "").replace(/^Wiki\/wiki\//, "");
+  // 去除 .md 后缀后再精确匹配
+  const pathNoMd = path.replace(/\.md$/, "");
+  page = state.data.pages.find(p => p.path.replace(/\.md$/, "") === pathNoMd);
+  if (page) return page;
+  // 末尾文件名匹配（用于 related 列表中的相对路径如 topics/xxx.md）
+  const pathBasename = pathNoMd.split("/").pop();
   page = state.data.pages.find(p => {
-    const pClean = p.path.replace(".md", "").replace(/^Wiki\/wiki\//, "");
-    return pClean === cleanPath || pClean.endsWith(cleanPath) || cleanPath.endsWith(pClean) || p.path.includes(cleanPath);
+    const pNoMd = p.path.replace(/\.md$/, "");
+    return pNoMd.endsWith("/" + pathBasename);
   });
-  return page || null;
+  if (page) return page;
+  // Wiki/wiki/xxx 格式匹配
+  if (!path.startsWith("Wiki/wiki/")) {
+    const wikiPath = "Wiki/wiki/" + pathNoMd.replace(/^(Wiki\/wiki\/)?/, "");
+    page = state.data.pages.find(p => p.path.replace(/\.md$/, "") === wikiPath);
+    if (page) return page;
+  }
+  return null;
 }
 
 function getTypeIcon(type) {
