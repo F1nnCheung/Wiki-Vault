@@ -88,6 +88,11 @@ updated: 2026-06-01
 - [GitNexus](entities/gitnexus.md) — 零服务器代码知识图谱引擎（3.55 万 Stars），浏览器端 WASM 运行，14 语言 + 16 MCP 工具 + Graph RAG
 - [Graphify](entities/graphify.md) — 多模态项目知识图谱 CLI 工具，支持代码+文档+图片+视频的关系查询
 
+### 低代码 AI 平台
+- [Coze（扣子）](entities/coze.md) — 字节跳动 AI Agent 开发平台，四大产品线，技能商店变现，多平台一键发布
+- [Dify](entities/dify.md) — 开源 LLM 应用开发平台（98.3K Stars），四层 Beehive 架构，企业级 LLMOps
+- [n8n](entities/n8n.md) — 开源工作流自动化引擎，400+ 集成，1 核 1G 即可运行
+
 ---
 
 ## 专题
@@ -153,6 +158,10 @@ updated: 2026-06-01
 - [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
 - [Agentic RAG 四种模式](topics/agentic-rag-patterns.md) — 路由型 / 多步型 / CRAG / 自适应型 + A-RAG 层级检索 + NaviRAG，含 LangGraph 完整实现
 - [Vector Graph RAG](topics/vector-graph-rag.md) — 不引入图数据库，仅用 Milvus 向量库解决多跳推理，Recall@5=87.8%
+- [本地 RAG 知识库搭建实战](topics/local-rag-setup-guide.md) — Langchain-Chatchat + Qwen2.5-7B + bge-large-zh，30 分钟搭建私有知识库，全程断网可用
+
+### 🧩 低代码 AI 平台
+- [低代码 AI 平台对比](comparisons/lowcode-ai-platforms.md) — Coze / Dify / n8n / FastGPT / RAGFlow 五平台全面对比与选型决策树
 
 ### ✍️ AI 学术写作
 - [Gemini 3.5 + 六个 Skill 学术论文写作](topics/gemini-academic-writing.md) — 定框架→引言→文献综述→方法→结果分析→结论，六步 Skill 管线化工作流
@@ -249,7 +258,7 @@ updated: 2026-06-01
 - 06-附录 — 插件清单/工具清单/快捷键速查/FAQs
 
 ### Codex 资料
-13 篇 Codex 中文文章，位于 `raw/articles/Codex/`：
+13 篇 Codex 中文文章，位于 `raw/articles/Codex/`（Dify vs Coze 对比文已移至 `低代码agent/`）：
 - OpenAI Codex 完全方法论：6 个阶段，从装上到吃透 — 莲花明，2026.05，六阶段方法论/沙箱系统/AGENTS.md/TDD/云端/与CC混用
 - OpenAI Codex 完整教程 2026：100 分钟 — 邵猛，2026.05，Riley Brown 视频拆解：产品定位/核心机制/六项目实战
 - Codex (APP) 保姆级全攻略 — 技术爬爬虾，2026.04，12 章完整教程：安装→沙箱→记忆→插件→Skills→MCP→部署→电脑自动化
@@ -265,7 +274,7 @@ updated: 2026-06-01
 - [国内可用！Codex 一步步安装配置指南](../raw/articles/Codex/国内可用！Codex%20一步步安装配置指南.md) — 海鱼星，2026.05，Windows 离线下载（rg-adguard）/msix→rar/中转 API 配置
 
 ### 知识库技术资料
-29 篇知识库技术中文文章，位于 `raw/articles/知识库/`，覆盖 RAG 进化史/混合检索/评估体系/Agentic RAG/知识图谱/Vector Graph RAG/向量检索算法 七大方向：
+29+4=33 篇知识库技术中文文章，位于 `raw/articles/知识库/`，覆盖 RAG 进化史/混合检索/评估体系/Agentic RAG/知识图谱/Vector Graph RAG/向量检索算法/多模态 RAG/本地 RAG 搭建/LLM-Wiki 自进化 十大方向：
 
 **RAG 架构与进化**
 - [AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki](../raw/articles/知识库/AI%20知识库技术演进拆解：从%20RAG%20到%20NotebookLM，再到%20LLM%20Wiki.md) — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
@@ -326,3 +335,30 @@ updated: 2026-06-01
 ### VibeCoding 实战资料
 1 篇 VibeCoding 实战文章，位于 `raw/articles/VibeCoding/`：
 - VibeCoding——从0到1开发微信小程序 — 子言sugar，2026.05，Figma→Trae→HBuilderX→微信开发者工具 完整工具链
+
+### 低代码 AI 平台资料
+4 篇低代码 AI 平台中文文章，位于 `raw/articles/低代码agent/`：Coze 教程(2) / 平台对比(2)
+
+- [2026 学习扣子 Coze 一篇讲透，新手也能看懂的实操指南](../raw/articles/低代码agent/2026%20学习扣子%20Coze%20一篇讲透，新手也能看懂的实操指南.md) — 阿童麦，2026.05，四大产品线详解 + Agent/编程/罗盘/开源 + AI 编程 vs 低代码实操
+- [升级 Coze 2.0 使用攻略；Coze Skill 好不好用！](../raw/articles/低代码agent/升级Coze%202.0%20使用攻略；Coze%20Skill好不好用！实战案例详细拆解（全文5000字）.md) — 杰克船长的AIGC，2026.01，Agent Skills 三级体系 + 创建/部署/使用 + Agent Plan
+- [Dify、n8n、扣子、Fastgpt、Ragflow 到底该怎么选？](../raw/articles/低代码agent/Dify、n8n、扣子、Fastgpt、Ragflow到底该怎么选？超详细指南来了【好文推荐，附MinerU实用教程】.md) — OpenDataLab，2025.06，五平台横向对比 + 适用性评分 + 选型决策树
+- [Dify 与 Coze 深度对比：架构、技术、优势与应用场景](../raw/articles/低代码agent/Dify%20与%20Coze%20深度对比：架构、技术、优势与应用场景.md) — 易君召，2026.04，四层 vs 五层架构/API→Agent 全链路对比
+
+### AI Agent 资料
+2 篇 AI Agent 文章，位于 `raw/articles/AI Agent/`：
+
+- [AI Agent 编排框架横向对比：LangChain vs LangGraph vs Spring AI Alibaba Graph](../raw/articles/AI%20Agent/AI%20Agent%20编排框架横向对比：LangChain%20vs%20LangGraph%20vs%20Spring%20AI%20Alibaba%20Graph.md) — 修行者华军，2026.05，执行模型/Agent 模式/企业特性/开发体验四维对比
+- [一文看懂 AI Agent 的 7 大核心模块：Skill、RAG、MCP、Harness……](../raw/articles/AI%20Agent/一文看懂%20AI%20Agent%20的7大核心模块：Skill、RAG、MCP、Harness…….md) — 深蓝学院，2026.05，Token/Skill/Prompt/RAG/MCP/SDD/Harness 七层架构
+
+### Prompt 工程资料
+1 篇 Prompt 工程进阶文章：
+
+- [Prompt 进阶：Few-shot、CoT、Self-Consistency 三板斧](../raw/articles/Prompt%20进阶：Few-shot、CoT、Self-Consistency%20三板斧.md) — Jameszyh，2026.05，LangChain 完整代码实现 + 动态路由 + 六大常见坑
+
+### 知识库技术补充资料
+4 篇知识库技术新增文章，位于 `raw/articles/知识库/`：
+
+- [RAG 多模态 与 LLM+工具链](../raw/articles/知识库/RAG%20多模态%20与%20LLM+工具链.md) — 小橙子，2026.05，LLM+工具链 vs 多模态模型底层原理/ViT+CLIP/混合架构
+- [RAG、Agentic RAG 和 AI Memory 到底有什么区别？](../raw/articles/知识库/RAG、Agentic%20RAG%20和%20AI%20Memory%20到底有什么区别？.md) — 七牛开发者，2026.05，通俗类比 + 三者关系 + 组合使用
+- [从零搭建本地 RAG 知识库](../raw/articles/知识库/从零搭建本地RAG知识库，你的文档终于能自己回答问题了！从安装到测试全流程讲解！.md) — AI不硬核，2026.05，Langchain-Chatchat + Qwen2.5-7B + 10 条踩坑实录
+- [前沿进展：LLM-Wiki 自进化 RAG 及 MinerU-Popo 文档解析后处理设计思路](../raw/articles/知识库/前沿进展：LLM-Wiki自进化RAG及MinerU-Popo文档解析后处理设计思路.md) — 老刘说NLP，2026.05，Retrieval as Reasoning + Error Book + MinerU-Popo 四子任务

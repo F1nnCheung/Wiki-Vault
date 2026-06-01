@@ -1,5 +1,28 @@
 # 操作日志
 
+## [2026-06-01] ingest | 批量收录 10 篇新增资料（低代码平台 4 篇 + 知识库 4 篇 + AI Agent 1 篇 + Prompt 进阶 1 篇）
+
+- **新增页面**：
+  - Wiki/wiki/entities/coze.md（Coze/扣子实体页：四大产品线/Agent Skills/Coze 2.0/技能商店变现）
+  - Wiki/wiki/entities/dify.md（Dify 实体页：四层 Beehive 架构/Orchestration Studio+RAG Pipeline+LLMOps）
+  - Wiki/wiki/entities/n8n.md（n8n 实体页：开源工作流自动化/400+ 集成/1C1G 轻量部署）
+  - Wiki/wiki/comparisons/lowcode-ai-platforms.md（低代码 AI 平台对比：Coze/Dify/n8n/FastGPT/RAGFlow 五选一 + 选型决策树）
+  - Wiki/wiki/topics/local-rag-setup-guide.md（本地 RAG 搭建实战：Langchain-Chatchat+Qwen2.5-7B+10 条踩坑实录）
+  - Wiki/wiki/concepts/prompt-engineering-trilogy.md（Prompt 工程三板斧：Few-shot/CoT/Self-Consistency + 动态路由 + LangChain 代码）
+
+- **更新页面**：
+  - Wiki/wiki/concepts/rag-architectures.md（新增「RAG vs Agentic RAG vs AI Memory 三者关系」「多模态 RAG (工具链 vs 多模态模型 + 混合架构)」「MinerU-Popo 文档解析后处理」三个章节 + 4 篇 sources + 2 条 related）
+  - Wiki/wiki/concepts/ai-agent.md（新增「七大核心工程模块」章节 (Token/Skill/Prompt/RAG/MCP/SDD/Harness 三层架构) + 「Prompt 工程三板斧」引用 + 3 篇 sources + 3 条 related）
+  - Wiki/wiki/topics/obsidian-llm-wiki-practice.md（新增「LLM-Wiki 检索即推理 (Retrieval as Reasoning)」「MinerU-Popo」两个章节 + 1 篇 source）
+  - Wiki/wiki/overview.md（新增「低代码 AI 平台」知识体系板块 + 更新文章数 124→134 + 实体 15→18 + 概念 17→18 + 专题 34→35 + 对比 3→4）
+  - Wiki/wiki/index.md（新增概念/实体/专题/对比条目 + 四个原始资料板块完整索引 + 更新知识库技术 29→33 篇）
+
+- **文件移动**：Codex/Dify 与 Coze 深度对比.md → 低代码agent/（误放纠正）
+
+- **教程同步**：待检查
+
+- **摘要**：处理 10 篇新增资料，覆盖五个新领域。核心产出：(1) 低代码 AI 平台成为独立知识体系（3 实体 + 1 对比 + 4 篇原始资料），填补了 AI 应用开发平台选型的空白；(2) 知识库技术从 29→33 篇，新增多模态 RAG、RAG vs Memory vs Agentic RAG 概念区分、本地 RAG 搭建实战、LLM-Wiki 自进化四大方向；(3) AI Agent 概念页新增七层模块体系（三层架构图），为 Agent 知识体系提供了系统化框架；(4) Prompt 工程首次拥有独立概念页，覆盖 Few-shot/CoT/Self-Consistency 三板斧 + LangChain 实现 + 动态路由策略。知识库从 7 条主线扩展到 8 条主线。
+
 ## [2026-05-29] output | 创建 AI Agent 学习教程
 
 - **新增页面**：
