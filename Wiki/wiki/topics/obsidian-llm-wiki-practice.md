@@ -9,6 +9,7 @@ sources:
   - raw/articles/Obsidian/推荐 Obsidian + Claude Code + Andrej Karpathy Wiki的obsidian-wiki，同时支持 hermes、openclaw等 AI接管你的 LangChain 实战课.md
   - raw/articles/Obsidian/公开我的Obsidian LLM Wiki的脚本（附双平台脚本）.md
   - raw/articles/Obsidian/建立Obsidian个人知识库的正确驾驶方式.md
+  - raw/articles/知识库/前沿进展：LLM-Wiki自进化RAG及MinerU-Popo文档解析后处理设计思路.md
 related:
   - entities/obsidian.md
   - topics/obsidian-ai-integration.md
@@ -103,6 +104,47 @@ related:
 - 实体识别准确率受模型性能限制
 - 近似词合并需要定期人工维护
 - 单脚本有局限性，大规模维护需要联网模型辅助
+
+## LLM-Wiki：检索即推理（Retrieval as Reasoning）
+
+2026 年 5 月的新论文《Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki》提出了一种新范式：**把检索从「查找」升级为「推理」**。
+
+### 核心思路
+
+**把文档用 LLM 转成带链接的 Markdown 页面 → 建目录、建双向链接 → 写一个错误检查脚本（抓悬空链接、格式错误）→ 把错误转成规则，下次编译自动遵守 → 给智能体开放两个工具：search/read → 智能体按「搜→读→跳链接→判断证据够不够」循环执行**。
+
+### 离线构建阶段
+
+**LLM-WIKI 编译**：
+- 对每段文本，LLM 找到已有 wiki 中最相关的页面，不随便新建（保证知识统一）
+- 每个页面包含：元数据（类型/创建时间/别名/标签）、一句话摘要、关键事实（结构化）、双向 wiki 链接、来源引用
+- 生成全局 index.md + 分类 _index.md
+
+**Error Book 自纠错**：
+- 定义 7 类必查错误：悬空链接/页面不完整/引用格式错误/意外覆盖/索引不一致（结构类）+ 无依据事实/跨页面矛盾（内容类）
+- 两层修复机制：第 1 层（代码自动修复结构错误）+ 第 2 层（LLM 周期性修复语义错误）
+
+### 在线推理阶段
+
+智能体只有两个工具就能完成所有多跳推理：
+- **wiki_search**：优先匹配页面名→别名→标签→描述→内容
+- **wiki_read**：读目录或具体页面，智能体可以「点链接」跳转
+
+外加终止条件：证据够了 / 工具调用 ≤ 15 次 / 连续 3 次搜索为空。
+
+### 关键发现
+
+> 在多跳 QA 与结构化查询任务上，LLM-Wiki 显著优于传统 RAG 与 Graph RAG 基线。
+
+## MinerU-Popo：文档解析通用后处理
+
+RAG 的效果高度依赖文档解析质量。MinerU-Popo 是专门针对这一问题设计的后处理模型：
+
+- **输入**：任意 OCR（MinerU/Paddle/GLM-OCR/Dolphin/Monkey）输出的页面级元素块
+- **输出**：结构化的文档树（JSON/Markdown）+ 节点摘要
+- **核心**：不重做 OCR，只做后处理——把碎块拼成完整、有结构、跨页连贯的文档，然后输出树结构 + 摘要给 RAG 用
+
+详见 [[../concepts/rag-architectures#mineru-popo文档解析通用后处理|RAG 架构页 → MinerU-Popo 章节]]。
 
 ## 实践建议
 

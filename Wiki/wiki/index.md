@@ -1,13 +1,13 @@
 ---
 title: 知识库索引
 type: overview
-updated: 2026-05-29
+updated: 2026-06-01
 ---
 
 # 知识库索引
 
 ## 概览
-- [全局概览](overview.md) — Claude Code + AI Coding + Obsidian 知识管理三大体系总览
+- [全局概览](overview.md) — 八大体系总览（Claude Code / AI Coding / Agent 框架 / Obsidian / RAG 知识库 / 低代码 AI 平台 / 智能家居 / AI 创业）
 
 ---
 
@@ -51,6 +51,9 @@ updated: 2026-05-29
 
 ### 创业 / 组织形态概念
 - [OPC（一人公司）](concepts/opc-one-person-company.md) — 出售系统而非时间，一个人 + AI = 一家公司，六种商业模式与中美对比
+
+### Prompt 工程
+- [Prompt 工程三板斧](concepts/prompt-engineering-trilogy.md) — Few-shot（格式稳定）+ CoT（推理准确）+ Self-Consistency（答案稳定），组合准确率提升 35-50%
 
 ---
 

@@ -4,11 +4,15 @@ type: concept
 tags: [ai-agent, concept, autonomy]
 created: 2026-05-09
 updated: 2026-05-09
-sources: []
+sources:
+  - raw/articles/AI Agent/一文看懂 AI Agent 的7大核心模块：Skill、RAG、MCP、Harness…….md
 related:
   - concepts/vibe-coding.md
   - concepts/agentic-engineering.md
   - entities/mcp.md
+  - concepts/skills-concept.md
+  - concepts/harness-engineering.md
+  - concepts/prompt-engineering-trilogy.md
 ---
 
 # AI Agent（智能体）
@@ -67,3 +71,35 @@ Agent 负责**决策和规划**，MCP 提供**标准化工具接口**。两者�
 2. **任务分解**：将复杂目标拆分为可执行子任务
 3. **错误恢复**：执行失败时自动调整策略
 4. **知识积累**：从成功经验中学习，越用越好
+
+## 七大核心工程模块
+
+随着大模型基础能力趋于同质化，AI 行业的竞争焦点已从模型本身转移到**如何将以下七个模块高效整合**。
+
+### 三层架构
+
+```
+工程层：SDD（规范） + Harness（驾驭）→ 确保开发规范和运行稳定
+能力层：Skill + Prompt + RAG + MCP → 赋予场景技能和连接世界的能力
+资源层：Token → 精细化管理 AI 的「燃料」与「内存」
+```
+
+### 七大模块详解
+
+| 模块 | 一句话 | 关键点 |
+|------|--------|--------|
+| **Token** | AI 系统运行的基础信息载体 | 大模型只能识别 Token；Token 数量决定推理深度；精细管控 = 降低成本 + 提高思考质量 |
+| **Skill** | 可复用功能模块，AI 的「能力包」 | 本质是文本而非可执行程序；行业统一标准为 OpenAI Function Calling 格式；Skill 清单 = Agent 的战斗力 |
+| **Prompt** | AI 的「编程语言」 | 三种类型：任务 Prompt / 角色 Prompt / 思维 Prompt；好的 Prompt 让普通模型变 Agent |
+| **RAG** | 让 AI 开卷考试 | 知识是冻死的（训练截止）+ 喜欢胡说（幻觉）→ 实时检索外部知识再生成答案 |
+| **MCP** | AI 世界的 USB-C | 统一外部资源通信协议；有 MCP = Agent，没有 MCP = 问答工具；缺点是绑定体系 |
+| **SDD** | Skill Definition Document，技能定义规范 | Agent 生态的基础；让不同开发者开发的 Skill 互相调用 |
+| **Harness** | 驾驭工程，Agent 的缰绳 | 上下文统筹/工具调用/沙箱/权限/日志/审核；Demo → 生产级的关键 |
+
+### 一句话总结
+
+> 行业竞争的下半场，已经不是「谁的模型更强」的军备竞赛，而是「谁能把这些七巧板拼得更快、更稳、成本更低」的效率之争。
+
+## Prompt 工程三板斧
+
+Prompt 工程的三个核心技术——Few-shot（格式稳定）、Chain-of-Thought（推理准确）、Self-Consistency（答案稳定）——是 Agent 推理能力的基础支撑。详见 [[prompt-engineering-trilogy|Prompt 工程三板斧]]。
