@@ -294,3 +294,5 @@ description: "热点追踪与多平台内容创作技能"
 ---
 
 > 🎯 **下一步**：[[03-主流Agent工具|第三章：主流 Agent 工具]]——全面对比 Claude Code / Codex / OpenClaw / Hermes 四大工具。
+>
+> 📖 **延伸阅读**：[[../../Wiki/wiki/concepts/ai-agent#七大核心工程模块|AI Agent 七大核心工程模块]]——从 Token/Skill/Prompt/RAG/MCP/SDD/Harness 三层架构理解 Agent 的全景技术栈。
