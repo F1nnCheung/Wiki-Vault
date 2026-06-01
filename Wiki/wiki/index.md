@@ -184,6 +184,12 @@ updated: 2026-06-01
 - [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
 - [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
 - [AI Agent 学习指南](../../教程/AI%20Agent/AI%20Agent%20学习指南.md) — 📖 综合教程（5 章），涵盖：Agent 基础概念 → 核心架构（Harness/记忆/压缩/自进化）→ 主流工具（Claude Code/Codex/OpenClaw/Hermes）→ 多 Agent 协作（Agentic Engineering/编排框架）→ 实战指南（安装/配置/安全/集成）
+- [LLM 与 Prompt 工程学习指南](../../教程/LLM与Prompt工程/LLM与Prompt工程学习指南.md) — 🆕 第 1 周教程：LLM 底层认知 → Prompt 工程三板斧 → 8 套代码专用 Prompt 模板 → Spec-Driven 开发
+- [Rule 与 Skills 学习指南](../../教程/Rule与Skills/Rule与Skills学习指南.md) — 🆕 第 2 周教程：Karpathy 4 条 + 辰北 8 条规则 → Skills 概念与封装 → 6 个开发常用 Skill → 分级管理与角色定制
+- [Dify 平台实战指南](../../教程/Dify平台实战/Dify平台实战指南.md) — 🆕 第 4 周教程：Dify 私有化部署 → RAG 管线搭建 → API 对接 → 企业级 LLMOps
+- [Coze 平台实战指南](../../教程/Coze平台实战/Coze平台实战指南.md) — 🆕 第 5 周教程：扣子 Agent 快速上手 → 可视化工作流编排 → 多平台发布 → 与本地开发环境集成
+- [MCP 与本地部署学习指南](../../教程/MCP与本地部署/MCP与本地部署学习指南.md) — 🆕 第 6 周教程：MCP 协议与 Client-Server 架构 → Function Calling 工具调度器 → Ollama 本地私有化部署
+- [LLMOps 与工程化落地指南](../../教程/LLMOps与工程化/LLMOps与工程化指南.md) — 🆕 第 8 周教程：MVP 七层架构 → LLMOps 监控面板 → AI 代码安全审计 → 个人 AI 资产沉淀
 
 ## 原始资料
 
