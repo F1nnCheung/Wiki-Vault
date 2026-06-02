@@ -7,7 +7,7 @@ updated: 2026-05-28
 sources:
   - Wiki/wiki/topics/codex-guide.md
   - Wiki/wiki/entities/codex.md
-  - 教程/学习AI/03-AI编码工具/AI Coding 学习计划.md
+  - 教程/学习AI/03-AI编码工具/00-00-AI Coding 学习计划.md
 related:
   - 01-介绍与安装.md
   - 03-适用场景.md

@@ -270,4 +270,4 @@ mkdir -p ~/.claude/skills/api-generator/templates
 
 ---
 
-> 📖 完成第 2 周学习后，进入 [[../03-AI编码工具/AI Coding 学习计划|第 3 周：AI 编码工具全栈 + Vibe Coding]]——吃透四大主流 AI 代码助手，掌握自然语言编程范式。
+> 📖 完成第 2 周学习后，进入 [[../03-AI编码工具/00-AI Coding 学习计划|第 3 周：AI 编码工具全栈 + Vibe Coding]]——吃透四大主流 AI 代码助手，掌握自然语言编程范式。

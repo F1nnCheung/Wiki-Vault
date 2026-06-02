@@ -8,7 +8,7 @@ sources:
   - Wiki/wiki/topics/hermes-agent-guide.md
   - Wiki/wiki/entities/hermes-agent.md
   - Wiki/wiki/concepts/agent-self-evolution.md
-  - 教程/学习AI/03-AI编码工具/AI Coding 学习计划.md
+  - 教程/学习AI/03-AI编码工具/00-00-AI Coding 学习计划.md
 related:
   - 01-OpenClaw.md
   - 03-深度对比.md

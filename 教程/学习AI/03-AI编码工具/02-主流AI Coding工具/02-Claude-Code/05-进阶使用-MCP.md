@@ -7,7 +7,7 @@ updated: 2026-05-13
 sources:
   - Wiki/wiki/topics/claude-code-mcp-ecosystem.md
   - Wiki/wiki/entities/mcp.md
-  - 教程/学习AI/03-AI编码工具/AI Coding 学习计划.md
+  - 教程/学习AI/03-AI编码工具/00-00-AI Coding 学习计划.md
 related:
   - 04-进阶使用-Skill.md
   - 06-高阶指令.md

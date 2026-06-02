@@ -165,4 +165,4 @@ AGENT_CONFIG = {
 
 ---
 
-> 📖 完成第 6 周学习后，进入 [[../03-AI编码工具/AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。
+> 📖 完成第 6 周学习后，进入 [[../03-AI编码工具/00-AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。
