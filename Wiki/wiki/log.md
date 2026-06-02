@@ -1,5 +1,13 @@
 # 操作日志
 
+## [2026-06-02] refactor | 分章节完善 LLM 与 Prompt 工程学习指南
+
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/01-LLM底层认知.md（LLM 训练三阶段、涌现能力、规模定律、Transformer 原理、Token 机制、幻觉四种类型+六大抑制方法、模型选型+Token 效率+推理模型注意）
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/02-Prompt工程核心.md（CRISPE/ROLE/R-T-F 框架、基础三板斧深度扩展、高级推理技术 ReAct/ToT/Prompt Chaining、技术选型决策树、8 套代码模板、结构化输出、8 个常见坑）
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/03-Prompt实战进阶.md（Spec-Driven 开发+Spec 文件结构、需求拆解、Bug 修复 CoT+ReAct 混合、工业级代码模板、Prompt 评估体系 PEEM/LLM-as-Judge、A/B 测试五步法、注入安全三层防御、版本管理+测试自动化）
+- 重写页面：教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md（精简为 TOC/总纲页，链接至三个分章）
+- 摘要：将原来 811 行单体教程拆分为 3 个独立章节文件（总计约 1150 行），新增内容：LLM 训练基础（预训练/SFT/RLHF）、涌现能力与规模定律、ReAct/ToT/Prompt Chaining 高级推理技术、Prompt 评估体系（PEEM/A/B 测试/LLM-as-Judge）、Prompt 注入安全三层防御。所有新增知识点均通过联网搜索补充最新 2026 年研究成果
+
 ## [2026-06-02] improve | 完善 LLM 与 Prompt 工程学习指南
 
 - 更新页面：教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md
