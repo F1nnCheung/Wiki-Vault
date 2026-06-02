@@ -11,7 +11,7 @@ sources:
 related:
   - ../AI Coding/AI Coding 学习计划.md
   - ../AI Agent/AI Agent 学习指南.md
-  - ../LLMOps与工程化/LLMOps与工程化指南.md
+  - ../LLMOps与工程化/00-LLMOps与工程化指南.md
 ---
 
 # MCP 与本地部署学习指南

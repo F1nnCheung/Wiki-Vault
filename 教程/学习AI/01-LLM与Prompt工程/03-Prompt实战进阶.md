@@ -455,7 +455,7 @@ echo "📈 结果: $PASS/$TOTAL 通过 ($FAIL 失败)"
 | CLAUDE.md 规则——约束 AI 的硬框架 | [[Wiki/wiki/topics/claude-md-12-rules\|CLAUDE.md 12 条规则]] |
 | Prompt 三板斧原理 + 动态路由 + LangChain 实现 | [[Wiki/wiki/concepts/prompt-engineering-trilogy\|Prompt 工程三板斧]] |
 | AI Agent 概念——安全与权限控制 | [[Wiki/wiki/concepts/ai-agent\|AI Agent 概念页]] |
-| LLMOps 与工程化指南 | [[../../09-LLMOps与工程化/LLMOps与工程化指南\|第 8 周：LLMOps 与工程化]] |
+| LLMOps 与工程化指南 | [[../../09-LLMOps与工程化/00-LLMOps与工程化指南\|第 8 周：LLMOps 与工程化]] |
 | 完整学习路径总览 | [[../00-完整学习路径总览\|学习路径总览]] |
 
 ---
