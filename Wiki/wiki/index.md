@@ -13,7 +13,7 @@ updated: 2026-06-01
 
 ## 🗺️ AI Coding 学习路线
 - [AI Coding 学习路线](topics/ai-coding-learning-plan.md) — 从零开始的系统学习路径
-- [AI Coding 完整学习计划](../../教程/AI Coding/AI Coding 学习计划.md) — 📖 综合教程：从入门到精通（含概念/工具/Agent/拓展）
+- [AI Coding 完整学习计划](../../教程/学习AI/03-AI编码工具/AI Coding 学习计划.md) — 📖 综合教程：从入门到精通（含概念/工具/Agent/拓展）
 - [AI Coding 发展史](topics/ai-coding-history.md) — 2024-2026 发展历程与市场格局
 - [AI Coding 核心概念](topics/ai-coding-concepts.md) — Vibe Coding、Agent、MCP、Skills、Claw、Hermes 等
 - [AI Coding 工具全景对比](topics/ai-coding-tools-comparison.md) — Claude Code / Cursor / Codex / Trae / Copilot 对比
@@ -152,7 +152,7 @@ updated: 2026-06-01
 
 ### 🚀 AI 原生创业
 - [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
-- [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md) — 📖 综合教程（5 章）：OPC 概述与核心理念 → 六大商业模式详解 → 从零启动 → AI 工具链 → 风险管理与长期发展。🆕 已纳入 8 周学习计划第 9 周
+- [OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/OPC 一人公司学习指南.md) — 📖 综合教程（5 章）：OPC 概述与核心理念 → 六大商业模式详解 → 从零启动 → AI 工具链 → 风险管理与长期发展。🆕 已纳入 8 周学习计划第 9 周
 
 ### 📚 RAG 与知识库技术
 - [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
@@ -179,19 +179,19 @@ updated: 2026-06-01
 
 ## 输出产物
 
-- [知识库技术学习指南](../../教程/知识库技术/知识库技术学习指南.md) — 📖 总纲（451 行），含 [[../../教程/知识库技术/01-知识库技术总览|7 章详细教程]]：总览 → RAG 架构 → 优化 20 法 → 知识图谱 → LLM Wiki → 向量数据库 → 工具选型 — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
-- [AI Coding 学习计划](../../教程/AI Coding/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
+- [知识库技术学习指南](../../教程/学习AI/04-知识库与RAG/知识库技术学习指南.md) — 📖 总纲（451 行），含 [[../../教程/学习AI/04-知识库与RAG/01-知识库技术总览|7 章详细教程]]：总览 → RAG 架构 → 优化 20 法 → 知识图谱 → LLM Wiki → 向量数据库 → 工具选型 — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
+- [AI Coding 学习计划](../../教程/学习AI/03-AI编码工具/AI Coding 学习计划.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
 - [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
-- [OPC 一人公司学习指南](../../教程/OPC/OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
-- [AI Agent 学习指南](../../教程/AI%20Agent/AI%20Agent%20学习指南.md) — 📖 综合教程（5 章），涵盖：Agent 基础概念 → 核心架构（Harness/记忆/压缩/自进化）→ 主流工具（Claude Code/Codex/OpenClaw/Hermes）→ 多 Agent 协作（Agentic Engineering/编排框架）→ 实战指南（安装/配置/安全/集成）
-- [OPC 一人公司学习指南](../../教程/OPC/OPC%20一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险管理与长期发展。**第 9 周 AI 创业落地配套教程**
-- [LLM 与 Prompt 工程学习指南](../../教程/LLM与Prompt工程/LLM与Prompt工程学习指南.md) — 🆕 第 1 周教程：LLM 底层认知 → Prompt 工程三板斧 → 8 套代码专用 Prompt 模板 → Spec-Driven 开发
-- [Rule 与 Skills 学习指南](../../教程/Rule与Skills/Rule与Skills学习指南.md) — 🆕 第 2 周教程：Karpathy 4 条 + 辰北 8 条规则 → Skills 概念与封装 → 6 个开发常用 Skill → 分级管理与角色定制
-- [Dify 平台实战指南](../../教程/Dify平台实战/Dify平台实战指南.md) — 🆕 第 4 周教程：Dify 私有化部署 → RAG 管线搭建 → API 对接 → 企业级 LLMOps
-- [Coze 平台实战指南](../../教程/Coze平台实战/Coze平台实战指南.md) — 🆕 第 5 周教程：扣子 Agent 快速上手 → 可视化工作流编排 → 多平台发布 → 与本地开发环境集成
-- [MCP 与本地部署学习指南](../../教程/MCP与本地部署/MCP与本地部署学习指南.md) — 🆕 第 6 周教程：MCP 协议与 Client-Server 架构 → Function Calling 工具调度器 → Ollama 本地私有化部署
-- [LLMOps 与工程化落地指南](../../教程/LLMOps与工程化/LLMOps与工程化指南.md) — 🆕 第 8 周教程：MVP 七层架构 → LLMOps 监控面板 → AI 代码安全审计 → 个人 AI 资产沉淀
-- [完整学习路径总览](../../教程/完整学习路径总览.md) — 🆕 学习路径汇总文档：主线 9 周路径 + 5 条角色分层路径 + 决策树 + 避坑清单 + 资源全索引
+- [OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
+- [AI Agent 学习指南](../../教程/学习AI/06-AI智能体/AI%20Agent%20学习指南.md) — 📖 综合教程（5 章），涵盖：Agent 基础概念 → 核心架构（Harness/记忆/压缩/自进化）→ 主流工具（Claude Code/Codex/OpenClaw/Hermes）→ 多 Agent 协作（Agentic Engineering/编排框架）→ 实战指南（安装/配置/安全/集成）
+- [OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/OPC%20一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险管理与长期发展。**第 9 周 AI 创业落地配套教程**
+- [LLM 与 Prompt 工程学习指南](../../教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md) — 🆕 第 1 周教程：LLM 底层认知 → Prompt 工程三板斧 → 8 套代码专用 Prompt 模板 → Spec-Driven 开发
+- [Rule 与 Skills 学习指南](../../教程/学习AI/02-Rule与Skills/Rule与Skills学习指南.md) — 🆕 第 2 周教程：Karpathy 4 条 + 辰北 8 条规则 → Skills 概念与封装 → 6 个开发常用 Skill → 分级管理与角色定制
+- [Dify 平台实战指南](../../教程/学习AI/05-Dify平台实战/Dify平台实战指南.md) — 🆕 第 4 周教程：Dify 私有化部署 → RAG 管线搭建 → API 对接 → 企业级 LLMOps
+- [Coze 平台实战指南](../../教程/学习AI/07-Coze平台实战/Coze平台实战指南.md) — 🆕 第 5 周教程：扣子 Agent 快速上手 → 可视化工作流编排 → 多平台发布 → 与本地开发环境集成
+- [MCP 与本地部署学习指南](../../教程/学习AI/08-MCP与本地部署/MCP与本地部署学习指南.md) — 🆕 第 6 周教程：MCP 协议与 Client-Server 架构 → Function Calling 工具调度器 → Ollama 本地私有化部署
+- [LLMOps 与工程化落地指南](../../教程/学习AI/09-LLMOps与工程化/LLMOps与工程化指南.md) — 🆕 第 8 周教程：MVP 七层架构 → LLMOps 监控面板 → AI 代码安全审计 → 个人 AI 资产沉淀
+- [完整学习路径总览](../../教程/学习AI/00-完整学习路径总览.md) — 🆕 学习路径汇总文档：主线 9 周路径 + 5 条角色分层路径 + 决策树 + 避坑清单 + 资源全索引
 
 ## 原始资料
 
