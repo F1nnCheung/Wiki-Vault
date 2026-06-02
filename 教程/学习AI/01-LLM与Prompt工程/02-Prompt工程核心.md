@@ -11,7 +11,7 @@ sources:
 related:
   - 01-LLM底层认知.md
   - 03-Prompt实战进阶.md
-  - ../02-Rule与Skills/Rule与Skills学习指南.md
+  - ../02-Rule与Skills/00-Rule与Skills学习指南.md
 ---
 
 # 第二章：Prompt 工程核心

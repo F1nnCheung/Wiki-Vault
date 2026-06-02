@@ -10,7 +10,7 @@ sources:
 related:
   - 01-LLM底层认知.md
   - 02-Prompt工程核心.md
-  - ../02-Rule与Skills/Rule与Skills学习指南.md
+  - ../02-Rule与Skills/00-Rule与Skills学习指南.md
 ---
 
 # 第三章：Prompt 实战进阶
@@ -460,4 +460,4 @@ echo "📈 结果: $PASS/$TOTAL 通过 ($FAIL 失败)"
 
 ---
 
-> 📖 完成第 1 周学习后，进入 [[../02-Rule与Skills/Rule与Skills学习指南\|第 2 周：Rule 规则体系 + Skills 技能封装]]——学会用规则约束 AI，用技能封装高频开发能力。
+> 📖 完成第 1 周学习后，进入 [[../02-Rule与Skills/00-Rule与Skills学习指南\|第 2 周：Rule 规则体系 + Skills 技能封装]]——学会用规则约束 AI，用技能封装高频开发能力。

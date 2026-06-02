@@ -446,7 +446,7 @@
 
 - **新增产物**（6 套新教程，覆盖学习计划 6 个缺失章节）：
   - 教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md — 第 1 周：LLM 底层认知 + Prompt 工程三板斧 + 8 套代码模板 + Spec-Driven 开发
-  - 教程/学习AI/02-Rule与Skills/Rule与Skills学习指南.md — 第 2 周：Karpathy 4 条 + 辰北 8 条规则 + Skills 封装实战 + 6 个开发常用 Skill
+  - 教程/学习AI/02-Rule与Skills/00-Rule与Skills学习指南.md — 第 2 周：Karpathy 4 条 + 辰北 8 条规则 + Skills 封装实战 + 6 个开发常用 Skill
   - 教程/学习AI/05-Dify平台实战/Dify平台实战指南.md — 第 4 周：Dify 私有化部署 + RAG 管线搭建 + API 对接 + 企业级 LLMOps
   - 教程/学习AI/07-Coze平台实战/Coze平台实战指南.md — 第 5 周：扣子 Agent 快速上手 + 可视化工作流编排 + 多平台发布 + API 集成
   - 教程/学习AI/08-MCP与本地部署/MCP与本地部署学习指南.md — 第 6 周：MCP 协议详解 + Function Calling 调度器 + Ollama 本地部署 + 分层调用策略
