@@ -10,7 +10,7 @@ sources:
   - Wiki/wiki/topics/claude-code-skills-ecosystem.md
   - Wiki/wiki/entities/everything-claude-code.md
 related:
-  - ../LLM与Prompt工程/LLM与Prompt工程学习指南.md
+  - ../LLM与Prompt工程/00-LLM与Prompt工程学习指南.md
   - ../AI Coding/AI Coding 学习计划.md
 ---
 

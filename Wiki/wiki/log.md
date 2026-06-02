@@ -5,12 +5,12 @@
 - 新增页面：教程/学习AI/01-LLM与Prompt工程/01-LLM底层认知.md（LLM 训练三阶段、涌现能力、规模定律、Transformer 原理、Token 机制、幻觉四种类型+六大抑制方法、模型选型+Token 效率+推理模型注意）
 - 新增页面：教程/学习AI/01-LLM与Prompt工程/02-Prompt工程核心.md（CRISPE/ROLE/R-T-F 框架、基础三板斧深度扩展、高级推理技术 ReAct/ToT/Prompt Chaining、技术选型决策树、8 套代码模板、结构化输出、8 个常见坑）
 - 新增页面：教程/学习AI/01-LLM与Prompt工程/03-Prompt实战进阶.md（Spec-Driven 开发+Spec 文件结构、需求拆解、Bug 修复 CoT+ReAct 混合、工业级代码模板、Prompt 评估体系 PEEM/LLM-as-Judge、A/B 测试五步法、注入安全三层防御、版本管理+测试自动化）
-- 重写页面：教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md（精简为 TOC/总纲页，链接至三个分章）
+- 重写页面：教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md（精简为 TOC/总纲页，链接至三个分章）
 - 摘要：将原来 811 行单体教程拆分为 3 个独立章节文件（总计约 1150 行），新增内容：LLM 训练基础（预训练/SFT/RLHF）、涌现能力与规模定律、ReAct/ToT/Prompt Chaining 高级推理技术、Prompt 评估体系（PEEM/A/B 测试/LLM-as-Judge）、Prompt 注入安全三层防御。所有新增知识点均通过联网搜索补充最新 2026 年研究成果
 
 ## [2026-06-02] improve | 完善 LLM 与 Prompt 工程学习指南
 
-- 更新页面：教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md
+- 更新页面：教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md
 - 新增内容：
   - 「核心认知」章节（Prompt/Rule/Skills 三者协同模型）
   - 三板斧深度扩展：静态/动态 Few-shot、Zero-shot/Few-shot CoT 对比、SC 参数建议、组合效果表、动态路由策略、六个常见坑、与 Agent 的关系
@@ -445,7 +445,7 @@
 ## [2026-06-01] output | 生成 8 周 AI 全栈学习计划配套教程（6 套新教程）
 
 - **新增产物**（6 套新教程，覆盖学习计划 6 个缺失章节）：
-  - 教程/学习AI/01-LLM与Prompt工程/LLM与Prompt工程学习指南.md — 第 1 周：LLM 底层认知 + Prompt 工程三板斧 + 8 套代码模板 + Spec-Driven 开发
+  - 教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md — 第 1 周：LLM 底层认知 + Prompt 工程三板斧 + 8 套代码模板 + Spec-Driven 开发
   - 教程/学习AI/02-Rule与Skills/Rule与Skills学习指南.md — 第 2 周：Karpathy 4 条 + 辰北 8 条规则 + Skills 封装实战 + 6 个开发常用 Skill
   - 教程/学习AI/05-Dify平台实战/Dify平台实战指南.md — 第 4 周：Dify 私有化部署 + RAG 管线搭建 + API 对接 + 企业级 LLMOps
   - 教程/学习AI/07-Coze平台实战/Coze平台实战指南.md — 第 5 周：扣子 Agent 快速上手 + 可视化工作流编排 + 多平台发布 + API 集成
