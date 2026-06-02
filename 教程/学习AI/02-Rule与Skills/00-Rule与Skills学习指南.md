@@ -11,7 +11,7 @@ sources:
   - Wiki/wiki/entities/everything-claude-code.md
 related:
   - ../01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md
-  - ../03-AI编码工具/00-AI Coding 学习计划.md
+  - ../03-AI-编码/00-AI Coding 学习计划.md
 ---
 
 # Rule 与 Skills 学习指南
@@ -110,4 +110,4 @@ Skills（方法论层）→ 被 AI 自动发现、按需调用
 
 ---
 
-> 📖 完成第 2 周学习后，进入 [[../03-AI编码工具/00-AI Coding 学习计划|第 3 周：AI 编码工具全栈 + Vibe Coding]]——吃透四大主流 AI 代码助手，掌握自然语言编程范式。
+> 📖 完成第 2 周学习后，进入 [[../03-AI-编码/00-AI Coding 学习计划|第 3 周：AI 编码工具全栈 + Vibe Coding]]——吃透四大主流 AI 代码助手，掌握自然语言编程范式。

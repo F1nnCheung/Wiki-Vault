@@ -9,7 +9,7 @@ sources:
   - Wiki/wiki/topics/claude-code-mcp-ecosystem.md
   - Wiki/wiki/concepts/ai-agent.md
 related:
-  - ../03-AI编码工具/00-AI Coding 学习计划.md
+  - ../03-AI-编码/00-AI Coding 学习计划.md
   - ../06-AI智能体/AI Agent 学习指南.md
   - ../09-LLMOps与工程化/00-LLMOps与工程化指南.md
 ---
@@ -87,4 +87,4 @@ related:
 
 ---
 
-> 📖 完成第 6 周学习后，进入 [[../03-AI编码工具/00-AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。
+> 📖 完成第 6 周学习后，进入 [[../03-AI-编码/00-AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。
