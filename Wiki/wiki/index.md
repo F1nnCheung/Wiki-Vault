@@ -139,6 +139,7 @@ updated: 2026-06-03
 - [Hermes 个人知识管理 RAG 检索](topics/hermes-rag-setup.md) — Ollama Embedding + ChromaDB，自然语言检索所有笔记
 
 ### 📓 Obsidian 知识管理
+- [Obsidian 学习指南](../../教程/Obsidian/00-Obsidian学习指南.md) — 📖 综合教程（9 章）：入门理念 → 安装设置 → 核心功能 → 知识组织 → 插件系统 → 信息捕获 → Git 同步 → AI 集成 → 对比选型
 - [Obsidian 入门指南](topics/obsidian-getting-started.md) — PARA / Zettelkasten / MOC 方法论 + 20 个核心插件 + 从零搭建实操
 - [Obsidian AI 集成方案](topics/obsidian-ai-integration.md) — 五种方案对比：Claude Code CLI / Copilot+DeepSeek / Claudian / Ollama / Web Clipper
 - [Obsidian 信息收集工作流](topics/obsidian-capture-workflow.md) — 浏览器 Web Clipper / 微信 Messager / 笔记同步助手，三种入口打通
@@ -148,7 +149,7 @@ updated: 2026-06-03
 
 ### 🏠 智能家居与 AI Agent
 - [Hermes + Home Assistant 集成](topics/hermes-home-assistant-integration.md) — 自然语言控制全家设备，五大场景实战（条件逻辑/Cron/Telegram/记忆/门铃对讲）
-- [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章）：概览 → HA 基础 → Docker 部署 → 品牌集成 → AI 语音控制 → 远程访问进阶
+- [智能家居学习指南](../../教程/智能家居/00-智能家居学习指南.md) — 📖 综合教程（6 章）：概览 → HA 基础 → Docker 部署 → 品牌集成 → AI 语音控制 → 远程访问进阶
 
 ### 🚀 AI 原生创业
 - [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
@@ -183,7 +184,8 @@ updated: 2026-06-03
 
 - [00-知识库技术学习指南](../../教程/学习AI/06-知识库与RAG/00-知识库技术学习指南.md) — 📖 总纲（451 行），含 [[../../教程/学习AI/06-知识库与RAG/01-知识库技术总览|7 章详细教程]]：总览 → RAG 架构 → 优化 20 法 → 知识图谱 → LLM Wiki → 向量数据库 → 工具选型 — 📖 综合教程（451 行），涵盖：RAG 三大架构 / RAG 优化 20 法 / 知识图谱 / 代码知识图谱 / LLM Wiki 范式 / 向量数据库 / 工具生态
 - [AI Coding 学习计划](../../教程/学习AI/05-AI Coding/00-AI Coding学习指南.md) — 📖 综合教程（1072 行），涵盖：发展历程与核心概念 → 五大工具完整教程（Claude Code/Cursor/Trae/Codex/Copilot）→ Agent 框架（OpenClaw/Hermes）→ 拓展使用（Obsidian 知识库/Superpowers+gstack）→ 按角色学习路线图
-- [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
+- [智能家居学习指南](../../教程/智能家居/00-智能家居学习指南.md) — 📖 综合教程（6 章），涵盖：概览 → HA 基础 → Docker 部署 → 五大品牌集成 → AI 语音控制与自动化 → 远程访问与进阶
+- [Obsidian 学习指南](../../教程/Obsidian/00-Obsidian学习指南.md) — 📖 综合教程（9 章），涵盖：入门理念 → 安装设置 → 核心功能 → 知识组织 → 插件系统 → 信息捕获 → Git 同步 → AI 集成 → 对比选型
 - [00-OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/00-OPC 一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险与长期发展
 - [00-AI Agent 学习指南](../../教程/学习AI/04-AI Agent/AI%20Agent%20学习指南.md) — 📖 综合教程（5 章），涵盖：Agent 基础概念 → 核心架构（Harness/记忆/压缩/自进化）→ 主流工具（Claude Code/Codex/OpenClaw/Hermes）→ 多 Agent 协作（Agentic Engineering/编排框架）→ 实战指南（安装/配置/安全/集成）
 - [00-OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/OPC%20一人公司学习指南.md) — 📖 综合教程（5 章），涵盖：OPC 概念 → 六大商业模式 → 从零启动四阶段 → AI 工具链 → 风险管理与长期发展。**第 9 周 AI 创业落地配套教程**
