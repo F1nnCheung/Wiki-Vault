@@ -545,3 +545,17 @@
   - 教程/智能家居/06-远程访问与进阶.md（Dashboard 美化段落新增 Hass Panel 入口）
 
 - **摘要**：处理 13 篇新增资料，覆盖五个领域。核心产出：(1) OPC 从 2 篇扩展到 9 篇资料、2 个 wiki 页面（概念+工具链专题），形成从概念→商业模式→政策→AI 工具链→实战案例的完整知识体系；(2) RAG 从三种架构扩展到五类方案全谱系（+LightRAG/PathRAG/Vectorless RAG）+ 生产级架构设计专题页；(3) Dify 从平台对比延伸到架构详解+本地部署实操；(4) HA 新增 Hass Panel 中控面板完整指南；(5) CC 新增面向绝对新手的避坑速通指南。知识库文章总数从 134 → 147 篇。
+## [2026-06-03] reorder | 调整 LLM 教程章节顺序
+
+- **原因**：用户指出应先介绍「什么是大模型、有哪些大模型」再介绍「如何部署」，遵循先理解后部署的教学逻辑
+- **重命名**：
+  - `教程/学习AI/01-LLM与Prompt工程/01-Ollama本地部署.md` → `02-Ollama本地部署.md`
+  - `教程/学习AI/01-LLM与Prompt工程/02-LLM底层认知.md` → `01-LLM底层认知.md`
+- **更新引用（跨文件 wikilink 修正，共 6 处）**：
+  - `00-LLM与Prompt工程学习指南.md`：核心认知图、学习路线图、分章导航、每日清单中的章节引用
+  - `03-Prompt工程核心.md`：frontmatter `related: 02-LLM底层认知.md` → `01-LLM底层认知.md`
+  - `04-Prompt实战进阶.md`：frontmatter `related: 02-LLM底层认知.md` → `01-LLM底层认知.md`
+  - `03-MCP/02-Function Calling.md`：frontmatter `related: 01-Ollama本地部署.md` → `02-Ollama本地部署.md`；正文链接 `[[01-Ollama本地部署|第三章]]` → `[[02-Ollama本地部署|第三章]]`
+  - `07-Dify平台实战/02-私有化部署.md`：正文链接 `[[../../01-LLM与Prompt工程/01-Ollama本地部署|第一章]]` → `[[../../01-LLM与Prompt工程/02-Ollama本地部署|第二章]]`
+- **新顺序**：`01-LLM底层认知 → 02-Ollama本地部署 → 03-Prompt工程核心 → 04-Prompt实战进阶`
+- **站点数据已重建**：`Wiki/site/data/data.json`
