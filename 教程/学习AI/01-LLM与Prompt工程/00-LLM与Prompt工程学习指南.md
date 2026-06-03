@@ -10,7 +10,7 @@ sources:
   - Wiki/wiki/topics/ai-coding-concepts.md
 related:
   - ../02-Rule与Skills/00-Rule与Skills学习指南.md
-  - ../05-AI Coding/00-AI Coding 学习计划.md
+  - ../05-AI Coding/00-AI Coding学习指南.md
 ---
 
 # LLM 与 Prompt 工程学习指南

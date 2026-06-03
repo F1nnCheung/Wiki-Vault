@@ -7,7 +7,7 @@ updated: 2026-05-11
 sources:
   - Wiki/wiki/topics/obsidian-llm-wiki-practice.md
   - Wiki/wiki/topics/obsidian-ai-integration.md
-  - 教程/学习AI/05-AI Coding/00-00-AI Coding 学习计划.md
+  - 教程/学习AI/05-AI Coding/00-00-AI Coding学习指南.md
 related:
   - 02-Superpowers-gstack进阶闭环.md
   - 03-其他拓展工具与场景.md

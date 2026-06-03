@@ -6,7 +6,7 @@ created: 2026-05-11
 updated: 2026-05-11
 sources:
   - Wiki/wiki/topics/ai-coding-tools-comparison.md
-  - 教程/学习AI/05-AI Coding/00-00-AI Coding 学习计划.md
+  - 教程/学习AI/05-AI Coding/00-00-AI Coding学习指南.md
 related:
   - 01-工具全景对比.md
 ---

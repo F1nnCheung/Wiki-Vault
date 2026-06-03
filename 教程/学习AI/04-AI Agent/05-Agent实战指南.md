@@ -357,7 +357,7 @@ AI Agent 作为 OPC（一人公司）的核心生产力：
 1. **深入 Agent 架构**：[[Wiki/wiki/topics/hermes-architecture-deep-dive|Hermes 五层架构深度拆解]]
 2. **搭建多 Agent 系统**：[[Wiki/wiki/topics/hermes-multi-agent|多 Agent 团队搭建]]
 3. **Agent + 知识库**：[[Wiki/wiki/topics/hermes-obsidian-integration|Obsidian 知识库集成]]
-4. **Agent 编程**：[[../AI Coding/AI Coding 学习计划|AI Coding 完整学习计划]]
+4. **Agent 编程**：[[../05-AI Coding/00-AI Coding学习指南|AI Coding 学习指南]]
 
 ---
 

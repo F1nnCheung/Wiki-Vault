@@ -7,7 +7,7 @@ updated: 2026-05-11
 sources:
   - Wiki/wiki/topics/openclaw-guide.md
   - Wiki/wiki/entities/openclaw.md
-  - 教程/学习AI/05-AI Coding/00-00-AI Coding 学习计划.md
+  - 教程/学习AI/05-AI Coding/00-00-AI Coding学习指南.md
 related:
   - 02-Hermes-Agent.md
   - 03-深度对比.md

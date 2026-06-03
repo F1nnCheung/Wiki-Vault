@@ -8,7 +8,7 @@ sources:
   - Wiki/wiki/topics/claude-code-skills-ecosystem.md
   - Wiki/wiki/concepts/skills-concept.md
   - Wiki/wiki/entities/everything-claude-code.md
-  - 教程/学习AI/05-AI Coding/00-00-AI Coding 学习计划.md
+  - 教程/学习AI/05-AI Coding/00-00-AI Coding学习指南.md
 related:
   - 03-基本使用.md
   - 05-进阶使用-MCP.md

@@ -78,7 +78,7 @@
   - 教程/学习AI/04-AI Agent/05-Agent实战指南.md（从零搭建 / 规则文件 / 安全配置 / Workspace / Obsidian 集成 / 进阶场景）
 - **更新页面**：Wiki/wiki/index.md（新增输出产物条目）
 - **摘要**：基于知识库 60+ Agent 相关页面，系统化整理了从入门到进阶的 AI Agent 完整学习教程（6 个文件，约 4300 行），覆盖概念→架构→工具→协作→实战五大阶段。
-- **教程同步**：教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md（末尾「推荐进一步阅读」添加了 00-AI Agent 学习指南链接）
+- **教程同步**：教程/学习AI/05-AI Coding/00-AI Coding学习指南.md（末尾「推荐进一步阅读」添加了 00-AI Agent 学习指南链接）
 - **更新页面**：Wiki/wiki/overview.md（输出产物由 4 份更新为 5 份）
 - **网站同步**：Wiki/site/data/data.json 已重建（85 wiki 页 + 18 概念 + 17 实体 + 43 专题 + 3 对比 + 128 原始文章 + 63 教程）
 
@@ -218,19 +218,19 @@
   - 教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/02-基本使用与Spec-Driven开发.md（全面重写：界面速览/Plan+Steering+Fork/AGENTS.md/TDD闭环/Git Worktree/Plugin+Skill+MCP三层）
   - 教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/03-适用场景.md（全面重写：从「4%配角」→「65%日常首选」，Codex vs CC 分工/场景矩阵/组合策略）
   - 教程/学习AI/05-AI Coding/02-主流AI Coding工具/01-工具全景对比.md（Codex 条目更新：从「全流程自动化」→「AI Agent 操作平台」，工具占比更新）
-  - 教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md（Codex 章节全面更新：四大形态/核心工作流/适用场景表格/工具占比更新）
+  - 教程/学习AI/05-AI Coding/00-AI Coding学习指南.md（Codex 章节全面更新：四大形态/核心工作流/适用场景表格/工具占比更新）
 - **摘要**：处理 Codex（12篇）+ 知识库技术（4篇）共 16 篇新增资料。Codex 从过时的「云端编程助手」定位更新为「统一 AI Agent 操作平台」，覆盖四大产品形态/沙箱/Computer Use/Automation/六阶段方法论等全部新能力。知识库技术板块新增三种 RAG 架构对比和代码知识图谱工具（GitNexus/Graphify）。本轮是优先级方案的第一批（Codex+知识库），还有 Home Assistant/OPC/VibeCoding/Claude Code增量/Obsidian增量 待处理。
 
 ## [2026-05-13] ingest | 让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘
 - **新增页面**：Wiki/wiki/topics/claude-md-12-rules.md（CLAUDE.md 12 条规则深度解析：Karpathy 原版 4 条 + 辰北 8 条增量，含每条规则的翻车现场、实验数据、完整模板和使用指南）
 - **更新页面**：Wiki/wiki/entities/claude-code.md（CLAUDE.md 章节新增 12 条规则专题引用 + related 交叉引用）、Wiki/wiki/overview.md（知识结构树新增 CLAUDE.md 规则条目 + 统计数据更新 73 篇/26 专题）、Wiki/wiki/index.md（索引新增专题页条目 + 原始资料条目）
-- **教程同步**：教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增引用）、教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md（Rule 概念段落新增延伸阅读）、教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/06-高阶指令.md（Q&A 段落新增 12 条规则引用）
+- **教程同步**：教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/02-安装与配置.md（CLAUDE.md 写作原则段落新增引用）、教程/学习AI/05-AI Coding/00-AI Coding学习指南.md（Rule 概念段落新增延伸阅读）、教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/06-高阶指令.md（Q&A 段落新增 12 条规则引用）
 - **摘要**：处理辰北 2026.05 发布的 CLAUDE.md 规则深度文章。文章基于 Karpathy 发帖吐槽 Claude 编码的三种典型翻车模式，Forrest Chang 的 4 条规则模板（12 万 star），加上作者在 30 个代码库 6 周实验中的 8 条增量规则。核心数据：失误率从 41% 降至 3%（4 条）再压 8 个百分点（12 条），合规率仅从 78% 降至 76%。专题页完整覆盖了 12 条规则的设计逻辑、防止的失败模式、真实翻车现场和实验数据。
 
 ## [2026-05-13] ingest | Everything Claude Code (ECC)
 - **新增页面**：Wiki/wiki/entities/everything-claude-code.md（实体页）、Wiki/wiki/topics/ecc-complete-guide.md（完整指南专题）
 - **更新页面**：Wiki/wiki/concepts/skills-concept.md（添加 ECC Skills 体系段落 + related 交叉引用）、Wiki/wiki/concepts/harness-engineering.md（新增第十节 ECC 标杆实践 + related）、Wiki/wiki/concepts/agentic-engineering.md（实践工具新增 ECC 条目 + related）、Wiki/wiki/entities/claude-code.md（新增 Harness 性能优化段落 + related）、Wiki/wiki/overview.md（新增第 6 核心论点 + 更新统计数据）、Wiki/wiki/index.md（索引新增 ECC 实体 + 专题 + 原始资料条目）
-- **教程同步**：教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/04-进阶使用-Skill.md（Skill 生态资源表新增 ECC + 更新时间）、教程/学习AI/05-AI Coding/04-拓展使用/03-其他拓展工具与场景.md（新增 ECC 专题章节 + 与逐个安装 Skill 的对比表 + 更新时间）、教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md（精选 Skill 表新增 ECC + Obsidian 推荐 Skill 段落新增 ECC + 4.3 章节标题更新）
+- **教程同步**：教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/04-进阶使用-Skill.md（Skill 生态资源表新增 ECC + 更新时间）、教程/学习AI/05-AI Coding/04-拓展使用/03-其他拓展工具与场景.md（新增 ECC 专题章节 + 与逐个安装 Skill 的对比表 + 更新时间）、教程/学习AI/05-AI Coding/00-AI Coding学习指南.md（精选 Skill 表新增 ECC + Obsidian 推荐 Skill 段落新增 ECC + 4.3 章节标题更新）
 - **摘要**：从 GitHub 仓库（200K+ Stars, Anthropic 黑客松获胜）和 132 页中文教程文章中提取信息，创建 ECC 实体页面（60 个 Agent / 228 个 Skill / 75 个命令 / 17 个语言规则包 / Hook 自动化 / 持续学习 / 跨 7+ 框架）和完整指南专题页面（安装/Agent 体系/Skills 生态/Hook 自动化/持续学习/安全/多 Agent 编排/跨框架/ECC 2.0/故障排除），同步更新了 5 个相关页面（skills-concept、harness-engineering、agentic-engineering、claude-code、overview）
 
 ## [2026-05-13] ingest | Superpowers 深度实战指南：从入门到精通（插件系统增量）
@@ -371,7 +371,7 @@
 ## [2026-05-10] create | AI Coding 完整学习计划（综合教程）
 - **摘要**：基于知识库全部内容，撰写一份面向新手的完整 AI Coding 学习计划，输出到 `教程/` 文件夹
 - **新增输出产物（1 个）**：
-  - 教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md — 1072 行综合教程，包含四大章节
+  - 教程/学习AI/05-AI Coding/00-AI Coding学习指南.md — 1072 行综合教程，包含四大章节
 - **教程结构**：
   - 第一部分：AI Coding 简介（发展历程 2024→2026 三阶段、6 个核心概念名词解释）
   - 第二部分：主流工具完整教程（Claude Code 安装/命令/Skill/MCP、Cursor Tab/Composer/Background Agent、Trae 四种模式、Codex 云端全流程、Copilot 概览）
@@ -385,7 +385,7 @@
 - 更新页面：Wiki/wiki/entities/superpowers.md（大幅扩展：跨 8 平台定位 + 架构全景 + 三种 Bootstrap 路径 + 14 技能详解含铁律 + 7 平台安装 + 设计哲学概述 + 调试指南 + 贡献标准）
 - 更新页面：Wiki/wiki/topics/claude-code-superpowers-workflow.md（新增跨平台 Bootstrap 路径表 + React Todo List 完整实战演练 + 补充不适用的场景）
 - 更新页面：Wiki/wiki/index.md（实体页简介更新为跨平台定位 + 新增设计哲学概念页条目）
-- 教程同步：教程/学习AI/05-AI Coding/00-AI Coding 学习计划.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
+- 教程同步：教程/学习AI/05-AI Coding/00-AI Coding学习指南.md（4.2 Superpowers+gstack 章节补充跨平台说明和设计哲学链接）
 - 摘要：处理 AgentBuff 2026-05-08 文章（1048 行）。核心新知：Superpowers 不仅是 Claude Code 插件，而是跨 8 平台方法论框架（三种 Bootstrap 路径）；每个技能有铁律+HARD-GATE+Red Flags+Common Rationalizations 四层防线；设计哲学（人的搭档语言/CSO）是全新内容；补充了 React Todo List 完整实战演练
 
 ## [2026-05-13] update | MCP 安装范围参数补充
@@ -459,7 +459,7 @@
 
 - **操作内容**：
   - 目录重命名：`教程/学习AI/03-AI编码工具` → `教程/学习AI/05-AI Coding`
-  - 文件替换：删除 `00-AI Coding 学习计划.md`，新建 `00-AI Coding学习指南.md`（精简为 200 行导航式概览，链接到 26 个已有子章节文件）
+  - 文件替换：删除 `00-AI Coding学习指南.md`，新建 `00-AI Coding学习指南.md`（精简为 200 行导航式概览，链接到 26 个已有子章节文件）
   - 批量引用更新：通过 `find -exec sed` 在 39 个文件中将 `03-AI编码工具` 替换为 `05-AI Coding`
 - **更新页面**：
   - 教程/学习AI/00-完整学习路径总览.md
@@ -492,3 +492,18 @@
 - **更新页面**：Home Page.md（dataviewjs 数组中的 AI Coding 指南链接 + 知识库技术标签）
 - **站点重建**：运行 `Wiki/site/build.py`，91 wiki 页面 + 138 原始文章 + 91 教程
 - **摘要**：统一教程目录命名风格（AI Coding / AI Agent 替代中文名），将 04/06/10 三套教程的学习指南统一加 `00-` 前缀编号，与 01/02/03/05/07/08/09 保持命名一致。全库通过 sed 批量更新引用，手动修复 sed 产生的标题误改。
+
+## [2026-06-03] refactor | 教程学习顺序重排：MCP → AI Agent → AI Coding
+
+- **操作内容**：根据"协议基础 → 智能体 → 编码应用"的递进逻辑，重排 03-08 教程目录顺序
+- **目录变更**：
+  - `03-AI Coding` → `05-AI Coding`（后移 2 位）
+  - `04-知识库与RAG` → `06-知识库与RAG`（后移 2 位）
+  - `05-Dify平台实战` → `07-Dify平台实战`（后移 2 位）
+  - `06-AI Agent` → `04-AI Agent`（前移 2 位）
+  - `07-Coze平台实战` → `08-Coze平台实战`（后移 1 位）
+  - `08-MCP与本地部署` → `03-MCP与本地部署`（前移 5 位，放在 AI Agent 和 AI Coding 之前）
+- **新顺序**：01-LLM → 02-Rule → 03-MCP → 04-AI Agent → 05-AI Coding → 06-知识库 → 07-Dify → 08-Coze → 09-LLMOps → 10-OPC
+- **技术细节**：先用临时后缀 `_TMP` 避免 mv 冲突，再单次 sed 调用 6 条 -e 表达式批量替换所有引用（避免级联误改），最后修复旧文件名 `00-AI Coding 学习计划` → `00-AI Coding学习指南`（40 处）+ CLAUDE.md 模板路径 + Agent 实战指南中的跨教程 wikilink
+- **站点重建**：运行 `Wiki/site/build.py`，91 wiki 页面 + 138 原始文章 + 91 教程
+- **摘要**：学习路径从"先学工具再补理论"改为"协议→Agent→工具"的递进结构。MCP 作为 AI 通信基础设施（03），AI Agent 基于 MCP 构建（04），AI Coding 是 Agent 的编程应用（05）——底层到上层自然递进。

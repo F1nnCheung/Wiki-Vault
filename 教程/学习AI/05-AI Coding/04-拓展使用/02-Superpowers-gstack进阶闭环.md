@@ -8,7 +8,7 @@ sources:
   - Wiki/wiki/topics/claude-code-superpowers-workflow.md
   - Wiki/wiki/entities/superpowers.md
   - Wiki/wiki/concepts/superpowers-design-philosophy.md
-  - 教程/学习AI/05-AI Coding/00-00-AI Coding 学习计划.md
+  - 教程/学习AI/05-AI Coding/00-00-AI Coding学习指南.md
 related:
   - 01-Obsidian-AI知识库工作流.md
   - 03-其他拓展工具与场景.md
