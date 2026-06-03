@@ -690,7 +690,7 @@ function renderTutorialDetail() {
   // 教程内容（已带 id 的版本）
   html += '<div class="wiki-content">' + tocResult.html + '</div>';
 
-  // 上/下一步导航
+  // 上/下一步导航（仅同文件夹内）
   const prevTut = tutorial.prev_path ? findTutorial(tutorial.prev_path) : null;
   const nextTut = tutorial.next_path ? findTutorial(tutorial.next_path) : null;
   if (prevTut || nextTut) {
@@ -699,15 +699,11 @@ function renderTutorialDetail() {
       html += '<a href="#" class="chapter-nav-link chapter-nav-prev" data-action="open-tutorial" data-tutpath="' + esc(prevTut.path) + '">' +
         '<span class="chapter-nav-label">← 上一章</span>' +
         '<span class="chapter-nav-title">' + esc(prevTut.title) + '</span></a>';
-    } else {
-      html += '<span class="chapter-nav-link chapter-nav-prev chapter-nav-empty"></span>';
     }
     if (nextTut) {
       html += '<a href="#" class="chapter-nav-link chapter-nav-next" data-action="open-tutorial" data-tutpath="' + esc(nextTut.path) + '">' +
         '<span class="chapter-nav-label">下一章 →</span>' +
         '<span class="chapter-nav-title">' + esc(nextTut.title) + '</span></a>';
-    } else {
-      html += '<span class="chapter-nav-link chapter-nav-next chapter-nav-empty"></span>';
     }
     html += '</nav>';
   }
