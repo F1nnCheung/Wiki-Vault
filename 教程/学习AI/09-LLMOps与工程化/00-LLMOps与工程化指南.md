@@ -85,7 +85,7 @@ related:
 | Superpowers + gstack 开发闭环 | [[Wiki/wiki/topics/claude-code-superpowers-workflow|Superpowers+gstack 工作流]] |
 | ID Coding — AI 编程终极愿景 | [[Wiki/wiki/concepts/id-coding|ID Coding 概念页]] |
 | Agentic Engineering | [[Wiki/wiki/concepts/agentic-engineering|Agentic Engineering]] |
-| 完整 8 周学习计划 | [[Ai学习计划/程序员专属AI全栈系统化学习计划（2026优化版）|优化版学习计划]] |
+| 完整学习路径 | [[../00-完整学习路径总览|学习路径总览]] |
 
 ---
 
