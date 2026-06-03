@@ -7,7 +7,7 @@ updated: 2026-06-02
 sources:
   - Wiki/wiki/entities/mcp.md
 related:
-  - 00-MCP与本地部署学习指南.md
+  - 00-MCP学习指南.md
   - 02-Function Calling.md
 ---
 

@@ -8,7 +8,7 @@ sources:
   - Wiki/wiki/entities/mcp.md
   - Wiki/wiki/topics/claude-code-mcp-ecosystem.md
 related:
-  - 00-MCP与本地部署学习指南.md
+  - 00-MCP学习指南.md
   - 02-Function Calling.md
 ---
 

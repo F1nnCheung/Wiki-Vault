@@ -152,4 +152,4 @@ Coze 可视化原型 → 验证核心逻辑（1 天）
 
 ---
 
-> 📖 继续学习 [[../03-MCP与本地部署/00-MCP与本地部署学习指南|第 6 周：MCP 协议 + Function Calling + Ollama 本地部署]]——掌握 Agent 生态的核心协议和本地化方案。
+> 📖 继续学习 [[../03-MCP/00-MCP学习指南|第 6 周：MCP 协议 + Function Calling + Ollama 本地部署]]——掌握 Agent 生态的核心协议和本地化方案。

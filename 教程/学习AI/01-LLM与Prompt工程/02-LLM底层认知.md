@@ -8,8 +8,8 @@ sources:
   - Wiki/wiki/overview.md
   - Wiki/wiki/topics/ai-coding-concepts.md
 related:
-  - 02-Prompt工程核心.md
-  - 03-Prompt实战进阶.md
+  - 03-Prompt工程核心.md
+  - 04-Prompt实战进阶.md
   - ../02-Rule与Skills/00-Rule与Skills学习指南.md
 ---
 
@@ -216,4 +216,4 @@ related:
 
 ---
 
-> 📖 完成本章后，进入 [[02-Prompt工程核心\|第二章：Prompt 工程核心]]——学习 Prompt 框架、三板斧技巧和 8 套代码专用模板。
+> 📖 完成本章后，进入 [[03-Prompt工程核心\|第二章：Prompt 工程核心]]——学习 Prompt 框架、三板斧技巧和 8 套代码专用模板。

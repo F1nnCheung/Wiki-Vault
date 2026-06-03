@@ -8,9 +8,9 @@ sources:
   - Wiki/wiki/entities/mcp.md
   - Wiki/wiki/concepts/ai-agent.md
 related:
-  - 00-MCP与本地部署学习指南.md
+  - 00-MCP学习指南.md
   - 01-MCP协议.md
-  - 03-Ollama本地部署.md
+  - 01-Ollama本地部署.md
 ---
 
 # 第二章：Function Calling
@@ -188,4 +188,4 @@ dispatcher.register(
 
 ---
 
-> 📖 继续学习 [[03-Ollama本地部署|第三章：Ollama 本地部署]]——本地运行大模型，零成本替代云端 API。
+> 📖 继续学习 [[01-Ollama本地部署|第三章：Ollama 本地部署]]——本地运行大模型，零成本替代云端 API。

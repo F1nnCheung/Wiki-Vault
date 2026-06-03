@@ -9,8 +9,8 @@ sources:
   - Wiki/wiki/topics/claude-code-prompt-engineering.md
   - Wiki/wiki/concepts/ai-agent.md
 related:
-  - 01-LLM底层认知.md
-  - 03-Prompt实战进阶.md
+  - 02-LLM底层认知.md
+  - 04-Prompt实战进阶.md
   - ../02-Rule与Skills/00-Rule与Skills学习指南.md
 ---
 
@@ -523,4 +523,4 @@ Prompt 1 → 验证输出 → 通过 → Prompt 2
 
 ---
 
-> 📖 完成本章后，进入 [[03-Prompt实战进阶\|第三章：Prompt 实战进阶]]——Spec-Driven 开发、Prompt 版本管理、评估体系和注入安全。
+> 📖 完成本章后，进入 [[04-Prompt实战进阶\|第三章：Prompt 实战进阶]]——Spec-Driven 开发、Prompt 版本管理、评估体系和注入安全。

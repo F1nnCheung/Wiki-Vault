@@ -9,7 +9,7 @@ sources:
   - Wiki/wiki/concepts/agentic-engineering.md
   - Wiki/wiki/concepts/harness-engineering.md
 related:
-  - ../03-MCP与本地部署/00-MCP与本地部署学习指南.md
+  - ../03-MCP/00-MCP学习指南.md
   - ../07-Dify平台实战/00-Dify平台实战指南.md
   - ../04-AI Agent/00-AI Agent 学习指南.md
 ---

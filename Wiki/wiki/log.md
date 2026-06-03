@@ -2,9 +2,9 @@
 
 ## [2026-06-02] refactor | 分章节完善 LLM 与 Prompt 工程学习指南
 
-- 新增页面：教程/学习AI/01-LLM与Prompt工程/01-LLM底层认知.md（LLM 训练三阶段、涌现能力、规模定律、Transformer 原理、Token 机制、幻觉四种类型+六大抑制方法、模型选型+Token 效率+推理模型注意）
-- 新增页面：教程/学习AI/01-LLM与Prompt工程/02-Prompt工程核心.md（CRISPE/ROLE/R-T-F 框架、基础三板斧深度扩展、高级推理技术 ReAct/ToT/Prompt Chaining、技术选型决策树、8 套代码模板、结构化输出、8 个常见坑）
-- 新增页面：教程/学习AI/01-LLM与Prompt工程/03-Prompt实战进阶.md（Spec-Driven 开发+Spec 文件结构、需求拆解、Bug 修复 CoT+ReAct 混合、工业级代码模板、Prompt 评估体系 PEEM/LLM-as-Judge、A/B 测试五步法、注入安全三层防御、版本管理+测试自动化）
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/02-LLM底层认知.md（LLM 训练三阶段、涌现能力、规模定律、Transformer 原理、Token 机制、幻觉四种类型+六大抑制方法、模型选型+Token 效率+推理模型注意）
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/03-Prompt工程核心.md（CRISPE/ROLE/R-T-F 框架、基础三板斧深度扩展、高级推理技术 ReAct/ToT/Prompt Chaining、技术选型决策树、8 套代码模板、结构化输出、8 个常见坑）
+- 新增页面：教程/学习AI/01-LLM与Prompt工程/04-Prompt实战进阶.md（Spec-Driven 开发+Spec 文件结构、需求拆解、Bug 修复 CoT+ReAct 混合、工业级代码模板、Prompt 评估体系 PEEM/LLM-as-Judge、A/B 测试五步法、注入安全三层防御、版本管理+测试自动化）
 - 重写页面：教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md（精简为 TOC/总纲页，链接至三个分章）
 - 摘要：将原来 811 行单体教程拆分为 3 个独立章节文件（总计约 1150 行），新增内容：LLM 训练基础（预训练/SFT/RLHF）、涌现能力与规模定律、ReAct/ToT/Prompt Chaining 高级推理技术、Prompt 评估体系（PEEM/A/B 测试/LLM-as-Judge）、Prompt 注入安全三层防御。所有新增知识点均通过联网搜索补充最新 2026 年研究成果
 
@@ -32,7 +32,7 @@
   - `教程/Dify平台实战/` → `教程/学习AI/07-Dify平台实战/`
   - `教程/AI Agent/` → `教程/学习AI/04-AI Agent/`
   - `教程/Coze平台实战/` → `教程/学习AI/08-Coze平台实战/`
-  - `教程/MCP与本地部署/` → `教程/学习AI/03-MCP与本地部署/`
+  - `教程/MCP与本地部署/` → `教程/学习AI/03-MCP/`
   - `教程/LLMOps与工程化/` → `教程/学习AI/09-LLMOps与工程化/`
   - `教程/OPC/` → `教程/学习AI/10-OPC创业变现/`
 - **保留原位**：`教程/Obsidian/`、`教程/智能家居/`（非 AI 主线）
@@ -449,7 +449,7 @@
   - 教程/学习AI/02-Rule与Skills/00-Rule与Skills学习指南.md — 第 2 周：Karpathy 4 条 + 辰北 8 条规则 + Skills 封装实战 + 6 个开发常用 Skill
   - 教程/学习AI/07-Dify平台实战/00-Dify平台实战指南.md — 第 4 周：Dify 私有化部署 + RAG 管线搭建 + API 对接 + 企业级 LLMOps
   - 教程/学习AI/08-Coze平台实战/00-Coze平台实战指南.md — 第 5 周：扣子 Agent 快速上手 + 可视化工作流编排 + 多平台发布 + API 集成
-  - 教程/学习AI/03-MCP与本地部署/00-MCP与本地部署学习指南.md — 第 6 周：MCP 协议详解 + Function Calling 调度器 + Ollama 本地部署 + 分层调用策略
+  - 教程/学习AI/03-MCP/00-MCP学习指南.md — 第 6 周：MCP 协议详解 + Function Calling 调度器 + Ollama 本地部署 + 分层调用策略
   - 教程/学习AI/09-LLMOps与工程化/00-LLMOps与工程化指南.md — 第 8 周：MVP 七层架构 + LLMOps 监控 + AI 代码安全审计 + 个人资产沉淀
 - **更新页面**：
   - Wiki/wiki/index.md（新增 6 条教程索引）
@@ -473,7 +473,7 @@
   - 02-Rule与Skills/ 下 2 个文件
   - 06-知识库与RAG/00-知识库技术学习指南.md
   - 04-AI Agent/ 下 2 个文件
-  - 03-MCP与本地部署/ 下 2 个文件
+  - 03-MCP/ 下 2 个文件
   - 05-AI Coding/ 下 26 个内部文件
   - Wiki/wiki/log.md（历史日志旧路径修正）
 - **站点重建**：运行 `Wiki/site/build.py`，91 wiki 页面 + 138 原始文章 + 91 教程，成功生成 data.json
@@ -502,8 +502,24 @@
   - `05-Dify平台实战` → `07-Dify平台实战`（后移 2 位）
   - `06-AI Agent` → `04-AI Agent`（前移 2 位）
   - `07-Coze平台实战` → `08-Coze平台实战`（后移 1 位）
-  - `08-MCP与本地部署` → `03-MCP与本地部署`（前移 5 位，放在 AI Agent 和 AI Coding 之前）
+  - `08-MCP与本地部署` → `03-MCP`（前移 5 位，放在 AI Agent 和 AI Coding 之前）
 - **新顺序**：01-LLM → 02-Rule → 03-MCP → 04-AI Agent → 05-AI Coding → 06-知识库 → 07-Dify → 08-Coze → 09-LLMOps → 10-OPC
 - **技术细节**：先用临时后缀 `_TMP` 避免 mv 冲突，再单次 sed 调用 6 条 -e 表达式批量替换所有引用（避免级联误改），最后修复旧文件名 `00-AI Coding 学习计划` → `00-AI Coding学习指南`（40 处）+ CLAUDE.md 模板路径 + Agent 实战指南中的跨教程 wikilink
 - **站点重建**：运行 `Wiki/site/build.py`，91 wiki 页面 + 138 原始文章 + 91 教程
 - **摘要**：学习路径从"先学工具再补理论"改为"协议→Agent→工具"的递进结构。MCP 作为 AI 通信基础设施（03），AI Agent 基于 MCP 构建（04），AI Coding 是 Agent 的编程应用（05）——底层到上层自然递进。
+
+## [2026-06-03] refactor | Ollama 本地部署移至 01-LLM 作为基础章节 + 03 目录精简
+
+- **操作内容**：
+  - 将 `03-MCP/03-Ollama本地部署.md` 移至 `01-LLM与Prompt工程/01-Ollama本地部署.md`
+  - 01 原有章节重编号：01→02(LLM底层认知), 02→03(Prompt工程核心), 03→04(Prompt实战进阶)
+  - 目录重命名：`03-MCP与本地部署` → `03-MCP`（去掉"与本地部署"）
+  - 指南重命名：`00-MCP与本地部署学习指南.md` → `00-MCP学习指南.md`
+- **01 新结构**：01-Ollama本地部署 → 02-LLM底层认知 → 03-Prompt工程核心 → 04-Prompt实战进阶
+- **03 精简为**：00-MCP学习指南 → 01-MCP协议 → 02-Function Calling（两章，主题统一）
+- **引用更新**：单次 sed 7 条表达式处理所有路径/文件引用变更
+- **内容更新**：
+  - `01/00-LLM与Prompt工程学习指南.md`：新增 Ollama 章节导航、日检清单、自检项；层次模型新增 Ollama 本地部署层
+  - `03/00-MCP学习指南.md`：移除所有 Ollama 内容（标题、标签、路线图、分章导航、日检、自检）
+- **站点重建**：运行 `Wiki/site/build.py`，91 wiki + 153 原始文章 + 91 教程
+- **摘要**：Ollama 本地部署是「怎么把大模型跑起来」的基础设施——模型下载、量化选型、API 暴露——属于大模型基础认知，放在 01-LLM 首章符合"先跑起来再学原理"的学习认知。03-MCP 去掉 Ollama 后成为纯 MCP 协议专题，主题更聚焦。
