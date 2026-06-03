@@ -3,7 +3,7 @@ title: 全局概览
 type: overview
 tags: []
 created: 2026-05-09
-updated: 2026-06-01
+updated: 2026-06-03
 sources:
   - raw/articles/Claude Code/
   - raw/articles/Codex/
@@ -354,10 +354,10 @@ AI 原生创业知识体系
 
 ## 关键数据
 
-- 收录文章：**134 篇**（Claude Code 27 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 21 篇 + Obsidian 23 篇 + Codex 13 篇 + 知识库技术 33 篇 + 低代码 AI 平台 4 篇 + AI Agent 1 篇 + Prompt 进阶 1 篇 + Agent 编排 1 篇 + Gemini 1 篇 + Home Assistant 2 篇 + OPC 2 篇 + VibeCoding 1 篇 + 橙皮书 1 份）
+- 收录文章：**147 篇**（Claude Code 28 篇 + 辰北 CLAUDE.md 规则 1 篇 + ECC 1 篇 + OpenClaw/Hermes 2 篇 + Hemmers 21 篇 + Obsidian 23 篇 + Codex 13 篇 + 知识库技术 35 篇 + 低代码 AI 平台 6 篇 + AI Agent 1 篇 + Prompt 进阶 1 篇 + Agent 编排 1 篇 + Gemini 1 篇 + Home Assistant 3 篇 + OPC 9 篇 + VibeCoding 1 篇 + 橙皮书 1 份）
 - 输出产物：5 份（[00-AI Coding学习指南](../../教程/学习AI/05-AI Coding/00-AI Coding学习指南.md) · [00-AI Agent 学习指南](../../教程/学习AI/04-AI Agent/AI%20Agent%20学习指南.md) · [00-知识库技术学习指南](../../教程/学习AI/06-知识库与RAG/00-知识库技术学习指南.md) · [智能家居学习指南](../../教程/智能家居/智能家居学习指南.md) · [00-OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/00-OPC 一人公司学习指南.md)）
-- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、**RAG 五阶段进化史、混合检索（BM25+向量）、RAG 评估体系（检索+生成两层）、Agentic RAG 四种模式、A-RAG 层级检索、NaviRAG 主动导航、Vector Graph RAG、多模态 RAG、本地 RAG 实战搭建**、知识图谱、GraphRAG、代码图谱、**低代码 AI 平台（Coze/Dify/n8n/FastGPT/RAGFlow）**、**Prompt 工程三板斧（Few-shot/CoT/Self-Consistency）**、**AI Agent 七大核心模块（Token/Skill/Prompt/RAG/MCP/SDD/Harness）**、智能家居自动化（Home Assistant + Hermes）、AI 原生创业方法论（OPC + Anthropic 手册）、VibeCoding 实战、Obsidian 主页设计
+- 知识领域：安装配置、命令体系、MCP 生态、Skills 生态与推荐、设计集成、工作流方法、Agent 架构对比、多 Agent 协作、Hermes 配置、知识库集成、Obsidian 知识管理、信息收集工作流、LLM Wiki 实践、实战技巧、精通指南、Harness 性能优化、CLAUDE.md 规则体系、OpenAI Codex 全体系、CC vs Codex 选型框架、**RAG 五阶段进化史、混合检索（BM25+向量）、RAG 评估体系（检索+生成两层）、Agentic RAG 四种模式、A-RAG 层级检索、NaviRAG 主动导航、Vector Graph RAG、多模态 RAG、本地 RAG 实战搭建、生产级 RAG 架构设计**、知识图谱、GraphRAG、代码图谱、**低代码 AI 平台（Coze/Dify/n8n/FastGPT/RAGFlow）+ Dify 架构详解与本地部署**、**Prompt 工程三板斧（Few-shot/CoT/Self-Consistency）**、**AI Agent 七大核心模块（Token/Skill/Prompt/RAG/MCP/SDD/Harness）**、智能家居自动化（Home Assistant + Hermes + Hass Panel 中控面板）、AI 原生创业方法论（OPC 全面扩展：黄金公式/六模式详解/政策红利/1+N 模型/AI 四模块工具链/Sahil 10 Skills/Welopc 三案例）、VibeCoding 实战、Obsidian 主页设计、Claude Code 小白避坑入门
 - 核心实体：**18 个**（Claude Code、MCP、Superpowers、gstack、CC Switch、CCR、ECC、Codex、OpenClaw、Hermes Agent、Obsidian、Tolaria、GitNexus、Graphify、Home Assistant、Coze、Dify、n8n）
-- 专题页面：**35 个**
+- 专题页面：**37 个**
 - 概念页面：**18 个**
 - 对比页面：**4 个**

@@ -1,7 +1,7 @@
 ---
 title: 知识库索引
 type: overview
-updated: 2026-06-01
+updated: 2026-06-03
 ---
 
 # 知识库索引
@@ -50,7 +50,7 @@ updated: 2026-06-01
 - [File over App](concepts/file-over-app.md) — 数据属于用户，文件比应用更长寿的软件哲学
 
 ### 创业 / 组织形态概念
-- [OPC（一人公司）](concepts/opc-one-person-company.md) — 出售系统而非时间，一个人 + AI = 一家公司，六种商业模式与中美对比
+- [OPC（一人公司）](concepts/opc-one-person-company.md) — 出售系统而非时间，1+N 模型（1个创始人+N个AI数字员工），六种商业模式详解、黄金公式、政策红利、AI 四模块工具链
 
 ### Prompt 工程
 - [Prompt 工程三板斧](concepts/prompt-engineering-trilogy.md) — Few-shot（格式稳定）+ CoT（推理准确）+ Self-Consistency（答案稳定），组合准确率提升 35-50%
@@ -152,10 +152,12 @@ updated: 2026-06-01
 
 ### 🚀 AI 原生创业
 - [AI 原生创业手册（Anthropic 2026）](topics/ai-native-startup-playbook.md) — 三大 AI 杠杆 / 创业四阶段 / 创始人 = AI 指挥家 / 三大新坑
+- [OPC AI 工具链与实战案例](topics/opc-ai-toolkit.md) — 🆕 AI 四模块矩阵 / Sahil 极简创业 10 个 Skill / Welopc 三行业真实案例（制造多Agent/电商数据飞轮/外贸AI销售系统）
 - [00-OPC 一人公司学习指南](../../教程/学习AI/10-OPC创业变现/00-OPC 一人公司学习指南.md) — 📖 综合教程（5 章）：OPC 概述与核心理念 → 六大商业模式详解 → 从零启动 → AI 工具链 → 风险管理与长期发展。🆕 已纳入 8 周学习计划第 9 周
 
 ### 📚 RAG 与知识库技术
 - [RAG 优化 20 法](topics/rag-optimization-techniques.md) — 五阶段优化管线：数据入库 → 检索前 → 检索阶段 → 检索后 → 生成阶段，含 Milvus 索引选型与嵌入模型选择
+- [生产级 RAG 架构设计](topics/production-rag-architecture.md) — 🆕 Qdrant 混合搜索/六步摄取管线/Chunking 与 Late Chunking/Reranker 重排序/自托管 vs 云混合部署
 - [Agentic RAG 四种模式](topics/agentic-rag-patterns.md) — 路由型 / 多步型 / CRAG / 自适应型 + A-RAG 层级检索 + NaviRAG，含 LangGraph 完整实现
 - [Vector Graph RAG](topics/vector-graph-rag.md) — 不引入图数据库，仅用 Milvus 向量库解决多跳推理，Recall@5=87.8%
 - [本地 RAG 知识库搭建实战](topics/local-rag-setup-guide.md) — Langchain-Chatchat + Qwen2.5-7B + bge-large-zh，30 分钟搭建私有知识库，全程断网可用
@@ -195,7 +197,7 @@ updated: 2026-06-01
 
 ## 原始资料
 
-27 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(4) / Superpowers(3) / 设计集成(4) / 辅助工具(2) / 工具对比(1)
+28 篇 Claude Code 中文文章（含 1 本 10 章完整指南），位于 `raw/articles/Claude Code/`：安装配置(5) / 命令提示词(3) / 实战技巧(2) / 精通指南(1) / MCP(4) / Skills(4) / Superpowers(3) / 设计集成(4) / 辅助工具(2) / 工具对比(1) / 小白入门(1)
 - [Claude Code 还是 Codex？老金告你怎么选！](../raw/articles/Claude%20Code/Claude%20Code还是Codex？老金告你怎么选！.md) — 老金，2026.05，四种用户类型（许愿/现场/派单/调度）选型框架
 - [Claude Code 十一个常用 Skill 推荐（含各职业最佳 Skill）](../raw/articles/Claude%20Code/Claude%20Code十一个常用Skill推荐（含各职业最佳Skill）.md) — 萝卜啊，2026.05，五级梯队 + 8 角色定制的完整 Skill 推荐方案
 
@@ -204,6 +206,7 @@ updated: 2026-06-01
 - [让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘](../raw/articles/Claude%20Code/让Claude编程失误率从41%降到3%：12条CLAUDE.md规则的踩坑复盘.md) — 辰北，2026.05，Karpathy 原版 4 条 + 8 条增量规则，含 30 代码库 6 周实验数据
 - [CLAUDE.md 的12条规则，让编程错误率从 41% 降至 3%](../raw/articles/Claude%20Code/CLAUDE.md%20的12条规则，让编程错误率从%2041%25%20降至%203%25.md) — 来杯凉白开，2026.05，Karpathy 4 条基础 + 辰北 8 条高级规则中英对照
 - [最佳 Claude Code 配置：Andrej Karpathy 的 CLAUDE.md，134+k star了！](../raw/articles/Claude%20Code/最佳%20Claude%20Code%20配置：Andrej%20Karpathy%20的%20CLAUDE.md，134+k%20star了！.md) — ChallengeHub，2026.05，Karpathy 推文→Forrest Chang 仓库→11 万 Star 现象拆解
+- [我用国产模型把 Claude Code 跑通后,写下了这份小白避坑手册](../raw/articles/Claude%20Code/我用国产模型把%20Claude%20Code%20跑通后,写下了这份小白避坑手册_服务软件_什么值得买.md) — 什么值得买，2026.05，概念地图（模型/Agent/Skill/MCP/Harness）/环境安装（Git+Node+VS Code+CC）/三种付费方式/国产模型接入/第一个小项目实战
 
 ### ECC 资料
 1 篇 ECC 介绍文章，位于 `raw/articles/`：
@@ -282,7 +285,7 @@ updated: 2026-06-01
 - [国内可用！Codex 一步步安装配置指南](../raw/articles/Codex/国内可用！Codex%20一步步安装配置指南.md) — 海鱼星，2026.05，Windows 离线下载（rg-adguard）/msix→rar/中转 API 配置
 
 ### 知识库技术资料
-29+4=33 篇知识库技术中文文章，位于 `raw/articles/知识库/`，覆盖 RAG 进化史/混合检索/评估体系/Agentic RAG/知识图谱/Vector Graph RAG/向量检索算法/多模态 RAG/本地 RAG 搭建/LLM-Wiki 自进化 十大方向：
+35 篇知识库技术中文文章，位于 `raw/articles/知识库/`，覆盖 RAG 进化史/混合检索/评估体系/Agentic RAG/知识图谱/Vector Graph RAG/向量检索算法/多模态 RAG/本地 RAG 搭建/LLM-Wiki 自进化/生产级架构 十一大方向：
 
 **RAG 架构与进化**
 - [AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki](../raw/articles/知识库/AI%20知识库技术演进拆解：从%20RAG%20到%20NotebookLM，再到%20LLM%20Wiki.md) — 叶小钗，2026.05，NotebookLM 七层技术架构拆解/RAG 产品化/三阶段演进
@@ -322,15 +325,28 @@ updated: 2026-06-01
 - [开源一款零服务器代码知识图谱引擎：GitNexus](../raw/articles/知识库/开源一款零服务器代码知识图谱引擎，支持多语言解析、Graph%20RAG%20问答、AI%20代理集成的代码分析平台.md) — 刘哥聊技术，2026.05，WASM浏览器端/14语言/16 MCP工具/Graph RAG
 - [RAG 2.0 落地实战：从「检索增强」到「知识推理」的工程跃迁](../raw/articles/知识库/RAG%202.0%20落地实战：从「检索增强」到「知识推理」的工程跃迁.md) — 2026.05
 
+### 知识库技术新增资料
+2 篇 2026.05 新增文章：
+- [做了 5 个知识库项目后，我整理了一份 RAG 选型终极指南](../raw/articles/知识库/做了%205%20个知识库项目后，我整理了一份%20RAG%20选型终极指南.md) — daydayago，2026.05，五类 RAG（向量/GraphRAG/LightRAG/PathRAG/Vectorless）全景对比 + 选型决策树 + 三项目实战复盘
+- [设计生产级 RAG 架构](../raw/articles/知识库/设计生产级%20RAG%20架构.md) — 茶桁，2026.05，Qdrant 混合搜索/六步摄取管线/Late Chunking/Cross Encoder Reranker/自托管 vs 云混合部署/Semantic Kernel 编排
+
 ### Home Assistant 资料
-2 篇 Home Assistant 中文文章，位于 `raw/articles/Home Assistant/`：
+3 篇 Home Assistant 中文文章，位于 `raw/articles/Home Assistant/`：
 - Hermes Agent + Home Assistant：用自然语言控制你的整个家 — AI赋能说，2026.05，Token 配置/五大场景/Cron/Telegram/门铃对讲案例
 - 真正全屋智能HomeAssistant：跨平台接入群晖NAS——整合米家、海尔、美的、海信、Homekit — 温泉，2026.05，Docker部署/HACS/五品牌集成/花生壳远程访问
+- [把 Home Assistant 做成真正顺手的家庭中控：Hass Panel 安装方法与玩法](../raw/articles/Home%20Assistant/把%20Home%20Assistant%20做成真正顺手的家庭中控：Hass%20Panel%20安装方法与玩法.md) — 夏白的小屋，2026.05，三安装方式/四层搭建顺序/五大玩法/推荐三屏模板
 
 ### OPC / AI 创业资料
-2 篇 OPC 中文文章，位于 `raw/articles/OPC/`：
+9 篇 OPC 中文文章，位于 `raw/articles/OPC/`：
 - 6种OPC商业模式 — 小麦，2026.05，OPC定义（系统vs时间）/六大商业模式/中美对比/Pieter Levels案例/真实痛点
 - Anthropic 2026《创始人手册：打造AI原生初创公司》精读长文 — AI潮局，2026.05，三大AI杠杆/四阶段方法论/创始人=指挥家/三大新坑
+- [6种OPC商业模式（老阳版）](../raw/articles/OPC/6种OPC商业模式%201.md) — 老阳，2026.05，1+N模型/六模式详解（专业服务/内容创富/微SaaS/电商/渠道/平台整合）
+- [一人公司创业者必备的10个Skills](../raw/articles/OPC/一人公司创业者必备的10个Skills.md) — 小麦，2026.06，Sahil Lavingia 极简创业 10 Skill 详解（找社群→验证→MVP→流程化→首批客户→定价→营销→增长→文化→复盘）
+- [一人公司的黄金公式](../raw/articles/OPC/一人公司的黄金公式：(喜欢+社会需求)%20x%20擅长%20x%201000个粉丝.md) — 小麦，2026.04，(喜欢+需求)×擅长×1000粉丝公式拆解
+- [如何通过AI打造一人公司(OPC)](../raw/articles/OPC/如何通过AI打造一人公司(OPC).md) — Jason，2026.05，AI 四模块矩阵/内容工作流/私域管理/数据复盘
+- [零基础入门！2025 OPC一人公司创业完全指南](../raw/articles/OPC/零基础入门！2025%20OPC一人公司创业完全指南（小白必看）.md) — AI Auto，2026.04，法律定义/OPC vs 个体户/1600万数据/5步启动
+- [OPC深度研究：政策驱动、城市竞争与发展路径分析](../raw/articles/OPC/OPC（一人公司）深度研究：政策驱动、城市竞争与发展路径分析.md) — 阿浪，2026.05，十五五规划/城市抢人/四大政策方向/黄金窗口期
+- [Welopc｜助力每一个人成为真正OPC](../raw/articles/OPC/Welopc｜助力每一个人成为真正OPC.md) — Kiki，2026.04，Welopc 社区愿景/三行业真实案例（制造多Agent/电商数据飞轮/外贸AI销售系统）
 
 ### AI Agent 编排框架资料
 1 篇 AI Agent 编排框架文章，位于 `raw/articles/AI Agent/`：
@@ -345,12 +361,14 @@ updated: 2026-06-01
 - VibeCoding——从0到1开发微信小程序 — 子言sugar，2026.05，Figma→Trae→HBuilderX→微信开发者工具 完整工具链
 
 ### 低代码 AI 平台资料
-4 篇低代码 AI 平台中文文章，位于 `raw/articles/低代码agent/`：Coze 教程(2) / 平台对比(2)
+6 篇低代码 AI 平台中文文章，位于 `raw/articles/低代码agent/`：Coze 教程(2) / 平台对比(2) / Dify 架构(1) / Dify 部署(1)
 
 - [2026 学习扣子 Coze 一篇讲透，新手也能看懂的实操指南](../raw/articles/低代码agent/2026%20学习扣子%20Coze%20一篇讲透，新手也能看懂的实操指南.md) — 阿童麦，2026.05，四大产品线详解 + Agent/编程/罗盘/开源 + AI 编程 vs 低代码实操
 - [升级 Coze 2.0 使用攻略；Coze Skill 好不好用！](../raw/articles/低代码agent/升级Coze%202.0%20使用攻略；Coze%20Skill好不好用！实战案例详细拆解（全文5000字）.md) — 杰克船长的AIGC，2026.01，Agent Skills 三级体系 + 创建/部署/使用 + Agent Plan
 - [Dify、n8n、扣子、Fastgpt、Ragflow 到底该怎么选？](../raw/articles/低代码agent/Dify、n8n、扣子、Fastgpt、Ragflow到底该怎么选？超详细指南来了【好文推荐，附MinerU实用教程】.md) — OpenDataLab，2025.06，五平台横向对比 + 适用性评分 + 选型决策树
 - [Dify 与 Coze 深度对比：架构、技术、优势与应用场景](../raw/articles/低代码agent/Dify%20与%20Coze%20深度对比：架构、技术、优势与应用场景.md) — 易君召，2026.04，四层 vs 五层架构/API→Agent 全链路对比
+- [Dify 新手入门第二课：从工作流到对话流的底层机制](../raw/articles/低代码agent/Dify%20新手入门第二课：从工作流到对话流的底层机制.md) — 码上解惑，2026.05，四层架构详解/DAG 执行引擎/Workflow vs Chatflow/核心节点清单/DSL 导出
+- [本地部署 Dify + Ollama + DeepSeek 最全指南](../raw/articles/低代码agent/本地部署%20Dify%20+%20Ollama%20+%20DeepSeek%20最全指南.md) — 六加一，2026.04，Docker 部署六步/环境配置/更新版本/Ollama 模型接入
 
 ### AI Agent 资料
 2 篇 AI Agent 文章，位于 `raw/articles/AI Agent/`：

@@ -523,3 +523,25 @@
   - `03/00-MCP学习指南.md`：移除所有 Ollama 内容（标题、标签、路线图、分章导航、日检、自检）
 - **站点重建**：运行 `Wiki/site/build.py`，91 wiki + 153 原始文章 + 91 教程
 - **摘要**：Ollama 本地部署是「怎么把大模型跑起来」的基础设施——模型下载、量化选型、API 暴露——属于大模型基础认知，放在 01-LLM 首章符合"先跑起来再学原理"的学习认知。03-MCP 去掉 Ollama 后成为纯 MCP 协议专题，主题更聚焦。
+
+## [2026-06-03] ingest | 批量收录 13 篇新增资料（OPC 7 篇 + RAG 2 篇 + Dify 2 篇 + HA 1 篇 + CC 1 篇）
+
+- **新增页面**：
+  - Wiki/wiki/topics/opc-ai-toolkit.md（OPC AI 工具链与实战案例：AI 四模块矩阵/黄金公式/Sahil 极简创业 10 个 Skill/Welopc 三行业真实案例）
+  - Wiki/wiki/topics/production-rag-architecture.md（生产级 RAG 架构设计：Qdrant 混合搜索/六步摄取管线/Late Chunking/Cross Encoder Reranker/自托管 vs 云混合部署）
+
+- **更新页面**：
+  - Wiki/wiki/concepts/opc-one-person-company.md（大幅扩展：OPC vs 个体户对比/1+N 模型/黄金公式/六模式详表/AI 四模块/政策红利与城市竞争/1600 万数据/选型建议。新增 7 篇 sources）
+  - Wiki/wiki/entities/home-assistant.md（新增「Hass Panel：家庭中控面板」章节：三安装方式/四层搭建顺序/五大玩法/推荐三屏模板。新增 1 篇 source）
+  - Wiki/wiki/entities/dify.md（新增「Dify 四层架构详解」「Workflow vs Chatflow」「核心节点清单」「Docker 本地部署」「接入本地模型（Ollama+DeepSeek）」五个章节。新增 2 篇 sources）
+  - Wiki/wiki/concepts/rag-architectures.md（新增「RAG 五类方案全景对比」章节：LightRAG/PathRAG/Vectorless RAG + 选型决策树。新增 1 篇 source）
+  - Wiki/wiki/topics/claude-code-installation.md（新增「小白入门避坑速通」章节：环境安装顺序/概念速通表/三种付费方式/常见踩坑点。新增 1 篇 source）
+  - Wiki/wiki/overview.md（文章数 134→147，专题 35→37，知识领域新增：生产级 RAG 架构设计/Dify 架构详解与本地部署/OPC 全面扩展/Hass Panel/CC 小白避坑）
+  - Wiki/wiki/index.md（新增概念/专题条目 + OPC 9 篇/HA 3 篇/知识库 35 篇/低代码 6 篇/CC 28 篇 完整索引）
+
+- **教程同步**：
+  - 教程/学习AI/07-Dify平台实战/02-私有化部署.md（新增 §2.6：接入本地模型 Ollama + DeepSeek）
+  - 教程/学习AI/10-OPC创业变现/04-AI工具链与效率杠杆.md（新增拓展阅读指向 OPC AI 工具链专题页；更新 frontmatter）
+  - 教程/智能家居/06-远程访问与进阶.md（Dashboard 美化段落新增 Hass Panel 入口）
+
+- **摘要**：处理 13 篇新增资料，覆盖五个领域。核心产出：(1) OPC 从 2 篇扩展到 9 篇资料、2 个 wiki 页面（概念+工具链专题），形成从概念→商业模式→政策→AI 工具链→实战案例的完整知识体系；(2) RAG 从三种架构扩展到五类方案全谱系（+LightRAG/PathRAG/Vectorless RAG）+ 生产级架构设计专题页；(3) Dify 从平台对比延伸到架构详解+本地部署实操；(4) HA 新增 Hass Panel 中控面板完整指南；(5) CC 新增面向绝对新手的避坑速通指南。知识库文章总数从 134 → 147 篇。

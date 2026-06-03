@@ -3,10 +3,11 @@ title: Home Assistant
 type: entity
 tags: [home-assistant, smart-home, open-source, iot, home-automation]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-03
 sources:
   - raw/articles/Home Assistant/真正全屋智能HomeAssistant：跨平台接入群晖NAS——整合米家、海尔、美的、海信、Homekit.md
   - raw/articles/Home Assistant/Hermes Agent + Home Assistant：用自然语言控制你的整个家.md
+  - raw/articles/Home Assistant/把 Home Assistant 做成真正顺手的家庭中控：Hass Panel 安装方法与玩法.md
 related:
   - entities/hermes-agent.md
   - topics/hermes-home-assistant-integration.md
@@ -122,6 +123,53 @@ HACS（Home Assistant Community Store）是 HA 的「应用商店」，安装第
 - 集成组件：2,700+
 - 安装方式：Docker / Home Assistant OS / 树莓派 / NAS / 虚拟机
 - 默认端口：8123
+
+## Hass Panel：家庭中控面板
+
+Hass Panel 是基于 React 的开源可视化控制面板，给 Home Assistant 加一层更适合日常使用的 UI。**HA 负责「连接和自动化」，Hass Panel 负责「看得懂、点得准、用得顺」。**
+
+### 适用场景
+
+- **墙上平板中控**：玄关/客厅常驻显示天气、灯光、窗帘、空调、摄像头
+- **家人简化入口**：不暴露 HA 配置细节，只保留常用控制和状态
+- **全屋设备状态看板**：一屏查看谁在家、哪些灯开着、空气质量、NAS/PVE 状态
+- **临时展示或客房控制**：只放客厅灯、空调、窗帘、场景按钮
+
+### 三种安装方式
+
+| 方式 | 适用 | 说明 |
+|------|------|------|
+| HA 加载项 | HAOS / Supervised 用户 | 集成度最高，在 HA 内管理升级 |
+| Docker | 独立服务器/NAS/软路由 | `docker run --network host -v ./data/:/config/hass-panel` + 5123 端口 |
+| Docker Compose | 长期运行推荐 | 方便升级迁移，`docker-compose pull && up -d` |
+
+### 面板搭建顺序
+
+真正好用的面板不是把所有设备堆上去，而是按使用频率和决策价值分层：
+
+1. **第 1 层：常用控制**（首屏最易点击位置）— 客厅灯、餐厅灯、主卧灯、空调、窗帘、常用场景
+2. **第 2 层：关键状态**（一眼能看出异常）— 温湿度、空气质量、门窗状态、人体传感器、用电功率、成员在家状态
+3. **第 3 层：低频但重要**（第二屏/设备状态页）— 摄像头、路由器、NAS、服务器、PVE、净水器
+
+> 建议按**房间**组织而非按设备类型——家人不需要理解实体 ID，「客厅→灯」比「所有灯→客厅的」直观。
+
+### 五大实用玩法
+
+1. **墙屏全屏模式**：平板固定横屏，只放高频卡片，深色模式，按钮放大避免误触
+2. **离家前检查区**：门窗/灯/空调/插座/摄像头/成员状态 → 一键确认出门安全
+3. **场景快捷指令**：回家/离家/观影/睡眠/起夜/全屋关灯——少而明确
+4. **家庭运维屏**：NAS 存储、服务器在线、PVE 虚拟机、路由器运行时间——给维护者用的专属页
+5. **摄像头精准投放**：首屏只放门口/庭院/客厅关键画面，低频摄像头放单独页面
+
+### 推荐三屏模板
+
+| 屏 | 用途 | 内容 |
+|----|------|------|
+| 首屏 | 日常控制（家人用） | 时间+天气+成员状态+灯光+空调+窗帘+场景按钮 |
+| 第二屏 | 状态监控（判断用） | 温湿度+空气质量+传感器+门窗+用电 |
+| 第三屏 | 运维安防（维护者用） | 摄像头+路由器+NAS+PVE+服务器 |
+
+> GitHub：`github.com/mrtian2016/hass-panel`
 
 ## 与 AI Agent 的集成
 

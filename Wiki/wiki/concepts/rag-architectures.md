@@ -3,10 +3,9 @@ title: RAG 架构：从经典检索到智能体驱动
 type: concept
 tags: [rag, knowledge-base, retrieval, graph-rag, agentic-rag, ai, evolution]
 created: 2026-05-28
-updated: 2026-05-29
+updated: 2026-06-03
 sources:
   - raw/articles/知识库/一文看懂三种 RAG 架构：Classic RAG、Graph RAG 与 Agentic RAG.md
-  - raw/articles/知识库/一文看懂三种 RAG 架构：Classic RAG、Graph RAG 与 Agentic RAG 1.md
   - raw/articles/知识库/AI 知识库技术演进拆解：从 RAG 到 NotebookLM，再到 LLM Wiki.md
   - raw/articles/知识库/RAG我懂你：从架构到知识库构建.md
   - raw/articles/知识库/RAG 进化史：从基础检索到智能体驱动.md
@@ -15,6 +14,7 @@ sources:
   - raw/articles/知识库/RAG 多模态 与 LLM+工具链.md
   - raw/articles/知识库/RAG、Agentic RAG 和 AI Memory 到底有什么区别？.md
   - raw/articles/知识库/前沿进展：LLM-Wiki自进化RAG及MinerU-Popo文档解析后处理设计思路.md
+  - raw/articles/知识库/做了 5 个知识库项目后，我整理了一份 RAG 选型终极指南.md
 related:
   - concepts/agentic-engineering.md
   - concepts/second-brain.md
@@ -25,7 +25,7 @@ related:
   - concepts/hybrid-retrieval.md
   - topics/agentic-rag-patterns.md
   - topics/local-rag-setup-guide.md
-  - concepts/prompt-engineering-trilogy.md
+  - topics/production-rag-architecture.md
 ---
 
 # RAG 架构：从经典检索到智能体驱动
@@ -204,7 +204,66 @@ Modular RAG 的核心价值：将系统搭建从"逐段硬编码"转向"声明�
 
 ---
 
-## 三种架构对比
+## RAG 五类方案全景对比
+
+除了三种核心架构，2025-2026 年衍生出更多技术路线。以下是五类 RAG 方案的一图对比：
+
+| 维度 | 向量 RAG | GraphRAG | LightRAG | PathRAG | Vectorless RAG |
+|------|----------|----------|----------|---------|----------------|
+| **核心机制** | 语义相似度匹配 | 知识图谱+社区分层 | 知识图谱+双层检索 | 知识图谱+路径检索 | LLM 直接推理文档结构 |
+| **多跳推理** | 弱 | 强（全局问答最强） | 中强 | 强（路径类） | 强 |
+| **增量更新** | 简单 | 需重建（全局计算） | 原生支持 | 支持 | 支持 |
+| **构建成本** | 低 | 高 | 中 | 中 | 低（但查询成本高） |
+| **查询成本** | 低 | 中 | 中 | 中 | 高 |
+| **成熟度** | 最高 | 高 | 中 | 较低 | 低 |
+| **适用规模** | 百万~亿级文档 | 万级实体关系 | 万级实体关系 | 万级实体关系 | 千级文档 |
+
+### LightRAG：GraphRAG 的轻量替代
+
+GraphRAG 太重了？LightRAG 做了三个关键简化：
+- 不划分社区，用**双层检索**（实体层+关系层）代替社区分层
+- **增量更新**：新文档入库时只更新局部图谱，不用重建
+- **去重机制**：相同实体自动合并
+
+代价：全局问答能力不如 GraphRAG。
+
+### PathRAG：路径感知的图检索
+
+不关注社区，关注**路径**。在知识图谱上找到从查询实体到答案实体的「路径」，用路径上的信息作为上下文。适合供应链追溯、因果推理。
+
+### Vectorless RAG（2026 新范式）
+
+**完全抛弃向量数据库**。不切块、不向量化，让 LLM 直接「阅读」文档结构来推理定位信息。代表框架：PageIndex。
+
+核心观点：分块本身就是有损操作——层次结构、交叉引用、上下文关系、视觉排版全丢了。向量检索再怎么优化，都是在「残缺数据」上做匹配。
+
+适合少量但非常复杂的文档（合同、论文、技术规范），不适合海量文档。
+
+### 选型决策树
+
+```
+你有哪些文档？
+│
+├─ 大量非结构化文档（FAQ、产品手册、新闻）
+│   → 向量 RAG，够用且成熟
+│
+├─ 文档之间有复杂关系（法律、医疗、供应链）
+│   ├─ 需要全局性问答 → GraphRAG
+│   ├─ 数据经常更新，追求性价比 → LightRAG
+│   └─ 主要查实体间路径/因果链 → PathRAG
+│
+├─ 少量但非常复杂的文档（合同、论文、技术规范）
+│   → 试试 Vectorless RAG
+│
+└─ 复杂关系 + 大量文档 + 需要兼顾
+    → 混合架构：向量检索 + 图谱增强（生产推荐）
+```
+
+**实战建议**：先向量 RAG 跑起来验证需求 → 遇到解决不了的问题（多跳推理、全局问答）→ 叠加图谱层形成混合架构 → 每加一层都要有明确的收益衡量。
+
+---
+
+## 三种架构对比（Classic / Graph / Agentic）
 
 | 维度 | Classic RAG | Graph RAG | Agentic RAG |
 |------|------------|-----------|-------------|
@@ -407,4 +466,4 @@ Memory 的关键不是「记住更多」，而是「记得更准，也忘得更�
 
 三个阶段是逐层叠加的过程：低配 RAG 是底座，NotebookLM 把底座产品化/自动化/可信化，LLM Wiki 再把知识结构沉淀为长期资产。详见 [[../topics/obsidian-llm-wiki-practice|Obsidian LLM Wiki 实践]]。
 
-> 📖 导航：[[overview|全局概览]] · [[../topics/rag-optimization-techniques|RAG 优化 20 法]] · [[knowledge-graph|知识图谱]] · [[rag-evaluation|RAG 评估体系]] · [[hybrid-retrieval|混合检索]] · [[../topics/agentic-rag-patterns|Agentic RAG 四种模式]] · [[../../教程/知识库/00-知识库技术学习指南|知识库技术教程]]
+> 📖 导航：[[overview|全局概览]] · [[../topics/rag-optimization-techniques|RAG 优化 20 法]] · [[../topics/production-rag-architecture|生产级 RAG 架构设计]] · [[knowledge-graph|知识图谱]] · [[rag-evaluation|RAG 评估体系]] · [[hybrid-retrieval|混合检索]] · [[../topics/agentic-rag-patterns|Agentic RAG 四种模式]] · [[../../教程/学习AI/06-知识库与RAG/00-知识库技术学习指南|知识库技术教程]]
