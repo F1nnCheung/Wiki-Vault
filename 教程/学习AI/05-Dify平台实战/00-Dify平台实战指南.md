@@ -11,13 +11,13 @@ sources:
   - Wiki/wiki/concepts/hybrid-retrieval.md
 related:
   - ../07-Coze平台实战/00-Coze平台实战指南.md
-  - ../04-知识库与RAG/知识库技术学习指南.md
-  - ../06-AI智能体/AI Agent 学习指南.md
+  - ../04-知识库与RAG/00-知识库技术学习指南.md
+  - ../06-AI Agent/00-AI Agent 学习指南.md
 ---
 
 # Dify 平台实战指南
 
-> 对应学习计划**第 4 周 Day 4-7**：先懂 RAG 原理（Day 1-3 见 [[../04-知识库与RAG/知识库技术学习指南|知识库技术教程]]），再用 Dify 低代码平台快速落地 RAG 管线，二者互为表里。
+> 对应学习计划**第 4 周 Day 4-7**：先懂 RAG 原理（Day 1-3 见 [[../04-知识库与RAG/00-知识库技术学习指南|知识库技术教程]]），再用 Dify 低代码平台快速落地 RAG 管线，二者互为表里。
 
 ---
 
@@ -77,7 +77,7 @@ related:
 | Day 5 | RAG 管线搭建 | [[03-RAG管线搭建]] |
 | Day 6-7 | 进阶优化 + 实战项目 | [[03-RAG管线搭建]]、[[04-应用发布与API对接]] |
 
-> ⚠️ 学习计划 Day 1-3 的 RAG 理论基础部分，参见 [[../04-知识库与RAG/知识库技术学习指南|知识库技术教程]]。
+> ⚠️ 学习计划 Day 1-3 的 RAG 理论基础部分，参见 [[../04-知识库与RAG/00-知识库技术学习指南|知识库技术教程]]。
 
 ## 附录 B：常见问题
 
@@ -114,7 +114,7 @@ tar -czf dify-storage-backup.tar.gz dify/docker/volumes/
 | RAG 优化 20 法 | [[Wiki/wiki/topics/rag-optimization-techniques|RAG 优化 20 法]] |
 | 混合检索 | [[Wiki/wiki/concepts/hybrid-retrieval|混合检索]] |
 | Dify vs Coze 全面对比 | [[Wiki/wiki/comparisons/lowcode-ai-platforms|低代码 AI 平台对比]] |
-| 知识库技术完整教程 | [[../04-知识库与RAG/知识库技术学习指南|知识库技术学习指南]] |
+| 知识库技术完整教程 | [[../04-知识库与RAG/00-知识库技术学习指南|00-知识库技术学习指南]] |
 
 ---
 

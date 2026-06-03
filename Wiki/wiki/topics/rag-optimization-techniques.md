@@ -206,4 +206,4 @@ related:
 
 > 不是所有场景都需要 20 种全上。理解你的语义鸿沟最大在哪一环，选 3-5 种对症的组合，就足够让"能跑"的 RAG 变成"能用"的 RAG。
 
-> 📖 导航：[[../overview|全局概览]] · [[../concepts/rag-architectures|RAG 三种架构]] · [[../concepts/knowledge-graph|知识图谱]] · [[../../教程/知识库/知识库技术学习指南|知识库技术教程]]
+> 📖 导航：[[../overview|全局概览]] · [[../concepts/rag-architectures|RAG 三种架构]] · [[../concepts/knowledge-graph|知识图谱]] · [[../../教程/知识库/00-知识库技术学习指南|知识库技术教程]]

@@ -164,4 +164,4 @@ RAG 的效果高度依赖文档解析质量。MinerU-Popo 是专门针对这一�
 - **自动化钩子**：新来源到来自动摄取，会话结束自动归档
 - **矛盾解决**：基于来源时效性和权威性，AI 提出哪个声明更可能正确
 
-> 📖 导航：[[../overview|全局概览]] · [[../concepts/rag-architectures|RAG 三种架构]] · [[../concepts/second-brain|第二大脑]] · [[../../教程/知识库/知识库技术学习指南|知识库技术教程]]
+> 📖 导航：[[../overview|全局概览]] · [[../concepts/rag-architectures|RAG 三种架构]] · [[../concepts/second-brain|第二大脑]] · [[../../教程/知识库/00-知识库技术学习指南|知识库技术教程]]

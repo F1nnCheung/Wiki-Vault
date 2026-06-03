@@ -407,4 +407,4 @@ Memory 的关键不是「记住更多」，而是「记得更准，也忘得更�
 
 三个阶段是逐层叠加的过程：低配 RAG 是底座，NotebookLM 把底座产品化/自动化/可信化，LLM Wiki 再把知识结构沉淀为长期资产。详见 [[../topics/obsidian-llm-wiki-practice|Obsidian LLM Wiki 实践]]。
 
-> 📖 导航：[[overview|全局概览]] · [[../topics/rag-optimization-techniques|RAG 优化 20 法]] · [[knowledge-graph|知识图谱]] · [[rag-evaluation|RAG 评估体系]] · [[hybrid-retrieval|混合检索]] · [[../topics/agentic-rag-patterns|Agentic RAG 四种模式]] · [[../../教程/知识库/知识库技术学习指南|知识库技术教程]]
+> 📖 导航：[[overview|全局概览]] · [[../topics/rag-optimization-techniques|RAG 优化 20 法]] · [[knowledge-graph|知识图谱]] · [[rag-evaluation|RAG 评估体系]] · [[hybrid-retrieval|混合检索]] · [[../topics/agentic-rag-patterns|Agentic RAG 四种模式]] · [[../../教程/知识库/00-知识库技术学习指南|知识库技术教程]]

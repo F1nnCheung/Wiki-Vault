@@ -9,8 +9,8 @@ sources:
   - Wiki/wiki/topics/claude-code-mcp-ecosystem.md
   - Wiki/wiki/concepts/ai-agent.md
 related:
-  - ../03-AI-编码/00-AI Coding 学习计划.md
-  - ../06-AI智能体/AI Agent 学习指南.md
+  - ../03-AI Coding/00-AI Coding 学习计划.md
+  - ../06-AI Agent/00-AI Agent 学习指南.md
   - ../09-LLMOps与工程化/00-LLMOps与工程化指南.md
 ---
 
@@ -83,8 +83,8 @@ related:
 | MCP 实体页（协议详解） | [[Wiki/wiki/entities/mcp|MCP 实体页]] |
 | MCP 生态系统（Top 15 排行榜） | [[Wiki/wiki/topics/claude-code-mcp-ecosystem|MCP 生态系统]] |
 | Claude Code 安装与国内模型接入 | [[Wiki/wiki/topics/claude-code-installation|Claude Code 安装配置]] |
-| AI Agent 核心架构 | [[../06-AI智能体/AI Agent 学习指南|AI Agent 教程]] |
+| AI Agent 核心架构 | [[../06-AI Agent/00-AI Agent 学习指南|AI Agent 教程]] |
 
 ---
 
-> 📖 完成第 6 周学习后，进入 [[../03-AI-编码/00-AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。
+> 📖 完成第 6 周学习后，进入 [[../03-AI Coding/00-AI Coding 学习计划|第 7 周：Agent 框架实战（OpenClaw + Hermes + Agentic RAG + KV 缓存）]]——已有完整教程，直接使用即可。

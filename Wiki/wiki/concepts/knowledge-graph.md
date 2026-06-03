@@ -237,4 +237,4 @@ LangChain 提供 `Neo4jGraph` 类，支持 LLM 自动生成 Cypher 查询：
 
 > 📖 相关：[[rag-architectures|RAG 三种架构]] · [[code-knowledge-graph|代码知识图谱]] · [[../entities/gitnexus|GitNexus]] · [[../entities/graphify|Graphify]] · [[../topics/vector-graph-rag|Vector Graph RAG]]
 
-> 📖 导航：[[overview|全局概览]] · [[rag-architectures|RAG 架构]] · [[code-knowledge-graph|代码知识图谱]] · [[hybrid-retrieval|混合检索]] · [[../topics/vector-graph-rag|Vector Graph RAG]] · [[../../教程/知识库/知识库技术学习指南|知识库技术教程]]
+> 📖 导航：[[overview|全局概览]] · [[rag-architectures|RAG 架构]] · [[code-knowledge-graph|代码知识图谱]] · [[hybrid-retrieval|混合检索]] · [[../topics/vector-graph-rag|Vector Graph RAG]] · [[../../教程/知识库/00-知识库技术学习指南|知识库技术教程]]

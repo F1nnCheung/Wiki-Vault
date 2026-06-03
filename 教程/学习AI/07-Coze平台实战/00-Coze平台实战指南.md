@@ -10,12 +10,12 @@ sources:
   - Wiki/wiki/concepts/ai-agent.md
 related:
   - ../05-Dify平台实战/00-Dify平台实战指南.md
-  - ../06-AI智能体/AI Agent 学习指南.md
+  - ../06-AI Agent/00-AI Agent 学习指南.md
 ---
 
 # Coze 平台实战指南
 
-> 对应学习计划**第 5 周 Day 5-7**：先理解 Agent 核心原理（Day 1-4 见 [[../06-AI智能体/AI Agent 学习指南|AI Agent 教程]]），再用 Coze 可视化编排快速搭建 Agent。
+> 对应学习计划**第 5 周 Day 5-7**：先理解 Agent 核心原理（Day 1-4 见 [[../06-AI Agent/00-AI Agent 学习指南|AI Agent 教程]]），再用 Coze 可视化编排快速搭建 Agent。
 
 ---
 
@@ -80,7 +80,7 @@ related:
 | Day 6 | 可视化 Agent 编排 + 发布 | [[03-可视化工作流编排]]、[[04-发布与API集成]] |
 | Day 7 | Agent + Coze 串联实战 | [[04-发布与API集成]]（Coze → 手写 Agent） |
 
-> ⚠️ 学习计划 Day 1-4 的 Agent 理论基础，参见 [[../06-AI智能体/AI Agent 学习指南|AI Agent 教程]]。
+> ⚠️ 学习计划 Day 1-4 的 Agent 理论基础，参见 [[../06-AI Agent/00-AI Agent 学习指南|AI Agent 教程]]。
 
 ## 附录 B：Coze 踩坑清单
 
@@ -95,7 +95,7 @@ related:
 | 主题 | 知识库资源 |
 |------|-----------|
 | AI Agent 核心概念（L1-L5 能力层次） | [[Wiki/wiki/concepts/ai-agent|AI Agent 概念页]] |
-| Agent 手写开发完整教程 | [[../06-AI智能体/AI Agent 学习指南|AI Agent 学习指南]] |
+| Agent 手写开发完整教程 | [[../06-AI Agent/00-AI Agent 学习指南|00-AI Agent 学习指南]] |
 | Coze vs Dify 全面对比 | [[Wiki/wiki/comparisons/lowcode-ai-platforms|低代码 AI 平台对比]] |
 | Agent 记忆系统设计 | [[Wiki/wiki/concepts/agent-memory-systems|Agent 记忆系统]] |
 | Agentic Engineering | [[Wiki/wiki/concepts/agentic-engineering|Agentic Engineering]] |
