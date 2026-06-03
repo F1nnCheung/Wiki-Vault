@@ -42,6 +42,13 @@ async function init() {
   renderTagCloud();
 
   window.addEventListener("hashchange", handleHashChange);
+
+  // 首次加载无 hash 时，默认跳转到完整学习路径总览
+  if (!location.hash || location.hash === "#" || location.hash === "#/") {
+    location.replace("#/tutorial/" + encodeURIComponent("教程/学习AI/00-完整学习路径总览.md"));
+    return;
+  }
+
   handleHashChange();
 }
 
