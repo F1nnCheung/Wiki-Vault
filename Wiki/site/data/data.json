@@ -3580,7 +3580,7 @@
         "角色分层"
       ],
       "prev_path": null,
-      "next_path": null
+      "next_path": "教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md"
     },
     {
       "path": "教程/学习AI/01-LLM与Prompt工程/00-LLM与Prompt工程学习指南.md",
@@ -3596,7 +3596,7 @@
         "程序员",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/00-完整学习路径总览.md",
       "next_path": "教程/学习AI/01-LLM与Prompt工程/01-LLM底层认知.md"
     },
     {
@@ -3673,7 +3673,7 @@
         "工业级代码"
       ],
       "prev_path": "教程/学习AI/01-LLM与Prompt工程/03-Prompt工程核心.md",
-      "next_path": null
+      "next_path": "教程/学习AI/02-Rule与Skills/00-Rule与Skills学习指南.md"
     },
     {
       "path": "教程/学习AI/02-Rule与Skills/00-Rule与Skills学习指南.md",
@@ -3690,7 +3690,7 @@
         "规则体系",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/01-LLM与Prompt工程/04-Prompt实战进阶.md",
       "next_path": "教程/学习AI/02-Rule与Skills/01-Rule规则体系.md"
     },
     {
@@ -3745,7 +3745,7 @@
         "测试生成"
       ],
       "prev_path": "教程/学习AI/02-Rule与Skills/02-Skills概念与触发机制.md",
-      "next_path": null
+      "next_path": "教程/学习AI/03-MCP/00-MCP学习指南.md"
     },
     {
       "path": "教程/学习AI/03-MCP/00-MCP学习指南.md",
@@ -3760,7 +3760,7 @@
         "多智能体通信",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/02-Rule与Skills/03-Skills封装实战.md",
       "next_path": "教程/学习AI/03-MCP/01-MCP协议.md"
     },
     {
@@ -3795,7 +3795,7 @@
         "风控"
       ],
       "prev_path": "教程/学习AI/03-MCP/01-MCP协议.md",
-      "next_path": null
+      "next_path": "教程/学习AI/04-AI Agent/00-AI Agent 学习指南.md"
     },
     {
       "path": "教程/学习AI/04-AI Agent/00-AI Agent 学习指南.md",
@@ -3810,7 +3810,7 @@
         "learning-plan",
         "tutorial"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/03-MCP/02-Function Calling.md",
       "next_path": "教程/学习AI/04-AI Agent/01-AI Agent基础概念.md"
     },
     {
@@ -3897,7 +3897,7 @@
         "tutorial"
       ],
       "prev_path": "教程/学习AI/04-AI Agent/04-多Agent协作与编排.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/00-AI Coding学习指南.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/00-AI Coding学习指南.md",
@@ -3917,8 +3917,8 @@
         "Hermes",
         "学习计划"
       ],
-      "prev_path": null,
-      "next_path": null
+      "prev_path": "教程/学习AI/04-AI Agent/05-Agent实战指南.md",
+      "next_path": "教程/学习AI/05-AI Coding/01-AI Coding简介/01-发展历程.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/01-AI Coding简介/01-发展历程.md",
@@ -3933,7 +3933,7 @@
         "timeline",
         "入门"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/00-AI Coding学习指南.md",
       "next_path": "教程/学习AI/05-AI Coding/01-AI Coding简介/02-核心概念名词解释.md"
     },
     {
@@ -3975,7 +3975,7 @@
         "prompt"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/01-AI Coding简介/02-核心概念名词解释.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/01-工具全景对比.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/01-工具全景对比.md",
@@ -3994,8 +3994,8 @@
         "codex",
         "copilot"
       ],
-      "prev_path": null,
-      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/06-GitHub-Copilot.md"
+      "prev_path": "教程/学习AI/05-AI Coding/01-AI Coding简介/03-六维概念对比.md",
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/01-介绍.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/01-介绍.md",
@@ -4009,7 +4009,7 @@
         "introduction",
         "overview"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/01-工具全景对比.md",
       "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/02-安装与配置.md"
     },
     {
@@ -4091,7 +4091,7 @@
         "tips"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/05-进阶使用-MCP.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/03-Cursor/01-介绍与安装.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/03-Cursor/01-介绍与安装.md",
@@ -4105,7 +4105,7 @@
         "introduction",
         "installation"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/02-Claude-Code/06-高阶指令.md",
       "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/03-Cursor/02-基本使用.md"
     },
     {
@@ -4139,7 +4139,7 @@
         "cursorrules"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/03-Cursor/02-基本使用.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/04-Trae/01-介绍与安装.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/04-Trae/01-介绍与安装.md",
@@ -4154,7 +4154,7 @@
         "installation",
         "国产"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/03-Cursor/03-进阶使用与插件.md",
       "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/04-Trae/02-四种模式与基本使用.md"
     },
     {
@@ -4190,7 +4190,7 @@
         "cursor"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/04-Trae/02-四种模式与基本使用.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/01-介绍与安装.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/01-介绍与安装.md",
@@ -4205,7 +4205,7 @@
         "introduction",
         "installation"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/04-Trae/03-进阶使用与对比.md",
       "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/02-基本使用与Spec-Driven开发.md"
     },
     {
@@ -4242,7 +4242,7 @@
         "workflow"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/02-基本使用与Spec-Driven开发.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/06-GitHub-Copilot.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/06-GitHub-Copilot.md",
@@ -4257,8 +4257,8 @@
         "microsoft",
         "ide-plugin"
       ],
-      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/01-工具全景对比.md",
-      "next_path": null
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/05-Codex/03-适用场景.md",
+      "next_path": "教程/学习AI/05-AI Coding/03-Agent框架/01-OpenClaw.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/03-Agent框架/01-OpenClaw.md",
@@ -4273,7 +4273,7 @@
         "tutorial",
         "installation"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/02-主流AI Coding工具/06-GitHub-Copilot.md",
       "next_path": "教程/学习AI/05-AI Coding/03-Agent框架/02-Hermes-Agent.md"
     },
     {
@@ -4307,7 +4307,7 @@
         "agent"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/03-Agent框架/02-Hermes-Agent.md",
-      "next_path": null
+      "next_path": "教程/学习AI/05-AI Coding/04-拓展使用/01-Obsidian-AI知识库工作流.md"
     },
     {
       "path": "教程/学习AI/05-AI Coding/04-拓展使用/01-Obsidian-AI知识库工作流.md",
@@ -4323,7 +4323,7 @@
         "workflow",
         "second-brain"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/03-Agent框架/03-深度对比.md",
       "next_path": "教程/学习AI/05-AI Coding/04-拓展使用/02-Superpowers-gstack进阶闭环.md"
     },
     {
@@ -4358,7 +4358,7 @@
         "tools"
       ],
       "prev_path": "教程/学习AI/05-AI Coding/04-拓展使用/02-Superpowers-gstack进阶闭环.md",
-      "next_path": null
+      "next_path": "教程/学习AI/06-知识库与RAG/00-知识库技术学习指南.md"
     },
     {
       "path": "教程/学习AI/06-知识库与RAG/00-知识库技术学习指南.md",
@@ -4375,7 +4375,7 @@
         "embedding",
         "向量数据库"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/05-AI Coding/04-拓展使用/03-其他拓展工具与场景.md",
       "next_path": "教程/学习AI/06-知识库与RAG/01-知识库技术总览.md"
     },
     {
@@ -4497,7 +4497,7 @@
         "路线图"
       ],
       "prev_path": "教程/学习AI/06-知识库与RAG/06-向量数据库与嵌入模型.md",
-      "next_path": null
+      "next_path": "教程/学习AI/07-Dify平台实战/00-Dify平台实战指南.md"
     },
     {
       "path": "教程/学习AI/07-Dify平台实战/00-Dify平台实战指南.md",
@@ -4514,7 +4514,7 @@
         "LLMOps",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/06-知识库与RAG/07-工具生态与选型.md",
       "next_path": "教程/学习AI/07-Dify平台实战/01-认识Dify.md"
     },
     {
@@ -4583,7 +4583,7 @@
         "集成"
       ],
       "prev_path": "教程/学习AI/07-Dify平台实战/03-RAG管线搭建.md",
-      "next_path": null
+      "next_path": "教程/学习AI/08-Coze平台实战/00-Coze平台实战指南.md"
     },
     {
       "path": "教程/学习AI/08-Coze平台实战/00-Coze平台实战指南.md",
@@ -4600,7 +4600,7 @@
         "可视化",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/07-Dify平台实战/04-应用发布与API对接.md",
       "next_path": "教程/学习AI/08-Coze平台实战/01-认识Coze.md"
     },
     {
@@ -4669,7 +4669,7 @@
         "手写Agent"
       ],
       "prev_path": "教程/学习AI/08-Coze平台实战/03-可视化工作流编排.md",
-      "next_path": null
+      "next_path": "教程/学习AI/09-LLMOps与工程化/00-LLMOps与工程化指南.md"
     },
     {
       "path": "教程/学习AI/09-LLMOps与工程化/00-LLMOps与工程化指南.md",
@@ -4686,7 +4686,7 @@
         "运维",
         "学习计划"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/08-Coze平台实战/04-发布与API集成.md",
       "next_path": "教程/学习AI/09-LLMOps与工程化/01-MVP架构设计.md"
     },
     {
@@ -4755,7 +4755,7 @@
         "8周总检"
       ],
       "prev_path": "教程/学习AI/09-LLMOps与工程化/03-AI代码安全审计.md",
-      "next_path": null
+      "next_path": "教程/学习AI/10-OPC创业变现/00-OPC 一人公司学习指南.md"
     },
     {
       "path": "教程/学习AI/10-OPC创业变现/00-OPC 一人公司学习指南.md",
@@ -4772,7 +4772,7 @@
         "商业模式",
         "教程"
       ],
-      "prev_path": null,
+      "prev_path": "教程/学习AI/09-LLMOps与工程化/04-AI资产沉淀与复盘.md",
       "next_path": "教程/学习AI/10-OPC创业变现/01-OPC概述与核心理念.md"
     },
     {

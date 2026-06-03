@@ -132,16 +132,16 @@ def scan_tutorials(page_map: dict) -> list[dict]:
                 "tags": tags,
             })
 
-    # 按路径排序后，在各自文件夹内分配 prev / next 路径
+    # 按路径排序后，在同一顶级文件夹内分配 prev / next 路径
     tutorials.sort(key=lambda t: t["path"])
-    tutorials_by_folder = {}
+    tutorials_by_top = {}
     for t in tutorials:
-        folder = t["folder"]
-        if folder not in tutorials_by_folder:
-            tutorials_by_folder[folder] = []
-        tutorials_by_folder[folder].append(t)
+        top_folder = t["folder"].split("/")[0] if t["folder"] != "root" else "root"
+        if top_folder not in tutorials_by_top:
+            tutorials_by_top[top_folder] = []
+        tutorials_by_top[top_folder].append(t)
 
-    for folder, tuts in tutorials_by_folder.items():
+    for top_folder, tuts in tutorials_by_top.items():
         for i, t in enumerate(tuts):
             t["prev_path"] = tuts[i - 1]["path"] if i > 0 else None
             t["next_path"] = tuts[i + 1]["path"] if i + 1 < len(tuts) else None
