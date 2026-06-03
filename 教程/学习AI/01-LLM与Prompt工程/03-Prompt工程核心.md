@@ -9,7 +9,7 @@ sources:
   - Wiki/wiki/topics/claude-code-prompt-engineering.md
   - Wiki/wiki/concepts/ai-agent.md
 related:
-  - 02-LLM底层认知.md
+  - 01-LLM底层认知.md
   - 04-Prompt实战进阶.md
   - ../02-Rule与Skills/00-Rule与Skills学习指南.md
 ---

@@ -10,7 +10,7 @@ sources:
 related:
   - 00-MCP学习指南.md
   - 01-MCP协议.md
-  - 01-Ollama本地部署.md
+  - 02-Ollama本地部署.md
 ---
 
 # 第二章：Function Calling
@@ -188,4 +188,4 @@ dispatcher.register(
 
 ---
 
-> 📖 继续学习 [[01-Ollama本地部署|第三章：Ollama 本地部署]]——本地运行大模型，零成本替代云端 API。
+> 📖 继续学习 [[02-Ollama本地部署|第三章：Ollama 本地部署]]——本地运行大模型，零成本替代云端 API。
