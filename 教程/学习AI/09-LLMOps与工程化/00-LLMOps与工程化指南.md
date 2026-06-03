@@ -9,9 +9,9 @@ sources:
   - Wiki/wiki/concepts/agentic-engineering.md
   - Wiki/wiki/concepts/harness-engineering.md
 related:
-  - ../08-MCP与本地部署/00-MCP与本地部署学习指南.md
-  - ../05-Dify平台实战/00-Dify平台实战指南.md
-  - ../06-AI Agent/00-AI Agent 学习指南.md
+  - ../03-MCP与本地部署/00-MCP与本地部署学习指南.md
+  - ../07-Dify平台实战/00-Dify平台实战指南.md
+  - ../04-AI Agent/00-AI Agent 学习指南.md
 ---
 
 # LLMOps 与工程化落地指南
@@ -93,5 +93,5 @@ related:
 > 1. 花 2-4 周打磨 MVP 中最弱的模块
 > 2. 选一个真实项目深度实践全链路
 > 3. 持续关注知识库更新（AI Coding 领域每月有新变化）
-> 4. 如果你想深入某个方向：Agent 专项见 [[../06-AI Agent/00-AI Agent 学习指南|AI Agent 教程]]，知识库技术见 [[../04-知识库与RAG/00-知识库技术学习指南|知识库技术教程]]
+> 4. 如果你想深入某个方向：Agent 专项见 [[../04-AI Agent/00-AI Agent 学习指南|AI Agent 教程]]，知识库技术见 [[../06-知识库与RAG/00-知识库技术学习指南|知识库技术教程]]
 > 5. 🆕 **想用这套能力变现？** 进入 [[../10-OPC创业变现/00-OPC 一人公司学习指南|第 9 周：AI 创业落地]]——一个人 + AI = 一家公司，六大商业模式 + 四阶段创业法，把你前 8 周积累的技术能力变成持续收入
