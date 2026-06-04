@@ -1,7 +1,7 @@
 # 📚 Wiki Vault — LLM 驱动的 AI 全栈知识库
 
-[![Deploy Wiki Site](https://github.com/finn/key-notes/actions/workflows/deploy.yml/badge.svg)](https://github.com/finn/key-notes/actions/workflows/deploy.yml)
-[![Pages](https://img.shields.io/badge/GitHub%20Pages-在线预览-blue?logo=github)](https://finn.github.io/key-notes/)
+[![Deploy Wiki Site](https://github.com/f1nncheung/Wiki-Vault/actions/workflows/deploy.yml/badge.svg)](https://github.com/f1nncheung/Wiki-Vault/actions/workflows/deploy.yml)
+[![Pages](https://img.shields.io/badge/GitHub%20Pages-在线预览-blue?logo=github)](https://f1nncheung.github.io/Wiki-Vault/)
 
 > 一个基于 Obsidian 的结构化知识库，围绕 Claude Code、AI Coding、Agent 框架、RAG 知识库技术、低代码 AI 平台、Obsidian 知识管理、智能家居和 AI 原生创业八大主线，系统化整理了从概念到实战的完整知识体系。
 
@@ -120,7 +120,7 @@ Wiki Vault/
 - 🔍 全文搜索（按标题、标签、内容）
 - 🔗 Wiki 链接导航（页面间相互跳转）
 
-> 在线地址：[https://finn.github.io/key-notes/](https://finn.github.io/key-notes/)
+> 在线地址：[https://f1nncheung.github.io/Wiki-Vault/](https://f1nncheung.github.io/Wiki-Vault/)
 
 ---
 
