@@ -1,7 +1,12 @@
 ---
 title: 知识库技术 05 — LLM Wiki 范式与实践
 type: tutorial
-tags: [知识库, LLM-Wiki, Karpathy, 知识蒸馏, 个人知识管理]
+tags:
+  - 知识库
+  - LLM-Wiki
+  - Karpathy
+  - 知识蒸馏
+  - 个人知识管理
 created: 2026-05-28
 updated: 2026-05-28
 sources:
