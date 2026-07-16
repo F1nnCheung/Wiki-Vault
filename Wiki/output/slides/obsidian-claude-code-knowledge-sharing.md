@@ -12,10 +12,6 @@ _paginationColor: "#666"
 footer: "Obsidian + Claude Code 知识库分享"
 ---
 
-<!--
-headingDivider: 2
--->
-
 <style>
 section {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
